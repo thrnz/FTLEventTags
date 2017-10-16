@@ -11,7 +11,7 @@ This mod is useful for players wanting to learn the possible results of ingame e
  * Mistakes may have been made. I take no responsibility for any runs lost as a result of incorrect information supplied by this mod!
 
 ## To-do
- * Needs plent of testing
+ * Needs plenty of testing
  * Maybe tag possible enemy ship classes too.
 
 ## Legend
