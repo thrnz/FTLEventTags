@@ -53,7 +53,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Try to be a hero. Attack the pirate. [ SF S: HStuff, K: R Scrap, CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ] ]</text>
+		<text>Try to be a hero. Attack the pirate. [ SF S: HStuff, K: RScrap, CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ] ]</text>
 		<event>
 			<text>The pirate ship stops its pursuit and locks weapons onto your ship.</text> 
 			<ship hostile="true"/>
