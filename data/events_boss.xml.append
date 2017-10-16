@@ -1,0 +1,53 @@
+<textList name="BOSS_SCOUT">
+	<text>Although this sector is still under Federation control, a small scout has slipped by the fleet. You move in to engage. [ SF DR ]</text>  <!--image- Fleet background-->
+	<text>Long range scanners show this system is empty of any capital ships. Clearly it is not of strategic value. Wait... FTL signatures show a Rebel scout just jumped nearby! [ SF DR ]</text> <!--image-no fleets-->
+	<text>Sensors indicate that the Rebels are setting up a forward Jump Beacon behind the nearby planet's moon. More importantly, a number of ships are passing by; prepare for a fight! [ SF DR ]</text> <!-- image- no fleet, empty planet-->
+	<text>Federation ships are scarce in this region of space despite a number of civilian space stations. You see a small bomber squadron engaged with some Federation scouts and quickly move in to assist. [ SF DR ]</text>
+	<text>As soon as you arrive at the beacon, a Rebel scout turns to engage. Power up the weapons! [ SF DR ]</text>
+	<text>You scan the area, finding signatures for only a small trade vessel. However, as it approaches you see the silhouette of a Rebel scout! You run the scanners again and discover their registration is fake. You move in to attack. [ SF DR ]</text>
+</textList>
+
+<textList name="BOSS_SCOUT_RESCUE">
+	<text>Shots fly by your port windows followed by a Rebel scout in pursuit of a damaged cruiser. Should we move in to engage? [ SF K: MStd, CK: HStd, DB: [ Sincere Gratitude | +8 Hull | MStuff | Repair Station Quest ] ]</text>
+	<text>There seems to be a small Federation colony under attack by a Rebel forward scout. Will you protect them? [ SF K: MStd, CK: HStd, DB: [ Sincere Gratitude | +8 Hull | MStuff | Repair Station Quest ] ]</text>
+	<text>A number of large transports are being pursued by a Rebel bombing squadron. One bomber has managed to slip through the defensive fire, and is poised to wreak havoc among the enormous yet vulnerable transports. There's time for you to advance and take it out! [ SF K: MStd, CK: HStd, DB: [ Sincere Gratitude | +8 Hull | MStuff | Repair Station Quest ] ]</text>
+	<text>A battle rages nearby between small fighters; apparently fighting over a space station. The Federation appears to be losing ships fast. Shall we assist them? [ SF K: MStd, CK: HStd, DB: [ Sincere Gratitude | +8 Hull | MStuff | Repair Station Quest ] ]</text>
+	<text>A civilian ship is broadcasting a request for assistance on a secure Federation channel. They are being harassed by Rebel scouts. Will you respond? [ SF K: MStd, CK: HStd, DB: [ Sincere Gratitude | +8 Hull | MStuff | Repair Station Quest ] ]</text>
+	<text>A number of large transports are being pursued by a Rebel bombing squadron. One bomber has managed to slip through the defensive fire, and is poised to wreak havoc among the enormous yet vulnerable transports. There's time for you to advance and take it out! [ SF K: MStd, CK: HStd, DB: [ Sincere Gratitude | +8 Hull | MStuff | Repair Station Quest ] ]</text>
+	<text>A battle rages nearby between small fighters; apparently fighting over a space station. The Federation appears to be losing ships fast. Shall we assist them? [ SF K: MStd, CK: HStd, DB: [ Sincere Gratitude | +8 Hull | MStuff | Repair Station Quest ] ]</text>
+	<text>A civilian ship is broadcasting a request for assistance on a secure Federation channel. They are being harassed by Rebel scouts. Will you respond? [ SF K: MStd, CK: HStd, DB: [ Sincere Gratitude | +8 Hull | MStuff | Repair Station Quest ] ]</text>
+</textList>
+
+<textList name="BOSS_FLEETS_BOTH">
+	<text>You arrive in the middle of a raging battle. Both sides are taking heavy losses. A small squadron flies past and a fighter breaks off, moving toward your position. [ SF K: LScrap, CK: MStd ]</text>
+	<text>Two fleets fight nearby. You try to skirt around the edges of the battle and keep out of weapons range, but a Rebel scout spots you and moves in. [ SF K: LScrap, CK: MStd ]</text>
+	<text>It's hard to tell who is winning the nearby battle. Before you have a chance to figure it out, a fighter moves in to attack. [ SF K: LScrap, CK: MStd ]</text>
+	<text>The sheer scale of the destruction in the distance is almost breath-taking. Unfortunately, your position as an independent observer doesn't last for long! [ SF K: LScrap, CK: MStd ]</text>
+	<text>The destruction in the distance is almost awe-inspiring. However you're dragged back to reality as Sensors indicate you are under attack. [ SF K: LScrap, CK: MStd ]</text>
+	<text>You don't have any time to worry about the battle in the distance. The fight is coming to you really quickly! [ SF K: LScrap, CK: MStd ]</text>
+	
+		<text>You arrive in the middle of a raging battle. Both sides are taking heavy losses. A small squadron flies past and a fighter breaks off, moving toward your position. [ SF K: LScrap, CK: MStd ]</text>
+	<text>Two fleets fight nearby. You try to skirt around the edges of the battle and keep out of weapons range, but a Rebel scout spots you and moves in. [ SF K: LScrap, CK: MStd ]</text>
+	<text>It's hard to tell who is winning the nearby battle. Before you have a chance to figure it out, a fighter moves in to attack. [ SF K: LScrap, CK: MStd ]</text>
+	<text>The sheer scale of the destruction in the distance is almost breath-taking. Unfortunately, your position as an independent observer doesn't last for long! [ SF K: LScrap, CK: MStd ]</text>
+	<text>The destruction in the distance is almost awe-inspiring. However you're dragged back to reality as Sensors indicate you are under attack. [ SF K: LScrap, CK: MStd ]</text>
+	<text>You don't have any time to worry about the battle in the distance. The fight is coming to you really quickly! [ SF K: LScrap, CK: MStd ]</text>
+</textList>
+
+<textList name="BOSS_FLEETS_REBEL">
+	<text>Although you were expecting the Rebels, you never imagined their fleet could have grown so fast. You scanners can hardly register them all before a fighter stationed nearby moves in to attack. [ SF K: LScrap, CK: MStd ]</text>
+	<text>This system is flooded with Rebel warships. Luckily your ship's signature is disguised as a civilian transport. Most heavy vessels ignore you but a small fighter is approaching with weapons hot! [ SF K: LScrap, CK: MStd ]</text> <!-- no environment?--> 
+	<text planet="PLANET_POPULATED">You arrive to find a Rebel battalion encircling a nearby planet, launching landing parties. A small scout moves toward your position. Prepare for a fight! [ SF K: LScrap, CK: MStd ]</text>
+	<text>As soon as you arrive you find yourself in the debris of a fierce battle. However, only Rebel warships remain and you find yourself immediately under attack. [ SF K: LScrap, CK: MStd ]</text>
+	<text>Shots fly by and your computer registers multiple weapon locks as soon as you arrive. Evasive action! [ SF K: LScrap, CK: MStd ]</text>
+	<text planet="PLANET_POPULATED">What was once a great series of space stations is now nothing but a small ring of debris around the nearby moon. There's no time to mourn the dead; an enemy approaches! [ SF K: LScrap, CK: MStd ]</text>
+	<text>The Federation seems to have put up a good fight. A number of Rebel ships lie broken or wounded. However their overwhelming numbers force the remaining Federation forces to retreat. Hopefully you can get away in time as well. [ SF K: LScrap, CK: MStd ]</text>
+	
+		<text>Although you were expecting the Rebels, you never imagined their fleet could have grown so fast. You scanners can hardly register them all before a fighter stationed nearby moves in to attack. [ SF K: LScrap, CK: MStd ]</text>
+	<text>This system is flooded with Rebel warships. Luckily your ship's signature is disguised as a civilian transport. Most heavy vessels ignore you but a small fighter is approaching with weapons hot! [ SF K: LScrap, CK: MStd ]</text> <!-- no environment?--> 
+	<text planet="PLANET_POPULATED">You arrive to find a Rebel battalion encircling a nearby planet, launching landing parties. A small scout moves toward your position. Prepare for a fight! [ SF K: LScrap, CK: MStd ]</text>
+	<text>As soon as you arrive you find yourself in the debris of a fierce battle. However, only Rebel warships remain and you find yourself immediately under attack. [ SF K: LScrap, CK: MStd ]</text>
+	<text>Shots fly by and your computer registers multiple weapon locks as soon as you arrive. Evasive action! [ SF K: LScrap, CK: MStd ]</text>
+	<text planet="PLANET_POPULATED">What was once a great series of space stations is now nothing but a small ring of debris around the nearby moon. There's no time to mourn the dead; an enemy approaches! [ SF K: LScrap, CK: MStd ]</text>
+	<text>The Federation seems to have put up a good fight. A number of Rebel ships lie broken or wounded. However their overwhelming numbers force the remaining Federation forces to retreat. Hopefully you can get away in time as well. [ SF K: LScrap, CK: MStd ]</text>
+</textList>

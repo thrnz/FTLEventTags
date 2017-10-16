@@ -1,0 +1,99 @@
+<textList name="MANTIS_FIGHT">
+	<!-- These are the ones that I had written-->
+	<text>A Mantis military ship appears on local radar alongside the remains of a human freighter. Prepare for a hostile encounter! [ SF DR ]</text>
+	<text>A Mantis military scout hails your ship. "Foolish alien! Your kind has stifled our greatness for too long! You will rue the day you backed the Federation!" [ SF DR ]</text>
+	<text>A small Mantis cruiser is broadcasting a repeating message on a wide-band frequency, "All non-Mantis ships that enter our territory are forfeit. Lower your shields and surrender if you value your lives." [ SF DR ]</text>
+	<text>You detect a small military outpost and a few freighters nearby. This mineral rich planet in an isolated location would be perfect for an illegal Mantis mining operation. As you consider your options, a ship launches from the outpost. Prepare for a fight. [ SF DR ]</text>
+	<text>You discover yet another unlicensed and uncharted Mantis colony. They certainly waste no time expanding their claims. A Mantis ship moves to intercept you before you can jump away. [ SF DR ]</text>
+	<text>A Mantis military scout seems to have just finished a salvage op on a nearby wreck. They have no time to waste with warnings and appear to wish to fight. [ SF DR ]</text>
+	<text>A small military craft hails you and a Mantis captain appears on your receiver. "All local human colonies have been punished for the Federation's transgressions. Submit to processing." [ SF DR ]</text>
+	<!-- These are the ones by tom-->
+	<text>A nearby Mantis ship begins aggressive maneuvers. You prepare for the worst. [ SF DR ]</text>
+	<text>A stream of clicks and gurgling comes on the comm from a hostile Mantis scout. The universal translator might be on the blink, but his intent is obvious. [ SF DR ]</text>
+	<text>The Mantis ship is pleased to see you, and fires up its weapon systems. [ SF DR ]</text>
+	<text>You recognize the outline of a Mantis ship against the blackness. Engage! [ SF DR ]</text>
+	<text>Something red looms. It's the Mantis. [ SF DR ]</text>
+	<text>A Mantis vessel hails you. "This hail is merely a distraction!" You notice their shields and weapons have come online. [ SF DR ]</text>
+	<text>You notice a flurry of laser fire glance by the port window. The Mantis are upon you. [ SF DR ]</text>
+	<text>The Mantis hail you. Their captain says, "I claim this vessel for my clan. Good hunting!" [ SF DR ]</text>
+	<text>A Mantis female comes on the vidscreen. The females don't make it to authority unless they're particularly vicious. You power the weapons. [ SF DR ]</text>
+	<text>A Mantis ship with the markings of a warrior tribe breaks position and attacks! [ SF DR ]</text>
+	<text>A Mantis ship hails: "Ah! Fine prey. Fine prey! We honor you with our most eviscerating arsenal!" You sense a cloud to this silver lining and power the weapons. [ SF DR ]</text>
+	<text>Children on Earth are told terrible tales of the blood red Mantis invasion ships - much like the one bearing down on you now - which once threatened the planet. You order weapons free! [ SF DR ]</text>
+	<text>A youthful-looking Mantis captain hails. "You, prey, must know. Your death, Kaaazthwak's final kill before maturity. Kaaazthwak pay respects." Seems respects in Mantis culture are paid with lasers. [ SF DR ]</text>
+</textList>
+
+<event name="MANTIS_FIGHT_CHOICE" unique="false">   
+	<text load="MANTIS_FIGHT_CHOICE"/>
+	<ship load="MANTIS_FIGHT" hostile="false"/>
+	<choice hidden="true">
+		<text>Attack the ship. [ SF DR ]</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Attempt to remain concealed. [ Nil | x2 SF DR ]</text>
+		<event load="MANTIS_FIGHT_CHOICE_AVOID"/>
+	</choice>
+	<choice hidden="true" req="cloaking" lvl="1">
+		<text>(Cloaking) Cloak to stay hidden. [ x2 Nil | SF DR ]</text>
+		<event load="MANTIS_FIGHT_CHOICE_CLOAK"/>
+	</choice>
+</event>
+
+<event name="MANTIS_CIVILIAN" unique="false">   
+	<text load="MANTIS_CIVILIAN"/>
+	<ship load="MANTIS_CIVILIAN" hostile="false"/>
+	<choice hidden="true">
+		<text>Aid the civilian ship. [ SF K: MStd, CK: MStd, DB: [ Crew+ | MStd | LSdt | LScrapWeapon | +5 Hull ] ]</text>
+		<event>
+			<text>You frown, power up the weapons and prepare to engage the Mantis ship. Not today.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Stay out of it. [ Nil ]</text>
+		<event>
+			<text load="MANTIS_CIVILIAN_AVOID"/>
+		</event>
+	</choice>
+</event>
+
+<event name="MANTIS_CREW" unique="true">
+	<text>You detect and retrieve an escape pod floating nearby. You consider returning it to space when you learn it's Mantis.</text>
+	<choice>
+		<text>Jettison the pod. [ Nil ]</text>
+		<event>
+			<text>You send the pod back out the airlock. You're not stupid.</text>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Pry it open. [ Crew- (CB+), 1 Boarder | MantisCrew+ | HumanCrew+ ]</text>
+		<event load="MANTIS_CREW_LIST"/>
+	</choice>
+</event>
+
+<event name="MANTIS_SUN_FIGHT" unique="false">   
+	<text>Who knows why the Mantis would venture so close to a sun. Perhaps it makes for more of a challenge? [ SF DR ]</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+	<environment type="sun"/>
+</event>
+
+<event name="MANTIS_NAMED_THIEF" unique="true"> <!-- NOTE - make globally unique  -->
+	<ship load="MANTIS_NAMED_THIEF" hostile="false"/>
+	<text>You cross paths with a Mantis ship that looks to have had dozens of layers of armor-plating added over what must have been a hundred year career. Its captain is legendary thief KazaaakplethKilik. Your crew look frightened.</text>
+	<choice hidden="true" req="mantis">
+		<text>(Mantis crewmember) Attempt to hail him. [ SF K: MStd, CK: HStd + BOs ]</text>
+		<event>
+			<text>Your Mantis crew-member steps forward. He and KazaaakplethKilik perform a weird kind of alien haka. You, meanwhile, charge the battle systems.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Prepare to fight. [ SF K: MStd, CK: HStd + BOs ]</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</text>

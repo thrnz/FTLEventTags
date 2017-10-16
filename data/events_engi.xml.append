@@ -1,0 +1,338 @@
+<event name="ENGI_FLEET_DELAY" unique="true">
+	<text>You notice an Engi colony hiding on the other side of a nearby moon. It turns out they're excavating an equipment cache from the Federation-Mantis War, and they suggest it might be used to lure the pursuing rebel fleet.</text>
+	<choice>
+		<text>Booby trap the cache. [ -2 Miss, Fleet-- ]</text>
+		<event>
+			<text>You transfer down some missile warheads and the Engi rig them to blow before setting a distress signal to attract the fleet's attention.</text>
+			<item_modify>
+				<item type="missiles" min="-2" max="-2"/>
+			</item_modify>
+			<modifyPursuit amount="-2"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Secure the cache. [ MScrapDrone ]</text>
+		<event>
+			<text>You have the Engi complete their excavations and bring the supplies on-board.</text>
+			<autoReward level="MED">drone</autoReward>
+		</event>
+	</choice>
+</event>
+
+
+<event name="ENGI_SURRENDER" unique="true">
+	<text>An Engi ship in the vicinity, seeing you jump in armed to the teeth, immediately broadcasts its surrender: "Subject goal: wealth. Engi motivation: survival. Transfer of goods acceptable?"</text>
+	<choice hidden="true">
+		<text>Explain that you're friendly. [ Nil | RStd ]</text>
+		<event load="ENGI_SURRENDER_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>Accept their offer of surrender. [ RStd ]</text>
+		<event>
+			<text>The Engi obediently transfer over the goods and get on their way. Money for nothing.</text>
+			<autoReward level="RANDOM">standard</autoReward>
+		</event>
+	</choice>
+</event>
+
+<textList name="ENGI_MANTIS_FIGHT">
+	<text>A mixed radar signal turns out to be a Mantis attack ship scavenging the remains of an Engi carrier. They turn and fight. [ SF DR ]</text>
+	<text>You come across a Mantis raider taking pot shots at a defenceless Engi supply station. Discovering its weapons aren't much of a match for the station's armour, it turns on your ship. Battle stations! [ SF DR ]</text>
+	<text>The area looks clear, and you prepare to jump off, but a Mantis scout jumps in behind you! They're as surprised as you are, but their weapons are already online. [ SF DR ]</text>
+	<text>You find a Mantis ship harrying a small squad of Engi. They make it to the node and jump off, leaving you toe to toe with their pursuer! [ SF DR ]</text>
+</textList>
+
+<event name="ENGI_REBEL_FIGHT">
+	<text>The rebel fighter here would seem to suggest elements of the rebel fleet are already making incursions on Engi space. You move to engage. [ SF DR ]</text>
+	<ship load="REBEL" hostile="true"/>
+</event>
+
+<event name="ENGI_PIRATE_FIGHT">
+	<text>There must have been rich pickings for pirates around here up until war broke out. The pirate you encounter here looks worn down, but hungry. You'll have to fight! [ SF DR ]</text>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+
+<event name="ENGI_STATION_DISTRESS" unique="false">
+	<text>You receive a distress call from a nearby Engi ship. "Assistance requested. Danger present. Imminent destruction."</text>
+	<choice>
+		<text>Respond to the call and move in to assist. [ SF DR, 1-2 Boarders | SF K: MStd, CK: HStd, DB: [ Nil | MFuel | EngiCrew+, LStd | [ Option of Fuel/Weapon/Drone/Engi BO ] ] ] </text>
+		<event load="ENGI_STATION_DISTRESS_LIST"/>
+	</choice>
+	<choice>
+		<text>Keep your distance.</text>
+		<event/>
+	</choice>
+</event>
+
+<eventList name="SAVE_ENGI_STATION">
+	<event>
+		<text>The Engi station is stripped bare and there are signs of a fierce battle. The Mantis must have left the distress call active to lure other ships into a trap.</text>
+	</event>
+	<event>
+		<text>The station was in the process of being evacuated. A number of civilian Engi offer their gratitude as they finalize their preparations to leave. They offer some fuel as a reward.</text>
+		<autoReward level="MED">fuel_only</autoReward>
+	</event>
+	<event>
+		<text>The station hails you, "Gratitude. Expected probability of defeat without assistance... 86.2 percent. Request suitable reward."</text>
+		<choice hidden="true">
+			<text>Request fuel. [ HScrapFuel ]</text>
+			<event>
+				<text>"Request granted. Fuel transferring."</text>
+				<autoReward level="HIGH">fuel</autoReward>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Request weapon. [ LScrapWeapon ]</text>
+			<event>
+				<text>"Request granted. Weapon transferring."</text>
+				<autoReward level="LOW">weapon</autoReward>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Request drone. [ LScrapDrone ]</text>
+			<event>
+				<text>"Request granted. Drone schematic transferring."</text>
+				<autoReward level="LOW">drone</autoReward>
+			</event>
+		</choice>
+		<choice req="engi" hidden="true">
+			<text>(Engi Crew) Threat unresolved. Current mission imperative: Protocol 52.34. [ +10 Hull, LScrapWeapon, Hidden Federation Base Quest ]</text>
+			<event>
+				<text>They respond, "Understood. Re-establishment of Federation highest import. Transmitting hidden base coordinates. Repairing hull and attaching ship to ship ordnance."</text>
+				<autoReward level="LOW">weapon</autoReward>
+				<quest event="HIDDEN_FEDERATION_BASE_LIST"/>
+				<damage amount="-10"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>They thank you for the assistance and when you tell them of your mission, one of the Engi asks if he can assist your crew. You welcome him aboard.</text>
+		<crewMember amount="1" class="engi"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+</eventList>
+
+
+<event name="DISTRESS_ENGI_REBEL" unique="true">
+	<text>The distress signal originates from a small Engi ship under attack by a rebel fighter - but when the Rebels see Federation markings they turn to attack! [ SF K: LStd, CK: MStd, DB: Random Buyables</text> 
+	<distressBeacon/>
+	<ship load="DISTRESS_ENGI_REBEL" hostile="true"/>
+</event>
+
+<event name="DISTRESS_ENGI_REBEL_RESULT">
+	<text>The Engi vessel turns out to be very poorly equipped - barely a runabout, really. They're trying to outrun the Rebels, and need all the help they can get.</text>
+	<choice hidden="true">
+		<text>Give them 25 scrap. [ Nil | HealBomb | Drone ]</text>
+		<event load="DISTRESS_ENGI_REBEL_LIST1"/>
+	</choice>
+	<choice hidden="true">
+		<text>Give them 40 scrap, 2 missiles and 2 fuel. [ MedBot Augment ]</text>
+		<event load="DISTRESS_ENGI_REBEL_LIST2"/>
+	</choice>
+	<choice hidden="true">
+		<text>Give them nothing. [ Nil ]</text>
+		<event>
+			<text>Engi can't feel fear, so they bear you no ill will when you explain you're unwilling to help. They set off on their journey and you do the same.</text>
+		</event>
+	</choice>
+</event>
+
+<event name="DISTRESS_ENGI_REACTOR" unique="true">
+	<text>You arrive at a smoldering Engi research station, its distress call unanswered - attacked by pirates or Mantis most likely. There may be someone left alive, or else something of value left on board.</text>
+	<distressBeacon/>
+	<choice hidden="true">
+		<text>Board the station. [ Nil | More... ]</text>
+		<event load="DISTRESS_ENGI_REACTOR_LIST1"/>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore it.</text>
+		<event>
+			<text>The place looks in bad state, probably nothing of use there. Time to move on.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="sensors" lvl="2">
+		<text>(Improved Sensors) Run another scan. [ EngiCrew+, LScrap | LScrapDrone ] </text>
+		<event load="DISTRESS_ENGI_REACTOR_SCAN"/>
+	</choice>
+	<choice hidden="true" req="ADV_SCANNERS">
+		<text>(Long Ranged Scanners) Run another scan. [ EngiCrew+, LScrap | LScrapDrone ]</text>
+		<event load="DISTRESS_ENGI_REACTOR_SCAN"/>
+	</choice>
+</choice>
+
+<eventList name="DISTRESS_ENGI_REACTOR_LIST1">
+	<event>
+		<text>You send an away team to investigate, but there's nothing save for the acidic stench of burnt Engi parts. This place is dead.</text>
+	</event>
+	<event>
+		<text>Your away team reports a wounded Engi and a functioning drone schematic. Then someone yells. The station reactor is overloading and they're running out of time!</text>
+		<choice hidden="true">
+			<text>Save the Engi! [ Crew- (CB+), LScrap, EngiCrew+ | LScrap, EngiCrew+ ]</text>
+			<event load="DISTRESS_ENGI_REACTOR_ENGI"/>
+		</choice>
+		<choice hidden="true">	
+			<text>Save the drone schematic. [ Crew- (CB+), LScrap | LScrapDrone ]</text>
+			<event load="DISTRESS_ENGI_REACTOR_DRONE"/>
+		</choice>
+		<choice hidden="true">
+			<text>Save yourselves! [ LScrap ]</text>
+			<event>
+				<text>It's a tough order, but your crew's lives are the priority. They drop everything and return to the ship unharmed. You put some distance on the station before it blows.</text>
+				<autoReward level="LOW">scrap_only</autoReward>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+<event name="DISTRESS_ENGI_REACTOR_SCAN">
+	<text>Scans reveal the station's reactor is overloading! Not only that, but an injured Engi and a functioning drone schematic are still on board! There's not time for both...</text>
+	<choice hidden="true">
+		<text>Save the Engi! [ EngiCrew+, LScrap ]</text>
+		<event>
+			<text>Your away team heads straight for the Engi and returns with time to spare. You put some distance on the station before it blows and the Engi is so impressed by your crew that they volunteer to join you!</text>
+			<crewMember amount="1" class="engi"/>  
+			<autoReward level="LOW">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Save the Drone Schematic! [ LScrapDrone ]</text>
+		<event>
+			<text>The Engi don't feel things the same way other species do. They'd want the tech to be saved. Your away team heads straight for the goods and returns with time to spare. You put some distance on the station before it blows.</text>
+			<autoReward level="LOW">drone</autoReward>
+		</event>
+	</choice>
+</event>
+
+<event name="ENGI_UNLOCK_3">
+	<text>You have finally caught up with the ships you've been hunting. A hangar-sized cargo ship is being escorted by a number of Mantis ships. As you reconsider the assault, a squadron of Engi ships with pirate emblems jump in and assist you. You prepare to fight the Mantis but scans indicate they are manned by Rebels! [ SF CK: MStd, DB: +20 Hull, HStd, Titanium System Casing  ]</text>
+	<ship load="MANTIS_ENGI_UNLOCK_3" hostile="true"/>
+</event>
+
+<event name="ENGI_SEX" unique="true">
+	<text>What appeared to be a single damaged ship is in fact two ships that have smashed into each other... there is a flurry of comm signals and damage, and it's hard to determine what occurred. The vessels appear to be... Engi? They look locked together by the impact and can't free themselves.</text>
+	<choice hidden="true">
+		<text>Attempt to help the ships by prying them apart. [ SF with no rewards ]</text>
+		<event>
+			<text>To your surprise, one of the Engi vessels attacks! One ship detaches itself, surprisingly still quite whole, and opens fire - it looks like it's somehow identified you as hostile!</text>
+			<ship load="ENGI_SEX_SHIP" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore the damaged vessels. [ Nil ]</text>
+		<event/>
+	</choice>
+	<choice req="engi">
+		<text>[Engi Crew] Have your Engi crewmember hail the vessel and assess the damage. [ MStuff ]</text>
+		<event>
+			<text>Your Engi crewmember refuses. In a halting use of adjectives and nouns, followed by some animated holographic aids, the Engi explains the ships are... using each other to, loosely translated, "achieve a union." For some reason, this consolidation of ship matter sounds embarrassing and personal.</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You elect to leave the two Engi ships... to their "business." After questioning your Engi crewmember, however, you do manage to salvage what scrap parts you can from the perimeter, even though you feel slightly dirty for doing so.</text>
+					<autoReward level="MEDIUM">stuff</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="ENGI_VIRUS" unique="true">
+	<text>The Engi are awaiting you at the beacon, with their weapons on-line! They explain a computer virus that is wanted for hostile acts against the Engi (multiple counts of binary scrambling, nano-dissolution, and variable interference) is aboard your vessel.</text>
+	<choice>
+		<text>Continue...</text>
+		<event>
+			<text>They insist they must destroy your ship to prevent the virus from escaping!</text>
+			<choice hidden="true">
+				<text>Hold on! Let us try to purge the system code! [ SF with half Shields and Engines, K: MStd, CK: MStd ]</text>
+				<event>
+					<text>Wiping your engine core and shields proves useless... eventually you trap the virus in the weapons systems to purge it, but before you do, the Engi grow restless and attack!</text>
+					<status type="divide" target="player" system="shields" amount="2"/>
+					<status type="divide" target="player" system="engines" amount="2"/>
+					<ship load="ENGI_VIRUS_SHIP" hostile="true"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Attack the Engi vessel! [ SF K:MStd, CK: MStd ]</text>
+				<event>
+					<text>The Engi be damned, no one threatens your ship. You prepare for a fight!</text>
+					<ship load="ENGI_VIRUS_SHIP" hostile="true"/>
+				</event>
+			</choice>
+			<choice req="hacking" lvl="1" max_group="0" hidden="true">
+				<text>[Hacking System] Isolate and quarantine the virus. [ LStd, Drone Reactor Booster ]</text>
+				<event>
+					<text>It takes some time, and the virus is slippery, but you eventually confine it to a useless sub-system prison where it frantically begins calculating insults at you. You eject the system from the ship and then silence the little binary criminal with your weapons.</text>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>The Engi thank you for deleting the virus, and jump away. They offer a unique ship augmentation as a reward.</text>
+							<autoReward level="LOW">standard</autoReward>
+							<augment name="DRONE_SPEED"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice req="hacking" lvl="2" max_group="0" hidden="true">
+				<text>[Improved Hacking] Reprogram the virus. [ +15 Hull, Reactor+1, Drone Reactor Booster ]</text>
+				<event>
+					<text>You proceed to interface with the virus and optimize its repair and benevolence routines.</text>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>After a few minutes, the virus "sees the light" and integrates itself in a positive manner with the computer society on your ship, repairing your hull and attempting to optimize your reactor.</text>
+							<damage amount="-15"/>
+							<upgrade amount="1" system="reactor"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>The Engi thank you for deleting the virus, and jump away. They offer a unique ship augmentation as a reward.</text>
+									<augment name="DRONE_SPEED"/>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice req="hacking" lvl="3" max_group="0" hidden="true">
+				<text>[Advanced Hacking] Reprogram the virus. [ +30 Hull, Reactor+1, Drone Reactor Booster ]</text>
+				<event>
+					<text>You proceed to interface with the virus and optimize its repair and benevolence routines.</text>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>After a few minutes, the virus "sees the light" and integrates itself in a positive manner with the computer society on your ship, repairing your hull and attempting to optimize your reactor.</text>
+							<damage amount="-30"/>
+							<upgrade amount="1" system="reactor"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>The Engi thank you for deleting the virus, and jump away. They offer a unique ship augmentation as a reward.</text>
+									<augment name="DRONE_SPEED"/>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice req="anaerobic" hidden="true">
+				<text>[Lanius Crew] Your Lanius crewmember gestures frantically. [ MScrap, Drone Reactor Booster ]</text>
+				<event>
+					<text>Oddly enough, the Lanius seems aware of which computer the virus is present in, and proceeds to... digest the terminal. There is a burst of O2, and the Engi ship powers down its weapons, no longer sensing the virus on board. The Engi send some parts over to repair your damaged computer, along with a unique ship augmentation as a reward for terminating the virus.</text>
+					<autoReward level="MEDIUM">scrap_only</autoReward>
+					<augment name="DRONE_SPEED"/>
+				</event>
+			</choice>
+			<choice req="engi" hidden="true">
+				<text>[Engi Crew] Have your Engi crewmember negotiate with the Engi ship. [ EngiCrew-, SF K: MStd, CK: MStd, DB: EngiCrew+ w/Max Skills ]</text>
+				<event>
+					<text>As the Engi attempts to contact the vessel and negotiate, your Engi crewmember suddenly dissolves into nanites - the virus has murdered again! Detecting activity on board your ship, the Engi vessel opens fire!</text>
+					<ship load="ENGI_VIRUS_SHIP_ALT" hostile="true"/>
+					<removeCrew class="engi">
+						<clone>false</clone>
+						<text>The virus appears to have disrupted your clone bay's capability to revive the lost crewmember!</text>
+					</removeCrew>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>

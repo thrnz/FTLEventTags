@@ -1,0 +1,439 @@
+<event name="CRYSTAL_CACHE" unique="true">
+	<text>Odd radar pings from a huge, orbiting asteroid here reveal a Crystalline cache of some kind. A deep crater has been sealed over with a thick layer of crystal to keep whatever's inside safe - it'd take some serious firepower to break though.</text>
+	<choice hidden="true">
+		<text>Attempt to break through with the weapons you have. [ x2 Nil | [ LStuff, Crystal Weapon | LStuff, Crystal Weapon, 2-3 Crystal Boarders | [ Crew- (CB+) or [ -100 Fuel, Weapon, LStuff or BOs ] ] ] ]</text>
+		<event load="CRYSTAL_CACHE_BREAK"/>
+	</choice>
+	<choice hidden="true" req="MISSILES_BREACH">
+		<text>(Breach Missiles) Use a Breach Missile. [ -1 Miss, [ LStuff, Crystal Weapon | LStuff, Crystal Weapon, 2-3 Crystal Boarders | [ Crew- (CB+) or [ -100 Fuel, Weapon, LStuff or BOs ] ] ]</text>
+		<event>
+			<text>Your Breach warheads dislodge and shatter a massive shard of crystal, leaving your away team enough space to climb down and take a look.</text>
+			<item_modify>
+				<item type="missiles" min="-1" max="-1"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Investigate the cache.</text>
+				<event load="CRYSTAL_CACHE_LIST"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="crystal">
+		<text>(Crystal crewmember) Have your Crystalline Being recalibrate your weapons. [ L Stuff, Crystal Weapon | L Stuff, Crystal Weapon, 2-3 Crystal Boarders | [ -1 Crew (CB revive) or [ -100 Fuel, Weapon, L Stuff or BOs ] ] ] </text>
+		<event>
+			<text>Your Crystalline crew-member is able to adjust the detonation frequency of your weapons to resonate with this type of crystal, and the barrier gives little resistance.</text>
+			<choice hidden="true">
+				<text>Investigate the cache.</text>
+				<event load="CRYSTAL_CACHE_LIST"/>
+			</choice>
+		</event>
+	</choice>	
+</event>
+
+<eventList name="CRYSTAL_CACHE_LIST">
+	<event>
+		<text>On arriving at the base of the crater, your team discovers a long-forgotten weapons cache. Most of the equipment is out of action, but not all of it!</text>
+		<weapon name="WEAPONS_CRYSTAL"/>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event>	
+		<text>Your away team is greeted at the crater by the owners of the cache, who are none too happy. You grab what you can and run back to the ship, but not before they teleport aboard!</text>
+		<weapon name="WEAPONS_CRYSTAL"/>
+		<autoReward level="LOW">stuff</autoReward>
+		<boarders min="2" max="3" class="crystal"/>
+	</event>
+	<event>
+		<text>You send a crewmember down to check out the cache. The comm goes dead, and shortly thereafter massive gravity readings are detected on the asteroid. You must have triggered some kind of singularity booby trap! We've got to leave now before we're pulled in!</text>
+		<choice hidden="true">
+			<text>Pull out now! [ Crew- (CB+) ]</text>
+			<event>
+				<text>You push the impulse engines to their limit and are able to break out of the gravity well. Your crewmember, along with the stockpile, is reduced to the size of a tennis ball - but you're left in one piece.</text>
+				<removeCrew>
+					<clone>true</clone>
+					<text>Luckily, your clone bay is able to revive your crewmember.</text>
+				</removeCrew>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Detonate your entire fuel reserves to escape with your crew and the cargo. [ -100 Fuel, Weapon, LStuff ]</text>
+			<event>
+				<text>You swoop into the heart of the distortion and pick up your crewmember and the cargo. You then eject your FTL fuel and ignite it, sending a shock wave that thrusts your ship well beyond the event horizon of the singularity. That was close.</text>
+				<item_modify steal="true">
+					<item type="fuel" min="-100" max="-100"/>
+				</item_modify>
+				<weapon name="RANDOM"/>
+				<autoReward level="LOW">stuff</autoReward>
+			</event>
+		</choice>
+		<choice hidden="true" req="teleporter" lvl="2">
+			<text>(Improved Teleporter) Beam your crewmember back on board. [ Nil ]</text>
+			<event>
+				<text>You floor the engines to escape the gravity well while trying to get a teleporter lock on your crewmember despite the massive interference. You're barely able to get them back on board before the entire area is consumed into the singularity.</text>
+			</event>
+		</choice>
+		<choice hidden="true" req="engines" lvl="7">
+			<text>(Advanced Engines) Rescue your crewmember and the cargo. [ Weapon, LStuff ]</text>
+			<event>
+				<text>You swoop into the heart of the distortion and pick up your crewmember and the cargo. Your top of the line impulse engines are barely able to get your ship out of the gravity well before the whole ship is consumed. That was close.</text>
+				<weapon name="RANDOM"/>
+				<autoReward level="LOW">stuff</autoReward>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+<event name="CRYSTAL_SCRAP_EXCITED" unique="true">
+	<text>You receive a signal from a private relay on a nearby inhabited planet. "Are you the alien ship they've been talking about?! You are! Please, I am a collector of alien artifacts, I'm sure what is scrap to you is priceless to me."</text>
+	<choice hidden="true">
+		<text>Offer 35 scrap. [ +1 Crystal Crew or [ Crystal Bomb | Crystal Burst 2 ] ]</text>
+		<event>
+			<text>"My word! Is this... a 25th century Rockman thrust stabilizer?! What do you want for it? Wait, I have a better proposal. I long to see the galaxy. I propose I come with you. What do you say?"</text>
+			<item_modify>    
+				<item type="scrap" min="-35" max="-35"/>
+			</item_modify>	
+			<choice hidden="true">
+				<text>Accept. [ CrystalCrew+ ]</text>
+				<event>
+					<text>"I shan't even gather my belongings - only permit me to leave my family a message." The Crystalline Being joins your crew.</text>
+					<crewMember amount="1" class="crystal"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Request another payment. [ Crystal Bomb | Crystal Burst 2 ]</text>
+				<event load="CRYSTAL_SCRAP_EXCITED_LIST"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Turn him down. [ Nil ]</text>
+		<event>
+			<text>Scrap is priceless no matter where you are in the galaxy. You hold onto your goods and prepare to jump.</text>
+		</event>
+	</choice>
+</event>
+
+<textList name="CRYSTAL_FIGHT">
+	<text>You arrive near a fleet of crystal ships, civilian or mercantile from the looks of them. You pause to scan one but they react immediately and send an escort to fight you off. Prepare to engage! [ SF DR ]</text>
+	<text>You arrive at the Beacon and are immediately greeted by an automatic message or warning of some kind. The translator can't seem to discern its purpose but after a few short moments an alarm goes off and a hostile ship jumps in! [ SF DR ]</text>
+	<text>You receive a message, "Hah. It looks like another worthless alien-filled craft. Prepare to meet your maker!" Weapon locks detected. [ SF DR ]</text>
+	<text>A Crystalline ship messages you, "I've heard tales that our isolation has finally ended. As a warrior I must demand to test my skills against you!" Before you can respond they move in to attack. [ SF DR ]</text>
+	<text>You arrive in a busy sector. At first no one pays any mind to your alien ship but soon you're registering a number of scan signatures. You get the feeling you're not wanted here just seconds before registering enemy weapon locks! [ SF DR ]</text>
+	<text>You jump next to a node busy with traffic, but before long all nearby ships notice you and keep their distance, uncertain of your allegiance. After an awkward standoff, a military ship breaks away from the rest and charges you. [ SF DR ]</text> 
+	<text>A barrage of rasps and clicks is broadcast over the comm; the universal translator understands little, but the words 'aliens', 'allowed' and 'no' come through quite clearly. You'll have to prove your right to be here in combat! [ SF DR ]</text>
+	
+	<text>You arrive near a fleet of crystal ships, civilian or mercantile from the looks of them. You pause to scan one but they react immediately and send an escort to fight you off. Prepare to engage! [ SF DR ]</text>
+	<text>You arrive at the Beacon and are immediately greeted by an automatic message or warning of some kind. The translator can't seem to discern its purpose but after a few short moments an alarm goes off and a hostile ship jumps in! [ SF DR ]</text>
+	<text>You receive a message, "Hah. It looks like another worthless alien-filled craft. Prepare to meet your maker!" Weapon locks detected. [ SF DR ]</text>
+	<text>A Crystalline ship messages you, "I've heard tales that our isolation has finally ended. As a warrior I must demand to test my skills against you!" Before you can respond they move in to attack. [ SF DR ]</text>
+	<text>You arrive in a busy sector. At first no one pays any mind to your alien ship but soon you're registering a number of scan signatures. You get the feeling you're not wanted here just seconds before registering enemy weapon locks! [ SF DR ]</text>
+	<text>You jump next to a node busy with traffic, but before long all nearby ships notice you and keep their distance, uncertain of your allegiance. After an awkward standoff, a military ship breaks away from the rest and charges you. [ SF DR ]</text> 
+	<text>A barrage of rasps and clicks is broadcast over the comm; the universal translator understands little, but the words 'aliens', 'allowed' and 'no' come through quite clearly. You'll have to prove your right to be here in combat! [ SF DR ]</text>
+</textList>
+
+<event name="CRYSTAL_CONVOY" unique="true">
+	<text>A large convoy of lumbering civilian ships appears to be passing through this region. You show no hostile intentions, but they are taking no chances, immediately sending their escort to attack! [ Kill: M Standard, Crew Kill: M Standard, Surrender: [ LScrapFuel, +8 Hull ] ]</text>
+	<ship load="CRYSTAL_CONVOY" hostile="true"/>
+</event>
+
+<event name="CRYSTAL_HUNTER" unique="true">
+	<text>Crystal shards fly past your ship as soon as you jump. You scan to find the assailant and discover a Crystalline ship carrying a number of humans in its cargo bay. It must be hunting the intruding ships! [ SF K: MStd, CK: MStd, S: HumanCrew+ ]</text>
+	<ship load="CRYSTAL_HUNTER" hostile="true"/>
+</event>
+
+<event name="CRYSTAL_REBEL" unique="false">
+	<text>As soon as you arrive, a Rebel ship jumps in after you; they must be really hot on your tail. [ SF DR ]</text>
+	<ship load="REBEL" hostile="true"/>
+</event>
+
+<event name="CRYSTAL_AUTO" unique="true">
+	<text>The Rebels must have sent their automated scouts to find you. One jumps in and immediately moves to attack. [ SF DR ]</text>
+	<ship load="REBEL_AUTO" hostile="true"/>
+</event>
+
+<event name="CRYSTAL_REBEL_CRYSTAL" unique="false">
+	<text>Crystal shards fly past the screen as soon as you arrive. Checking the scanners, it looks like a crystalline ship is engaged with a Rebel!</text>
+	<choice hidden="true">
+		<text>Attack the Rebel. [ Kill: M Standard, Crew Kill, H Standard, Double: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
+		<event>
+			<text>You message the Crystalline ship your intentions and move in to intercept the Rebel ship.</text>
+			<ship load="REBEL_CRYSTAL_REBEL_CRYSTAL" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Attack the Crystalline ship. [ SF DR ]</text>
+		<event>
+			<text>You move in to intercept the Crystalline ship. As soon as the Rebel scans your ship it takes the opportunity to jump. You have the sneaking suspicion they will inform the fleet of your position, but that's the least of your current concerns.</text>
+			<modifyPursuit amount="1"/>
+			<ship load="CRYSTAL_SHIP_NO_SURRENDER" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore them. [ Nil ]</text>
+		<event>
+			<text>With the two ships engaged in combat, you sneak by unnoticed.</text>
+		</event>
+	</choice>
+</event>
+
+<event name="CRYSTAL_MANTIS_CRYSTAL" unique="false">
+	<text>You discover a number of civilian ships fleeing the area. Shots are fired and you find the assailant; a Mantis ship is attacking one of the smaller ships!</text>
+	<choice hidden="true">
+		<text>Attack the Mantis. [ Kill: M Standard, Crew Kill, H Standard, Double: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
+		<event>
+			<text>You activate your impulse engines and fly between the Mantis and their prey, weapons charging. You appear to have their full attention.</text>
+			<ship load="MANTIS_CRYSTAL" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore them. [ Nil ]</text>
+		<event>
+			<text>You try to keep a low profile and quickly prepare to jump.</text>
+		</event>
+	</choice>
+</event>
+
+<event name="CRYSTAL_PIRATE_CRYSTAL" unique="false">
+	<text>A pirate ship jumps in right after you arrive at the beacon. It must have followed once the Long-Range Beacon was reactivated. It almost charges a small Crystalline transport ship, weapons armed.</text>
+	<choice hidden="true">
+		<text>Attack the pirate. [ SF K: MStd, CK, HStd, DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
+		<event>
+			<text>You chase down the pirate before it has a chance to engage the civilian ship. When it detects the real threat, it turns to face you.</text>
+			<ship load="PIRATE_CRYSTAL" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore them. [ Nil ]</text>
+		<event>
+			<text>You assume the Crystalline ship can handle itself. You have enough of your own problems.</text>
+		</event>
+	</choice>
+</event>
+
+<event name="CRYSTAL_REBEL_CRYSTAL2" unique="true">
+	<text>You're greeted by an unwelcome sight - a Rebel advance ship is laying down fire on a Crystalline vessel in the distance.</text>
+	<choice hidden="true">
+		<text>Engage the Rebel ship. [ SF DR ]</text>
+		<event>
+			<text>Before you can engage, the Crystalline ship scores a direct hit and obliterates the Rebel ship! They hail: "You, you are like these other aliens! You brought them here!" With that they turn their cannons on you!</text>
+			<ship load="CRYSTAL_SHIP_NO_SURRENDER" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Leave them alone. [ Nil ]</text>
+		<event>
+			<text>It's best to take advantage of the rare occasions when the Rebels aren't shooting at you. You prepare to jump.</text>
+		</event>
+	</choice>
+</event>
+
+<event name="CRYSTAL_FED" unique="false">
+	<text>There appears to be a fight going on nearby. A Crystalline border guard is chasing a small Federation ship!</text>
+	<choice hidden="true">
+		<text>Save the Federation ship. [ SF K: MStd, CK: HStd, DB: [ RStuff | LStd, Crew+ ] ]</text>
+		<event>
+			<text>It doesn't look like the Fed ship can stand much more pressure. You fly in and intercept the Crystalline ship.</text>
+			<ship load="CRYSTAL_FED" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Prepare to leave. [ Nil ]</text>
+		<event>
+			<text>With the Federation ship distracting the guard, you are free to continue on your mission.</text>
+		</event>
+	</choice>
+</event>
+
+<event name="CRYSTAL_FED_DESERTER" unique="true">
+	<text>For a moment you assume it's a glitch, but no... you've found a Federation military ship! They hail you and, after some probing, reveal that they deserted the Federation fleet before stumbling into this sector while seeking refuge.</text>
+	<ship load="FED_SHIP" hostile="false"/>
+	<choice hidden="false">
+		<text>Offer supplies. [ -1-3 Fuel, -15-25 Scrap, Map ]</text>
+		<event>
+			<text>You send over some supplies to help them on their way and in return they upload their flight plan to your computer, allowing you to map the sector! "The Federation fleet's still standing - get there while you can!"</text>
+			<item_modify>
+				<item type="fuel" min="-3" max="-1"/>
+				<item type="scrap" min="-25" max="-15"/>
+			</item_modify>
+			<reveal_map/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Attack the traitors. [ SF DR ]</text>
+		<event>
+			<text>Deserters cannot be tolerated. You open fire on the cowards - though it doesn't please you to do so. The Federation needs every soldier it can get.</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Leave them be. [ Nil ]</text>
+		<event>
+			<text>You send them a friendly warning regarding the armada of Rebel ships pursuing you, and then get underway lest they catch you up.</text>
+		</event>
+	</choice>
+</event>
+
+
+<event name="CRYSTAL_HUMAN_TESTS" unique="true">
+	<text>You arrive near what appears to be a Crystalline research facility. A scientist quickly messages you, "Ah! You're those aliens! Please, I've heard so much about you and I'm really curious about your physiology! Would you let us run a few simple tests?"</text>
+	<choice hidden="true">
+		<text>Allow them to run tests on a crewmember. [ Crew- (CB+) | LScrapWeapon | MStuff | LScrapDrone ]</text>
+		<event load="CRYSTAL_HUMAN_TESTS_ACCEPT"/>
+	</choice>
+	<choice hidden="true">
+		<text>Refuse. [ x2 Nil | SF DR ]</text>
+		<event load="CRYSTAL_HUMAN_TESTS_REFUSE"/>
+	</choice>
+	<choice hidden="true" req="rock">
+		<text>(Rock crewmember) Send your Rockman crew. [ MStd ]</text>
+		<event>
+			<text>"Ah! My dear evolutionary cousin! This is truly wonderful! We have countless historical records of your kind but we lack information on the past few hundreds of years. We can learn so much from these scans, we must get to analyzing them as soon as possible! Please, take this."</text>
+			<autoReward level="MED">standard</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="BACKUP_DNA"> <!--DLC-->
+		<text>(Backup DNA Bank) Send your crew's data. [ MScrapWeapon ]</text>
+		<event>
+			<text>"What is this? Full genetic and personal profiles stored digitally? I did not think this possible... This will help our research immeasurably. Please, take this in exchange for your help."</text>
+			<autoReward level="MED">weapon</autoReward>
+		</event>
+	</choice>
+</event>
+
+
+<event name="CRYSTAL_CHATTY" unique="true">
+	<text>A small civilian vessel messages you, "Wow! You're that alien that opened up the portal, aren't you! Are you busy? Can I ask you a question?"</text>
+	<choice hidden="true">
+		<text>Yes. [ More... ]</text>
+		<event>
+			<text>"What do you eat? What is your culture like? How long do your people live?"</text>
+			<choice hidden="true">
+				<text>Try to answer his questions. [ +6 Hull | RStuff | SF DR ]</text>
+				<event load="CRYSTAL_CHATTY_LIST"/>
+			</choice>
+			<choice hidden="true">
+				<text>"I don't have time for this." [ Nil ]</text>
+				<event>
+					<text>"I see. Oh well. Maybe the next alien I meet will be nicer..." You prepare to jump.</text>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>No.</text>
+		<event>
+			<text>"I see... I guess you're busy." [ Nil ]</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="crystal">
+		<text>(Crystal Crew) Have your crew speak to them. [ RScrapFuel ]</text>
+		<event>
+			<text>"Wow, you're one of us! I didn't know we made an alliance with the aliens. I guess I won't bother you, but here, have some of our extra supplies!"</text>
+			<autoReward level="RANDOM">fuel</autoReward>
+		</event>
+	</choice>
+</event>
+
+<event name="CRYSTAL_REQUEST" unique="true">
+	<text>The moment you arrive you notice a Crystalline ship in the vicinity keeping its distance. They message you, "The 'Rebels' that are trying to hunt YOU down are creating havoc everywhere they go."</text>
+	<ship load="CRYSTAL_SHIP_NO_SURRENDER" hostile="false"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>"To minimize their impact on our people, we would like you to give them your flight path out of our sector. We would like to remain civil and are willing to pay you in 'scrap' for the increased danger it poses.</text>
+			<choice hidden="true">
+				<text>Give them your flight plans. [ HScrap, Fleet+ ]</text>
+				<event>
+					<text>It was never your intention to lead the Rebels here, and frankly you could do with the scrap. The Crystalline ship immediately jumps off to inform the Rebels, leaving you with a fleet to outrun!</text>
+					<autoReward level="HIGH">scrap_only</autoReward>
+					<modifyPursuit amount="1"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Accept the scrap but give them false flight plans. [ HScrap, Fleet- | 1-2 Crystal Borders, SF ] </text>
+				<event load="CRYSTAL_REQUEST_LIST"/>
+			</choice>
+			<choice hidden="true" req="FLEET_DISTRACTION"> <!--DLC-->
+				<text>(Distraction Buoy) Accept the scrap but give them falsified flight plans. [ HScrap, Fleet- ]</text>
+				<event>
+					<text>Your distraction buoy allows you to create very convincing flight plan. They accept it as true and give you the scrap. The deception may not be the most honorable tactic but staying ahead of the fleet is your highest priority.</text>
+					<autoReward level="HIGH">scrap_only</autoReward>
+					<modifyPursuit amount="-1"/>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Refuse. [ Nil ]</text>
+				<event>
+					<text>You apologize for the trouble you've brought them, but explain that you have no choice. They seem to understand, and break the comm link to set about preparing defenses.</text>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="CRYSTAL_HELP_DIG" unique="true">
+	<text>A large Crystalline ship is floating in space here. They hail: "Aliens?! How curious. We request your aid. We have men buried on a nearby planet and we must dig them out."</text>
+	<ship load="CRYSTAL_SHIP_NO_SURRENDER" hostile="false"/>
+	<choice hidden="true">
+		<text>Send a crewmember to help. [ More... ]</text>
+		<event>
+			<text>You do as you're asked and send a crewmember down to the planet to assist. They discover a massive Crystal excavation operation and it quickly becomes clear this is a task that will take days, not hours.</text>
+			<choice hidden="true">
+				<text>Leave your crewmember behind. [ Crew- (CB-), MScrapFuel ]</text>
+				<event>
+					<text>You're committed to both saving the Federation and upholding the principles it worked to maintain. Your crewmember will remain and make good on the promise - you still have a galaxy to save. They give you some supplies for your trouble.</text>
+					<autoReward level="MED">fuel</autoReward>
+					<removeCrew>
+						<clone>false</clone>
+						<text></text>
+					</removeCrew>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Pull your guy out. [ SF DR ]</text>
+				<event>
+					<text>The Crystalline captain contacts you urgently: "What is the meaning of this?! Had you no wish to aid us you might simply have declined, but THIS... is an insult!" His turns his massive ship on yours and you prepare to fight for your life.</text>
+					<ship hostile="true"/>
+				</event>
+			</choice>
+			<choice>
+				<text>Wait. [ Fleet+ ]</text>
+				<event>
+					<text>You've made a commitment, and that still means something. You wait one jump cycle and then inquire with the Crystalline captain about the status of the operation. "We respect your strength. The operation will take one more cycle."</text>
+					<modifyPursuit amount="1"/>
+					<choice hidden="true">
+						<text>Leave your crewmember behind. [ HScrapFuel, Crew- (CB-) ]</text>
+						<event>
+							<text>You're committed to both saving the Federation and upholding the principles it worked to maintain. Your crewmember will remain and make good on the promise - you still have a galaxy to save. They give you some supplies for your trouble.</text>
+							<autoReward level="HIGH">fuel</autoReward>
+							<removeCrew>
+								<clone>false</clone>
+								<text></text>
+							</removeCrew>
+						</event>
+					</choice>
+					<choice hidden="true">
+						<text>Pull your guy out. [ SF DR ]</text>
+						<event>
+							<text>The Crystalline captain contacts you urgently: "What is the meaning of this?! Had you no wish to aid us you might simply have declined, but THIS... is an insult!" His turns his massive ship on yours and you prepare to fight for your life.</text>
+							<ship hostile="true"/>
+						</event>
+					</choice>
+					<choice hidden="true">
+						<text>Wait. [ Fleet+, Crystal Heavy 2 ]</text>
+						<event>
+							<text>Another cycle passes while the Rebel fleet draws ever nearer. You contact the captain again. "Alien Captain, your knowledge of our customs has most impressed us. Your crewmember is on their way back to you now, along with a token of our respect."</text>
+							<modifyPursuit amount="1"/>
+							<autoReward level="HIGH">augment</autoReward>
+							<weapon name="CRYSTAL_HEAVY_2"/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Refuse. [ Nil ]</text>
+		<event>
+			<text>"We understand. You rely on machines for so much. Yours is a soft and weak species - we would hardly even have noticed your presence. Fly well."</text>
+		</event>
+	</choice>
+</event>
