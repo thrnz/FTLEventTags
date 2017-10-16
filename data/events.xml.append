@@ -209,11 +209,11 @@
 		<event load="CIVILIAN_ASTEROIDS_BEACON_LIST4"/>
 	</choice>
 	<choice req="DRONES_DEFENSE_LIST" hidden="true">
-		<text>(Defense Drone) Use a Defense Drone to protect their ship. [ -1 Drone, Hidden Federation Base Quest ]</text>
+		<text>(Defense Drone) Use a Defense Drone to protect their ship. [ -1 Drone, [ Hidden Federation Base Quest | -4 Hull, MScrapWeapon ] ]</text>
 		<event load="CIVILIAN_ASTEROIDS_BEACON_LIST2"/>
 	</choice>
 	<choice req="REPAIR" hidden="true">
-		<text>(Repair Drone) Send a Repair Drone to fix their Shields. [ -1 Drone, Hidden Federation Base Quest ]</text>
+		<text>(Repair Drone) Send a Repair Drone to fix their Shields. [ -1 Drone, [ Hidden Federation Base Quest | -4 Hull, MScrapWeapon ] ]</text>
 		<event load="CIVILIAN_ASTEROIDS_BEACON_LIST2"/>
 	</choice>
 	<choice req="teleporter" hidden="true">
