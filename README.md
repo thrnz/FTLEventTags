@@ -61,3 +61,7 @@ A ship fight. Killing the ship gives medium scrap + 2 resources. Getting a crew 
 
 * [ Fleet-- ]
 The fleet is delayed by 2 jumps
+
+## Screenshots:
+
+https://imgur.com/a/3uRpz
