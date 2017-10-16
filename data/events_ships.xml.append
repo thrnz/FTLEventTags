@@ -67,7 +67,7 @@
 
 <ship name="REBEL_AUTO_WARNING" auto_blueprint="SHIPS_AUTO">
 	<escape timer="40" min="22" max="22" >
-		<text>The ship starts to power up its FTL Drive. If it gets away, it will no doubt warn the fleet of your position! [ SF K: LStd ]</text>
+		<text>The ship starts to power up its FTL Drive. If it gets away, it will no doubt warn the fleet of your position! [ SF K: LStd, Esc: Fleet+ ]</text>
 		<ship hostile="true"/>
 	</escape>
 	<gotaway>

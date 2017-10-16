@@ -51,3 +51,15 @@
 	<text planet="PLANET_POPULATED">What was once a great series of space stations is now nothing but a small ring of debris around the nearby moon. There's no time to mourn the dead; an enemy approaches! [ SF K: LScrap, CK: MStd ]</text>
 	<text>The Federation seems to have put up a good fight. A number of Rebel ships lie broken or wounded. However their overwhelming numbers force the remaining Federation forces to retreat. Hopefully you can get away in time as well. [ SF K: LScrap, CK: MStd ]</text>
 </textList>
+
+<textList name="REBEL_AUTO">
+	<text>You discover one of the Rebel's autonomous scouts. The ship's AI wastes no time in engaging your ship. [ SF DR ]</text>
+	<text>Your ship is hailed: "This is an automated message. Resisting our takeover is pointless. Prepare to die." It appears this Rebel ship is run by an AI. [ SF DR ]</text>
+	<text>A Rebel autonomous scout is exploring this beacon. You attempt to hide behind a nearby moon, but the ship finds you and begins its assault. [ SF DR ]</text>
+	<text>The AI of a nearby small Rebel scout immediately identifies you as a threat and engages. [ SF DR ]</text>
+	<text>A Rebel ship moves in to engage. You attempt to open communications, but realize the futility of that action when you see the ship is run by an AI. [ SF DR ]</text>
+	<text>This must be one of the Rebels' unmanned scout ships. Looks like there's no way around a fight. [ SF DR ]</text>
+	<text>Another unmanned ship patrols this area. You prepare the ship for combat. [ SF DR ]</text>
+	<text>This beacon is being patrolled by a unmanned scout. A fight is unavoidable. [ SF DR ]</text>
+	<text>A small shuttle appears on the local radar. Turns out it is a Rebel automated scout! [ SF DR ]</text>
+</textList>

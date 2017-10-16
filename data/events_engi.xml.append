@@ -336,3 +336,16 @@
 		</event>
 	</choice>
 </event>
+
+
+<eventList name="ENGI_STATION_DISTRESS_LIST">
+	<event>
+		<text>You receive another message from the ship, this time with a Mantis at the comm-log. "Foolish meatsacks," he yells. Sensors indicate the ship is moving in to attack and boarders teleport from the station. [ SF DR 1-2 Mantis Boarders ]</text>
+		<ship load="ENGI_MANTIS_CONTROLLED" hostile="true"/>
+		<boarders min="1" max="2" class="mantis"/>
+	</event>
+	<event>
+		<text>You approach to find a Mantis ship assaulting a small Engi space station. You prepare for a fight! SF K: MStd, CK: HStd, DB: [ Nil | MFuel | EngiCrew+, LStd | [ Option of Fuel/Weapon/Drone/Engi BO ] ] ]</text>
+		<ship load="MANTIS_ENGI_STATION" hostile="true"/>
+	</event>
+</eventList>

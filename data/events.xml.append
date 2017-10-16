@@ -904,7 +904,7 @@
 		<choice>
 			<text>Accept. [ SF, MScrapWeapon ]</text>
 			<event>
-				<text>"Just be sure not to blow them up!" they say nervously as they direct you to a nearby moon. You find the pirate ship docked there. They immediately respond to your appearance with, "Your money or your life!" They must be new to this.</text>
+				<text>"Just be sure not to blow them up!" they say nervously as they direct you to a nearby moon. You find the pirate ship docked there. They immediately respond to your appearance with, "Your money or your life!" They must be new to this. [ SF S: MScrapWeapon, K: LStd, CK: LStd ]</text>
 				<ship load="SQUAT_PIRATE_MERCENARY" hostile="true"/>
 			</event>
 		</choice>
