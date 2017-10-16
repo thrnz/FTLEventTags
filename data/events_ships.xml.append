@@ -196,3 +196,30 @@
 		<autoReward level="MED">standard</autoReward>
 	</deadCrew>
 </ship>
+
+<ship name="REBEL_HELPERS_SHIP" auto_blueprint="SHIPS_REBEL"> 
+	<destroyed>
+		<text>With the Rebel ship destroyed, you take the time to collect what little scrap remains. They had already made their delivery to the civilians.</text>
+		<autoReward level="LOW">standard</autoReward>
+		<choice hidden="true">
+			<text>Steal the civilian supplies. [ LScrapDrones | Nil | LScrap | -2 Hull ] </text>
+			<event load="REBEL_HELPERS_SUPPLIES"/>
+		</choice>
+		<choice hidden="true">
+			<text>Leave the civilians alone.</text>
+			<event load="REBEL_HELPER_NO_SUPPLIES"/>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>With the Rebel crew dead, you strip their ship for equipment. They had already made their delivery to the civilians. </text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>Steal the civilian supplies. [ LScrapDrones | Nil | LScrap | -2 Hull ]</text>
+			<event load="REBEL_HELPERS_SUPPLIES"/>
+		</choice>
+		<choice hidden="true">
+			<text>Leave the civilians alone.</text>
+			<event load="REBEL_HELPER_NO_SUPPLIES"/>
+		</choice>
+	</deadCrew>
+</ship>

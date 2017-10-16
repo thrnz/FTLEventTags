@@ -803,7 +803,7 @@
 <event name="ROGUE_REBEL">
 	<text load="ROGUE_REBEL_TEXT"/>
 	<choice>
-		<text>Go looking for the Rebel ship. [ Nil | x2 SF DR | SF DR | SF DR, Fleet+ ]</text>
+		<text>Go looking for the Rebel ship. [ Nil | x2 SF DR | SF DR, Fleet+ ]</text>
 		<event load="ROGUE_REBEL_SEARCH"/>
 	</choice>
 	<choice>
