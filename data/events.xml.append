@@ -57,7 +57,7 @@
 	<text>Scans show a remote settlement being blockaded by a pirate ship. The ship hastily messages you, "Stay out of this, or you'll be next!...Concentrate fire on..."</text>
 	<ship load="PIRATE_STATION_CROPS" hostile="false"/>
 	<choice hidden="true">
-		<text>Attack the pirate. [ Surr: Stuff; K: MStd; CK: MStd; DB: LStuff ]</text>
+		<text>Attack the pirate. [ SF K: MStd; CK: MStd; DB: LStuff, S: MStuff ]</text>
 		<event>
 			<text>"You asked for it!" They pull away from the planet and move in to engage.</text>
 			<ship hostile="true"/>
