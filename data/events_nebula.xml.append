@@ -101,7 +101,7 @@
 	<text>An advance Rebel automated ship remains stationed near a small Rebel space-station. However, without functioning sensors it is impossible to tell what is inside.</text>
 	<ship load="REBEL_AUTO_ITEM" hostile="false"/>  <!-- ship is in other xmls -->
 	<choice>
-		<text>Attack the automated ship to get to the station. [ SF K: MScrap, GB: [ LscrapDrone | Nil | LScrapWeapon | MStuff ] ]</text>
+		<text>Attack the automated ship to get to the station. [ SF K: MScrap, DB: [ LscrapDrone | Nil | LScrapWeapon | MStuff ] ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
