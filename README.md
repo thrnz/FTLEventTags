@@ -60,6 +60,7 @@ One of 4 possible outcomes: Two chances at having nothing happen, one chance of 
 A ship fight. Killing the ship gives medium scrap + 2 resources. Getting a crew kill gives high scrap + 2 resources.
 
 * [ Fleet-- ]
+
 The fleet is delayed by 2 jumps
 
 ## Screenshots:
