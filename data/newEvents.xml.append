@@ -264,7 +264,7 @@
 		<event load="WRECKAGE_SCANNED"/>
 	</choice>
 	<choice hidden="true">
-		<text>Investigate the battlefield. [ x5 Nil | MStuff | x2 SF DR | SF DR ]</text>
+		<text>Investigate the battlefield. [ x5 Nil | MStuff | x3 SF DR ]</text>
 		<event load="WRECKAGE_INVESTIGATE"/>
 	</choice>
 	<choice>
@@ -826,3 +826,37 @@
 		</event>
 	</choice>
 </event>
+
+<eventList name="WRECKAGE_INVESTIGATE">
+	<event>
+		<text>You scan the battlefield, and find little remains. Disappointed, you prepare to jump.</text>
+	</event>
+	<event>
+		<text>You scan the battlefield, and find little remains. Disappointed, you prepare to jump.</text>
+	</event>
+	<event>
+		<text>You scan the battlefield, and find little remains. Disappointed, you prepare to jump.</text>
+	</event>
+	<event>
+		<text>You scan the battlefield, and find little remains. Disappointed, you prepare to jump.</text>
+	</event>
+	<event>
+		<text>You scan the battlefield, and are able to salvage some useful material from the wreckage. [ MStuff ]</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+	<event>
+		<text>As you approach the wreckage, a Mantis ship screams into the system... either sensing prey - or to finish the job its fellows started. [ SF DR ]</text>
+		<ship load="MANTIS_FIGHT" hostile="true"/>
+	</event>
+	<event>
+		<text>The wreckage appears to be a battle between Federation fighters and Rebel cruisers. Though outnumbered, it looks like the Federation fought valiantly. As you begin a more detailed scan of the wreckage, Rebel reinforcements arrive in the system and target your ship! [ SF DR ]</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>As you approach the wreckage, a Zoltan ship makes its arrival. It immediately mistakes you for one of the attackers, declares you as hostile aggressors in violation of Zoltan space, and opens fire! [ SF DR ]</text>
+		<ship load="ZOLTAN_SHIP" hostile="true"/>
+	</event>
+	<event>
+		<text>As you approach the wreckage, a Slug ship makes its arrival. It hesitates for a moment, as if surprised to see anyone remaining, and then jumps away without a word. You resume scanning the system, wary of any other visitors.</text>
+	</event>
+</eventList>
