@@ -223,3 +223,31 @@
 		</choice>
 	</deadCrew>
 </ship>
+
+<ship name="QUEST_SLUG_PIRATE_TRAP1" auto_blueprint="SHIPS_PIRATE">
+	<surrender  chance="0" min="3" max="4">
+		<text>When the pirate ship looks ready to break apart you notice the Slug ship has secured the loot and is preparing to jump away!</text>
+		<choice hidden="true">
+			<text>Continue fighting the pirate. [ K: MStd, CK: HStd ]</text>
+			<event>
+				<text>It's best you finish this - but you wonder whether what the pirate is carrying will be as valuable as what the Slugs snuck off with.</text>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Let the pirate escape and go after the Slugman ship. [ HScrap ]</text>
+			<event>
+				<text>The pirate's too badly damaged to pursue you, and you catch up to the Slugs before they jump. "Ah, of courssse, we would never leave without providing the agreed upon ssspoils." They transfer over a decent chunk of the profits and set off.</text>
+				<autoReward level="HIGH">scrap_only</autoReward>
+				<ship hostile="false"/>
+			</event>
+		</choice>
+	</surrender>
+	<destroyed>
+		<text>With the pirate defeated you scan the debris for anything useful. The Slug ship is long gone, spoils from the cache in hand.</text>
+		<autoReward level="MED">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>With the pirate defeated you scan the debris for anything useful. The Slug ship is long gone, spoils from the cache in hand.</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</deadCrew>
+</ship>
