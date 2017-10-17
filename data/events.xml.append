@@ -753,7 +753,7 @@
 <event name="FEDERATION_PLANET_SIGNAL" unique ="true">    
 	<text>A Federation encrypted signal is being broadcast from a nearby planet.</text>
 	<choice hidden="true">
-		<text>Send an away party to investigate. [ Hidden Federation Base Quest | MStuff, Federation Base Assist Quest | Nil | HStd | 2-3 Boarders ]</text>
+		<text>Send an away party to investigate. [ Hidden Federation Base Quest | MStuff, Federation Base Assist Quest | Nil | HStd | SF DR, 2-3 Human Boarders ]</text>
 		<event name="FEDERATION_PLANET_SIGNAL_LIST"/>
 	</choice>
 	<choice>
