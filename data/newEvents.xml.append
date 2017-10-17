@@ -264,7 +264,7 @@
 		<event load="WRECKAGE_SCANNED"/>
 	</choice>
 	<choice hidden="true">
-		<text>Investigate the battlefield. [ x5 Nil | MStuff | SF DR | SF DR | SF DR ]</text>
+		<text>Investigate the battlefield. [ x5 Nil | MStuff | x2 SF DR | SF DR ]</text>
 		<event load="WRECKAGE_INVESTIGATE"/>
 	</choice>
 	<choice>
