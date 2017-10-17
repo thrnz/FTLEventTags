@@ -65,7 +65,7 @@
 	<text>A pirate ship arrives shortly after you. Judging from the fact that it is attempting to avoid your ship, you assume that it's a smuggler trying to stay away from beacons.</text>
 	<environment type="nebula"/>
 	<choice>
-		<text>Attack the pirate.</text>
+		<text>Attack the pirate. [ SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 		<event>
 			<text>You power up your weapons and move in to engage. [ SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 			<ship load="PIRATE_SMUGGLE" hostile ="true"/>
