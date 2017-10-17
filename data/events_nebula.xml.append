@@ -62,7 +62,7 @@
 </event>
 
 <event name="NEBULA_PIRATE_SMUGGLE">   <!-- TO DO -- NEED TO MAKE A NEW PIRATE SHIP THAT ATTEMPTS TO BRIBE YOU WHEN SURRENDERING-->
-	<text>A pirate ship arrives shortly after you. Judging from the fact that it is attempting to avoid your ship, you assume that it's a smuggler trying to stay away from beacons.</text>
+	<text>A pirate ship arrives shortly after you. Judging from the fact that it is attempting to avoid your ship, you assume that it's a smuggler trying to stay away from beacons. [ SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 	<environment type="nebula"/>
 	<choice>
 		<text>Attack the pirate. [ SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
