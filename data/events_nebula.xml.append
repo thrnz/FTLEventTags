@@ -165,7 +165,7 @@
 		</event>
 	</choice>
 	<choice req="ADV_SCANNERS" hidden="true">
-		<text>(Long-ranged Scanner) Pump extra power into your sensors and try to track them. [ Crew+ | MScrap</text>
+		<text>(Long-ranged Scanner) Pump extra power into your sensors and try to track them. [ Crew+ | MScrap ]</text>
 		<event load="NEBULA_LOST_SHIP_LIST2"/>
 	</choice>
 </event>
