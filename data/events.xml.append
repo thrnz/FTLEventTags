@@ -1392,3 +1392,41 @@
 		</event>
 	</choice>
 </event>
+
+<eventList name="MERCHANT_REQUEST_LIST">
+	<event>
+		<text>"Great, I was worried no one would respond. My usual carrier is days late. I need you to deliver this cargo of drone parts to a small station a few jumps from here. We can't afford to pay another carrier, but they will surely tip you generously."</text>
+		<choice hidden="true">
+			<text>Accept. [ +5 Drones, Merchant Delivery Quest ]</text>
+			<event>
+				<text>"Great! I uploaded their location to your star map. I'm running out of options, so I have no choice but to trust you'll do what you have agreed to do."</text>
+				<item_modify>
+					<item type="drones" min="5" max="5"/>
+				</item_modify>
+				<quest event="MERCHANT_DELIVER"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Decline. [ Nil ]</text>
+			<event>
+				<text>"Fine, I'll keep looking for someone who wishes to make some easy money..."</text>
+			</event>
+		</choice>
+	</event> 
+	<event>
+		<text>"Your ship seems reasonably equipped... A freighter carrying a shipment of my goods is a week late. The fools flew through a pirate-filled sector in their haste and I fear for the cargo's safety. I'm looking for a less incompetent captain to investigate."</text>
+		<choice hidden="true">
+			<text>Accept. [ Metchant Investigate Quset ]</text>
+			<event>
+				<text>"At least you're confident, for what little that's worth. Here is their last known location."</text>
+				<quest event="MERCHANT_INVESTIGATE"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Decline. [ Nil ]</text>
+			<event>
+				<text>"At least YOU are willing to admit your incompetence. Thank you for saving me the cost of paying more fools to go to their death."</text>
+			</event>
+		</choice>
+	</event>  
+</eventList>
