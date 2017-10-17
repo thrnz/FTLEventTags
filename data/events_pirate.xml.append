@@ -112,7 +112,7 @@
 	<choice>
 		<text>Reject their 'offer'. [ SF DR ]</text>
 		<event>
-			<text>"Too bad... You will regret this decision!"</text>
+			<text>"Too bad... You will regret this decision!" [ SF DR ]</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
