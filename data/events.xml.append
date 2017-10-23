@@ -1,7 +1,7 @@
 <event name="ASTEROID_EXPLORE" unique="true">
 	<text>Scans reveal a large asteroid field nearby. Short-range scanners may discover useful materials while we wait for the FTL to recharge.</text>
 	<choice hidden="true">
-		<text>Explore the asteroid field. [ Nil | HScrapFuel | MScrapMiss | MScrapDrones | -5 Hull | SF DR ] </text>
+		<text>Explore the asteroid field. [ Nil | HScrapFuel | MScrapMiss | MScrapDrones | -5 Hull | SF DR w/Asteroids ] </text>
 		<event load="ASTEROID_EXPLORE_RESULTS"/>
 	</choice>
 	<choice>	
