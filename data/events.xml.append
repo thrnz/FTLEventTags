@@ -1430,3 +1430,27 @@
 		</choice>
 	</event>  
 </eventList>
+
+<eventList name="FEDERATION_PLANET_SIGNAL_LIST">
+	<event>
+		<text>You find a secret Federation outpost. They are regrettably out of supplies but are eager to tell you of another secret base. They give you the coordinates.</text>
+		<quest event="HIDDEN_FEDERATION_BASE_LIST"/>
+	</event>
+	<event>
+		<text>You find a hidden Federation outpost. They message you, "Quick, we just got word from a sister outpost that they've been discovered by the Rebels and are under attack! If you are still loyal to the Federation, go save them!"</text>
+		<autoReward level="MED">stuff</autoReward>
+		<quest event="FEDERATION_BASE_ASSIST"/>
+	</event>
+	<event>
+		<text>You find a secret Federation outpost... but it appears the Rebels have found it before you; the place is empty and faint bloodstains can be seen in the living quarters. You find the encrypted signal emitter and shut it off before leaving.</text>
+	</event>
+	<event>
+		<text>You find a small cache of supplies that were surely left for any loyal Federation ships in trouble. You take all that you need, leaving some for others to find.</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</event>
+	<event>
+		<text>As you approach the signal you receive a message on a Rebel channel, "I knew we'd catch some Federation fish with this signal. Prepare to be boarded, scum!" [ SF DR, 2-3 Human Boarders ]</text>
+		<ship load="REBEL" hostile="true"/>
+		<boarders min="2" max="3" class="human"/>
+	</event>
+</eventList>
