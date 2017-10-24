@@ -217,7 +217,7 @@
 <event name="LANIUS_TRADER_TRANSLATOR" unique="true">
 	<text>A Lanius merchant appears to have a significantly improved translator as you clearly understand their message. "Metal content more than sufficient. Does your ship care to exchange resources for our excess metal?"</text>
 	<choice>
-		<text>Agree to the exchange. [ Various Trades ]</text>
+		<text>Agree to the exchange. [ Resource Trades ]</text>
 		<event load="LANIUS_TRADER_LIST"/>
 	</choice>
 	<choice>
@@ -253,7 +253,7 @@
 <event name="LANIUS_TRADER" unique="true">
 	<text load="LANIUS_TRADER_TEXT"/>
 	<choice>
-		<text>Agree to the exchange. [ Various Trades ]</text>
+		<text>Agree to the exchange. [ Resource Trades ]</text>
 		<event load="LANIUS_TRADER_LIST"/>
 	</choice>
 	<choice>
@@ -528,7 +528,7 @@
 		<event load="LANIUS_BEACON_EATER_LEAVE"/>
 	</choice>
 	<choice hidden="true" req="anaerobic">
-		<text>(Lanius Crew) Ask if they require assistance. [ Various Trades ]</text>
+		<text>(Lanius Crew) Ask if they require assistance. [ Scrap/Missiles/Drones for Augment Trades ]</text>
 		<event>
 			<text>After a time you are told they were damaged and unable to repair their ship due to a lack of metal. They offer to exchange a piece of their ship's equipment for some scrap or other useful materials.</text>
 			<choice hidden="true">
