@@ -52,7 +52,7 @@
 <event name="REFUGEE_DISTRESS">
 	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
 	<choice>
-		<text>Hail them. [ x4 Trade | x4 Ship Fight ]</text>
+		<text>Hail them. [ x4 Resource Trade | x4 Ship Fight ]</text>
 		<event load="REFUGEE_HAIL_LIST"/>
 	</choice>
 	<choice>
@@ -65,7 +65,7 @@
 <event name="REFUGEE_NO_DISTRESS">  <!-- this is actually a NEUTRAL, I'm just leaving it here cause it's linked-->
 	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
 	<choice>
-		<text>Hail them. [ x4 Trade | x4 Ship Fight ]</text>
+		<text>Hail them. [ x4 Resource Trade | x4 Ship Fight ]</text>
 		<event load="REFUGEE_HAIL_LIST"/>
 	</choice>
 	<choice>
@@ -100,7 +100,7 @@
 <event name="REFUGEE_DISTRESS_ZOLTAN">
 	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
 	<choice>
-		<text>Hail them. [ Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_ZOLTAN"/>
 	</choice>
 	<choice>
@@ -112,7 +112,7 @@
 <event name="REFUGEE_NO_DISTRESS_ZOLTAN"> 
 	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
 	<choice>
-		<text>Hail them. [ Trade | K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_ZOLTAN"/>
 	</choice>
 	<choice>
@@ -132,7 +132,7 @@
 <event name="REFUGEE_DISTRESS_PIRATE">
 	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
 	<choice>
-		<text>Hail them. [ Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_PIRATE"/>
 	</choice>
 	<choice>
@@ -144,7 +144,7 @@
 <event name="REFUGEE_NO_DISTRESS_PIRATE"> 
 	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
 	<choice>
-		<text>Hail them. [ Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_PIRATE"/>
 	</choice>
 	<choice>
@@ -163,7 +163,7 @@
 <event name="REFUGEE_DISTRESS_SLUG">
 	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
 	<choice>
-		<text>Hail them. [ Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_SLUG"/>
 	</choice>
 	<choice>
@@ -176,7 +176,7 @@
 	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
 	<environment type="nebula"/>
 	<choice>
-		<text>Hail them. [ Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_SLUG"/>
 	</choice>
 	<choice>
@@ -467,7 +467,7 @@
 		<event>
 			<text>The Slug captain explains that they upgraded the Rock ship's reactor and now the 'thick boulder heads' are refusing to pay for the work done. The Rock Captain says the 'slime balls' did a poor job that is not worth their agreed upon price.</text>
 			<choice>
-				<text>Offer to pay off the Rock debt. [ -10-15 Scrap, [ Nil | Reactor+1 | Reactor Trade ] ]</text>
+				<text>Offer to pay off the Rock debt. [ -10-15 Scrap, [ Nil | Reactor+1 | 10-15 Scrap Reactor Upgrade ] ]</text>
 				<event>
 					<text>You pay off the debt. The Rock Captain still seems annoyed at the Slug's getting their 'undeserved' scrap, but at least the situation will remain peaceful.</text>
 					<item_modify>
@@ -480,7 +480,7 @@
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Demand the Rock ship pay the agreed upon price. [ -5 Hull | [ Nil | Reactor+1 | Reactor Trade ] | SF K: LStd, CK: MStd, DB: [ Nil | Reactor+1 | Reactor Trade ] ]</text>
+				<text>Demand the Rock ship pay the agreed upon price. [ -5 Hull | [ Nil | Reactor+1 | 10-15 Scrap Reactor Upgrade ] | SF K: LStd, CK: MStd, DB: [ Nil | Reactor+1 | 10-15 Scrap Reactor Upgrade ] ]</text>
 				<event load="ROCK_SLUG_COMMAND"/>
 			</choice>
 			<choice>
