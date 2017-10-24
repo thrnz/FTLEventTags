@@ -114,7 +114,7 @@
 
 
 <event name="DISTRESS_ENGI_REBEL" unique="true">
-	<text>The distress signal originates from a small Engi ship under attack by a rebel fighter - but when the Rebels see Federation markings they turn to attack! [ SF K: LStd, CK: MStd, DB: Random Buyables</text> 
+	<text>The distress signal originates from a small Engi ship under attack by a rebel fighter - but when the Rebels see Federation markings they turn to attack! [ SF K: LStd, CK: MStd, DB: Random Buyables ]</text> 
 	<distressBeacon/>
 	<ship load="DISTRESS_ENGI_REBEL" hostile="true"/>
 </event>
