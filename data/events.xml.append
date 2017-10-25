@@ -117,7 +117,7 @@
 <event name="PIRATE_CIVILIAN_BEACON">
 	<text>The distress beacon is coming from a civilian ship. It appears it is being chased by a pirate.</text>
 	<choice>
-		<text>Aid the civilian ship. [ SF K: Std; CK: Std+; DB: [ Crew+ | MStd | LStd | LWeap | +5 Hull ] ]</text>
+		<text>Aid the civilian ship. [ SF K: MStd; CK: HStd; DB: [ Crew+ | MStd | LStd | LWeap | +5 Hull ] ]</text>
 		<event>
 			<text>You power up your weapons and engage the pirate ship.</text>
 			<ship load="PIRATE_CIVILIAN" hostile="true"/>
