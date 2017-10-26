@@ -127,11 +127,11 @@
 				</event>
 			</choice>
 			<choice hidden="true" req="medbay" lvl="2">
-				<text>(Adv. Medbay) Quickly teleport him back to the medbay. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+				<text>(Adv. Medbay) Quickly teleport him back to the medbay. [ HScrap, MantisCrew+ w/Max Skills, HScrapWeapon Quest ]</text>
 				<event>
 					<text>Your haste has paid off and you are able to bring him back from the brink of death. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
 					<choice hidden="true">  <!-- NOTE - Add other options?-->
-						<text>Accept. [ HScrap, MantisCrew+, HWeapon Quest ]</text>
+						<text>Accept. [ HScrap, MantisCrew+ w/Max Skills, HWeapon Quest ]</text>
 						<event>
 							<text>KazaaakplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
 							<augment name="CREW_STIMS"/>
@@ -144,11 +144,11 @@
 				</event>
 			</choice>
 			<choice hidden="true" req="clonebay" lvl="2">
-				<text>(Adv. Clonebay) Quickly configure the Clonebay to save him. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+				<text>(Adv. Clonebay) Quickly configure the Clonebay to save him. [ HScrap, MantisCrew+ w/Max Skills, HScrapWeapon Quest ]</text>
 				<event>
 					<text>Your haste has paid off and you register him into the Clonebay's database. After he passes away he is quickly reconstructed on board your ship. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
 					<choice hidden="true">  <!-- NOTE - Add other options?-->
-						<text>Accept. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+						<text>Accept. [ HScrap, MantisCrew+ w/Max Skills, HScrapWeapon Quest ]</text>
 						<event>
 							<text>KazaaakplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
 							<augment name="CREW_STIMS"/>
@@ -182,11 +182,11 @@
 				</event>
 			</choice>
 			<choice hidden="true" req="medbay" lvl="2">
-				<text>(Adv. Medbay) Dock and quickly take him back to the medbay. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+				<text>(Adv. Medbay) Dock and quickly take him back to the medbay. [ HScrap, MantisCrew+ w/Max Skills, HScrapWeapon Quest ]</text>
 				<event>
 					<text>Your haste has paid off and you are able to bring him back from the brink of death. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
 					<choice hidden="true">  <!-- NOTE - Add other options?-->
-						<text>Accept. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+						<text>Accept. [ HScrap, MantisCrew+ w/Max Skills, HScrapWeapon Quest ]</text>
 						<event>
 							<text>KazaaakplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
 							<augment name="CREW_STIMS"/>
@@ -199,11 +199,11 @@
 				</event>
 			</choice>
 			<choice hidden="true" req="clonebay" lvl="2">
-				<text>(Adv. Clonebay) Quickly configure the Clonebay to save him. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+				<text>(Adv. Clonebay) Quickly configure the Clonebay to save him. [ HScrap, MantisCrew+ w/Max Skills, HScrapWeapon Quest ]</text>
 				<event>
 					<text>Your haste has paid off and you register him into the Clonebay's database. After he passes away he is quickly reconstructed on board your ship. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
 					<choice hidden="true">  <!-- NOTE - Add other options?-->
-						<text>Accept. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+						<text>Accept. [ HScrap, MantisCrew+ w/Max Skills, HScrapWeapon Quest ]</text>
 						<event>
 							<text>KazaaakplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
 							<augment name="CREW_STIMS"/>
