@@ -206,7 +206,7 @@
 			<event load="REBEL_HELPERS_SUPPLIES"/>
 		</choice>
 		<choice hidden="true">
-			<text>Leave the civilians alone.</text>
+			<text>Leave the civilians alone. [ Nil ]</text>
 			<event load="REBEL_HELPER_NO_SUPPLIES"/>
 		</choice>
 	</destroyed>
@@ -218,7 +218,7 @@
 			<event load="REBEL_HELPERS_SUPPLIES"/>
 		</choice>
 		<choice hidden="true">
-			<text>Leave the civilians alone.</text>
+			<text>Leave the civilians alone. [ Nil ]</text>
 			<event load="REBEL_HELPER_NO_SUPPLIES"/>
 		</choice>
 	</deadCrew>
