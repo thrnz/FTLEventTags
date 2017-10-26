@@ -188,7 +188,7 @@
 <event name="ZOLTAN_SCIENCE_DOCK" unique="true">
 	<text>What appears to be a Zoltan science ship requests permission to dock.</text>
 	<choice hidden="true">
-		<text>Dock with them. [ MStuff | SF S: [ LStd, ZoltanCrew+ ], L: LStd, CK: MStd ]</text>
+		<text>Dock with them. [ MStuff | SF S: [ LStd, ZoltanCrew+ ], K: LStd, CK: MStd ]</text>
 		<event load="ZOLTAN_SCIENCE_DOCK_LIST"/>
 	</choice>
 	<choice hidden="true">
