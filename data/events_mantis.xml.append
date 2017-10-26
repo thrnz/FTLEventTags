@@ -97,3 +97,124 @@
 		</event>
 	</choice>
 </text>
+
+<event name="MANTIS_NAMED_THIEF_DEFEAT">
+	<text>No more life signs are detected aboard their ship. You appear to have won.</text>
+	<choice hidden="true">
+		<text>Move in to strip their ship. [ HStd ]</text>
+		<event>
+			<text>It seems almost a waste for such a fierce foe to die in such an anticlimactic fashion. You shrug it off and take what you can.</text>
+			<autoReward level="HIGH">standard</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="teleporter">
+		<text>(Teleporter) Quickly teleport additional crew and check for survivors.[ More .. ]</text>
+		<event>
+			<text>You find KazaaakplethKilik slumped in a corner dying.</text>
+			<choice hidden="true">
+				<text>Put him out of his misery. [ HStd ]</text>
+				<event>
+					<text>Thus ends the life of the famed captain, KazaaakplethKilik... You wonder what secrets went with him to the grave as you thoroughly loot his ship.</text>
+					<autoReward level="HIGH">standard</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Listen to what he has to say. [ H Std, HScrapWeapon Quest ]</text>
+				<event>
+					<text>In his dying moments he gives up the location of his secret stash. You strip the ship wondering what other secrets went with him to the grave.</text>
+					<quest event="MANTIS_NAMED_THIEF_STASH"/>
+					<autoReward level="HIGH">standard</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true" req="medbay" lvl="2">
+				<text>(Adv. Medbay) Quickly teleport him back to the medbay. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+				<event>
+					<text>Your haste has paid off and you are able to bring him back from the brink of death. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
+					<choice hidden="true">  <!-- NOTE - Add other options?-->
+						<text>Accept. [ HScrap, MantisCrew+, HWeapon Quest ]</text>
+						<event>
+							<text>KazaaakplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
+							<augment name="CREW_STIMS"/>
+							<autoReward level="HIGH">scrap_only</autoReward>
+							<crewMember amount="1" class="mantis" all_skills="2">Kazaaak</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
+							<quest event="MANTIS_NAMED_THIEF_STASH"/>
+							<unlockShip id="2">A Mantis cruiser has been unlocked and added to the hangar!</unlockShip>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="clonebay" lvl="2">
+				<text>(Adv. Clonebay) Quickly configure the Clonebay to save him. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+				<event>
+					<text>Your haste has paid off and you register him into the Clonebay's database. After he passes away he is quickly reconstructed on board your ship. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
+					<choice hidden="true">  <!-- NOTE - Add other options?-->
+						<text>Accept. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+						<event>
+							<text>KazaaakplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
+							<augment name="CREW_STIMS"/>
+							<autoReward level="HIGH">scrap_only</autoReward>
+							<crewMember amount="1" class="mantis" all_skills="2">Kazaaak</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
+							<quest event="MANTIS_NAMED_THIEF_STASH"/>
+							<unlockShip id="2">A Mantis cruiser has been unlocked and added to the hangar!</unlockShip>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="sensors" lvl="3">
+		<text>(Sensors) Quickly scan their ship for survivors.</text>
+		<event>
+			<text>You detect KazaaakplethKilik slumped in a corner dying.</text>
+			<choice hidden="true">
+				<text>Let him die. [ HStd ]</text>
+				<event>
+					<text>Thus ends the life of the famed captain, KazaaakplethKilik... You wonder what secrets went with him to the grave as you thoroughly loot his ship.</text>
+					<autoReward level="HIGH">standard</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Dock and try to speak with him. [ HStd, HScrapWeapon Quest ]</text>
+				<event>
+					<text>In his dying moments he gives up the location of his secret stash. You strip the ship wondering what other secrets went with him to the grave.</text>
+					<quest event="MANTIS_NAMED_THIEF_STASH"/>
+					<autoReward level="HIGH">standard</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true" req="medbay" lvl="2">
+				<text>(Adv. Medbay) Dock and quickly take him back to the medbay. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+				<event>
+					<text>Your haste has paid off and you are able to bring him back from the brink of death. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
+					<choice hidden="true">  <!-- NOTE - Add other options?-->
+						<text>Accept. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+						<event>
+							<text>KazaaakplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
+							<augment name="CREW_STIMS"/>
+							<autoReward level="HIGH">scrap_only</autoReward>
+							<crewMember amount="1" class="mantis" all_skills="2">Kazaaak</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
+							<quest event="MANTIS_NAMED_THIEF_STASH"/>
+							<unlockShip id="2">A Mantis cruiser has been unlocked and added to the hangar!</unlockShip>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="clonebay" lvl="2">
+				<text>(Adv. Clonebay) Quickly configure the Clonebay to save him. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+				<event>
+					<text>Your haste has paid off and you register him into the Clonebay's database. After he passes away he is quickly reconstructed on board your ship. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
+					<choice hidden="true">  <!-- NOTE - Add other options?-->
+						<text>Accept. [ HScrap, MantisCrew+, HScrapWeapon Quest ]</text>
+						<event>
+							<text>KazaaakplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
+							<augment name="CREW_STIMS"/>
+							<autoReward level="HIGH">scrap_only</autoReward>
+							<crewMember amount="1" class="mantis" all_skills="2">Kazaaak</crewMember>  <!-- NOTE - Make him a special unique character/color?  At least give him the right name? -->
+							<quest event="MANTIS_NAMED_THIEF_STASH"/>
+							<unlockShip id="2">A Mantis cruiser has been unlocked and added to the hangar!</unlockShip>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
