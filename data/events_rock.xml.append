@@ -283,3 +283,15 @@
 	<text>You passively scan a small Rock station that is next to the beacon. However they must not have appreciated your curiosity. A Rock ship pulls away from the station and you register an incoming teleporter signal as well! [ SF DR, 1-3 Rock Boarders ]</text>
 	<text>You find a Rock ship docked with a damaged Mantis fighter. Before you have a chance to hail them, the ship moves in to attack you and you register teleporter symbols from the disabled ship. They're using Mantis tech to board you! [ SF DR, 1-3 Rock Boarders ]/text>
 </textList>
+
+<eventList name="ROCK_MANTIS_FREIGHTER_LIST">
+	<event>
+		<text>The Mantis craft are both too busy slaughtering one another to notice you. Eventually the smaller ship gets the upper hand, but they must have blown a fuse in the assault and their weapons system is inoperable. Now is the time to attack! [ SF K: MStd, CK: MStd ]</text>
+		<ship load="MANTIS_ROCK_MANTIS_FREIGHTER" hostile="true"/>
+		<status type="loss" target="enemy" system="weapons" amount="2"/>
+	</event>
+	<event>
+		<text>The Mantis craft may have their differences, but when it comes to you they are of one mind. The smaller ship suffers a power failure as it moves to engage, but the larger one lets off a volley of fire and moves in to attack! [ SF K: MStd, CK: MStd ]</text>
+		<ship load="MANTIS_ROCK_MANTIS_FREIGHTER" hostile="true"/>
+	</event>
+</eventList>
