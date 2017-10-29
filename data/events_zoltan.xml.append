@@ -198,6 +198,16 @@
 		</event>
 	</choice>
 </event>	
+<eventList name="ZOLTAN_SCIENCE_DOCK_LIST">
+	<event>
+		<text>You allow them to approach, but are caught unaware when they open fire! [ SF S: [ LStd, ZoltanCrew+ ], K: LStd, CK: MStd ]</text>
+		<ship load="ZOLTAN_SCIENCE_DOCK" hostile="true"/>
+	</event>
+	<event>
+		<text>"We have been studying the relationships between the species and have determined that the 'Federation' still has potential to be a net positive for the galaxy. Please accept this gift to aid your journey."</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+</eventList>
 
 <event name="ZOLTAN_RIFT_FIGHT" unique="true">
 	<text>You come to a quiet part of Zoltan space and encounter an ancient Zoltan wise man who has managed to harness the power of a spatial rift, but seems to have been driven completely mad by the power. "Choose your doom," he demands. This is all part of a day's work.</text>

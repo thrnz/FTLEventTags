@@ -251,3 +251,20 @@
 		<autoReward level="HIGH">standard</autoReward>
 	</deadCrew>
 </ship>
+
+<ship name="ZOLTAN_SCIENCE_DOCK" auto_blueprint="SHIPS_ZOLTAN">   <!-- JUSTIN - MAKE A SURRENDER!!-->
+	<surrender  chance="0.5" min="3" max="4">
+		<text>The Zoltan captain sends an urgent hail: "Wait, this was all a test! A test that you passed! A diverse crew, working together, surely a sight to warm the heart of any dispassionate observer. Come, I shall join your crew!" [ LStd, ZoltanCrew+, K: LStd, CK: MStd ]</text>
+		<ship hostile="false"/>
+		<crewMember amount="1" class="energy"/>  
+		<autoReward level="LOW">standard</autoReward>
+	</surrender>
+	<destroyed>
+		<text>While you search the debris, you wonder what it was that could have provoked them to act so irrationally.</text>
+		<autoReward level="LOW">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>While you scrap their ship, you wonder what it was that could have provoked them to act so irrationally.</text>
+		<autoReward level="MED">standard</autoReward>
+	</deadCrew>
+</ship>
