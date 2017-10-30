@@ -702,3 +702,10 @@
 		</event>
 	</choice>
 </event>
+
+<textList name="START_BEACON_LANIUS">
+	<text>This sector has been largely abandoned since a series of battles decimated the local population. An unusual alien race is reportedly scavenging in the area. You'd best be on guard. [ 2 Stores, 1-2 Empty, 1-2 Distress, 5-6 Hostile, 1-2 Hostile Envs, 1-2 Boarder, 2-4 Items, 0-1 Quests, 5-6 Neutral ]</text>
+	<text>This sector was the site of many major battles between the Federation and Rebel fleets. Strangely, there's very little evidence of those battles remaining... [ 2 Stores, 1-2 Empty, 1-2 Distress, 5-6 Hostile, 1-2 Hostile Envs, 1-2 Boarder, 2-4 Items, 0-1 Quests, 5-6 Neutral ]</text>
+	<text>There have been a number of reports of advanced ships salvaging the wrecks and abandoned mining facilities in this sector. Could it be that the Lanius have resurfaced? [ 2 Stores, 1-2 Empty, 1-2 Distress, 5-6 Hostile, 1-2 Hostile Envs, 1-2 Boarder, 2-4 Items, 0-1 Quests, 5-6 Neutral ]</text>
+	<text>The war tore through this civilian sector, and just recently even the few life signs that remained have begun blinking out. Rumours suggest the Lanius are responsible. [ 2 Stores, 1-2 Empty, 1-2 Distress, 5-6 Hostile, 1-2 Hostile Envs, 1-2 Boarder, 2-4 Items, 0-1 Quests, 5-6 Neutral ]</text>
+</textList>

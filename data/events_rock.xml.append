@@ -295,3 +295,8 @@
 		<ship load="MANTIS_ROCK_MANTIS_FREIGHTER" hostile="true"/>
 	</event>
 </eventList>
+
+<textList name="START_BEACON_ROCK">
+	<text>The Rock people have a particularly aggressive stance toward alien races trespassing in their space. You should tread carefully here. [ 2 Stores, 2-3 Empty, 1-2 Distress, 6-8 Hostile, 1-2 Boarders, 1-2 Items, 0-1 Quests, 7-8 Neutral ]</text>
+	<text>The Rock people are a powerful and proud race. It is not unheard of to have a peaceful journey through their lands, but don't count on it. [ 2 Stores, 2-3 Empty, 1-2 Distress, 6-8 Hostile, 1-2 Boarders, 1-2 Items, 0-1 Quests, 7-8 Neutral ]</text>
+</textList>

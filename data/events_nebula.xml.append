@@ -319,3 +319,12 @@
 	</choice>
 	<environment type="storm"/>
 </event>
+
+<textList name="START_BEACON_NEBULA">
+	<text>This nebula must have been an important hub at one point; placing all of these jump beacons would be no easy task. However, now it's hardly navigable. [ 0-1 Non-Nebula Store, 1-3 Items, 1 Nebula Store, 4 Empty Nebula, 5-6 Hostile, 7-8 Neutral, 1-3 Distress ]</text>
+	<text>Nebulas were always dangerous places. Many electronics fail in these clouds. You will have to tread lightly. [ 0-1 Non-Nebula Store, 1-3 Items, 1 Nebula Store, 4 Empty Nebula, 5-6 Hostile, 7-8 Neutral, 1-3 Distress ]</text>
+	<text>You've entered a sector thick with nebulas. You'll have to navigate on instinct. [ 0-1 Non-Nebula Store, 1-3 Items, 1 Nebula Store, 4 Empty Nebula, 5-6 Hostile, 7-8 Neutral, 1-3 Distress ]</text>
+	<text>You've entered a nebula-rich sector. You may put a few light years on the fleet, but that's only useful if you make it out the other side. [ 0-1 Non-Nebula Store, 1-3 Items, 1 Nebula Store, 4 Empty Nebula, 5-6 Hostile, 7-8 Neutral, 1-3 Distress ]</text>
+	<text>Thanks to the high nebula density of this sector very little of it has been charted, and rumours of what lurks in the depths abound. [ 0-1 Non-Nebula Store, 1-3 Items, 1 Nebula Store, 4 Empty Nebula, 5-6 Hostile, 7-8 Neutral, 1-3 Distress ]</text>
+	<text>The gases that make up the nebulas in this sector threaten to impair your systems; but you have to press on. [ 0-1 Non-Nebula Store, 1-3 Items, 1 Nebula-Store, 4 Empty Nebula, 5-6 Hostile, 7-8 Neutral, 1-3 Distress ]</text>
+</textList>

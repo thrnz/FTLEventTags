@@ -63,3 +63,25 @@
 	<text>This beacon is being patrolled by a unmanned scout. A fight is unavoidable. [ SF DR ]</text>
 	<text>A small shuttle appears on the local radar. Turns out it is a Rebel automated scout! [ SF DR ]</text>
 </textList>
+
+
+<event name="LAST_STAND_START">
+	<text>You arrive at an outpost close to the Federation Base. Your access codes get you past initial security and an officer sets up a direct feed to the Federation Base's war room. Admiral Tully speaks first saying, "What is the meaning of this?! Who are you?"</text>
+	<choice>
+		<text>Explain your mission.</text>
+		<event>
+			<text>Your explanation is met with murmurs of cynicism and disbelief among the officers. General Turzil of the Engi Brigade speaks up, "Intel suggests potential counter to Rebel technology. Risk all or save none."</text>
+			<choice hidden="true">
+				<text>Explain the weakness of the enemy fleet, the Rebel flagship.</text>
+				<event>
+					<text>Tully responds, "It's settled. The Rebels will be here in a matter of moments. We will do what we can to hold off their warships but you must succeed in destroying this flagship. Your current outpost can provide some repairs and fuel, and the other repair stations can provide aid as well. Good luck." [ 1 Store, 3 Repair, 6 Hostile, 7-10 Neutral ]</text>
+					<item_modify>
+						<item type="fuel" min="10" max="10"/>
+					</item_modify>
+					<damage amount="-10"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<fleet>fed</fleet>
+</event>

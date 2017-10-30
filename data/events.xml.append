@@ -1454,3 +1454,11 @@
 		<boarders min="2" max="3" class="human"/>
 	</event>
 </eventList>
+
+<event name="START_GAME">
+	<text>The data you carry is vital to the remaining Federation fleet. You'll need supplies for the journey, so make sure to explore each sector before moving on to the next. But get to the exit before the pursuing Rebel fleet can catch up! [ 1-2 Stores, 1 Item, 2-4 Neutral, 1-2 Empty, 1-2 Distress, 6-8 Hostile, 0-4 Nebula, 1 Quest ]</text>
+</event>
+
+<event name="START_BEACON">
+	<text>Welcome to a new sector! Get to the exit beacon and jump to the next sector before the pursuing Rebels catch you! [ 2-3 Stores, 2-3 Items, 2-4 Neutral, 1-2 Empty, 1-2 Distress, 6-8 Hostile, 0-8 Nebula, 0-2 Quests ]</text>
+</event>

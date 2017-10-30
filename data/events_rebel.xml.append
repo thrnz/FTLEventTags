@@ -245,3 +245,11 @@
 	<text>Incoming message, "Hello Captain," says a Rebel in an officer's garb. "How very generous of you to turn yourself in. Prepare to be boarded. Come quietly and we may be lenient." [ SF DR, 2-3 Human Boarders ]</text>
 	<text>You receive a message on a low-band channel. "You're surrounded, just like the last of your Federation friends. Just die already." The enemy has teleported onto your ship! [ SF DR, 2-3 Human Boarders ]</text>
 </textList>
+
+<textList name="START_BEACON_REBEL">
+	<text>This sector was bustling with activity just a few years ago. Now, more than half of the jump beacons have been destroyed, many settlements have been abandoned and the Rebels patrol constantly. [ 1-2 Stores, 1-2 Items, 6-8 Hostile, 1 Boarders, 1-2 Distress, 0-5 Nebula, 1-2 Empty, 0-2 Quests, 5-6 Neutral ]</text>
+	<text>This sector was hit hard by the rebellion. The many alien settlements and stations located here are now watched over by almost an equal number of Rebel bases, heavy-handedly 'keeping the peace'. [ 1-2 Stores, 1-2 Items, 6-8 Hostile, 1 Boarders, 1-2 Distress, 0-5 Nebula, 1-2 Empty, 0-2 Quests, 5-6 Neutral ]</text>
+	<text>Once the Federation forces were scattered, the Rebels came down hard on the locals here. Between the 'tax collectors' and military bases, the Rebel presence in this sector is high. [ 1-2 Stores, 1-2 Items, 6-8 Hostile, 1 Boarders, 1-2 Distress, 0-5 Nebula, 1-2 Empty, 0-2 Quests, 5-6 Neutral ]</text>
+	<text>At one point this was one of the most commonly traveled sectors. Knowing that, the Rebels have stationed a number of fleets here. Be careful. [ 1-2 Stores, 1-2 Items, 6-8 Hostile, 1 Boarders, 1-2 Distress, 0-5 Nebula, 1-2 Empty, 0-2 Quests, 5-6 Neutral ]</text>
+	<text>You will have to be very cautious in this sector. The Rebels have full control and are no doubt looking for you. [ 1-2 Stores, 1-2 Items, 6-8 Hostile, 1 Boarders, 1-2 Distress, 0-5 Nebula, 1-2 Empty, 0-2 Quests, 5-6 Neutral ]</text>
+</textList>

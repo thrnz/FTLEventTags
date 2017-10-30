@@ -437,3 +437,14 @@
 		</event>
 	</choice>
 </event>
+
+<event name="START_BEACON_CRYSTAL">
+	<text>You arrive in a sector not listed in any star charts. Strange crystalline ships dot the horizon. Your companion speaks, "Here we are, my home sector. It has been a long time since others have set foot here, I wonder how you will be received."</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>"You have done as you promised and so shall I. The coordinates of my old ship have been forwarded to your navigation system." [ 2-3 Stores, 2 Items, 2 Empty, 6-10 Hostile, 1-2 Boarders, 12 Neutral ]</text>
+			<quest event="CRYSTAL_UNLOCK"/>
+		</event>
+	</choice>
+</event>

@@ -346,3 +346,10 @@
 	<ship load="MANTIS_FIGHT" hostile="true"/>
 	<boarders min="2" max="3" class="mantis"/>
 </event>
+
+<textList name="START_BEACON_ZOLTAN">
+	<text>You've entered Zoltan territory. This species is not renowned for giving anything for nothing, but you can always be assured a fair hearing. [ 1 Zoltan Study, 2 Stores, 1-2 Empty, 1-2 Distress, 2-6 Nebula, 6-8 Hostile, 1-2 Boarders, 1-2 Items, 0-1 Quests, 5-6 Neutral ]</text>
+	<text>The Zoltan patrol their borders but let you pass when you ID as Federation. Let's hope they won't be so courteous to the Rebels. [ 1 Zoltan Study, 2 Stores, 1-2 Empty, 1-2 Distress, 2-6 Nebula, 6-8 Hostile, 1-2 Boarders, 1-2 Items, 0-1 Quests, 5-6 Neutral ]</text>
+	<text>You arrive in Zoltan space. From what you have heard they anticipated the coming war and made preparations to hold their borders. [ 1 Zoltan Study, 2 Stores, 1-2 Empty, 1-2 Distress, 2-6 Nebula, 6-8 Hostile, 1-2 Boarders, 1-2 Items, 0-1 Quests, 5-6 Neutral ]</text>
+	<text>You're far from Federation home space here in Zoltan territory, and it's not clear whether the authorities will have any goodwill remaining. Still, you have to push forward. [ 1 Zoltan Study, 2 Stores, 1-2 Empty, 1-2 Distress, 2-6 Nebula, 6-8 Hostile, 1-2 Boarders, 1-2 Items, 0-1 Quests, 5-6 Neutral ]</text>
+</textList>

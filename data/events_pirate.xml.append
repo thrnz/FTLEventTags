@@ -241,3 +241,10 @@
 		</choice>
 	</event>
 </eventList>
+
+<textList name="START_BEACON_PIRATE">
+	<text>A few years ago this region was bustling with trade activity. Now it is overrun with bandits and marauders. You should tread lightly here. [ 1-2 Stores, 1-2 Items, 1 Boarders, 1-2 Distress, 0-5 Nebula, 1-2 Empty, 6-8 Hostile, 0-1 Quest, 5-6 Neutral ]</text>
+	<text>This somewhat isolated region was thrown into chaos at the start of the rebellion. Even in peacetime it was always beset by pirates but now it houses a center of operations for countless pirate fleets. [ 1-2 Stores, 1-2 Items, 1 Boarders, 1-2 Distress, 0-5 Nebula, 1-2 Empty, 6-8 Hostile, 0-1 Quest, 5-6 Neutral ]</text>
+	<text>If the reports are true, this area has been under the control of pirates for quite some time. Some traders still attempt to trade with the few settlements that remain, but they do so at great risk. [ 1-2 Stores, 1-2 Items, 1 Boarders, 1-2 Distress, 0-5 Nebula, 1-2 Empty, 6-8 Hostile, 0-1 Quest, 5-6 Neutral ]</text>
+	<text>A few Federation-friendly planets still exist in this sector, but they are constantly under attack by pirate raids. This is a dangerous sector, so be careful. [ 1-2 Stores, 1-2 Items, 1 Boarders, 1-2 Distress, 0-5 Nebula, 1-2 Empty, 6-8 Hostile, 0-1 Quest, 5-6 Neutral ]</text>
+</textList>
