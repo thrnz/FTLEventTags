@@ -268,3 +268,46 @@
 		<autoReward level="MED">standard</autoReward>
 	</deadCrew>
 </ship>
+
+<ship name="PIRATE_BRIBER" auto_blueprint="SHIPS_PIRATE"> <!-- NEEDS ELITE TAG -->
+	<surrender  chance="0.3" min="3" max="4">
+		<text>"Fine! Our previous offer was not generous enough, let's improve it."</text>
+		<choice>
+			<text>Accept the more generous bribe and leave. [ HStuff ]</text>
+			<event>
+				<ship hostile="false"/>
+				<autoReward level="HIGH">stuff</autoReward>
+			</event>
+		</choice>
+		<choice>
+			<text>Reject the offer and continue your assault. [ K: RScrap, CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ]</text>
+			<event/>
+		</choice>
+	</surrender>
+	<escape  chance="0.4" min="3" max="4">
+		<text>You've proved a sufficient match for the pirates; they are powering up their FTL and trying to get away.</text>
+	</escape>
+	<gotaway>
+		<text>The pirate has abandoned pursuit of both you and its former prey. You attempt to hail the damaged ship.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="PIRATE_BRIBER_WIN"/>
+		</choice>
+	</gotaway>
+	<destroyed>
+		<text>The pirate explodes, leaving behind a substantial collection of useful scrap material. You go to examine the ship you just saved.</text>
+		<autoReward level="RANDOM">scrap_only</autoReward>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="PIRATE_BRIBER_WIN"/>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>The pirates are all dead, leaving the ship dead in space. You scrounge what you can from their ship before contacting its former prey.</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="PIRATE_BRIBER_WIN"/>
+		</choice>
+	</deadCrew>
+</ship>
