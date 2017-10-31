@@ -1462,3 +1462,14 @@
 <event name="START_BEACON">
 	<text>Welcome to a new sector! Get to the exit beacon and jump to the next sector before the pursuing Rebels catch you! [ 2-3 Stores, 2-3 Items, 2-4 Neutral, 1-2 Empty, 1-2 Distress, 6-8 Hostile, 0-8 Nebula, 0-2 Quests ]</text>
 </event>
+
+<eventList name="DISTRESS_TRAPPED_MINER_LOOT">
+	<event>
+		<text>You decide the pirate is not worth saving and fire a few volleys into their hull causing the ship to depressurize and break apart. You move in to loot the remains.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>You decide the pirate is not worth saving and fire a few volleys into their hull. Before you can scrap the remains another pirate ship flashes on your radar. Perhaps they saw your deed, or perhaps they want to claim the spoils for themselves, but for whatever reason, they're charging weapons! [ SF DR ]</text>
+		<ship load="PIRATE" hostile="true"/>
+	</event>
+</eventList>	
