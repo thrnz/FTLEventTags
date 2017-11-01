@@ -272,7 +272,7 @@
 <event name="SLUG_DISTRESS_MANTIS" unique="true">
 	<text>The distress call appears to be emanating from a Slug ship caught in open space by a Mantis raider. They contact you on emergency frequencies: "Please, we'll give you all we have if you sssave ussss!"</text>
 	<choice hidden="true">
-		<text>Attack the Mantis ship. [ SF K: MStd, CK: M Std, DB: [ LScrapAugment | RStd ]</text>
+		<text>Attack the Mantis ship. [ SF K: MStd, CK: MStd, DB: [ LScrapAugment | RStd ]</text>
 		<event>
 			<text>You lock onto the Mantis ship and engage.</text>
 			<ship load="SLUG_DISTRESS_MANTIS" hostile="true"/>
