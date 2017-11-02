@@ -531,3 +531,30 @@
 	<text>The Slugs that live in this nebula field are a leisure-centered civilization. Everything in Slug life is done in the pursuit of more currency and more time in which to spend it on extravagant ventures. This, inevitably, leads to much treachery in open space. [ 0-1 Non-Nebula Store, 2 Nebula Stores, 0-2 Items, 0-2 Non-Nebula Empty, 1-2 Non-Nebula Hostile, 3-4 Distress, 2-4 Empty Nebula, 5-7 Nebula Hostile, 1-3 IonStorm Slug Fights, 3-5 Neutral Nebula, 1-2 Neutral ]</text>
 	<text>The Slugs developed on an ocean planet where the ability to telepathically sense another organism was more important than sight. Today they use this ability to navigate unfettered the depths of the nebulas they inhabit. [ 0-1 Non-Nebula Store, 2 Nebula Stores, 0-2 Items, 0-2 Non-Nebula Empty, 1-2 Non-Nebula Hostile, 3-4 Distress, 2-4 Empty Nebula, 5-7 Nebula Hostile, 1-3 IonStorm Slug Fights, 3-5 Neutral Nebula, 1-2 Neutral ]</text>
 </textList>
+
+
+<eventList name="NEBULA_SLUG_HULLFIX_REQUEST">
+	<event>
+		<text>"Ahhh. A fellow businessman. We offer to fix 10 damage for 50 ssscrap."</text>
+		<choice hidden="true">
+			<text>Accept. [ -50 Scrap, +10 Hull ]</text>
+			<event>
+				<text>You perform the transaction and watch carefully as their machines patch the hull. However, everything seems fine. Once they're complete you get ready to jump.</text>
+				<damage amount="-10"/>				
+				<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Decline. [ Nil ]</text>
+			<event>
+				<text>"Too bad. Farewell, traveller." Their mobile station slips into the clouds.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>Just before the transmission is cut you hear, "They're not falling for it. Just kill the crew and we can ssstrip..." Looks like you're not getting out of here without a fight. [ SF DR ]</text>
+		<ship load="JELLY" hostile="true"/>
+	</event>
+</eventList>
