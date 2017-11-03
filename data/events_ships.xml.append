@@ -311,3 +311,21 @@
 		</choice>
 	</deadCrew>
 </ship>
+
+<ship name="CRYSTAL_SHIP" auto_blueprint="SHIPS_CRYSTAL">   
+	<surrender  chance="0.6" min="3" max="4">
+		<text load="CRYSTAL_SHIP_SURRENDER"/>
+		<choice hidden="true">
+			<text>Accept their surrender. [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ]</text>
+			<event load="CRYSTAL_SHIP_SURRENDER"/>
+		</choice>
+		<choice hidden="true">
+			<text>Ignore them.</text>
+			<event>
+				<text>You cut off communications and prepare to finish them off.</text>
+			</event>
+		</choice>
+	</surrender>
+	<destroyed load="DESTROYED_DEFAULT"/>
+	<deadCrew load="DEAD_CREW_DEFAULT"/>
+</ship> 

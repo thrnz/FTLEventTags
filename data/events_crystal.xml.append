@@ -112,54 +112,54 @@
 </event>
 
 <textList name="CRYSTAL_FIGHT">
-	<text>You arrive near a fleet of crystal ships, civilian or mercantile from the looks of them. You pause to scan one but they react immediately and send an escort to fight you off. Prepare to engage! [ SF DR ]</text>
-	<text>You arrive at the Beacon and are immediately greeted by an automatic message or warning of some kind. The translator can't seem to discern its purpose but after a few short moments an alarm goes off and a hostile ship jumps in! [ SF DR ]</text>
-	<text>You receive a message, "Hah. It looks like another worthless alien-filled craft. Prepare to meet your maker!" Weapon locks detected. [ SF DR ]</text>
-	<text>A Crystalline ship messages you, "I've heard tales that our isolation has finally ended. As a warrior I must demand to test my skills against you!" Before you can respond they move in to attack. [ SF DR ]</text>
-	<text>You arrive in a busy sector. At first no one pays any mind to your alien ship but soon you're registering a number of scan signatures. You get the feeling you're not wanted here just seconds before registering enemy weapon locks! [ SF DR ]</text>
-	<text>You jump next to a node busy with traffic, but before long all nearby ships notice you and keep their distance, uncertain of your allegiance. After an awkward standoff, a military ship breaks away from the rest and charges you. [ SF DR ]</text> 
-	<text>A barrage of rasps and clicks is broadcast over the comm; the universal translator understands little, but the words 'aliens', 'allowed' and 'no' come through quite clearly. You'll have to prove your right to be here in combat! [ SF DR ]</text>
+	<text>You arrive near a fleet of crystal ships, civilian or mercantile from the looks of them. You pause to scan one but they react immediately and send an escort to fight you off. Prepare to engage! [ Cry SF DR ]</text>
+	<text>You arrive at the Beacon and are immediately greeted by an automatic message or warning of some kind. The translator can't seem to discern its purpose but after a few short moments an alarm goes off and a hostile ship jumps in! [ Cry SF DR ]</text>
+	<text>You receive a message, "Hah. It looks like another worthless alien-filled craft. Prepare to meet your maker!" Weapon locks detected. [ Cry SF DR ]</text>
+	<text>A Crystalline ship messages you, "I've heard tales that our isolation has finally ended. As a warrior I must demand to test my skills against you!" Before you can respond they move in to attack. [ Cry SF DR ]</text>
+	<text>You arrive in a busy sector. At first no one pays any mind to your alien ship but soon you're registering a number of scan signatures. You get the feeling you're not wanted here just seconds before registering enemy weapon locks! [ Cry SF DR ]</text>
+	<text>You jump next to a node busy with traffic, but before long all nearby ships notice you and keep their distance, uncertain of your allegiance. After an awkward standoff, a military ship breaks away from the rest and charges you. [ Cry SF DR ]</text> 
+	<text>A barrage of rasps and clicks is broadcast over the comm; the universal translator understands little, but the words 'aliens', 'allowed' and 'no' come through quite clearly. You'll have to prove your right to be here in combat! [ Cry SF DR ]</text>
 	
-	<text>You arrive near a fleet of crystal ships, civilian or mercantile from the looks of them. You pause to scan one but they react immediately and send an escort to fight you off. Prepare to engage! [ SF DR ]</text>
-	<text>You arrive at the Beacon and are immediately greeted by an automatic message or warning of some kind. The translator can't seem to discern its purpose but after a few short moments an alarm goes off and a hostile ship jumps in! [ SF DR ]</text>
-	<text>You receive a message, "Hah. It looks like another worthless alien-filled craft. Prepare to meet your maker!" Weapon locks detected. [ SF DR ]</text>
-	<text>A Crystalline ship messages you, "I've heard tales that our isolation has finally ended. As a warrior I must demand to test my skills against you!" Before you can respond they move in to attack. [ SF DR ]</text>
-	<text>You arrive in a busy sector. At first no one pays any mind to your alien ship but soon you're registering a number of scan signatures. You get the feeling you're not wanted here just seconds before registering enemy weapon locks! [ SF DR ]</text>
-	<text>You jump next to a node busy with traffic, but before long all nearby ships notice you and keep their distance, uncertain of your allegiance. After an awkward standoff, a military ship breaks away from the rest and charges you. [ SF DR ]</text> 
-	<text>A barrage of rasps and clicks is broadcast over the comm; the universal translator understands little, but the words 'aliens', 'allowed' and 'no' come through quite clearly. You'll have to prove your right to be here in combat! [ SF DR ]</text>
+	<text>You arrive near a fleet of crystal ships, civilian or mercantile from the looks of them. You pause to scan one but they react immediately and send an escort to fight you off. Prepare to engage! [ Cry SF DR ]</text>
+	<text>You arrive at the Beacon and are immediately greeted by an automatic message or warning of some kind. The translator can't seem to discern its purpose but after a few short moments an alarm goes off and a hostile ship jumps in! [ Cry SF DR ]</text>
+	<text>You receive a message, "Hah. It looks like another worthless alien-filled craft. Prepare to meet your maker!" Weapon locks detected. [ Cry SF DR ]</text>
+	<text>A Crystalline ship messages you, "I've heard tales that our isolation has finally ended. As a warrior I must demand to test my skills against you!" Before you can respond they move in to attack. [ Cry SF DR ]</text>
+	<text>You arrive in a busy sector. At first no one pays any mind to your alien ship but soon you're registering a number of scan signatures. You get the feeling you're not wanted here just seconds before registering enemy weapon locks! [ Cry SF DR ]</text>
+	<text>You jump next to a node busy with traffic, but before long all nearby ships notice you and keep their distance, uncertain of your allegiance. After an awkward standoff, a military ship breaks away from the rest and charges you. [ Cry SF DR ]</text> 
+	<text>A barrage of rasps and clicks is broadcast over the comm; the universal translator understands little, but the words 'aliens', 'allowed' and 'no' come through quite clearly. You'll have to prove your right to be here in combat! [ Cry SF DR ]</text>
 </textList>
 
 <event name="CRYSTAL_CONVOY" unique="true">
-	<text>A large convoy of lumbering civilian ships appears to be passing through this region. You show no hostile intentions, but they are taking no chances, immediately sending their escort to attack! [ Kill: M Standard, Crew Kill: M Standard, Surrender: [ LScrapFuel, +8 Hull ] ]</text>
+	<text>A large convoy of lumbering civilian ships appears to be passing through this region. You show no hostile intentions, but they are taking no chances, immediately sending their escort to attack! [ Cry SF K: MStd, CK: MStd, S: [ LScrapFuel, +8 Hull ] ]</text>
 	<ship load="CRYSTAL_CONVOY" hostile="true"/>
 </event>
 
 <event name="CRYSTAL_HUNTER" unique="true">
-	<text>Crystal shards fly past your ship as soon as you jump. You scan to find the assailant and discover a Crystalline ship carrying a number of humans in its cargo bay. It must be hunting the intruding ships! [ SF K: MStd, CK: MStd, S: HumanCrew+ ]</text>
+	<text>Crystal shards fly past your ship as soon as you jump. You scan to find the assailant and discover a Crystalline ship carrying a number of humans in its cargo bay. It must be hunting the intruding ships! [ Cry SF K: MStd, CK: MStd, S: HumanCrew+ ]</text>
 	<ship load="CRYSTAL_HUNTER" hostile="true"/>
 </event>
 
 <event name="CRYSTAL_REBEL" unique="false">
-	<text>As soon as you arrive, a Rebel ship jumps in after you; they must be really hot on your tail. [ SF DR ]</text>
+	<text>As soon as you arrive, a Rebel ship jumps in after you; they must be really hot on your tail. [ Rbl SF DR ]</text>
 	<ship load="REBEL" hostile="true"/>
 </event>
 
 <event name="CRYSTAL_AUTO" unique="true">
-	<text>The Rebels must have sent their automated scouts to find you. One jumps in and immediately moves to attack. [ SF DR ]</text>
+	<text>The Rebels must have sent their automated scouts to find you. One jumps in and immediately moves to attack. [ Auto SF DR ]</text>
 	<ship load="REBEL_AUTO" hostile="true"/>
 </event>
 
 <event name="CRYSTAL_REBEL_CRYSTAL" unique="false">
 	<text>Crystal shards fly past the screen as soon as you arrive. Checking the scanners, it looks like a crystalline ship is engaged with a Rebel!</text>
 	<choice hidden="true">
-		<text>Attack the Rebel. [ Kill: M Standard, Crew Kill, H Standard, Double: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
+		<text>Attack the Rebel. [ Rbl SF K: MStd, CK: HStd, DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
 		<event>
 			<text>You message the Crystalline ship your intentions and move in to intercept the Rebel ship.</text>
 			<ship load="REBEL_CRYSTAL_REBEL_CRYSTAL" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Attack the Crystalline ship. [ SF DR ]</text>
+		<text>Attack the Crystalline ship. [ Cry SF DR ]</text>
 		<event>
 			<text>You move in to intercept the Crystalline ship. As soon as the Rebel scans your ship it takes the opportunity to jump. You have the sneaking suspicion they will inform the fleet of your position, but that's the least of your current concerns.</text>
 			<modifyPursuit amount="1"/>
@@ -177,7 +177,7 @@
 <event name="CRYSTAL_MANTIS_CRYSTAL" unique="false">
 	<text>You discover a number of civilian ships fleeing the area. Shots are fired and you find the assailant; a Mantis ship is attacking one of the smaller ships!</text>
 	<choice hidden="true">
-		<text>Attack the Mantis. [ Kill: M Standard, Crew Kill, H Standard, Double: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
+		<text>Attack the Mantis. [ Mts SF K: MStd, CK: HStd, DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
 		<event>
 			<text>You activate your impulse engines and fly between the Mantis and their prey, weapons charging. You appear to have their full attention.</text>
 			<ship load="MANTIS_CRYSTAL" hostile="true"/>
@@ -194,7 +194,7 @@
 <event name="CRYSTAL_PIRATE_CRYSTAL" unique="false">
 	<text>A pirate ship jumps in right after you arrive at the beacon. It must have followed once the Long-Range Beacon was reactivated. It almost charges a small Crystalline transport ship, weapons armed.</text>
 	<choice hidden="true">
-		<text>Attack the pirate. [ SF K: MStd, CK, HStd, DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
+		<text>Attack the pirate. [ Prt SF K: MStd, CK, HStd, DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
 		<event>
 			<text>You chase down the pirate before it has a chance to engage the civilian ship. When it detects the real threat, it turns to face you.</text>
 			<ship load="PIRATE_CRYSTAL" hostile="true"/>
@@ -211,7 +211,7 @@
 <event name="CRYSTAL_REBEL_CRYSTAL2" unique="true">
 	<text>You're greeted by an unwelcome sight - a Rebel advance ship is laying down fire on a Crystalline vessel in the distance.</text>
 	<choice hidden="true">
-		<text>Engage the Rebel ship. [ SF DR ]</text>
+		<text>Engage the Rebel ship. [ Cry SF DR ]</text>
 		<event>
 			<text>Before you can engage, the Crystalline ship scores a direct hit and obliterates the Rebel ship! They hail: "You, you are like these other aliens! You brought them here!" With that they turn their cannons on you!</text>
 			<ship load="CRYSTAL_SHIP_NO_SURRENDER" hostile="true"/>
@@ -228,7 +228,7 @@
 <event name="CRYSTAL_FED" unique="false">
 	<text>There appears to be a fight going on nearby. A Crystalline border guard is chasing a small Federation ship!</text>
 	<choice hidden="true">
-		<text>Save the Federation ship. [ SF K: MStd, CK: HStd, DB: [ RStuff | LStd, Crew+ ] ]</text>
+		<text>Save the Federation ship. [ Cry SF K: MStd, CK: HStd, DB: [ RStuff | LStd, Crew+ ] ]</text>
 		<event>
 			<text>It doesn't look like the Fed ship can stand much more pressure. You fly in and intercept the Crystalline ship.</text>
 			<ship load="CRYSTAL_FED" hostile="true"/>
@@ -257,7 +257,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Attack the traitors. [ SF DR ]</text>
+		<text>Attack the traitors. [ Fed SF DR ]</text>
 		<event>
 			<text>Deserters cannot be tolerated. You open fire on the cowards - though it doesn't please you to do so. The Federation needs every soldier it can get.</text>
 			<ship hostile="true"/>
@@ -306,7 +306,7 @@
 		<event>
 			<text>"What do you eat? What is your culture like? How long do your people live?"</text>
 			<choice hidden="true">
-				<text>Try to answer his questions. [ +6 Hull | RStuff | SF DR ]</text>
+				<text>Try to answer his questions. [ +6 Hull | RStuff | Rbl SF DR ]</text>
 				<event load="CRYSTAL_CHATTY_LIST"/>
 			</choice>
 			<choice hidden="true">
@@ -348,7 +348,7 @@
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Accept the scrap but give them false flight plans. [ HScrap, Fleet- | 1-2 Crystal Borders, SF ] </text>
+				<text>Accept the scrap but give them false flight plans. [ HScrap, Fleet- | 1-2 Crystal Borders, Cry SF DR ] </text>
 				<event load="CRYSTAL_REQUEST_LIST"/>
 			</choice>
 			<choice hidden="true" req="FLEET_DISTRACTION"> <!--DLC-->
@@ -388,7 +388,7 @@
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Pull your guy out. [ SF DR ]</text>
+				<text>Pull your guy out. [ Cry SF DR ]</text>
 				<event>
 					<text>The Crystalline captain contacts you urgently: "What is the meaning of this?! Had you no wish to aid us you might simply have declined, but THIS... is an insult!" His turns his massive ship on yours and you prepare to fight for your life.</text>
 					<ship hostile="true"/>
@@ -411,7 +411,7 @@
 						</event>
 					</choice>
 					<choice hidden="true">
-						<text>Pull your guy out. [ SF DR ]</text>
+						<text>Pull your guy out. [ Cry SF DR ]</text>
 						<event>
 							<text>The Crystalline captain contacts you urgently: "What is the meaning of this?! Had you no wish to aid us you might simply have declined, but THIS... is an insult!" His turns his massive ship on yours and you prepare to fight for your life.</text>
 							<ship hostile="true"/>
@@ -448,3 +448,53 @@
 		</event>
 	</choice>
 </event>
+
+
+<eventList name="CRYSTAL_SHIP_SURRENDER">
+	<event>
+		<text>"Thank you. We have misjudged you and will not forget your kindness." They leave without another word.</text>
+		<ship hostile="false"/>
+	</event>
+	<event>
+		<text>They respond, "Good. I'm glad to hear that there are still those who value life throughout the galaxy." They abruptly cut communications and prepare to jump away.</text>
+		<ship hostile="false"/>
+	</event>
+	<event>
+		<text>"Thank you. I hope our early aggression will not prevent a future accord between our peoples." They transfer some goods as a means of compensation.</text>
+		<ship hostile="false"/>
+		<autoReward level="RANDOM">stuff</autoReward>
+	</event>
+	<event>
+		<text>"Good. I see no need for bloodshed either." They release a cargo crate in your direction. "Take this as a trophy for clearly besting us."</text>
+		<ship hostile="false"/>
+		<autoReward level="RANDOM">stuff</autoReward>
+	</event>
+	<event>
+		<text>They thank you for sparing them, their extreme aggression quickly changing to a calm acceptance. You're not sure if they're mocking you when they dryly state that "your species has a knack for warfare".</text>
+		<ship hostile="false"/>
+		<autoReward level="RANDOM">stuff</autoReward>
+	</event>
+	<event>
+		<text>"We would like to apologize for our xenophobia. You have shown that aliens can be compassionate, a fact unwritten in our history records. Please, take this."</text>
+		<ship hostile="false"/>
+		<autoReward level="RANDOM">stuff</autoReward>
+	</event>
+	<event>
+		<text>What appears to be a young soldier pushes its way onto the vid screen, "A captain both able and merciful? I have always wanted to explore beyond our restricted sector... Please, permit me to join your crew?"</text>
+		<ship hostile="false"/>
+		<choice hidden="true">
+			<text>Yes. [ CrystalCrew+]</text>
+			<event>
+				<text>"Great!" As he brings his few belongings on board, you wonder how a being made of crystal can move with such lightness and enthusiasm.</text>
+				<crewMember amount="1" class="crystal"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>No. [ RStuff ]</text>
+			<event>
+				<text>"I understand. We did try to kill you..." They transfer some materials over before leaving.</text>
+				<autoReward level="RANDOM">stuff</autoReward>
+			</event>
+		</choice>
+	</event>
+</eventList>

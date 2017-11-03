@@ -1,7 +1,7 @@
 <event name="ASTEROID_EXPLORE" unique="true">
 	<text>Scans reveal a large asteroid field nearby. Short-range scanners may discover useful materials while we wait for the FTL to recharge.</text>
 	<choice hidden="true">
-		<text>Explore the asteroid field. [ Nil | HScrapFuel | MScrapMiss | MScrapDrones | -5 Hull | SF DR w/Asteroids ] </text>
+		<text>Explore the asteroid field. [ Nil | HScrapFuel | MScrapMiss | MScrapDrones | -5 Hull | Prt SF DR w/Asteroids ] </text>
 		<event load="ASTEROID_EXPLORE_RESULTS"/>
 	</choice>
 	<choice>	
@@ -41,7 +41,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Fight the ship. [ SF DR ]</text>
+		<text>Fight the ship. [ Prt SF DR ]</text>
 		<event>
 			<text>Mercenaries are worse than Rebels. The only honorable course is to engage the mercenary in battle.</text>
 			<ship hostile="true"/>
@@ -57,7 +57,7 @@
 	<text>Scans show a remote settlement being blockaded by a pirate ship. The ship hastily messages you, "Stay out of this, or you'll be next!...Concentrate fire on..."</text>
 	<ship load="PIRATE_STATION_CROPS" hostile="false"/>
 	<choice hidden="true">
-		<text>Attack the pirate. [ SF K: MStd; CK: MStd; DB: LStuff, S: MStuff ]</text>
+		<text>Attack the pirate. [ Prt SF K: MStd; CK: MStd; DB: LStuff, S: MStuff ]</text>
 		<event>
 			<text>"You asked for it!" They pull away from the planet and move in to engage.</text>
 			<ship hostile="true"/>
@@ -117,7 +117,7 @@
 <event name="PIRATE_CIVILIAN_BEACON">
 	<text>The distress beacon is coming from a civilian ship. It appears it is being chased by a pirate.</text>
 	<choice>
-		<text>Aid the civilian ship. [ SF K: MStd; CK: HStd; DB: [ Crew+ | MStd | LStd | LWeap | +5 Hull ] ]</text>
+		<text>Aid the civilian ship. [ Prt SF K: MStd; CK: HStd; DB: [ Crew+ | MStd | LStd | LWeap | +5 Hull ] ]</text>
 		<event>
 			<text>You power up your weapons and engage the pirate ship.</text>
 			<ship load="PIRATE_CIVILIAN" hostile="true"/>
@@ -130,7 +130,7 @@
 		</event>
 	</choice>
 	<choice req="weapons" lvl="6" hidden="true" hidden="true">
-		<text>(Improved Weapons) Fire a warning shot from your strongest weapon. [ SF K: MStd , CK: HStd, DB: [ Crew+ | MStd | LStd | LWeap | +5 Hull ] | [ Crew+ | MStd | LStd | LWeap | +5 Hull ] ]</text>
+		<text>(Improved Weapons) Fire a warning shot from your strongest weapon. [ Prt SF K: MStd , CK: HStd, DB: [ Crew+ | MStd | LStd | LWeap | +5 Hull ] | [ Crew+ | MStd | LStd | LWeap | +5 Hull ] ]</text>
 		<event load="PIRATE_CIVILIAN_BEACON_BEAM"/>
 	</choice>
 </event>
@@ -192,10 +192,10 @@
 </eventList>
 
 <textList name="TRAP_BEACON_TEXT">  <!-- JUSTIN - ADDED -->
-	<text>You arrive at the beacon and immediately detect a pirate ship. It seems this distress beacon was a trap! [ SF DR ]</text>
-	<text>"Haha! I knew someone would fall into our dastardly trap!" It appears this distress beacon was nothing but a decoy for a pirate ambush. [ SF DR ]</text>
-	<text>Your cockpit lights up with warning signals. You are being targeted by a nearby ship. The distress call was a lure to attract unwitting ships into weapons range. You prepare for a fight. [ SF DR ]</text>
-	<text>As soon as you arrive at the distress signal, shots are fired toward your ship. A trap! [ SF DR ]</text>
+	<text>You arrive at the beacon and immediately detect a pirate ship. It seems this distress beacon was a trap! [ Prt SF DR ]</text>
+	<text>"Haha! I knew someone would fall into our dastardly trap!" It appears this distress beacon was nothing but a decoy for a pirate ambush. [ Prt SF DR ]</text>
+	<text>Your cockpit lights up with warning signals. You are being targeted by a nearby ship. The distress call was a lure to attract unwitting ships into weapons range. You prepare for a fight. [ Prt SF DR ]</text>
+	<text>As soon as you arrive at the distress signal, shots are fired toward your ship. A trap! [ Prt SF DR ]</text>
 </textList>
 
 <event name="CIVILIAN_ASTEROIDS_BEACON_2">
@@ -260,7 +260,7 @@
 	<text load="REBEL_VS_FEDERATION"/>
 	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
 	<choice>
-		<text>Aid the Federation ship. [ SF K: MStd; CK: MStd; DB: [ Hidden Federation Base Quest | MStd | Crew+ w/BOs ] </text>
+		<text>Aid the Federation ship. [ Rbl SF K: MStd; CK: MStd; DB: [ Hidden Federation Base Quest | MStd | Crew+ w/BOs ] </text>
 		<event>
 			<text>You power up your weapons and engage the Rebel ship.</text>
 			<ship load="REBEL_VS_FEDERATION" hostile="true"/>
@@ -340,7 +340,7 @@
 		<event load="DISTRESS_TRAPPED_MINER_SHOOT"/>
 	</choice>
 	<choice hidden="true">
-		<text>Destroy and loot the ship. They're just pirates. [ MStd | SF DR ]</text>
+		<text>Destroy and loot the ship. They're just pirates. [ MStd | Prt SF DR ]</text>
 		<event load="DISTRESS_TRAPPED_MINER_LOOT"/>		
 	</choice>
 	<choice hidden="true" req="WEAPONS_BEAM_DAMAGE"> <!-- JUSTIN - TO DO - List of beam weapons-->
@@ -587,7 +587,7 @@
 	<img back="BG_DARK" planet="NONE"/>
 	<text>You jump into the middle of an asteroid field. Looking around, you find you are surrounded by dozens of wrecks of other ships. Faint wisps of light can be seen moving between wrecks. As you watch, they seem to be changing path and floating toward your ship!</text>
 	<choice>
-		<text>Prepare for a fight! [ 3-6 Boarders ]</text>
+		<text>Prepare for a fight! [ 3-6 Boarders w/asteroids ]</text>
 			<event>
 			<boarders min="3" max="6" class="ghost"/>
 			<environment type="asteroid"/>
@@ -612,13 +612,13 @@
 
 <event name="AUTO_ASTEROID">
 	<img back="BG_DARK" planet="NONE"/>
-	<text>You arrive in an asteroid belt to discover that a Rebel automated-scout has been stationed here. Prepare for a fight! [ SF DR ]</text>
+	<text>You arrive in an asteroid belt to discover that a Rebel automated-scout has been stationed here. Prepare for a fight! [ Auto SF DR ]</text>
 	<ship load="REBEL_AUTO" hostile="true"/>
 	<environment type="asteroid"/>
 </event>
 
 <event name="AUTO_SUN" unique = "true">
-	<text>You arrive at the beacon to find yourself dangerously close to a star. An automated Rebel ship, impervious to the heat, moves in to engage. [ SF DR ]</text>
+	<text>You arrive at the beacon to find yourself dangerously close to a star. An automated Rebel ship, impervious to the heat, moves in to engage. [ Auto SF DR ]</text>
 	<ship load="REBEL_AUTO" hostile="true"/>
 	<environment type="sun"/>
 </event>
@@ -715,7 +715,7 @@
 		<text>You find the remains of the ship. It seems to have severe external damage, but you cannot pinpoint a cause. The majority of its cargo seems intact. You manage to discern the ship's intended destination.</text>
 		<autoReward level="MED">standard</autoReward>
 		<choice>
-			<text>Take the cargo and head to its original destination in search of a reward.</text>
+			<text>Take the cargo and head to its original destination in search of a reward. [ MDrone Reward Quest ]</text>
 			<event>
 				<quest event="MERCHANT_INVESTIGATE_DELIVER"/>
 			</event>
@@ -745,7 +745,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>After a quick scan, you find a ship being chased by a pirate. This must be the missing delivery ship! You move in to rescue them. [ SF K: MStd, CK: MStd</text>
+		<text>After a quick scan, you find a ship being chased by a pirate. This must be the missing delivery ship! You move in to rescue them. [ Prt SF K: MStd, CK: MStd</text>
 		<ship load="JELLY_PIRATE_MERCHANT" hostile="true"/>
 	</event>
 </eventList>
@@ -753,7 +753,7 @@
 <event name="FEDERATION_PLANET_SIGNAL" unique ="true">    
 	<text>A Federation encrypted signal is being broadcast from a nearby planet.</text>
 	<choice hidden="true">
-		<text>Send an away party to investigate. [ Hidden Federation Base Quest | MStuff, Federation Base Assist Quest | Nil | HStd | SF DR, 2-3 Human Boarders ]</text>
+		<text>Send an away party to investigate. [ Hidden Federation Base Quest | MStuff, Federation Base Assist Quest | Nil | HStd | Rbl SF DR, 2-3 Human Boarders ]</text>
 		<event name="FEDERATION_PLANET_SIGNAL_LIST"/>
 	</choice>
 	<choice>
@@ -813,7 +813,7 @@
 	<text load="QUEST_ESCORT_TEXT"/>
 	<ship load="CIVILIAN_SHIP" hostile="false"/>
 	<choice>
-		<text hidden="true">Accept. [ LFuel, Quest [ SF | HStd | +5 Hull, Store | Reactor+1 ] ]</text>
+		<text hidden="true">Accept. [ LFuel, Quest [ Rbl SF | HStd | +5 Hull, Store | Reactor+1 ] ]</text>
 		<event>
 			<text>"Great. Take this bit of fuel as a down-payment. We'll be one step behind you, following your jump signatures. Don't want to take any risks now, do we?"</text>
 			<quest event="QUEST_ESCORT_ARRIVE"/>
@@ -830,7 +830,7 @@
 
 <eventList name="QUEST_ESCORT_ARRIVE">
 	<event>
-		<text>You escort the ship to the requested beacon. Much to your dismay you are ambushed by a Rebel ship. You walked right into their trap! [ SF DR ]</text>
+		<text>You escort the ship to the requested beacon. Much to your dismay you are ambushed by a Rebel ship. You walked right into their trap! [ Rbl SF DR ]</text>
 		<ship load="REBEL" hostile="true"/>
 	</event>
 	<event>
@@ -852,7 +852,7 @@
 	<img planet="PLANET_POPULATED"/>
 	<text>Once you arrive at this populated region, you immediately pick up a distress signal. A small shuttle is asking anyone who'll listen for help protecting their family from a Rebel ship. Unsurprisingly, no one has yet responded to their request.</text>
 	<choice>
-		<text>See if you can assist them. [ Quest: Ship fight, MScrap, +5 Hull, Store ]</text>
+		<text>See if you can assist them. [ Quest: SF, MScrap, +5 Hull, Store ]</text>
 		<event>
 			<text>It seems that a small space dock has done something to anger the Rebels. The store there is run by his family and he pleads that you rescue them. He uploads the coordinates of the station to your navigation system.</text>
 			<quest event="QUEST_STORE_RESCUE"/>
@@ -869,7 +869,7 @@
 <event name="QUEST_STORE_RESCUE">
 	<text>Once you arrive at the beacon you detect a Rebel scout assaulting a compound on a nearby desolate moon.</text>
 	<choice>
-		<text>Engage the Rebel and rescue the space dock. [ SF K: MScrap, CK: MScrap, DB: [ +5 Hull, Store ] ]</text>
+		<text>Engage the Rebel and rescue the space dock. [ Rbl SF K: MScrap, CK: MScrap, DB: [ +5 Hull, Store ] ]</text>
 		<event>
 			<ship load="SQUAT_STORE_RESCUE" hostile="true"/>
 		</event>
@@ -886,7 +886,7 @@
 	<event>
 		<text>"A space dock is under assault from the Rebels. Although the dock is... technically... illegal within their laws, it's very important for our trade. We'll pay you in fuel and scrap if you promise to save them."</text>
 		<choice>
-			<text>Agree to rescue the store. [ Quest: SF, MScrap, +5 Hull, Store ]</text>
+			<text>Agree to rescue the store. [ Quest: Reb SF, MScrap, +5 Hull, Store ]</text>
 			<event>
 				<text>They transmit the space dock's coordinates.</text>
 				<quest event="QUEST_STORE_RESCUE"/>
@@ -902,9 +902,9 @@
 	<event>
 		<text>"Some of our friends have taken to piracy in the recent chaos of the war. We'd like you to "convince" them of their poor decision by severely damaging their ship. We'll pay you well as long as you don't kill them all."</text>
 		<choice>
-			<text>Accept. [ SF, MScrapWeapon ]</text>
+			<text>Accept. [ Prt SF S: MScrapWeapon, K: LStd, CK: LStd ]</text>
 			<event>
-				<text>"Just be sure not to blow them up!" they say nervously as they direct you to a nearby moon. You find the pirate ship docked there. They immediately respond to your appearance with, "Your money or your life!" They must be new to this. [ SF S: MScrapWeapon, K: LStd, CK: LStd ]</text>
+				<text>"Just be sure not to blow them up!" they say nervously as they direct you to a nearby moon. You find the pirate ship docked there. They immediately respond to your appearance with, "Your money or your life!" They must be new to this. [ Prt SF S: MScrapWeapon, K: LStd, CK: LStd ]</text>
 				<ship load="SQUAT_PIRATE_MERCENARY" hostile="true"/>
 			</event>
 		</choice>
@@ -920,11 +920,11 @@
 <event name="QUEST_MANTIS_INVASION" unique="true"> <!-- ADD PDS ENVIRONMENT -->
 	<text>You find the Mantis encampment but there are far too many of them to count accurately. You send a long range message back to the settlement with your findings but unfortunately there's not much you can do. It would be suicide to attack directly.</text>
 	<choice>
-		<text>Leave before they notice you. [ Nil | SF K: MStd, CK: HStd ]</text>
+		<text>Leave before they notice you. [ Nil | Mts SF K: MStd, CK: HStd ]</text>
 		<event load="MANTIS_LANDING_PARTY_LEAVE"/>
 	</choice>
 	<choice req="WEAPONS_MISSILES">
-		<text>(Missile Weapon) Bombard their key structures. [ -1 Miss, SF K: MStd, CK: HStd ] ]</text>
+		<text>(Missile Weapon) Bombard their key structures. [ -1 Miss, Mts SF K: MStd, CK: HStd ] ]</text>
 		<event>
 			<text>You fire at their fuel depot, but a shot from the surface rips the missile to shreds. They must have a planetary defense system set up already! You try to get away but a nearby patrol ship moves in to attack.</text>
 			<item_modify>
@@ -967,15 +967,15 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="teleporter" lvl="1">
-		<text>(Teleporter) Offer to board their ship.</text>
+		<text>(Teleporter) Offer to board their ship. [ Quest: Prt SF, K: -15 Hull, CK: HScrapWeapon ]</text>
 		<event load="QUEST_CREWDEAD_CONTINUE"/>
 	</choice>
 	<choice hidden="true" req="BEAM_BIO">
-		<text>(Bio Beam) Offer to 'remove' their crew.</text>
+		<text>(Bio Beam) Offer to 'remove' their crew. [ Quest: Prt SF, K: -15 Hull, CK: HScrapWeapon ]</text>
 		<event load="QUEST_CREWDEAD_CONTINUE"/>
 	</choice>
 	<choice hidden="true" req="BOMB_FIRE">
-		<text>(Fire Bomb) Offer to burn the crew out.</text>
+		<text>(Fire Bomb) Offer to burn the crew out. [ Quest: Prt SF, K: -15 Hull, CK: HScrapWeapon ]</text>
 		<event load="QUEST_CREWDEAD_CONTINUE"/>
 	</choice>
 </event>
@@ -983,7 +983,7 @@
 <event name="QUEST_CREWDEAD_CONTINUE">
 	<text>They quickly scan your ship and say, "It appears you could help. A bandit has made off with some very important cargo, though I doubt they have any understanding of what it is they stole. We need you to capture the ship intact.</text>
 	<choice hidden="true">
-		<text>Agree to capture the ship. [ Quest: SF, K: -15 Hull, CK: HScrapWeapon ]</text>	
+		<text>Agree to capture the ship. [ Quest: Prt SF, K: -15 Hull, CK: HScrapWeapon ]</text>	
 		<event>
 			<text>"Great, we'll relay their coordinates. Remember, do NOT destroy that ship! Remember, we'll be right behind you."</text>
 			<quest event="QUEST_CREWDEAD"/>
@@ -997,7 +997,7 @@
 	</choice>
 </event>	
 <event name="QUEST_CREWDEAD" unique="true">
-	<text>You find the ship that you were asked to capture intact. You're not sure why, but they stressed that it's of great importance that you kill the crew WITHOUT destroying the ship. [ K: -15 Hull, CK: HScrapWeapon ]</text>
+	<text>You find the ship that you were asked to capture intact. You're not sure why, but they stressed that it's of great importance that you kill the crew WITHOUT destroying the ship. [ Prt SF K: -15 Hull, CK: HScrapWeapon ]</text>
 	<ship load="PIRATE_QUEST_CREWDEAD" hostile="true"/>
 </event>
 
@@ -1099,7 +1099,7 @@
 <event name="ZOLTAN_CREW_STUDY">
 	<text>You arrive at a Zoltan research facility. They say they are researching genetic distortion due to stasis sleep and prolonged FTL travel. They ask if your crew has the time to undergo a few scans.</text>
 	<choice hidden="true">
-		<text>Participate in their study. [ x2 LScrap | 2 Boarders, SF K: MStd, CK: HStd, DB: LStuff ]</text>
+		<text>Participate in their study. [ x2 LScrap | 2 Boarders, Prt SF K: MStd, CK: HStd, DB: LStuff ]</text>
 		<event load="ZOLTAN_CREW_STUDY_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -1233,20 +1233,20 @@
 		<event>
 			<text>"Well I have heard of you and I must see if you are as dangerousss as they say. I challenge you!"</text>
 			<choice hidden="true">	
-				<text>Accept his challenge. [ SF K: MStd, CK: HStd, S: HScrapWeapon ]</text>
+				<text>Accept his challenge. [ Slg SF K: MStd, CK: HStd, S: HScrapWeapon ]</text>
 				<event>
 					<ship hostile="true"/>
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Decline. [ K: MStd, CK: HStd, S: HScrapWeapon ]</text>
+				<text>Decline. [ Slg SF K: MStd, CK: HStd, S: HScrapWeapon ]</text>
 				<event>
 					<text>"I sssee... However you have no choice in the matter!" They move in to attack.</text>
 					<ship hostile="true"/>
 				</event>
 			</choice>
 			<choice hidden="true" req="slug">
-				<text>(Slugman Crew) Engage in a duel of the mind. [ HScrapWeapon | SF 1-2 Boarders, K: MStd, CK: HStd, S: HScrapWeapon </text>
+				<text>(Slugman Crew) Engage in a duel of the mind. [ HScrapWeapon | Slg SF 1-2 Boarders, K: MStd, CK: HStd, S: HScrapWeapon </text>
 				<event load="DONOR_BLACK_RAVEN_SLUG"/>
 			</choice>
 		</event>
@@ -1254,12 +1254,12 @@
 </event>
 
 <event name="DONOR_MANTIS_CHASE" unique="true">
-	<text>You are immediately hailed by an impressive looking Mantis ship, "Your ship would make a mighty fine prize. Prepare for battle!" [ SF K: MStd, CK: HStd, Esc: Mantis Chase Quest ] </text>
+	<text>You are immediately hailed by an impressive looking Mantis ship, "Your ship would make a mighty fine prize. Prepare for battle!" [ Mts SF K: MStd, CK: HStd, Esc: Mantis Chase Quest ] </text>
 	<ship load="DONOR_MANTIS_CHASE1" hostile="true"/>
 </event>
 <ship name="DONOR_MANTIS_CHASE1" auto_blueprint="MANTIS_FIGHTER">
 	<escape timer="5" min="5" max="5">
-		<text>You pick up more chatter from the enemy ship, "You know what... Forget this. Prepare for retreat!" Looks like they're preparing to make a hasty get away!</text>
+		<text>You pick up more chatter from the enemy ship, "You know what... Forget this. Prepare for retreat!" Looks like they're preparing to make a hasty get away! [ K: MStd, CK: HStd, Esc: Mantis Chase Quest ]</text>
 	</escape>
 	<gotaway>
 		<text>The ship made an emergency FTL jump, but it looks like they didn't mask their signatures. You could easily follow them if you want.</text>
@@ -1293,7 +1293,7 @@
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>"Not YOU again! Do you know how much these repairs are going to cost me? Time to take out the big guns." [ SF K: MStd, CK: HStd, S: HWeap ]</text>
+			<text>"Not YOU again! Do you know how much these repairs are going to cost me? Time to take out the big guns." [ Mts SF K: MStd, CK: HStd, S: HWeap ]</text>
 		</event>
 	</choice>
 </event>
@@ -1306,11 +1306,11 @@
 		<event>
 			<text>A young Mantis in a charred uniform has teleported onto the deck. He begs for sanctuary from the Engi, and offers to serve in exchange for your protection. The Engi have already traced the teleporter signal and are offering a deal in exchange for the prisoner.</text>
 			<choice hidden="true">
-				<text>Side with the fugitive and fight the Engi ship. [ -5 Hull, SF DR | MantisCrew+, SF DR ]</text>
+				<text>Side with the fugitive and fight the Engi ship. [ -5 Hull, SF DR | MantisCrew+, Eng SF DR ]</text>
 				<event load="ALISON_MANTIS_CREW_HELP"/>
 			</choice>
 			<choice hidden="true">
-				<text>Agree to offer up the Mantis in exchange for a bounty. [ HScrap | -5 Hull, HScrap | 1 Mantis Boarder, DR SF ] </text>
+				<text>Agree to offer up the Mantis in exchange for a bounty. [ HScrap | -5 Hull, HScrap | 1 Mantis Boarder, Eng SF DR w/Mantis crew ] </text>
 				<event load="ALISON_MANTIS_CREW_REJECT"/>
 			</choice>
 		</event>
@@ -1325,11 +1325,11 @@
 		<event>
 			<text>A flushed and panicky rebel soldier has teleported aboard. The rebel, who appears unarmed, repeatedly declares his peaceful intentions. It seems the rebel life has lost its charm.</text>
 			<choice hidden="true">
-				<text>Accept his proposal, and prepare to fight the Rebel ship. [ -3 Hull, Fleet+, SF DR | 2 Human Boarders, -3 Hull, SF DR | x3 HumanCrew+ SF DR | 1 Human Boarder, SF DR, Crew- (CB+)</text>
+				<text>Accept his proposal, and prepare to fight the Rebel ship. [ -3 Hull, Fleet+, Rbl SF DR | 2 Human Boarders, -3 Hull, Rbl SF DR | x3 HumanCrew+ Rbl SF DR | 1 Human Boarder, Rbl SF DR, Crew- (CB+)</text>
 				<event load="ALISON_DEFECTOR_HELP"/>
 			</choice>
 			<choice>
-				<text>Reject his offer. You can never trust these Rebels. [ SF DR | 1 Boarder, SFDR | Second chance ]</text>
+				<text>Reject his offer. You can never trust these Rebels. [ Rbl SF DR | 1 Boarder, Rbl SF DR | Second chance ]</text>
 				<event load="ALISON_DEFECTOR_REJECT"/>
 			</choice>
 		</event>
@@ -1339,24 +1339,24 @@
 
 <eventList name="ALISON_DEFECTOR_REJECT">
 	<event>
-		<text>Your fearless crew easily overcome the intruder, but the Rebel ship still needs to be dealt with.</text>
+		<text>Your fearless crew easily overcome the intruder, but the Rebel ship still needs to be dealt with. [ Rbl SF DR ]</text>
 	</event>
 	<event>
-		<text>Attempting to deal with attacks from inside and out is never easy!</text>
+		<text>Attempting to deal with attacks from inside and out is never easy! [ 1 Boarder, Rbl SF DR ]</text>
 		<boarders min="1" max="1" class="human"/>
 	</event>
 	<event>
 		<text>He offers to lead you to a secret cache of scrap nearby if you let him join your crew.</text>
 		<choice>
-			<text>Reluctantly accept his proposal and fight the Rebel ship. [ -3 Hull, SF DR, Fleet+ | -3 Hull, 2 Human Boarders, SF DR | x3 HumanCrew+, Quest, SF DR | 1 HumanBoarder, SF DR, Crew- (CB+)</text>
+			<text>Reluctantly accept his proposal and fight the Rebel ship. [ -3 Hull, SF DR, Fleet+ | -3 Hull, 2 Human Boarders, Rbl SF DR | x3 HumanCrew+, Quest, Rbl SF DR | 1 HumanBoarder, Rbl SF DR, Crew- (CB+)</text>
 			<event load="ALISON_DEFECTOR_HELP_2"/>
 		</choice>
 		<choice>
-			<text>Reject him outright and execute him on the spot. [ SF DR ]</text>
+			<text>Reject him outright and execute him on the spot. [ Rbl SF DR ]</text>
 			<event/>
 		</choice>
 		<choice>
-			<text>Reject his offer again. [ SF DR, 1 Human Boarder ]</text>
+			<text>Reject his offer again. [ Rbl SF DR, 1 Human Boarder ]</text>
 			<event>
 				<boarders min="1" max="1" class="human"/>
 			</event>
@@ -1366,11 +1366,11 @@
 
 <eventList name="FEDERATION_BASE_ASSIST">
 	<event>
-		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ SF K: LStd, DB: [ LWeapon, Crew+ | HStd, +7 Hull ] ]</text>
+		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ LWeapon, Crew+ | HStd, +7 Hull ] ]</text>
 		<ship load="AUTO_FEDERATION_BASE" hostile="true"/>
 	</event>
 	<event>
-		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ SF K: LStd, DB: [ LWeapon, Crew+ | HStd, +7 Hull ] ]</text>
+		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ LWeapon, Crew+ | HStd, +7 Hull ] ]</text>
 		<ship load="AUTO_FEDERATION_BASE2" hostile="true"/>
 	</event>
 </eventList>
@@ -1416,7 +1416,7 @@
 	<event>
 		<text>"Your ship seems reasonably equipped... A freighter carrying a shipment of my goods is a week late. The fools flew through a pirate-filled sector in their haste and I fear for the cargo's safety. I'm looking for a less incompetent captain to investigate."</text>
 		<choice hidden="true">
-			<text>Accept. [ Metchant Investigate Quset ]</text>
+			<text>Accept. [ Merchant Investigate Quest ]</text>
 			<event>
 				<text>"At least you're confident, for what little that's worth. Here is their last known location."</text>
 				<quest event="MERCHANT_INVESTIGATE"/>

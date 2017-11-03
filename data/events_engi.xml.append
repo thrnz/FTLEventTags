@@ -36,26 +36,26 @@
 </event>
 
 <textList name="ENGI_MANTIS_FIGHT">
-	<text>A mixed radar signal turns out to be a Mantis attack ship scavenging the remains of an Engi carrier. They turn and fight. [ SF DR ]</text>
-	<text>You come across a Mantis raider taking pot shots at a defenceless Engi supply station. Discovering its weapons aren't much of a match for the station's armour, it turns on your ship. Battle stations! [ SF DR ]</text>
-	<text>The area looks clear, and you prepare to jump off, but a Mantis scout jumps in behind you! They're as surprised as you are, but their weapons are already online. [ SF DR ]</text>
-	<text>You find a Mantis ship harrying a small squad of Engi. They make it to the node and jump off, leaving you toe to toe with their pursuer! [ SF DR ]</text>
+	<text>A mixed radar signal turns out to be a Mantis attack ship scavenging the remains of an Engi carrier. They turn and fight. [ Mts SF DR ]</text>
+	<text>You come across a Mantis raider taking pot shots at a defenceless Engi supply station. Discovering its weapons aren't much of a match for the station's armour, it turns on your ship. Battle stations! [ Mts SF DR ]</text>
+	<text>The area looks clear, and you prepare to jump off, but a Mantis scout jumps in behind you! They're as surprised as you are, but their weapons are already online. [ Mts SF DR ]</text>
+	<text>You find a Mantis ship harrying a small squad of Engi. They make it to the node and jump off, leaving you toe to toe with their pursuer! [ Mts SF DR ]</text>
 </textList>
 
 <event name="ENGI_REBEL_FIGHT">
-	<text>The rebel fighter here would seem to suggest elements of the rebel fleet are already making incursions on Engi space. You move to engage. [ SF DR ]</text>
+	<text>The rebel fighter here would seem to suggest elements of the rebel fleet are already making incursions on Engi space. You move to engage. [ Rbl SF DR ]</text>
 	<ship load="REBEL" hostile="true"/>
 </event>
 
 <event name="ENGI_PIRATE_FIGHT">
-	<text>There must have been rich pickings for pirates around here up until war broke out. The pirate you encounter here looks worn down, but hungry. You'll have to fight! [ SF DR ]</text>
+	<text>There must have been rich pickings for pirates around here up until war broke out. The pirate you encounter here looks worn down, but hungry. You'll have to fight! [ Prt SF DR ]</text>
 	<ship load="PIRATE" hostile="true"/>
 </event>
 
 <event name="ENGI_STATION_DISTRESS" unique="false">
 	<text>You receive a distress call from a nearby Engi ship. "Assistance requested. Danger present. Imminent destruction."</text>
 	<choice>
-		<text>Respond to the call and move in to assist. [ SF DR, 1-2 Boarders | SF K: MStd, CK: HStd, DB: [ Nil | MFuel | EngiCrew+, LStd | [ Option of Fuel/Weapon/Drone/Engi BO ] ] ] </text>
+		<text>Respond to the call and move in to assist. [ Eng w/Mantis Crew SF DR, 1-2 Boarders | Mts SF K: MStd, CK: HStd, DB: [ Nil | MFuel | EngiCrew+, LStd | [ Option of Fuel/Weapon/Drone/Engi BO ] ] ] </text>
 		<event load="ENGI_STATION_DISTRESS_LIST"/>
 	</choice>
 	<choice>
@@ -114,7 +114,7 @@
 
 
 <event name="DISTRESS_ENGI_REBEL" unique="true">
-	<text>The distress signal originates from a small Engi ship under attack by a rebel fighter - but when the Rebels see Federation markings they turn to attack! [ SF K: LStd, CK: MStd, DB: Random Buyables ]</text> 
+	<text>The distress signal originates from a small Engi ship under attack by a rebel fighter - but when the Rebels see Federation markings they turn to attack! [ Rbl SF K: LStd, CK: MStd, DB: Random Buyables ]</text> 
 	<distressBeacon/>
 	<ship load="DISTRESS_ENGI_REBEL" hostile="true"/>
 </event>
@@ -204,14 +204,14 @@
 </event>
 
 <event name="ENGI_UNLOCK_3">
-	<text>You have finally caught up with the ships you've been hunting. A hangar-sized cargo ship is being escorted by a number of Mantis ships. As you reconsider the assault, a squadron of Engi ships with pirate emblems jump in and assist you. You prepare to fight the Mantis but scans indicate they are manned by Rebels! [ SF CK: MStd, DB: +20 Hull, HStd, Titanium System Casing  ]</text>
+	<text>You have finally caught up with the ships you've been hunting. A hangar-sized cargo ship is being escorted by a number of Mantis ships. As you reconsider the assault, a squadron of Engi ships with pirate emblems jump in and assist you. You prepare to fight the Mantis but scans indicate they are manned by Rebels! [ Mts w/Human crew SF CK: MStd, DB: +20 Hull, HStd, Titanium System Casing  ]</text>
 	<ship load="MANTIS_ENGI_UNLOCK_3" hostile="true"/>
 </event>
 
 <event name="ENGI_SEX" unique="true">
 	<text>What appeared to be a single damaged ship is in fact two ships that have smashed into each other... there is a flurry of comm signals and damage, and it's hard to determine what occurred. The vessels appear to be... Engi? They look locked together by the impact and can't free themselves.</text>
 	<choice hidden="true">
-		<text>Attempt to help the ships by prying them apart. [ SF with no rewards ]</text>
+		<text>Attempt to help the ships by prying them apart. [ Eng SF with no rewards ]</text>
 		<event>
 			<text>To your surprise, one of the Engi vessels attacks! One ship detaches itself, surprisingly still quite whole, and opens fire - it looks like it's somehow identified you as hostile!</text>
 			<ship load="ENGI_SEX_SHIP" hostile="true"/>
@@ -243,7 +243,7 @@
 		<event>
 			<text>They insist they must destroy your ship to prevent the virus from escaping!</text>
 			<choice hidden="true">
-				<text>Hold on! Let us try to purge the system code! [ SF with half Shields and Engines, K: MStd, CK: MStd ]</text>
+				<text>Hold on! Let us try to purge the system code! [ Eng SF with half Shields and Engines, K: MStd, CK: MStd ]</text>
 				<event>
 					<text>Wiping your engine core and shields proves useless... eventually you trap the virus in the weapons systems to purge it, but before you do, the Engi grow restless and attack!</text>
 					<status type="divide" target="player" system="shields" amount="2"/>
@@ -252,7 +252,7 @@
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Attack the Engi vessel! [ SF K:MStd, CK: MStd ]</text>
+				<text>Attack the Engi vessel! [ Eng SF K:MStd, CK: MStd ]</text>
 				<event>
 					<text>The Engi be damned, no one threatens your ship. You prepare for a fight!</text>
 					<ship load="ENGI_VIRUS_SHIP" hostile="true"/>
@@ -323,7 +323,7 @@
 				</event>
 			</choice>
 			<choice req="engi" hidden="true">
-				<text>[Engi Crew] Have your Engi crewmember negotiate with the Engi ship. [ EngiCrew-, SF K: MStd, CK: MStd, DB: EngiCrew+ w/Max Skills ]</text>
+				<text>[Engi Crew] Have your Engi crewmember negotiate with the Engi ship. [ EngiCrew-, Eng SF K: MStd, CK: MStd, DB: EngiCrew+ w/Max Skills ]</text>
 				<event>
 					<text>As the Engi attempts to contact the vessel and negotiate, your Engi crewmember suddenly dissolves into nanites - the virus has murdered again! Detecting activity on board your ship, the Engi vessel opens fire!</text>
 					<ship load="ENGI_VIRUS_SHIP_ALT" hostile="true"/>
@@ -340,12 +340,12 @@
 
 <eventList name="ENGI_STATION_DISTRESS_LIST">
 	<event>
-		<text>You receive another message from the ship, this time with a Mantis at the comm-log. "Foolish meatsacks," he yells. Sensors indicate the ship is moving in to attack and boarders teleport from the station. [ SF DR 1-2 Mantis Boarders ]</text>
+		<text>You receive another message from the ship, this time with a Mantis at the comm-log. "Foolish meatsacks," he yells. Sensors indicate the ship is moving in to attack and boarders teleport from the station. [ Eng w/Mantis crew SF DR 1-2 Mantis Boarders ]</text>
 		<ship load="ENGI_MANTIS_CONTROLLED" hostile="true"/>
 		<boarders min="1" max="2" class="mantis"/>
 	</event>
 	<event>
-		<text>You approach to find a Mantis ship assaulting a small Engi space station. You prepare for a fight! SF K: MStd, CK: HStd, DB: [ Nil | MFuel | EngiCrew+, LStd | [ Option of Fuel/Weapon/Drone/Engi BO ] ] ]</text>
+		<text>You approach to find a Mantis ship assaulting a small Engi space station. You prepare for a fight! [ Mts SF K: MStd, CK: HStd, DB: [ Nil | MFuel | EngiCrew+, LStd | [ Option of Fuel/Weapon/Drone/Engi BO ] ] ]</text>
 		<ship load="MANTIS_ENGI_STATION" hostile="true"/>
 	</event>
 </eventList>
