@@ -59,17 +59,17 @@ This mod is useful for players wanting to learn the possible results of ingame e
 
 ## Example tags:
 
-* [ SF DR | Nil | Weapon ] 
+* [ Prt SF DR | Nil | Weapon ] 
 
-One of 3 possible outcomes: either a ship fight with default rewards, nothing, or a free random weapon.
+One of 3 possible outcomes: either a ship fight aainst a pirate class ship with default rewards, nothing, or a free random weapon.
 
 * [ x2 Nil | Crew+ | Crew- (CB+) ]
 
 One of 4 possible outcomes: Two chances at having nothing happen, one chance of gaining a random crew member, and one chance of losing a crew member that can be negated by a clonebay.
 
-* [ SF K: MStd, CK: HStd ]
+* [ Rbl SF K: MStd, CK: HStd ]
 
-A ship fight. Killing the ship gives medium scrap + 2 resources. Getting a crew kill gives high scrap + 2 resources.
+A ship fight against a Rebel class ship. Killing the ship gives medium scrap + 2 resources. Getting a crew kill gives high scrap + 2 resources.
 
 * [ Fleet-- ]
 
