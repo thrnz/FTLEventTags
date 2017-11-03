@@ -1,20 +1,20 @@
 <eventList name="OVERRIDE_FEDERATION_BASE_ASSIST">
 	<event>
-		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ SF K: LStd, DB: [ Crew+, +7 Hull, HStd | LScrapWeapon, Crew+ ] ]</text>
+		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ Crew+, +7 Hull, HStd | LScrapWeapon, Crew+ ] ]</text>
 		<ship load="AUTO_FEDERATION_BASE" hostile="true"/>
 	</event>
 	<event>
-		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ SF K: LStd, DB: [ Crew+, +7 Hull, HStd | LScrapWeapon, Crew+ ] ]</text>
+		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Ato SF K: LStd, DB: [ Crew+, +7 Hull, HStd | LScrapWeapon, Crew+ ] ]</text>
 		<ship load="AUTO_FEDERATION_BASE2" hostile="true"/>
 	</event>
 	<!-- the new ones-->
 	<event> 
-		<text>You arrive in the sector to see the Federation outpost under fire from multiple Rebel ships. However, as you approach they get their Anti-Ship Battery online and disable two of the smaller ships. You swoop in to assist, taking down the wing leader. [ Friendly ASB, SF K: LStd, CK: MStd, DB: [ Crew+, MScrap ] ]</text>
+		<text>You arrive in the sector to see the Federation outpost under fire from multiple Rebel ships. However, as you approach they get their Anti-Ship Battery online and disable two of the smaller ships. You swoop in to assist, taking down the wing leader. [ Friendly ASB, Rbl SF K: LStd, CK: MStd, DB: [ Crew+, MScrap ] ]</text>
 		<ship load="REBEL_FEDERATION_PDS" hostile="true"/>
 		<environment type="PDS" target="enemy"/>
 	</event>
 	<event>
-		<text>You arrive in the sector to see a small Federation outpost using their Anti-Ship Battery to fire at an automated drone. Debris from other ships is strewn around the area. It looks like the brunt of the battle is already over. You move in to assist. [ Friendly ASB, SF K: LStd, DB: [ Crew+, +7 Hull, HStd ] ]</text>
+		<text>You arrive in the sector to see a small Federation outpost using their Anti-Ship Battery to fire at an automated drone. Debris from other ships is strewn around the area. It looks like the brunt of the battle is already over. You move in to assist. [ Friendly ASB, Auto SF K: LStd, DB: [ Crew+, +7 Hull, HStd ] ]</text>
 		<ship load="AUTO_FEDERATION_BASE2" hostile="true"/>
 		<environment type="PDS" target="enemy"/>
 	</event>
