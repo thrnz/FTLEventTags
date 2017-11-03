@@ -11,8 +11,7 @@ This mod is useful for players wanting to learn the possible results of ingame e
  * Mistakes may have been made. I take no responsibility for any runs lost as a result of incorrect information supplied by this mod!
 
 ## To-do
- * Needs plenty of testing
- * Maybe tag possible enemy ship classes too.
+ * Testing / double checking etc
 
 ## Legend
 * SF: Ship Fight
@@ -30,6 +29,19 @@ This mod is useful for players wanting to learn the possible results of ingame e
 * x2, x3: Number of times an identical event is in the event pool
 * Nil: Nothing happens
 * More...: More options follow. Should always be safe to click.
+* Rbl: Rebel class ship
+* Prt: Pirate class ship
+* Fed: Federation class ship
+* Auto - Auto assault or scout class ship
+* Eng - Engi class ship
+* Mts - Mantis class ship
+* Ztn - Zoltan class ship
+* Slg - Slug class ship
+* Rck - Rock class ship
+* Lns - Lanius class ship fight
+* Cry - Crystal class ship fight
+* PZtl, PRck - Pirate class Zoltan/Rock ship etc.
+ 
 
 ## Rewards
 * L/M/H/R Prefix: Low/Medium/High/Random

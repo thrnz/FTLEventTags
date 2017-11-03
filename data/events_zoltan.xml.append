@@ -3,7 +3,7 @@
 	<environment type="asteroid"/>
 	<distressBeacon/>
 	<choice hidden="true">
-		<text>Interfere and save the Mantis ship. [ SF K: LStd, CK: MStd ]</text>
+		<text>Interfere and save the Mantis ship. [ Ztn SF K: LStd, CK: MStd ]</text>
 		<event>
 			<text>Sometimes you have to bet on the underdog - even on the rare occasions that the underdog is a Mantis warship. You set off for the heart of the asteroid field and engage the Zoltan there.</text>
 			<environment type="asteroid"/>
@@ -11,7 +11,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Interfere and help the Zoltan ship. [ SF K: LStd, CK: MStd ]</text>
+		<text>Interfere and help the Zoltan ship. [ Mts SF K: LStd, CK: MStd ]</text>
 		<event>
 			<text>You overtake the Zoltan and catch up with the Mantis ship in the asteroid belt. Time to make some friends.</text>
 			<environment type="asteroid"/>
@@ -29,7 +29,7 @@
 <event name="ZOLTAN_TRADE_HUB" unique="true">   <!-- This is a 50/50 chance of quest start-->
 	<text>You come to a Zoltan trade and supply hub - everything the weary traveler needs, provided they have the right documentation.</text>
 	<choice hidden="true">
-		<text>Try to talk your way in. [ SF DR, 2-4 Zoltan Boarders | [ Store | Primitives Quest ] ]</text>
+		<text>Try to talk your way in. [ Ztn SF DR, 2-4 Zoltan Boarders | [ Store | Primitives Quest ] ]</text>
 		<event load="ZOLTAN_TRADE_HUB_TALK"/>
 	</choice>	
 	<choice hidden="true" req="teleporter" lvl="1">
@@ -70,14 +70,14 @@
 		<event>
 			<text>You tap into their frequency and hear the Rebel captain yelling, "We are liberating this planet in the name of the new Galactic government! These aliens will not be left in ignorance where they cannot be of use!"</text>
 			<choice hidden="true">
-				<text>Interfere - make first contact with the primitive aliens. [ SF K: LStd, CK: RStd ]</text>
+				<text>Interfere - make first contact with the primitive aliens. [ Ztn SF K: LStd, CK: RStd ]</text>
 				<event>
 					<text>The local people - furry, one-eyed tree lizard things - begin chanting when they see you. Suddenly the sky is lit by laser fire - the Zoltan opened fire on your ship! You dash back to the shuttle and join the fight.</text>
 					<ship load="ZOLTAN_PRIMITIVES_ZOLTAN" hostile="true"/>
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Protect the aliens' way of life - Attack the Rebel ship. [ SF K: LScrapWeapon, CK: MScrapWeapon ]</text>
+				<text>Protect the aliens' way of life - Attack the Rebel ship. [ Rb; SF K: LScrapWeapon, CK: MScrapWeapon ]</text>
 				<event>
 					<text>These creatures should be left to develop at their own pace. You direct all weapons on the Rebel ship and begin the firing sequence.</text>
 					<ship load="ZOLTAN_PRIMITIVES_REBEL" hostile="true"/>
@@ -123,47 +123,72 @@
 	</choice>
 </event>
 
+<eventList name="ZOLTAN_ODD_MOON_CHECK">
+	<event>
+		<text>A closer inspection reveals signs of habitation on the surface, but nothing else particularly interesting.</text>
+	</event>
+	<event>
+		<text>Sending a shuttle to explore a beckoning cave system you discover signs of a battle - and a still-functioning weapon!</text>
+		<autoReward level="LOW">weapon</autoReward>	
+	</event>
+	<event>
+		<text>A deep scan of the surface reveals a cave system that runs for miles, and what looks like a scrap heap left over from some heavy-duty construction.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>It looks as if a team could break through the fragile layer of the moon's surface into a hidden cavern.</text>
+		<choice hidden="true">
+			<text>Attempt to detonate some explosives to break through the surface. [ -1 Missile, [ Nil | LScrapWeapon | MScrap ] ]</text>.
+			<event load="ZOLTAN_ODD_MOON_EXPLOSION"/>
+		</choice>
+		<choice>
+			<text>Explosives are too valuable to waste on excavation work. Let's get out of here. [ Nil ]</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+
 <textList name="ZOLTAN_FIGHT">
-	<text>A Zoltan ship makes contact. "The nature of the day is rotational. The fever is emaciated. The reason is-" They've caught some nasty deep space dementia. Before you can consider finding help for them, they open fire. [ SF DR ]</text>
-	<text>You're surprised when a stationary Zoltan ship opens fire. It appears there are aggressive pugilists even among the 'enlightened'. [ SF DR ]</text>
-	<text>You receive a message, "This area is off limits. Submit your ship to processing." It's only one guard ship in a lonely beacon. You decide to fight your way out. [ SF DR ]</text>
-	<text>You discover a number of Zoltan civilian ships fighting off pirates. Unfortunately one ship mistakes your purpose and moves in to attack! They are refusing all communication; you have no choice but to fight. [ SF DR ]</text>
-	<text>Like many areas in Zoltan space, the residents of this sector prepared well for Galactic war. The military here seem to have given up reasoning with foreigners, preferring instead to attack on sight! [ SF DR ]</text>
-	<text>A Zoltan ship is waiting at this beacon. They request your identification, but radiation from the sun in this system is disrupting your communications. They take your silence for aggression and move in to attack. [ SF DR ]</text>
-	<text>The Zoltan ship patrolling this area hails you: "This area is off limits. Secrecy is vital." They power their weapons. [ SF DR ]</text>
+	<text>A Zoltan ship makes contact. "The nature of the day is rotational. The fever is emaciated. The reason is-" They've caught some nasty deep space dementia. Before you can consider finding help for them, they open fire. [ Ztn SF DR ]</text>
+	<text>You're surprised when a stationary Zoltan ship opens fire. It appears there are aggressive pugilists even among the 'enlightened'. [ Ztn SF DR ]</text>
+	<text>You receive a message, "This area is off limits. Submit your ship to processing." It's only one guard ship in a lonely beacon. You decide to fight your way out. [ Ztn SF DR ]</text>
+	<text>You discover a number of Zoltan civilian ships fighting off pirates. Unfortunately one ship mistakes your purpose and moves in to attack! They are refusing all communication; you have no choice but to fight. [ Ztn SF DR ]</text>
+	<text>Like many areas in Zoltan space, the residents of this sector prepared well for Galactic war. The military here seem to have given up reasoning with foreigners, preferring instead to attack on sight! [ Ztn SF DR ]</text>
+	<text>A Zoltan ship is waiting at this beacon. They request your identification, but radiation from the sun in this system is disrupting your communications. They take your silence for aggression and move in to attack. [ Ztn SF DR ]</text>
+	<text>The Zoltan ship patrolling this area hails you: "This area is off limits. Secrecy is vital." They power their weapons. [ Ztn SF DR ]</text>
 	<!-- Add more! -->
 	
 </textList>
 
 
 <textList name="ZOLTAN_PIRATE">
-	<text>"Emergency, all ships in range, we are under attack!" The frequency matches a nearby Zoltan ship; you move in on their pursuer. They take your intervention as a cue to jump away. Cowards. [ SF DR ]</text>
-	<text>You jump just in time to witness a Zoltan ship's FTL drive overload. In his final moments their captain implores you not to get involved, but it's too late - their attacker is already upon you! [ SF DR ]</text>
-	<text>Despite their precautions, pirates have begun to harass the local Zoltan settlements across this sector. One such pirate spots your ship and moves in to attack. [ SF DR ]</text>
-	<text>A ship with pirate markings demands your surrender. These are sad times when even Zoltan space is beset by pirates. You doubt these fools will be missed. [ SF DR ]</text>
-	<text>You spot a pirate ship looting a small Zoltan cruiser. They spot you and move in to attack before your FTL drive has a chance to recharge. [ SF DR ]</text>
+	<text>"Emergency, all ships in range, we are under attack!" The frequency matches a nearby Zoltan ship; you move in on their pursuer. They take your intervention as a cue to jump away. Cowards. [ Prt SF DR ]</text>
+	<text>You jump just in time to witness a Zoltan ship's FTL drive overload. In his final moments their captain implores you not to get involved, but it's too late - their attacker is already upon you! [ Prt SF DR ]</text>
+	<text>Despite their precautions, pirates have begun to harass the local Zoltan settlements across this sector. One such pirate spots your ship and moves in to attack. [ Prt SF DR ]</text>
+	<text>A ship with pirate markings demands your surrender. These are sad times when even Zoltan space is beset by pirates. You doubt these fools will be missed. [ Prt SF DR ]</text>
+	<text>You spot a pirate ship looting a small Zoltan cruiser. They spot you and move in to attack before your FTL drive has a chance to recharge. [ Prt SF DR ]</text>
 	<!-- Add more instead of repeating ! -->
 	
-	<text>"Emergency, all ships in range, we are under attack!" The frequency matches a nearby Zoltan ship; you move in on their pursuer. They take your intervention as a cue to jump away. Cowards. [ SF DR ]</text>
-	<text>You jump just in time to witness a Zoltan ship's FTL drive overload. In their final moments they implore you not to get involved, but it's too late - their attacker is already upon you! [ SF DR ]</text>
-	<text>Despite their precautions, pirates have begun to harass the local Zoltan settlements across this sector. One such pirate spots your ship and moves in to attack. [ SF DR ]</text>
-	<text>A ship with pirate markings demand that you surrender. These are sad times when even Zoltan space is beset by pirates. You doubt these fools will be missed. [ SF DR ]</text>
-	<text>You spot a pirate ship looting a small Zoltan cruiser. They spot you and move in to attack before your FTL drive has a chance to recharge. [ SF DR ]</text>
+	<text>"Emergency, all ships in range, we are under attack!" The frequency matches a nearby Zoltan ship; you move in on their pursuer. They take your intervention as a cue to jump away. Cowards. [ Prt SF DR ]</text>
+	<text>You jump just in time to witness a Zoltan ship's FTL drive overload. In their final moments they implore you not to get involved, but it's too late - their attacker is already upon you! [ Prt SF DR ]</text>
+	<text>Despite their precautions, pirates have begun to harass the local Zoltan settlements across this sector. One such pirate spots your ship and moves in to attack. [ Prt SF DR ]</text>
+	<text>A ship with pirate markings demand that you surrender. These are sad times when even Zoltan space is beset by pirates. You doubt these fools will be missed. [ Prt SF DR ]</text>
+	<text>You spot a pirate ship looting a small Zoltan cruiser. They spot you and move in to attack before your FTL drive has a chance to recharge. [ Prt SF DR ]</text>
 </textList>
 
 <event name="ZOLTAN_MANTIS" unique="true">
-	<text>You pick up the last broadcast from a rupturing Zoltan freighter: "The Mantis, they're here, please-" You're interrupted by fire off the port bow! [ SF DR ]</text>
+	<text>You pick up the last broadcast from a rupturing Zoltan freighter: "The Mantis, they're here, please-" You're interrupted by fire off the port bow! [ Mts SF DR ]</text>
 	<ship load="MANTIS_FIGHT" hostile="true"/>
 </event>
 
 <event name="ZOLTAN_ENGI" unique="true">
-	<text>You jump into a debris field that used to be a Zoltan cruiser. Unfortunately, its Engi escort takes you for the attacker and retaliates! They refuse all hails. [ SF DR ]</text>
+	<text>You jump into a debris field that used to be a Zoltan cruiser. Unfortunately, its Engi escort takes you for the attacker and retaliates! They refuse all hails. [ Eng SF DR ]</text>
 	<ship load="ENGI_SHIP" hostile="true"/>
 </event>
 
 
 <event name="ZOLTAN_ASTEROID" unique="true">
-	<text>You arrive in an asteroid field and are greeted by a Zoltan guard, "By attempting to access these closed mining fields, you are in violation of the Natural Mineral Protection Act. Your weaponry will be confiscated for processing." You don't have time for this. [ SF DR ]</text>
+	<text>You arrive in an asteroid field and are greeted by a Zoltan guard, "By attempting to access these closed mining fields, you are in violation of the Natural Mineral Protection Act. Your weaponry will be confiscated for processing." You don't have time for this. [ Ztn SF DR ]</text>
 	<environment type="asteroid"/>
 	<ship load="ZOLTAN_SHIP" hostile="true"/>
 </event>
@@ -172,7 +197,7 @@
 	<text>You pick up a Zoltan life raft floating in space. Its inhabitant asks you to retake his ship from the pirates who recently commandeered it. "I'm certain it is clear," he concludes, "that you must not destroy my vessel in the process."</text>
 	<ship load="ZOLTAN_LIFERAFT" hostile="false"/>
 	<choice hidden="true">
-		<text>Engage the pirates. [ SF K: [ MStd, Trade -40 Scrap for Zoltan Crew ] CK: [ HScrapAugment ] ]</text>
+		<text>Engage the pirates. [ PZtn SF K: [ MStd, Trade -40 Scrap for Zoltan Crew ] CK: [ HScrapAugment ] ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -188,7 +213,7 @@
 <event name="ZOLTAN_SCIENCE_DOCK" unique="true">
 	<text>What appears to be a Zoltan science ship requests permission to dock.</text>
 	<choice hidden="true">
-		<text>Dock with them. [ MStuff | SF S: [ LStd, ZoltanCrew+ ], K: LStd, CK: MStd ]</text>
+		<text>Dock with them. [ MStuff | Ztn SF S: [ LStd, ZoltanCrew+ ], K: LStd, CK: MStd ]</text>
 		<event load="ZOLTAN_SCIENCE_DOCK_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -200,7 +225,7 @@
 </event>	
 <eventList name="ZOLTAN_SCIENCE_DOCK_LIST">
 	<event>
-		<text>You allow them to approach, but are caught unaware when they open fire! [ SF S: [ LStd, ZoltanCrew+ ], K: LStd, CK: MStd ]</text>
+		<text>You allow them to approach, but are caught unaware when they open fire! [ Ztn SF S: [ LStd, ZoltanCrew+ ], K: LStd, CK: MStd ]</text>
 		<ship load="ZOLTAN_SCIENCE_DOCK" hostile="true"/>
 	</event>
 	<event>
@@ -212,21 +237,21 @@
 <event name="ZOLTAN_RIFT_FIGHT" unique="true">
 	<text>You come to a quiet part of Zoltan space and encounter an ancient Zoltan wise man who has managed to harness the power of a spatial rift, but seems to have been driven completely mad by the power. "Choose your doom," he demands. This is all part of a day's work.</text>
 	<choice hidden="true">
-		<text>Mantis. [ SF K: LStd, CK: MStd, DB: HStd ]</text>
+		<text>Mantis. [ Mts SF K: LStd, CK: MStd, DB: HStd ]</text>
 		<event>
 			<text>"You like a challenge. So be it!" A wormhole forms and a confused, angry Mantis ship hurtles toward you!</text>
 			<ship load="ZOLTAN_RIFT_MANTIS" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Slug. [ SF K: LStd, CK: MStd, DB: HStd ]</text>
+		<text>Slug. [ Slg SF K: LStd, CK: MStd, DB: HStd ]</text>
 		<event>
 			<text>"Do not be fooled, Federation, by a soft underbelly." You detect a wormhole opening up, and seconds later a Slug ship is attacking from the other direction!</text>
 			<ship load="ZOLTAN_RIFT_SLUG" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Rockmen. [ SF K: LStd, CK: MStd, DB: HStd ]</text>
+		<text>Rockmen. [ Rck SF K: LStd, CK: MStd, DB: HStd ]</text>
 		<event>
 			<text>"A hardened foe for a hardened veteran." You detect a wormhole opening up, and a Rock ship appears with guns blazing. It appears they were in combat when they were thrust across space-time.</text>
 			<ship load="ZOLTAN_RIFT_ROCK" hostile="true"/>
@@ -247,14 +272,14 @@
 <event name="ZOLTAN_CREW_SCAN" unique="true">
 	<text>You arrive at a Zoltan security checkpoint set up in a perimeter around the beacon. "Travelling vessel, you will submit to crew profiling to identify fugitives of the empire."</text>
 	<choice hidden="true">
-		<text>You don't have time for this nonsense. Attack! [ SF DR ]</text>
+		<text>You don't have time for this nonsense. Attack! [ Ztn SF DR ]</text>
 		<event>
 			<text>Expecting resistance, their Energy Shield is raised and ready for combat.</text>
 			<ship load="ZOLTAN_SHIP" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Submit to profiling. [ Nil | [ Crew- (CB-) or [ SF 2-4 Zoltan Boarders, Weapons@half, K: LStd, CK: MStd ] ]</text>
+		<text>Submit to profiling. [ Nil | [ Crew- (CB-) or [ Ztn SF 2-4 Zoltan Boarders, Weapons@half, K: LStd, CK: MStd ] ]</text>
 		<event load="ZOLTAN_CREW_SCAN_LIST"/>
 	</choice>
 	<choice hidden="true" req="slug">
@@ -274,7 +299,7 @@
 </event>
 
 <event name="NEBULA_ZOLTAN_ROCK" unique="true">
-	<text>This nebula turns out to be the hiding place of a terrified rock crew taking refuge from the Zoltan border police. They don't seem prepared to risk your leaving with their co-ordinates, and open fire! [ SF DR ]</text>
+	<text>This nebula turns out to be the hiding place of a terrified rock crew taking refuge from the Zoltan border police. They don't seem prepared to risk your leaving with their co-ordinates, and open fire! [ Rck SF DR ]</text>
 	<environment type="nebula"/>
 	<ship load="ROCK_SHIP" hostile="true"/>
 </event>
@@ -284,7 +309,7 @@
 	<text>Inside this nebula you detect a rogue planet drifting through space, on its surface a huge monolith visible at this distance even to the naked eye. A Zoltan elder hails you from the planet. "Through luck or intent, you have discovered the Great Eye. Look into its depths and receive your just deserts."</text>
 	<environment type="nebula"/>
 	<choice hidden="true">
-		<text>Pull the ship in closer. [ Heal Bomb | SF DR | HScrap | Crew- (CB-) ]</text>
+		<text>Pull the ship in closer. [ Heal Bomb | Ztn SF DR | HScrap | Crew- (CB-) ]</text>
 		<event load="NEBULA_ZOLTAN_EYE_LIST"/>
 	</choice>
 	<choice>	
@@ -299,14 +324,14 @@
 	<text>You spy two pirate ships lurking in the nebula here. They remain unaware of your presence; you're able to get your scanners to at least identify their cargo: One is carrying the fuel supplies, the other the ammunition. They begin to drift away from each other in the storm.</text>
 	<environment type="storm"/>
 	<choice hidden="true">
-		<text>Secure the fuel supply. [ SF L: LScrapFuel, CK: HScrapFuel ]</text>
+		<text>Secure the fuel supply. [ Prt SF L: LScrapFuel, CK: HScrapFuel ]</text>
 		<event>
 			<text>You jet toward the pirate with the fuel supplies and engage - hopefully you can leave the ship in one piece!</text>
 			<ship load="STORM_PIRATE_SUPPLY_FUEL" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Secure the ammunition. [ SF K: LScrapMiss, CK: HScrapMissiles ]</text>
+		<text>Secure the ammunition. [ Prt SF K: LScrapMiss, CK: HScrapMissiles ]</text>
 		<event>
 			<text>You jet toward the pirate with the ammunition and engage - hopefully you can leave the ship in one piece!</text>
 			<ship load="STORM_PIRATE_SUPPLY_AMMO" hostile="true"/>
@@ -336,13 +361,13 @@
 </event>
 
 <event name="ZOLTAN_BOARDERS" unique="true">
-	<text>There are few more zealous in their customs checks than the Zoltan. A team of border police beam on board. There's just a little confusion over your weapons licences, but things escalate rapidly from heated discussion to gunfire! [ SF DR 3-4 Zoltan Boarders ]</text>
+	<text>There are few more zealous in their customs checks than the Zoltan. A team of border police beam on board. There's just a little confusion over your weapons licences, but things escalate rapidly from heated discussion to gunfire! [ Ztn SF DR 3-4 Zoltan Boarders ]</text>
 	<ship load="ZOLTAN_SHIP" hostile="true"/>
 	<boarders min="3" max="4" class="energy"/>
 </event>
 
 <event name="ZOLTAN_BOARDERS_MANTIS" unique="true">
-	<text>The Mantis outcasts sometimes make the mistake of taking the Zoltan for easy game. A scout moves in to attack while a boarding party beams aboard from a nearby transport! [ SF DR 2-3 Mantis Boarders ]</text>
+	<text>The Mantis outcasts sometimes make the mistake of taking the Zoltan for easy game. A scout moves in to attack while a boarding party beams aboard from a nearby transport! [ Mts SF DR 2-3 Mantis Boarders ]</text>
 	<ship load="MANTIS_FIGHT" hostile="true"/>
 	<boarders min="2" max="3" class="mantis"/>
 </event>

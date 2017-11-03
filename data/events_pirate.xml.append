@@ -1,22 +1,22 @@
 <textList name="PIRATE">
-	<text>As you jump into the system a pirate advances on your position. They are refusing all hails. Prepare for a fight. [ SF DR ]</text>
-	<text>Soon after arriving in the system you are hailed by a small cruiser. "What good fortune that we happen to run into each other. Nothing personal, but you have some information we need!" [ SF DR ]</text>
-	<text>At first it appears you've arrived in an empty system, but a ship appears from behind a planet and hails you: "Haha! I am the dread pirate Tuco, prepare to die!" [ SF DR ]</text>
-	<text>The only other ship at this beacon messages you: "Finally, after months of waiting, someone has fallen into our trap!" [ SF DR ]</text>
-	<text>You barely have time to register jump completion before your ship warns you of an incoming ship with weapons hot. [ SF DR ]</text>
+	<text>As you jump into the system a pirate advances on your position. They are refusing all hails. Prepare for a fight. [ Prt SF DR ]</text>
+	<text>Soon after arriving in the system you are hailed by a small cruiser. "What good fortune that we happen to run into each other. Nothing personal, but you have some information we need!" [ Prt SF DR ]</text>
+	<text>At first it appears you've arrived in an empty system, but a ship appears from behind a planet and hails you: "Haha! I am the dread pirate Tuco, prepare to die!" [ Prt SF DR ]</text>
+	<text>The only other ship at this beacon messages you: "Finally, after months of waiting, someone has fallen into our trap!" [ Prt SF DR ]</text>
+	<text>You barely have time to register jump completion before your ship warns you of an incoming ship with weapons hot. [ Prt SF DR ]</text>
 </textList>
 
 <event name="PIRATE_NO_ESCAPE" unique="true">
 	<text>Once you arrive, your screen lights up with warnings. A nearby pirate seems to have advanced hacking tools and they have tried to shut down your engines. Your crew manages to keep them barely operational and you move into attack.</text>
 	<ship load="PIRATE_NO_ESCAPE" hostile="true"/>
 	<choice hidden="true">
-		<text>Continue... [ SF Engines@1, K: RScrapFuel, CK: MSCrapFuel ]</text>
+		<text>Continue... [ Prt SF Engines@1, K: RScrapFuel, CK: MSCrapFuel ]</text>
 		<event>
 			<status type="limit" target="player" system="engines" amount="1"/>			
 		</event>
 	</choice>
 	<choice hidden="true" req="hacking"> <!-- CHANGED - added -->
-		<text>(Hacking System) Counter the remote hacking. [ SF Hacking@0, K: RScrapFuel, CK: MScrapFuel ]</text>
+		<text>(Hacking System) Counter the remote hacking. [ Prt SF Hacking@0, K: RScrapFuel, CK: MScrapFuel ]</text>
 		<event>
 			<text>Your Hacking System automatically counters the digital assault and you move in to fight the ship.</text>
 			<status type="limit" target="player" system="hacking" amount="0"/>
@@ -28,7 +28,7 @@
 	<text load="PIRATE_CIVILIAN"/>
 	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
 	<choice>
-		<text>Aid the civilian ship. [ SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
+		<text>Aid the civilian ship. [ Prt SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
 		<event>
 			<text>You power up your weapons and engage the pirate ship.</text>
 			<ship load="PIRATE_CIVILIAN" hostile="true"/>
@@ -53,7 +53,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Try to be a hero. Attack the pirate. [ SF S: HStuff, K: RScrap, CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ] ]</text>
+		<text>Try to be a hero. Attack the pirate. [ Prt SF S: HStuff, K: RScrap, CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ] ]</text>
 		<event>
 			<text>The pirate ship stops its pursuit and locks weapons onto your ship.</text> 
 			<ship hostile="true"/>
@@ -110,7 +110,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Reject their 'offer'. [ SF DR ]</text>
+		<text>Reject their 'offer'. [ Prt SF DR ]</text>
 		<event>
 			<text>"Too bad... You will regret this decision!" [ SF DR ]</text>
 			<ship hostile="true"/>
@@ -132,7 +132,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>We will never surrender one of our crew to slavers! [ SF S: Crew+, K: HStd, CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | HStd ] ]</text>
+		<text>We will never surrender one of our crew to slavers! [ Prt SF S: Crew+, K: HStd, CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | HStd ] ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -156,7 +156,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Attack the slaver scum. [ SF S: Crew+, K: HStd, CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | Hstd ]</text>
+		<text>Attack the slaver scum. [ Prt SF S: Crew+, K: HStd, CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | Hstd ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -173,7 +173,7 @@
 
 <event name="PIRATE_SUN" unique="true">
 	<img back="BG_DARK"/>
-	<text>This beacon has been placed too close to a super-giant class M star! The ship will gradually overheat until you get out of here... or die. A pirate, apparently oblivious to the danger of the sun, moves in to engage. [ SF DR ]</text>
+	<text>This beacon has been placed too close to a super-giant class M star! The ship will gradually overheat until you get out of here... or die. A pirate, apparently oblivious to the danger of the sun, moves in to engage. [ Prt SF DR ]</text>
 	<ship load="PIRATE" hostile="true"/>
 	<environment type="sun"/>
 </event>
@@ -184,7 +184,7 @@
 	<text>A pirate ship was lying in wait inside this asteroid field. It immediately moves in to attack.</text>
 	<ship load="PIRATE" hostile="true"/>
 	<choice>
-		<text>Turn and fight. [ SF DR ]</text>
+		<text>Turn and fight. [ Prt SF DR w/asteroids ]</text>
 		<event/>
 	</choice> <!--
 	<choice req="pilot" lvl="2" hidden="true">
@@ -196,7 +196,7 @@
 <event name="FLOATING_CARGO" unique="true">
 	<text>Not too far from the beacon, you detect a destroyed cargo ship with its cargo scattered nearby, intact.</text>
 	<choice hidden="true">
-		<text>Bring it aboard. [ MStd | LScrap | 2-4 Boarders | 2-4 Boarders, SF DR ]</text>
+		<text>Bring it aboard. [ MStd | LScrap | 2-4 Boarders | 2-4 Boarders, Prt SF DR ]</text>
 		<event load="FLOATING_CARGO_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -206,11 +206,11 @@
 		</event>
 	</choice>
 	<choice req="sensors" lvl="2" hidden="true">
-		<text>(Advanced Sensors) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | SF DR or Nil ]</text>
+		<text>(Advanced Sensors) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | Prt SF DR or Nil ]</text>
 		<event load="FLOATING_CARGO_SCAN_LIST"/>
 	</choice>
 	<choice req="ADV_SCANNERS" hidden="true">
-		<text>(Long-Ranged Scanners) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | SF DR or Nil ]</text>
+		<text>(Long-Ranged Scanners) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | Prt SF DR or Nil ]</text>
 		<event load="FLOATING_CARGO_SCAN_LIST"/>
 	</choice>
 </event>
@@ -229,7 +229,7 @@
 	<event>
 		<text>Your advanced sensors pick up faint life signatures inside the cargo. The life forms appear to be armed. This looks like a planned pirate ambush.</text>
 		<choice hidden="true">
-			<text>Destroy the crates to prevent another ship from falling victim. [ SF DR ]</text>
+			<text>Destroy the crates to prevent another ship from falling victim. [ Prt SF DR ]</text>
 			<event>
 				<text>You fire on the crates, breaking them open and scattering the pirates into empty space. A pirate ship appears out of nowhere with a message, "You will pay for that!"</text>
 				<ship load="PIRATE" hostile="true"/>

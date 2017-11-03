@@ -26,7 +26,7 @@
 
 <ship name="REBEL_ENGI_UNLOCK_2FAKE" auto_blueprint="SHIPS_REBEL">
 	<escape timer="40" min="18" max="18" >
-		<text>As soon as they see you, they power up their engines to jump away. Stop them! [ SF K: MStd, CK: MStd (Decoy), HStd (Real) ]</text>
+		<text>As soon as they see you, they power up their engines to jump away. Stop them! [ Rbl SF K: MStd, CK: MStd (Decoy), HStd (Real) ]</text>
 		<ship hostile="true"/>
 	</escape>
 	<gotaway>
@@ -46,7 +46,7 @@
 
 <ship name="REBEL_ENGI_UNLOCK_2REAL" auto_blueprint="SHIPS_REBEL">
 	<escape timer="40" min="18" max="18" >
-		<text>As soon as they see you, they power up their engines to jump away. Stop them! [ SF K: MStd, CK: MStd (Decoy), HStd (Real) ]</text>
+		<text>As soon as they see you, they power up their engines to jump away. Stop them! [ Rbl SF K: MStd, CK: MStd (Decoy), HStd (Real) ]</text>
 		<ship hostile="true"/>
 	</escape>
 	<gotaway>
@@ -67,7 +67,7 @@
 
 <ship name="REBEL_AUTO_WARNING" auto_blueprint="SHIPS_AUTO">
 	<escape timer="40" min="22" max="22" >
-		<text>The ship starts to power up its FTL Drive. If it gets away, it will no doubt warn the fleet of your position! [ SF K: LStd, Esc: Fleet+ ]</text>
+		<text>The ship starts to power up its FTL Drive. If it gets away, it will no doubt warn the fleet of your position! [ Auto SF K: LStd, Esc: Fleet+ ]</text>
 		<ship hostile="true"/>
 	</escape>
 	<gotaway>
@@ -82,7 +82,7 @@
 
 <ship name="SQUAT_WARNING" auto_blueprint="SHIPS_REBEL">
 	<escape timer="40" min="22" max="22" >
-		<text>They are powering up their FTL! If they get away, they will no doubt warn the fleet of your position! [ SF K: MStd, CK: MStd ]</text>
+		<text>They are powering up their FTL! If they get away, they will no doubt warn the fleet of your position! [ Rbl SF K: MStd, CK: MStd ]</text>
 		<ship hostile="true"/>
 	</escape>
 	<gotaway>

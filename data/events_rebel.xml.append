@@ -1,27 +1,27 @@
 </event>
 <textList name="REBEL_AUTO">
-	<text>You discover one of the Rebel's autonomous scouts. The ship's AI wastes no time in engaging your ship. [ SF DR ]</text>
-	<text>Your ship is hailed: "This is an automated message. Resisting our takeover is pointless. Prepare to die." It appears this Rebel ship is run by an AI. [ SF DR ]</text>
-	<text>A Rebel autonomous scout is exploring this beacon. You attempt to hide behind a nearby moon, but the ship finds you and begins its assault.</text>
-	<text>The AI of a nearby small Rebel scout immediately identifies you as a threat and engages. [ SF DR ]</text>
-	<text>A Rebel ship moves in to engage. You attempt to open communications, but realize the futility of that action when you see the ship is run by an AI. [ SF DR ]</text>
-	<text>This must be one of the Rebels' unmanned scout ships. Looks like there's no way around a fight. [ SF DR ]</text>
-	<text>Another unmanned ship patrols this area. You prepare the ship for combat. [ SF DR ]</text>
-	<text>This beacon is being patrolled by a unmanned scout. A fight is unavoidable. [ SF DR ]</text>
-	<text>A small shuttle appears on the local radar. Turns out it is a Rebel automated scout! [ SF DR ]</text>
+	<text>You discover one of the Rebel's autonomous scouts. The ship's AI wastes no time in engaging your ship. [ Auto SF DR ]</text>
+	<text>Your ship is hailed: "This is an automated message. Resisting our takeover is pointless. Prepare to die." It appears this Rebel ship is run by an AI. [ Auto SF DR ]</text>
+	<text>A Rebel autonomous scout is exploring this beacon. You attempt to hide behind a nearby moon, but the ship finds you and begins its assault. [ Auto SF DR ]</text>
+	<text>The AI of a nearby small Rebel scout immediately identifies you as a threat and engages. [ Auto SF DR ]</text>
+	<text>A Rebel ship moves in to engage. You attempt to open communications, but realize the futility of that action when you see the ship is run by an AI. [ Auto SF DR ]</text>
+	<text>This must be one of the Rebels' unmanned scout ships. Looks like there's no way around a fight. [ Auto SF DR ]</text>
+	<text>Another unmanned ship patrols this area. You prepare the ship for combat. [ Auto SF DR ]</text>
+	<text>This beacon is being patrolled by a unmanned scout. A fight is unavoidable. [ Auto SF DR ]</text>
+	<text>A small shuttle appears on the local radar. Turns out it is a Rebel automated scout! [ Auto SF DR ]</text>
 </textList>
 
 <event name="AUTO_HACKER" unique="true">
 	<text>Your arrival is greeted by numerous computer alerts. The nearby automated Rebel scout has used a local satellite to deploy a virus to disrupt your Shields System. Hopefully it won't cause further problems before you can destroy it.</text>
 	<ship load="REBEL_AUTO_HACKSHIELDS" hostile="true"/>
 	<choice>
-		<text>Continue... [ SF Shields@Half, K: MStd ]</text>
+		<text>Continue... [ Auto SF Shields@Half, K: MStd ]</text>
 		<event>	
 			<status type="divide" target="player" system="shields" amount="2"/>
 		</event>
 	</choice>
 	<choice hidden="true" req="hacking"> <!-- CHANGED - added -->
-		<text>(Hacking System) Counter the remote hacking. [ SF DR ]</text>
+		<text>(Hacking System) Counter the remote hacking. [ Slg SF DR ]</text>
 		<event>
 			<text>Your hacking system automatically counters the digital assault and you move in to fight the ship.</text>
 			<ship load="JELLY" hostile="true"/>
@@ -31,22 +31,22 @@
 </event>	
 
 <textList name="REBEL">
-	<text>Your ship is hailed. "We've found you at last. Prepare to die!" [ SF DR, S: RStuff ]</text>
-	<text>A small Rebel ship is docked at a small station. You try to lay low but it spots you. Power up the weapons! [ SF DR, S: RStuff ]</text>
-	<text>A Rebel ship has been patrolling this region. As soon as you arrive it begins its assault. [ SF DR, S: RStuff ]</text>
-	<text>A Rebel ship hails you: "Federation scum! We've waited a long time for this!" [ SF DR, S: RStuff ]</text>
-	<text>You receive a transmission: "Sorry sir, this is nothing personal but we're under orders." The Rebel ship's weapons go hot. [ SF DR, S: RStuff ]</text>
-	<text>By the time you notice the Rebel ship behind the beacon, it's too late to avoid a fight. [ SF DR, S: RStuff ]</text>
-	<text>A Rebel ship hails. "We did not fight a war to let a single Federation ship shatter our dreams of a better galaxy!" He locks weapons. [ SF DR, S: RStuff ]</text>
-	<text>A Rebel ship approaches cautiously. "Personally," says the captain, "I'd have stuck with the Federation. But I'm a soldier, sir, and I'm no use without a war to fight. Raise your shields!" [ SF DR, S: RStuff ]</text>
-	<text>You're hailed by a Rebel ship: "When the rebellion is complete you'll see the safer world we provide. Well, you won't, but you get the point." They arm weapons. [ SF DR, S: RStuff ]</text>
-	<text>A Rebel ship is guarding this beacon. You order a pursuit course and prepare to scratch up one more. [ SF DR, S: RStuff ]</text>
+	<text>Your ship is hailed. "We've found you at last. Prepare to die!" [ Rbl SF DR, S: RStuff ]</text>
+	<text>A small Rebel ship is docked at a small station. You try to lay low but it spots you. Power up the weapons! [ Rbl SF DR, S: RStuff ]</text>
+	<text>A Rebel ship has been patrolling this region. As soon as you arrive it begins its assault. [ Rbl SF DR, S: RStuff ]</text>
+	<text>A Rebel ship hails you: "Federation scum! We've waited a long time for this!" [ Rbl SF DR, S: RStuff ]</text>
+	<text>You receive a transmission: "Sorry sir, this is nothing personal but we're under orders." The Rebel ship's weapons go hot. [ Rbl SF DR, S: RStuff ]</text>
+	<text>By the time you notice the Rebel ship behind the beacon, it's too late to avoid a fight. [ Rbl SF DR, S: RStuff ]</text>
+	<text>A Rebel ship hails. "We did not fight a war to let a single Federation ship shatter our dreams of a better galaxy!" He locks weapons. [ Rbl SF DR, S: RStuff ]</text>
+	<text>A Rebel ship approaches cautiously. "Personally," says the captain, "I'd have stuck with the Federation. But I'm a soldier, sir, and I'm no use without a war to fight. Raise your shields!" [ Rbl SF DR, S: RStuff ]</text>
+	<text>You're hailed by a Rebel ship: "When the rebellion is complete you'll see the safer world we provide. Well, you won't, but you get the point." They arm weapons. [ Rbl SF DR, S: RStuff ]</text>
+	<text>A Rebel ship is guarding this beacon. You order a pursuit course and prepare to scratch up one more. [ Rbl SF DR, S: RStuff ]</text>
 </textList>
 
 <event name="AUTO_CIVILIAN" unique="false">
 	<text>You come across a Rebel automated scout ship pursuing a civilian ship, weapons engaged.</text>
 	<choice>
-		<text>Aid the civilian ship. [ SF K: LStd, CK: MStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
+		<text>Aid the civilian ship. [ Auto SF K: LStd, CK: MStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
 		<event>
 			<text>You power up your weapons and engage the automated ship.</text>
 			<ship load="REBEL_AUTO_CIVILIAN" hostile="true"/>
@@ -65,7 +65,7 @@
 	<text>You detect a Rebel scout on an attack approach to a small refueling outpost. Their weapons are charged, but they're not firing yet.</text>
 	<ship load="SQUAT_REFUEL_STATION" hostile="false"/>
 	<choice>
-		<text>Intervene to defend the outpost. [ SF K: MStd, CK: H Std, DB: MScrapFuel ]</text>
+		<text>Intervene to defend the outpost. [ Rbl SF K: MStd, CK: HStd, DB: MScrapFuel ]</text>
 		<event>
 			<text>The rebel responds to your threat, "I don't know who you are, but no one defies the Rebel Fleet!" They move in to engage.</text> 
 			<ship hostile="true"/>
@@ -84,7 +84,7 @@
 	<text>You detect an automated Rebel scout attacking a small refueling outpost.</text>
 	<ship load="REBEL_AUTO_REFUEL" hostile="false"/>
 	<choice>
-		<text>Intervene to defend the outpost. [ SF K: LStd, DB: MStd ]</text>
+		<text>Intervene to defend the outpost. [ Auto SF K: LStd, DB: MStd ]</text>
 		<event>
 			<text>Detecting the higher threat, the automated ship moves in to engage your ship.</text> 
 			<ship hostile="true"/>
@@ -103,7 +103,7 @@
 	<text>You detect a Rebel automated ship nearby. It does not engage and seems to be patrolling around a long-range sensor station.</text>
 	<ship load="REBEL_AUTO_MAP" hostile="false"/>
 	<choice>
-		<text>Attack the automated ship to get to the sensor station. [ SF K: LScrap, DB: Map ]</text>
+		<text>Attack the automated ship to get to the sensor station. [ Auto SF K: LScrap, DB: Map ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -113,7 +113,7 @@
 		<event/>
 	</choice>
 	<choice req="sensors" lvl="3" hidden="true">
-		<text>(Sensors) Use your sensors to attempt to access the data. [ Map | SF K: LScrap, DB: Map ]</text>
+		<text>(Sensors) Use your sensors to attempt to access the data. [ Map | Auto SF K: LScrap, DB: Map ]</text>
 		<event load="AUTO_DEFENSE_MAP_SENSORS"/>
 	</choice>
 	<choice req="teleporter" hidden="true">
@@ -129,7 +129,7 @@
 	<text>An advanced Rebel automated ship remains stationed near a small Rebel space-station. Sensors indicate it's a storage vessel for military goods.</text>
 	<ship load="REBEL_AUTO_ITEM" hostile="false"/>
 	<choice>
-		<text>Attack the automated ship to get to the storage cache. [ SF K: MScrap, DB: [ LScrapDrone | Nil | LScrapWeapon | MStuff ] ]</text>
+		<text>Attack the automated ship to get to the storage cache. [ Auto SF K: MScrap, DB: [ LScrapDrone | Nil | LScrapWeapon | MStuff ] ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -139,7 +139,7 @@
 		<event/>
 	</choice>
 	<choice req="cloaking" hidden="true">
-		<text>(Cloaking) Attempt to cloak and access the cache. [ SF K: MScrap, DB: [ LScrapDrone | Nil | LScrapWeapon | MStuff ] | [ LScrapDrone | Nil | LScrapWeapon | MStuff ] ]</text>
+		<text>(Cloaking) Attempt to cloak and access the cache. [ Auto SF K: MScrap, DB: [ LScrapDrone | Nil | LScrapWeapon | MStuff ] | [ LScrapDrone | Nil | LScrapWeapon | MStuff ] ]</text>
 		<event load="AUTO_DEFENSE_ITEM_CLOAK"/>
 	</choice>
 </event>
@@ -148,7 +148,7 @@
 	<text>A Rebel automated ship sits dormant near a Rebel forward radar station.</text>
 	<ship load="REBEL_AUTO_RADAR" hostile="false"/>
 	<choice>
-		<text>Approach the station. [ SF K: MScrap, More... ]</text>
+		<text>Approach the station. [ Auto SF K: MScrap, More... ]</text>
 		<event>
 			<text>The ship powers up and targets you.</text>
 			<ship hostile="true"/>
@@ -168,9 +168,9 @@
 	<img planet="NONE"/>
 	<text>You spot a small Rebel ship nearby. It seems to have been re-fitted for transport rather than combat. It does not seem to want to engage you and your ship.</text>
 	<choice>
-		<text>Demand the surrender of their goods. [ SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 L Standard | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+		<text>Demand the surrender of their goods. [ Rbl SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 L Standard | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 		<event>
-			<text>You prepare to secure their cargo by force. [ SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 L Standard | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+			<text>You prepare to secure their cargo by force. [ Rbl SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 L Standard | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 			<ship load="SQUAT_TRANSPORT" hostile="true"/>
 		</event>
 	</choice>
@@ -186,7 +186,7 @@
 	<text>You find a Rebel automated scout floating near this beacon. Despite its pristine condition, it appears to be de-activated.</text>
 	<ship load="REBEL_AUTO" hostile="false"/>
 	<choice hidden="true">
-		<text>Attempt to download the ship's data stores. [ Map, LStd | SF DR ] </text>
+		<text>Attempt to download the ship's data stores. [ Map, LStd | Auto SF DR ] </text>
 		<event load="DOWNLOAD_DRONE_DATA"/>
 	</choice>
 	<choice>
@@ -208,7 +208,7 @@
 		<autoReward level="LOW">standard</autoReward>
 	</event>
 	<event>
-		<text>Your improved Sensors indicate the ship is on standby, ready to activate at a moment's notice. Will you still attempt to access the ship's data? [ Map, LStd | SF DR ]</text>
+		<text>Your improved Sensors indicate the ship is on standby, ready to activate at a moment's notice. Will you still attempt to access the ship's data? [ Map, LStd | Auto SF DR ]</text>
 		<choice hidden="true">
 			<text>Yes.</text>
 			<event load="DOWNLOAD_DRONE_DATA"/>
@@ -240,10 +240,10 @@
 </event>
 
 <textList name="BOARDERS_REBEL_SHIP" unique="false">
-	<text>You receive a message from a nearby Rebel station, "You have a lot of guts passing through our space, I'll give you that." He turns giving an order, "Kill their crew, I want that ship intact." [ SF DR, 2-3 Human Boarders ]</text>
-	<text>Your sensors warn of an incoming Rebel ship at the same time as you hear the telltale signs of a teleporter. You hear someone taunt from within the ship, "Ready to die? I sure am ready to get a promotion!" [ SF DR, 2-3 Human Boarders ]</text>
-	<text>Incoming message, "Hello Captain," says a Rebel in an officer's garb. "How very generous of you to turn yourself in. Prepare to be boarded. Come quietly and we may be lenient." [ SF DR, 2-3 Human Boarders ]</text>
-	<text>You receive a message on a low-band channel. "You're surrounded, just like the last of your Federation friends. Just die already." The enemy has teleported onto your ship! [ SF DR, 2-3 Human Boarders ]</text>
+	<text>You receive a message from a nearby Rebel station, "You have a lot of guts passing through our space, I'll give you that." He turns giving an order, "Kill their crew, I want that ship intact." [ Rbl SF DR, 2-3 Human Boarders ]</text>
+	<text>Your sensors warn of an incoming Rebel ship at the same time as you hear the telltale signs of a teleporter. You hear someone taunt from within the ship, "Ready to die? I sure am ready to get a promotion!" [ Rbl SF DR, 2-3 Human Boarders ]</text>
+	<text>Incoming message, "Hello Captain," says a Rebel in an officer's garb. "How very generous of you to turn yourself in. Prepare to be boarded. Come quietly and we may be lenient." [ Rbl SF DR, 2-3 Human Boarders ]</text>
+	<text>You receive a message on a low-band channel. "You're surrounded, just like the last of your Federation friends. Just die already." The enemy has teleported onto your ship! [ Rbl SF DR, 2-3 Human Boarders ]</text>
 </textList>
 
 <textList name="START_BEACON_REBEL">

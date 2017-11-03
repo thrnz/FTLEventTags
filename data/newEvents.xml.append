@@ -65,7 +65,7 @@
 <event name="REFUGEE_NO_DISTRESS">  <!-- this is actually a NEUTRAL, I'm just leaving it here cause it's linked-->
 	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
 	<choice>
-		<text>Hail them. [ x4 Resource Trade | x4 Ship Fight ]</text>
+		<text>Hail them. [ x4 Resource Trade | x4 SF ]</text>
 		<event load="REFUGEE_HAIL_LIST"/>
 	</choice>
 	<choice>
@@ -80,19 +80,19 @@
 	<event load="REFUGEE_TRADER"/>
 	<event load="REFUGEE_TRADER"/>
 	<event>
-		<text>As you hail the freighter, it advances, weapons bristling from its hull! It's a pirate ambush! [ SF DR ]</text>
+		<text>As you hail the freighter, it advances, weapons bristling from its hull! It's a pirate ambush! [ Prt SF DR ]</text>
 		<ship load="PIRATE" hostile="true"/>
 	</event>
 	<event>
-		<text>As you hail the refugee ship, a Zoltan ship suddenly jumps into the system... it claims the refugees are criminals, and accuses you of escorting fugitives! Before you can respond, it cuts communications, and powers up its weapons! [ SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>As you hail the refugee ship, a Zoltan ship suddenly jumps into the system... it claims the refugees are criminals, and accuses you of escorting fugitives! Before you can respond, it cuts communications, and powers up its weapons! [ Ztn SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<ship load="ZOLTAN_REFUGEE" hostile="true"/>
 	</event>
 	<event>
-		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait! [ SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait! [ Prt SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<ship load="PIRATE_REFUGEE" hostile="true"/>
 	</event>
 	<event>
-		<text>As you hail the refugee ship, a Slug ship jumps into the system... it was hunting the refugee ship for sport and now they've found you instead! [ SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>As you hail the refugee ship, a Slug ship jumps into the system... it was hunting the refugee ship for sport and now they've found you instead! [ Slg SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<ship load="SLUG_REFUGEE" hostile="true"/>
 	</event>
 </eventList>
@@ -100,7 +100,7 @@
 <event name="REFUGEE_DISTRESS_ZOLTAN">
 	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
 	<choice>
-		<text>Hail them. [ Resource Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | Ztn SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_ZOLTAN"/>
 	</choice>
 	<choice>
@@ -112,7 +112,7 @@
 <event name="REFUGEE_NO_DISTRESS_ZOLTAN"> 
 	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
 	<choice>
-		<text>Hail them. [ Resource Trade | K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | Ztn SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_ZOLTAN"/>
 	</choice>
 	<choice>
@@ -124,7 +124,7 @@
 <eventList name="REFUGEE_HAIL_LIST_ZOLTAN">
 	<event load="REFUGEE_TRADER"/>
 	<event>
-		<text>As you hail the refugee ship, a Zoltan ship suddenly jumps into the system... it claims the refugees are criminals, and accuses you of escorting fugitives! Before you can respond, it cuts communications, and powers up its weapons! [ SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>As you hail the refugee ship, a Zoltan ship suddenly jumps into the system... it claims the refugees are criminals, and accuses you of escorting fugitives! Before you can respond, it cuts communications, and powers up its weapons! [ Ztn SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<ship load="ZOLTAN_REFUGEE" hostile="true"/>
 	</event>
 </eventList>
@@ -132,7 +132,7 @@
 <event name="REFUGEE_DISTRESS_PIRATE">
 	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
 	<choice>
-		<text>Hail them. [ Resource Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | Prt SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_PIRATE"/>
 	</choice>
 	<choice>
@@ -144,7 +144,7 @@
 <event name="REFUGEE_NO_DISTRESS_PIRATE"> 
 	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
 	<choice>
-		<text>Hail them. [ Resource Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | Prt SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_PIRATE"/>
 	</choice>
 	<choice>
@@ -155,7 +155,7 @@
 <eventList name="REFUGEE_HAIL_LIST_PIRATE">
 	<event load="REFUGEE_TRADER"/>
 	<event>
-		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait! [ SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait! [ Prt SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<ship load="PIRATE_REFUGEE" hostile="true"/>
 	</event>
 </eventList>
@@ -163,7 +163,7 @@
 <event name="REFUGEE_DISTRESS_SLUG">
 	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
 	<choice>
-		<text>Hail them. [ Resource Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | Slg SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_SLUG"/>
 	</choice>
 	<choice>
@@ -176,7 +176,7 @@
 	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
 	<environment type="nebula"/>
 	<choice>
-		<text>Hail them. [ Resource Trade | SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | Slg SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_SLUG"/>
 	</choice>
 	<choice>
@@ -187,7 +187,7 @@
 <eventList name="REFUGEE_HAIL_LIST_SLUG">
 	<event load="REFUGEE_TRADER"/>
 	<event>
-		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait! [ SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait! [ Slg SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<ship load="PIRATE_REFUGEE" hostile="true"/>
 	</event>
 </eventList>
@@ -195,7 +195,7 @@
 <event name="EMPTY_STATION2" unique="true"> <!--Neutrals-->
 	<text load="EMPTY_STATION2_TEXT"/>
 	<choice hidden="true">
-		<text>Move in to examine the station. [ Nil | x2 LScrap | [ LSCrap | CloneBay BO [ x2 Crew+ | +1 Boarder ] ] | 2 Boarders, SF DR | 2-4 Boarders, Enemy ASB ]</text>
+		<text>Move in to examine the station. [ Nil | x2 LScrap | [ LSCrap | CloneBay BO [ x2 Crew+ | +1 Boarder ] ] | 2 Boarders, Prt SF DR | 2-4 Boarders, Enemy ASB ]</text>
 		<event load="EMPTY_STATION2_LIST"/>
 	</choice>
 	<choice>
@@ -239,7 +239,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>You dock with the station to take a look inside. However no sooner do you open the airlock than pirates burst in. Meanwhile scanners pick up a previously undetected pirate ship moving in to attack!</text>
+		<text>You dock with the station to take a look inside. However no sooner do you open the airlock than pirates burst in. Meanwhile scanners pick up a previously undetected pirate ship moving in to attack! [ Prt SF DR ]</text>
 		<boarders min="2" max="2"/>
 		<ship load="PIRATE" hostile="true"/>
 	</event>
@@ -264,7 +264,7 @@
 		<event load="WRECKAGE_SCANNED"/>
 	</choice>
 	<choice hidden="true">
-		<text>Investigate the battlefield. [ x5 Nil | MStuff | x3 SF DR ]</text>
+		<text>Investigate the battlefield. [ x5 Nil | MStuff | Mts SF DR | Rbl SF DR | Ztn SF DR ]</text>
 		<event load="WRECKAGE_INVESTIGATE"/>
 	</choice>
 	<choice>
@@ -276,7 +276,7 @@
 <event name="FUELING_STATION" unique="true">
 	<text>A small platform orbits near this beacon - it looks like a fueling station of some sort, and it is cheerily broadcasting reasonable prices in a spectrum of frequencies and languages.</text>
 	<choice hidden="true">
-		<text>Dock with the refueling platform. [ [ Fuel Trade | 3-5 Fuel | More... ] | [ [ -3 Hull, 2-4 Boarders | 5 Fuel BlastDoors BO] | -3 Hull, SF DR] ]</text>
+		<text>Dock with the refueling platform. [ [ Fuel Trade | 3-5 Fuel | More... ] | [ [ -3 Hull, 2-4 Boarders | 5 Fuel BlastDoors BO] | -3 Hull, Prt SF DR] ]</text>
 		<event load="FUELING_STATION_LIST"/>
 	</choice>
 	<choice>
@@ -285,6 +285,34 @@
 	</choice>
 </event>
 
+
+<eventList name="FUELING_STATION_PIRATE_LIST">
+	<event>
+		<text>You dock and signal the fuel station's staff to begin refueling.</text>
+		<choice hidden="true">
+			<text>Wait for them to finish. [ -3 Hull, 2-4 Boarders ]</text>
+			<event>
+				<text>As you dock with the refueling platform, there is an explosion from your engine room! Warning lights flash in your ship as pirates from the station swarm aboard your vessel!</text>
+				<damage amount="3" system="engines"/>
+				<boarders min="2" max="4" class="random"/>
+			</event>
+		</choice>
+		<choice req="doors" lvl="2" hidden="true">
+			<text>[Blast Doors] Seal your blast doors, one can never be too careful when docked. [ +5 Fuel ]</text>
+			<event>
+				<text>Pirates hidden on the station are confounded by your security locks, turning an attempted ambush into a fish-in-a-barrel firefight. You take control of the station and take its fuel reserves.</text>
+				<item_modify>
+					<item type="fuel" min="5" max="5"/>
+				</item_modify>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>The refueling station welcomes you into one of its berths, and as you hail them, there is an explosion from your engine room! While assessing the damage, you detect a Pirate Ship closing fast! [ Prt SF DR, -3 Hull ]</text>
+		<ship load="PIRATE" hostile="true"/>
+		<damage amount="3" system="engines"/>
+	</event>
+</eventList>
 
 <eventList name="FUELING_STATION_NORMAL_LIST">
 	<event>
@@ -390,7 +418,7 @@
 	<event>
 		<text>You find the missing cargo ship docked to a Rebel station. You send a short-band message to them and discover they are being held against their will and forced to 'donate to their supplies for the war effort.'</text>
 		<choice hidden="true">
-			<text>Attack the Rebels to help them escape. [ SF Enemy ASB, K: MStd, CK: HStd, DB: MScrap ]</text>
+			<text>Attack the Rebels to help them escape. [ Rbl SF Enemy ASB, K: MStd, CK: HStd, DB: MScrap ]</text>
 			<event>
 				<text>You move in to attack the Rebel ship that is threatening them and scanners detect weapon locks from a nearby Anti-Ship Battery. It's about to get hectic!</text>
 				<ship load="QUEST_CONSTRUCTIONYARD_SHIP" hostile="true"/>
@@ -407,7 +435,7 @@
 	<event>
 		<text>You find the missing cargo ship docked to an empty space station. However their hold appears to be empty and there are no obvious signs that anyone is inside the ship or station. Everything looks abandoned.</text>
 		<choice hidden="true">
-			<text>Move in to examine the station. [ Nil | x2 LScrap | [ LScrap | CloneBay BO [ x2 Crew+ | +1 Boarder ] ] | 2 Boarders, SF DR | 2-4 Boarders, Enemy ASB ]</text>
+			<text>Move in to examine the station. [ Nil | x2 LScrap | [ LScrap | CloneBay BO [ x2 Crew+ | +1 Boarder ] ] | 2 Boarders, Prt SF DR | 2-4 Boarders, Enemy ASB ]</text>
 			<event load="EMPTY_STATION2_LIST"/>
 		</choice>
 		<choice>
@@ -480,7 +508,7 @@
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Demand the Rock ship pay the agreed upon price. [ -5 Hull | [ Nil | Reactor+1 | 10-15 Scrap Reactor Upgrade ] | SF K: LStd, CK: MStd, DB: [ Nil | Reactor+1 | 10-15 Scrap Reactor Upgrade ] ]</text>
+				<text>Demand the Rock ship pay the agreed upon price. [ -5 Hull | [ Nil | Reactor+1 | 10-15 Scrap Reactor Upgrade ] | Rck SF K: LStd, CK: MStd, DB: [ Nil | Reactor+1 | 10-15 Scrap Reactor Upgrade ] ]</text>
 				<event load="ROCK_SLUG_COMMAND"/>
 			</choice>
 			<choice>
@@ -531,15 +559,15 @@
 		<event>
 			<text>"Thank you! We need to scan this planet for life before we can begin terraforming, but our sensors can't get the necessary power to scan through this atmosphere. We've got a schedule to keep, any chance you can help?"</text>
 			<choice>
-				<text>Attempt to scan the planet. [ Nil | [ +1 Oxygen | SF DR | More... ] ] </text>
+				<text>Attempt to scan the planet. [ Nil | [ +1 Oxygen | Prt SF DR | More... ] ] </text>
 				<event load="NORMAL_SCAN_TERRAFORMING"/>
 			</choice>
 			<choice req="sensors" lvl="2" hidden="true">
-				<text>(Advanced Sensors) Set sensors to maximum and scan. [ +1 Oxygen | SF DR | More... ]</text>
+				<text>(Advanced Sensors) Set sensors to maximum and scan. [ +1 Oxygen | Prt SF DR | More... ]</text>
 				<event load="HIGH_SCAN_TERRAFORMING"/>
 			</choice>
 			<choice req="energy" hidden="true">
-				<text>(Zoltan) Send your crewman to overcharge their systems. [ +1 Oxygen | SF DR | More... ]</text>
+				<text>(Zoltan) Send your crewman to overcharge their systems. [ +1 Oxygen | Prt SF DR | More... ]</text>
 				<event load="HIGH_SCAN_TERRAFORMING"/>
 			</choice>
 		</event>
@@ -562,7 +590,7 @@
 		<upgrade amount="1" system="oxygen"/>
 	</event>
 	<event>
-		<text>A complete scan of the planet reveals no life signs other than a single ship on the surface. The terraformers thank you for your help, and attempt to contact the ship. Just as you're about to jump away, the ship takes off and attacks, it's a pirate! [ SF DR ]</text>
+		<text>A complete scan of the planet reveals no life signs other than a single ship on the surface. The terraformers thank you for your help, and attempt to contact the ship. Just as you're about to jump away, the ship takes off and attacks, it's a pirate! [ Prt SF DR ]</text>
 		<ship load="PIRATE" hostile="true"/>
 	</event>
 	<event>
@@ -657,7 +685,7 @@
 		<event load="CONTACT_PIRATE_SALESMAN"/>
 	</choice>
 	<choice>
-		<text>Attack him before he can attack! [ SF DR ]</text>
+		<text>Attack him before he can attack! [ Prt SF DR ]</text>
 		<event>
 			<ship load="PIRATE" hostile="true"/>
 		</event>
@@ -671,11 +699,11 @@
 <event name="CONTACT_PIRATE_SALESMAN">
 	<text>The ship responds "Yes, we have an extensive stock! Come aboard and see our wares!"</text>
 	<choice>
-		<text>Dock with the ship. [ Drone Offers or -3 Hull and SF DR if none are purchased ]</text>
+		<text>Dock with the ship. [ Drone Offers or -3 Hull and Prt SF DR if none are purchased ]</text>
 		<event load="DOCK_PIRATE_SALESMAN"/>
 	</choice>
 	<choice>
-		<text>This seems dangerous, leave. [ SF DR ]</text>
+		<text>This seems dangerous, leave. [ Prt SF DR ]</text>
 		<event>
 			<text>As soon as you start to reverse your ship, the pirate reveals hidden weaponry and sets off in pursuit. You'll have to fight him to escape!</text>
 			<ship load="PIRATE" hostile="true"/>
@@ -758,13 +786,13 @@
 <event name="REBEL_CHECKPOINT">
 	<text load="REBEL_CHECKPOINT_TEXT"/>
 	<choice>
-		<text>Fend for yourself, attack and escape. [ SF DR ]</text>
+		<text>Fend for yourself, attack and escape. [ Rbl SF DR ]</text>
 		<event>
 			<ship load="REBEL" hostile="true"/>
 		</event>
 	</choice>
 	<choice>
-		<text>Bribe the Rebels to release the civilian ships. [ Nil | LScrap | LStd | SF DR ]</text>	
+		<text>Bribe the Rebels to release the civilian ships. [ Nil | LScrap | LStd | Rbl SF DR ]</text>	
 		<event>
 			<text load="REBEL_BRIBE_TEXT"/>
 			<item_modify>
@@ -785,7 +813,7 @@
 <event name="REBEL_HELPERS">
 	<text load="REBEL_HELPERS_TEXT"/>
 	<choice>
-		<text>Attack the Rebels. [ SF K: LStd, CK: MStd, DB: Nil or [ LScrapDrones | Nil | LScrap | -2 Hull ] ]</text>
+		<text>Attack the Rebels. [ Rbl SF K: LStd, CK: MStd, DB: Nil or [ LScrapDrones | Nil | LScrap | -2 Hull ] ]</text>
 		<event>
 			<ship load="REBEL_HELPERS_SHIP" hostile="true"/>
 		</event>
@@ -803,7 +831,7 @@
 <event name="ROGUE_REBEL">
 	<text load="ROGUE_REBEL_TEXT"/>
 	<choice>
-		<text>Go looking for the Rebel ship. [ Nil | x2 SF DR | SF DR, Fleet+ ]</text>
+		<text>Go looking for the Rebel ship. [ Nil | x2 Rbl SF DR | Rbl SF DR, Fleet+ ]</text>
 		<event load="ROGUE_REBEL_SEARCH"/>
 	</choice>
 	<choice>
@@ -811,14 +839,14 @@
 		<event/>
 	</choice>
 	<choice req="sensors" lvl="2" max_group="0">
-		<text>(Improved Sensors) Perform a scan of the area. [ SF DR ]</text>
+		<text>(Improved Sensors) Perform a scan of the area. [ Rbl SF DR ]</text>
 		<event>
 			<text>You quickly find the Rebel ship's location and move to intercept.</text>
 			<ship load="REBEL" hostile="true"/>
 		</event>
 	</choice>
 	<choice req="sensors" lvl="3" max_group="0" hidden="true">
-		<text>(Advanced Sensors) Pinpoint the Rebel's location. [ SF DR, Enemy Engines@0 ]</text>
+		<text>(Advanced Sensors) Pinpoint the Rebel's location. [ Rbl SF DR, Enemy Engines@0 ]</text>
 		<event>
 			<text>You find the Rebel ship hiding on a nearby asteroid. You are able to get a shot off and permanently disable their engines before they notice you.</text>
 			<ship load="REBEL" hostile="true"/>
@@ -845,15 +873,15 @@
 		<autoReward level="MED">stuff</autoReward>
 	</event>
 	<event>
-		<text>As you approach the wreckage, a Mantis ship screams into the system... either sensing prey - or to finish the job its fellows started. [ SF DR ]</text>
+		<text>As you approach the wreckage, a Mantis ship screams into the system... either sensing prey - or to finish the job its fellows started. [ Mts SF DR ]</text>
 		<ship load="MANTIS_FIGHT" hostile="true"/>
 	</event>
 	<event>
-		<text>The wreckage appears to be a battle between Federation fighters and Rebel cruisers. Though outnumbered, it looks like the Federation fought valiantly. As you begin a more detailed scan of the wreckage, Rebel reinforcements arrive in the system and target your ship! [ SF DR ]</text>
+		<text>The wreckage appears to be a battle between Federation fighters and Rebel cruisers. Though outnumbered, it looks like the Federation fought valiantly. As you begin a more detailed scan of the wreckage, Rebel reinforcements arrive in the system and target your ship! [ Rbl SF DR ]</text>
 		<ship load="REBEL" hostile="true"/>
 	</event>
 	<event>
-		<text>As you approach the wreckage, a Zoltan ship makes its arrival. It immediately mistakes you for one of the attackers, declares you as hostile aggressors in violation of Zoltan space, and opens fire! [ SF DR ]</text>
+		<text>As you approach the wreckage, a Zoltan ship makes its arrival. It immediately mistakes you for one of the attackers, declares you as hostile aggressors in violation of Zoltan space, and opens fire! [ Ztn SF DR ]</text>
 		<ship load="ZOLTAN_SHIP" hostile="true"/>
 	</event>
 	<event>

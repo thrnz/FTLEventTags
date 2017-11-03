@@ -1,31 +1,31 @@
 <event name="SLUG_FIGHT" unique="true">
-	<text>It's rare for the Slugs to stay exposed in open space for long periods - the ship here may be lost, or just passing through, but either way he moves in to attack! [ SF DR ]</text>
+	<text>It's rare for the Slugs to stay exposed in open space for long periods - the ship here may be lost, or just passing through, but either way he moves in to attack! [ Slg SF DR ]</text>
 	<ship load="JELLY" hostile="true"/>
 </event>
 
 
 <event name="SLUG_MANTIS" unique="true">
-	<text>You intercept comm chatter from an incoming Mantis ship. "Look. This ship appears not to be owned by the squishy ones. Maybe they won't smell so bad when we cut them open." They move in on your position. [ SF DR ]</text>
+	<text>You intercept comm chatter from an incoming Mantis ship. "Look. This ship appears not to be owned by the squishy ones. Maybe they won't smell so bad when we cut them open." They move in on your position. [ Mts SF DR ]</text>
 	<ship load="MANTIS_FIGHT" hostile="true"/>
 </event> 
 
 <textList name="SLUG_PIRATE" unique="false">
-	<text>There appears to be a pirate ship nearby. Be on your guard; anyone trying to hunt in Slug territory is either formidable or deeply stupid, and in space, either can be dangerous. [ SF DR ]</text>
-	<text>"We knew anyone foolish enough to try and sneak through a Slug nebula would stick to open space. Yield your goods and we may let you live." You cut the transmission in lieu of a response. [ SF DR ]</text>
-	<text>Before you can take a moment's rest from the ever present nebulas in this sector, a pirate ship appears behind you and opens fire. [ SF DR ]</text>
+	<text>There appears to be a pirate ship nearby. Be on your guard; anyone trying to hunt in Slug territory is either formidable or deeply stupid, and in space, either can be dangerous. [ Prt SF DR ]</text>
+	<text>"We knew anyone foolish enough to try and sneak through a Slug nebula would stick to open space. Yield your goods and we may let you live." You cut the transmission in lieu of a response. [ Prt SF DR ]</text>
+	<text>Before you can take a moment's rest from the ever present nebulas in this sector, a pirate ship appears behind you and opens fire. [ Prt SF DR ]</text>
 </textList>
 
 <textList name="SLUG_REBEL" unique="false">
-	<text>As you arrive at the beacon, a hostile ship immediately registers on your scanners. You didn't expect to see Rebels extending their reach into Slug territory. Charge the weapons! [ SF DR ]</text>
-	<text>You jump into empty space and are relieved to see your sensors blink back to life. However, you are less pleased to see them immediately register a rebel ship on an approach vector! [ SF DR ]</text>
-	<text>You receive a message from a nearby ship, "Looks like our intelligence was correct! Sneaking through the clouds with the Slugs... No one can hide from the rebellion!" [ SF DR ]</text>
+	<text>As you arrive at the beacon, a hostile ship immediately registers on your scanners. You didn't expect to see Rebels extending their reach into Slug territory. Charge the weapons! [ Rbl SF DR ]</text>
+	<text>You jump into empty space and are relieved to see your sensors blink back to life. However, you are less pleased to see them immediately register a rebel ship on an approach vector! [ Rbl SF DR ]</text>
+	<text>You receive a message from a nearby ship, "Looks like our intelligence was correct! Sneaking through the clouds with the Slugs... No one can hide from the rebellion!" [ Rbl SF DR ]</text>
 </textList>
 
 <event name="NEBULA_SLUG_CHOOSE_DEATH" unique="true">
 	<text>You are immediately hailed by a dangerous looking ship guarding a station. "I'm feeling generouss today. I shall allow you to choose your own death. Which do you like leasst: shields, oxygen, or weaponsss?"</text>
 	<environment type="nebula"/>
 	<choice hidden="true">
-		<text>Shields. [ SF Shields@half K: MStd, CK: HStd ]</text>
+		<text>Shields. [ Slg SF Shields@half K: MStd, CK: HStd ]</text>
 		<event>
 			<text>"Very good then!" Your shield power suddenly drops and they charge.</text>
 			<ship load="JELLY_STATUS_SHIELDS" hostile="true"/>
@@ -33,7 +33,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Oxygen. [ SF Oxygen@half K: MStd, CK: MStd ]</text>
+		<text>Oxygen. [ Slg SF Oxygen@half K: MStd, CK: MStd ]</text>
 		<event>
 			<text>"A being that would choose sssuffocation? Who am I to judge..." Your life support is sabatoged and they move in to attack.</text>
 			<ship load="JELLY_STATUS_OXYGEN" hostile="true"/>
@@ -41,7 +41,7 @@
 		</event>
 	</event>
 	<choice hidden="true">
-		<text>Weapons. [ SF Weapons@half K: HStd, CK: HStd ]</text>
+		<text>Weapons. [ Slg SF Weapons@half K: HStd, CK: HStd ]</text>
 		<event>
 			<text>"Your acceptance of death is almosst admirable... Almosst." Your weapons system registers a hacking module. You hardly have time to respond before they attack.</text>
 			<ship load="JELLY_STATUS_WEAPONS" hostile="true"/>
@@ -58,7 +58,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="hacking"> <!-- CHANGED-->
-		<text>(Hacking System) Counter any hack attempt. [ SF Hacking@0 K: HStd, CK: HStd ]</text>
+		<text>(Hacking System) Counter any hack attempt. [ Slg SF Hacking@0 K: HStd, CK: HStd ]</text>
 		<event>
 			<text>"Sssilence won't protect you. I'll make the choice mysself... Wait. Why isn't this working?" You cut transmission and move in to attack.</text>
 			<ship load="JELLY_STATUS_HACKING" hostile="true"/>
@@ -81,7 +81,7 @@
 		<event load="NEBULA_SLUG_HULLFIX_RESULT1"/>
 	</choice>
 	<choice hidden="true">
-		<text>Ask if they would like payment. [ SF DR | Nil or +10 Hull for 50 Scrap ]</text>
+		<text>Ask if they would like payment. [ Slg SF DR | Nil or +10 Hull for 50 Scrap ]</text>
 		<event load="NEBULA_SLUG_HULLFIX_REQUEST"/>
 	</choice>
 </event>
@@ -105,15 +105,15 @@
 				<event>
 					<text>"Firssst... We accept no tradesss, couponss or refundss. Purchasess are final. Underssstand?"</text>
 					<choice>
-						<text>Understood. [ [ +5 Fuel, Store | SF 1 Boarder, Weapons@0, K: HStd, CK: HStd | 2 Boarders, SF DR] or [ Nothing | 1 Boarder, SF DR ] ] </text>
+						<text>Understood. [ [ +5 Fuel, Store | Slg SF 1 Boarder, Weapons@0, K: HStd, CK: HStd | 2 Boarders, Slg SF DR ] or [ Nothing | 1 Boarder, Slg SF DR ] ] </text>
 						<event>
 							<text>"We hold no liability for productsss damaged post ssale. We offer no insurance or customer sservice. Not a problem?"</text>
 							<choice hidden="true">
-								<text>Not a problem. [ +5 Fuel, Store | 1 Boarder, Weapons@0, K: HStd, CK: HStd | 2 Boarders, SF DR ] </text>
+								<text>Not a problem. [ +5 Fuel, Store | 1 Boarder, Slg SF Weapons@0, K: HStd, CK: HStd | 2 Boarders, Slg SF DR ] </text>
 								<event load="NEBULA_SLUG_FAKE_STORE_LIST"/>
 							</choice>
 							<choice hidden="true">
-								<text>Forget this. [ Nil | 1 Boarder, SF DR ]</text>
+								<text>Forget this. [ Nil | 1 Boarder, Slg SF DR ]</text>
 								<event load="NEBULA_SLUG_FAKE_STORE_LEAVING"/>
 							</choice>
 						</event>
@@ -125,7 +125,7 @@
 						</event>
 					</choice>
 					<choice hidden="true" req="slug">
-						<text>(Slug crewmember) Our Slug senses someone aboard the ship. Investigate it. [ SF DR ]</text>
+						<text>(Slug crewmember) Our Slug senses someone aboard the ship. Investigate it. [ Slg SF DR ]</text>
 						<event>
 							<text>It looks like the merchant was trying to stall you while someone teleported on board. You catch him before he could finish and he teleports away. You immediately prepare for battle.</text>
 							<ship load="JELLY" hostile="true"/>
@@ -138,21 +138,21 @@
 </event>
 
 <textList name="NEBULA_SLUG_FIGHT">
-	<text>Your sensors are no match for the Slug's telepathic abilities - a ship you never even saw opens fire from astern! [ SF DR ]</text>
-	<text>The Slug vessel you encounter here has obviously made a big score and is looking to test its new armaments. They picked the wrong ship to attack. [ SF DR ]</text>
-	<text>A Slug passenger ship hails: "Please, your worthy alien highnessesss, we are unarmed and sseeking asssylum." You approach cautiously, and weapons immediately spring from their hull! [ SF DR ]</text>
-	<text>A Slug ship - a rogue, you suspect - approaches, but when he sees you're Federation he thinks better of the sneak attack and fires everything he has. [ SF DR ]</text>
-	<text>Direct attacks are not preferred by the Slugs, but of the three you see at this beacon, one has the brass to make a move on your position! [ SF DR ]</text>
+	<text>Your sensors are no match for the Slug's telepathic abilities - a ship you never even saw opens fire from astern! [ Slg SF DR ]</text>
+	<text>The Slug vessel you encounter here has obviously made a big score and is looking to test its new armaments. They picked the wrong ship to attack. [ Slg SF DR ]</text>
+	<text>A Slug passenger ship hails: "Please, your worthy alien highnessesss, we are unarmed and sseeking asssylum." You approach cautiously, and weapons immediately spring from their hull! [ Slg SF DR ]</text>
+	<text>A Slug ship - a rogue, you suspect - approaches, but when he sees you're Federation he thinks better of the sneak attack and fires everything he has. [ Slg SF DR ]</text>
+	<text>Direct attacks are not preferred by the Slugs, but of the three you see at this beacon, one has the brass to make a move on your position! [ Slg SF DR ]</text>
 	
-	<text>Your sensors are no match for the Slug's telepathic abilities - a ship you never even saw opens fire from astern! [ SF DR ]</text>
-	<text>The Slug vessel you encounter here has obviously made a big score and is looking to test its new armaments. They picked the wrong ship to attack. [ SF DR ]</text>
-	<text>A Slug passenger ship hails: "Please, your worthy alien highnessesss, we are unarmed and sseeking asssylum." You approach cautiously, and weapons immediately spring from their hull! [ SF DR ]</text>
-	<text>A Slug ship - a rogue, you suspect - approaches, but when he sees you're Federation he thinks better of the sneak attack and fires everything he has. [ SF DR ]</text>
-	<text>Direct attacks are not preferred by the Slugs, but of the three you see at this beacon, one has the brass to make a move on your position! [ SF DR ]</text>
+	<text>Your sensors are no match for the Slug's telepathic abilities - a ship you never even saw opens fire from astern! [ Slg SF DR ]</text>
+	<text>The Slug vessel you encounter here has obviously made a big score and is looking to test its new armaments. They picked the wrong ship to attack. [ Slg SF DR ]</text>
+	<text>A Slug passenger ship hails: "Please, your worthy alien highnessesss, we are unarmed and sseeking asssylum." You approach cautiously, and weapons immediately spring from their hull! [ Slg SF DR ]</text>
+	<text>A Slug ship - a rogue, you suspect - approaches, but when he sees you're Federation he thinks better of the sneak attack and fires everything he has. [ Slg SF DR ]</text>
+	<text>Direct attacks are not preferred by the Slugs, but of the three you see at this beacon, one has the brass to make a move on your position! [ Slg SF DR ]</text>
 </textList>
 
 <event name="NEBULA_SLUG_MANTIS" unique="true">
-	<text>The Mantis attack ship here looks to have been hunting Slugs on their home turf - a rare test of honor for the mightiest Mantis crews. Weapons up! [ SF DR ]</text>
+	<text>The Mantis attack ship here looks to have been hunting Slugs on their home turf - a rare test of honor for the mightiest Mantis crews. Weapons up! [ Mts SF DR ]</text>
 	<ship load="MANTIS_FIGHT" hostile="true"/>
 	<environment type="nebula"/>
 </event>
@@ -162,7 +162,7 @@
 	<ship load="PIRATE" hostile="false"/>
 	<environment type="nebula"/>
 	<choice>
-		<text>Attack! [ SF DR ]</text>
+		<text>Attack! [ Prt SF DR ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -177,14 +177,14 @@
 	<text>There are few more vicious beasts in the galaxy than a Slug with his back to the wall. The faltering ship armed with fire-weapons uses a remote hacking tool to try and disable your door system - they're going to burn you out!</text>
 	<environment type="nebula"/>
 	<choice>
-		<text>Continue... [ SF Doors@0, K: MStd, CK: HStd ]</text>
+		<text>Continue... [ Slg SF Doors@0, K: MStd, CK: HStd ]</text>
 		<event>
 			<status type="limit" target="player" system="doors" amount="0"/>
 			<ship load="JELLY_STATUS_DOORS" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true" req="hacking"> <!-- CHANGED - added -->
-		<text>(Hacking System) Counter the remote hacking. [ SF Hacking@0, K: HStd, CK: HStd ]</text>
+		<text>(Hacking System) Counter the remote hacking. [ Slg SF Hacking@0, K: HStd, CK: HStd ]</text>
 		<event>
 			<text>Your hacking system automatically counters the digital assault and you move in to fight the ship.</text>
 			<ship load="JELLY_STATUS_HACKING" hostile="true"/>
@@ -199,18 +199,18 @@
 	<ship load="JELLY_STATUS_OXYGEN_FIRE" hostile="true"/>
 	<environment type="nebula"/>
 	<choice hidden="true">
-		<text>Continue... [ SF Oxygen@0, K: MStd, CK: MStd ]</text>
+		<text>Continue... [ Slg SF Oxygen@0, K: MStd, CK: MStd ]</text>
 		<event/>
 	</choice>
 	<choice hidden="true" req="oxygen" lvl="2">
-		<text>(Improved Oxygen) Try to squeeze some extra power to the system. [ SF Oxygen@half, K: MStd, CK: MStd ]</text>
+		<text>(Improved Oxygen) Try to squeeze some extra power to the system. [ Slg SF Oxygen@half, K: MStd, CK: MStd ]</text>
 		<event>
 			<text>Thankfully your improved subsystem is able to counter their hacking enough to keep the life support barely functional. That should keep you alive at least...</text>
 			<status type="divide" target="player" system="oxygen" amount="2"/>
 		</event>
 	</choice>
 	<choice hidden="true" req="hacking"> <!-- CHANGED - added -->
-		<text>(Hacking System) Counter the remote hacking. [ SF Hacking@0, K: MStd, CK: MStd ]</text>
+		<text>(Hacking System) Counter the remote hacking. [ Slg SF Hacking@0, K: MStd, CK: MStd ]</text>
 		<event>
 			<text>Your hacking system automatically counters the digital assault and you move in to fight the ship.</text>
 			<status type="limit" target="player" system="hacking" amount="0"/>
@@ -225,21 +225,21 @@
 	<boarders min="2" max="2" class="slug"/>
 	<environment type="nebula"/>
 	<choice hidden="true">
-		<text>Continue... [ SF Clone/Medbay@0, K: HStd, CK: HStd ]</text>
+		<text>Continue... [ Slg SF Clone/Medbay@0, K: HStd, CK: HStd ]</text>
 		<event>
 			<status type="limit" target="player" system="medbay" amount="0"/>
 			<status type="limit" target="player" system="clonebay" amount="0"/>
 		</event>
 	</choice>
 	<choice hidden="true" req="medbay" lvl="2">
-		<text>(Improved Medbay) Try to squeeze some extra power to the system. [ SF Clone/Medbay@half, K: HStd, CK: HStd ]</text>
+		<text>(Improved Medbay) Try to squeeze some extra power to the system. [ Slg SF Clone/Medbay@half, K: HStd, CK: HStd ]</text>
 		<event>
 			<text>Fearing the imminent battle you desperately try to get the medbay working again. Its lights flicker back on and you turn to face the intruders.</text>
 			<status type="divide" target="player" system="medbay" amount="2"/>
 		</event>
 	</choice>
 	<choice hidden="true" req="hacking"> <!-- CHANGED - added -->
-		<text>(Hacking System) Counter the remote hacking. [ SF Hacking@0, K : HStd, CK: HStd ]</text>
+		<text>(Hacking System) Counter the remote hacking. [ Slg SF Hacking@0, K : HStd, CK: HStd ]</text>
 		<event>
 			<text>You are able to undo the damage of their remote hacking satellite but it's taking everything your hacking system has. Time to take out the enemy the old fashioned way.</text>
 			<status type="limit" target="player" system="hacking" amount="0"/>
@@ -249,10 +249,10 @@
 
 
 <textList name="STORM_SLUG_FIGHT">
-	<text>The ion storm here threatens to deactivate your core systems, a fact made all the worse for the largely unaffected Slug ships circling like space-vultures. [ SF DR ]</text>
-	<text>The Slug ship that descends into view as you enter the ion storm must have sensed your distress - defensive action! [ SF DR ]</text>
-	<text>You arrive in the middle of an ion storm. Slugs generally avoid these storms but you find one waiting in ambush. Prepare for a fight! [ SF DR ]</text>
-	<text>You find yourself stuck in the middle of an ion storm with a Slug ship just a short distance away, refusing all hails. You cautiously try to slip further into the clouds, but they turn suddenly to attack! [ SF DR ]</text>	
+	<text>The ion storm here threatens to deactivate your core systems, a fact made all the worse for the largely unaffected Slug ships circling like space-vultures. [ Slg SF DR ]</text>
+	<text>The Slug ship that descends into view as you enter the ion storm must have sensed your distress - defensive action! [ Slg SF DR ]</text>
+	<text>You arrive in the middle of an ion storm. Slugs generally avoid these storms but you find one waiting in ambush. Prepare for a fight! [ Slg SF DR ]</text>
+	<text>You find yourself stuck in the middle of an ion storm with a Slug ship just a short distance away, refusing all hails. You cautiously try to slip further into the clouds, but they turn suddenly to attack! [ Slg SF DR ]</text>	
 </textList>
 
 <event name="SLUG_DISTRESS_ROCK" unique="true">
@@ -260,11 +260,11 @@
 	<distressBeacon/>
 	<environment type="nebula"/>
 	<choice hidden="true">
-		<text>Engage the Slug ship. [ SF K: MStd, CK: MStd, DB: [ x2 Nil | MStd ] ]</text>
+		<text>Engage the Slug ship. [ Slg SF K: MStd, CK: MStd, DB: [ x2 Nil | MStd ] ]</text>
 		<event load="SLUG_DISTRESS_ROCK_FIGHT"/>
 	</choice>
 	<choice>
-		<text>Ignore them. [ x2 Nil | SF DR ]</text>
+		<text>Ignore them. [ x2 Nil | Rck SF DR ]</text>
 		<event load="SLUG_DISTRESS_ROCK_AVOID"/>
 	</choice>
 </event>
@@ -272,14 +272,14 @@
 <event name="SLUG_DISTRESS_MANTIS" unique="true">
 	<text>The distress call appears to be emanating from a Slug ship caught in open space by a Mantis raider. They contact you on emergency frequencies: "Please, we'll give you all we have if you sssave ussss!"</text>
 	<choice hidden="true">
-		<text>Attack the Mantis ship. [ SF K: MStd, CK: MStd, DB: [ LScrapAugment | RStd ]</text>
+		<text>Attack the Mantis ship. [ Mts SF K: MStd, CK: MStd, DB: [ LScrapAugment | RStd ]</text>
 		<event>
 			<text>You lock onto the Mantis ship and engage.</text>
 			<ship load="SLUG_DISTRESS_MANTIS" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Attack the Slug ship. [ SF K: HStd, CK: HStd ]</text>
+		<text>Attack the Slug ship. [ Slg SF K: HStd, CK: HStd ]</text>
 		<event>
 			<text>You move to finish what the Mantis have started.</text>
 			<ship load="SLUG_DISTRESS_MANTIS_SLUG" hostile="true"/>
@@ -343,14 +343,14 @@
 		<event load="SLUG_DRINK_DRINK"/>
 	</choice>
 	<choice hidden="true">
-		<text>Refuse. [ SF DR ]</text>
+		<text>Refuse. [ Slg SF DR ]</text>
 		<event>
 			<text>The Slug feigns offense at your refusal, but you sense that he respects your caution. This does not, however, prevent him from returning to his ship and opening fire.</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true" req="rock">
-		<text>(Rock Crew) Have your Rockman pose as captain. [ Store, +10 Hull | SF DR ]</text>
+		<text>(Rock Crew) Have your Rockman pose as captain. [ Store, +10 Hull | Slg SF DR ]</text>
 		<event load="SLUG_DRINK_ROCK"/>
 	</choice>
 </event>
@@ -382,14 +382,14 @@
 		<event>
 			<text>Suddenly the first ship bursts into flames, and an urgent call arrives from the remaining Slugs. "We sssugest you distract the pirate vesssel while we retrieve the valuables. Fifty fifty sssplit."</text>
 			<choice hidden="true">
-				<text>Engage the pirate. [ SF K: MStd, CK: HStd, S:HScrap ]</text>
+				<text>Engage the pirate. [ Prt SF K: MStd, CK: HStd, S:HScrap ]</text>
 				<event>
 					<text>There's money to be made here. The Slugs know that. You turn on the pirate and intercept just before he can reach the cache! </text>
 					<ship load="QUEST_SLUG_PIRATE_TRAP1" hostile="true"/>
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Head for the cache. [ SF K: LStd, CK: MStd ]</text>
+				<text>Head for the cache. [ Prt SF K: LStd, CK: MStd ]</text>
 				<event>
 					<text>When he sees you making for the cache the Slug captain hails: "Foolish alienss, no eye for profit. Bessst of luck to you." They jump off, leaving you toe to toe with the pirate! </text>
 					<ship load="QUEST_SLUG_PIRATE_TRAP2" hostile="true"/>
@@ -423,7 +423,7 @@
 	<environment type="nebula"/>
 	<ship load="JELLY" hostile="false"/>
 	<choice hidden="true">
-		<text>Send some crew to help. [ 1-3 Borders, SF DR | Crew- (CB+), SF DR | HScrap ]</text>
+		<text>Send some crew to help. [ 1-3 Borders, Slg SF DR | Crew- (CB+), Slg SF DR | HScrap ]</text>
 		<event load="SLUG_DISTRESS_TRICK_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -452,14 +452,14 @@
 		<event load="SLUG_DISTRESS_PILOTING_SWEAR"/>
 	</choice>
 	<choice hidden="true">
-		<text>Never! [ SF Engines@1, K: MStd, CK: HStd ]</text>
+		<text>Never! [ Slg SF Engines@1, K: MStd, CK: HStd ]</text>
 		<event>
 			<text>The Slug is unimpressed by your bravado and moves in to attack. Get the shields up, you're a sitting duck with malfunctioning thrusters!</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true" req="pilot" lvl="2">
-		<text>(Improved Piloting) Override his control. [ FS K: MStd, CK: HStd ]</text>
+		<text>(Improved Piloting) Override his control. [ Slg SF K: MStd, CK: HStd ]</text>
 		<event>
 			<text>You quickly re-wire through a secondary control module. Once they realize you're not likely to agree to their demands they move in to attack.</text>
 			<ship hostile="true"/>
@@ -467,7 +467,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="hacking"> <!-- CHANGED - added -->
-		<text>(Hacking System) Counter the remote hacking. [ FS Hacking@0, K: Mstd, CK: HStd ]</text>
+		<text>(Hacking System) Counter the remote hacking. [ Slg SF Hacking@0, K: Mstd, CK: HStd ]</text>
 		<event>
 			<text>Your hacking system automatically counters the digital assault and you move in to fight the ship.</text>
 			<ship hostile="true"/>
@@ -508,11 +508,11 @@
 <event name="SECRET_WORD_ABADOTH">
 	<text>You have arrived at the coordinates given to you by the dead crewman you attempted to save. There doesn't seem to be anything here - no planets, no vessels, and no clue as to what he meant by sending you here.</text>
 	<choice req="slug" hidden="true">
-		<text>(Slug Crew) Ask your Slug crewmember to scan for life forms. [ MStd or SF DR ]</text>
+		<text>(Slug Crew) Ask your Slug crewmember to scan for life forms. [ MStd or Ztn SF DR ]</text>
 		<event load="SECRET_WORD_ABADOTH_CONCLUSION"/>
 	</choice>
 	<choice hidden="true">
-		<text>Do a full system scan - though you're sure to lose some of your lead with the Rebels. [ Fleet+, MStd or SF DR ]</text>
+		<text>Do a full system scan - though you're sure to lose some of your lead with the Rebels. [ Fleet+, MStd or Ztn SF DR ]</text>
 		<event>
 			<text>You start the arduous task of a full system scan. This better be worth it.</text>
 			<modifyPursuit amount="1"/>
@@ -554,7 +554,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>Just before the transmission is cut you hear, "They're not falling for it. Just kill the crew and we can ssstrip..." Looks like you're not getting out of here without a fight. [ SF DR ]</text>
+		<text>Just before the transmission is cut you hear, "They're not falling for it. Just kill the crew and we can ssstrip..." Looks like you're not getting out of here without a fight. [ Slg SF DR ]</text>
 		<ship load="JELLY" hostile="true"/>
 	</event>
 </eventList>

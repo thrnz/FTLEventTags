@@ -44,7 +44,7 @@
 <event name="FUEL_EXPLORE">
 	<text>Although your lack of fuel cells prevents your ship from jumping, you can still use your impulse engines. Will you spend some time exploring the nearby system?</text>
 	<choice hidden="true">
-		<text>Explore the nearby area. [ 5 Fuel for 20 Scrap | 2 Fuel for 10 Scrap | 1 Fuel for 5 Scrap | Nil | SF K: MScrapFuel | [ [ Nil | HScrapFuel | MScrapMiss | MScrapDrones | -5 Hull | SF DR ] ] ]</text>
+		<text>Explore the nearby area. [ 5 Fuel for 20 Scrap | 2 Fuel for 10 Scrap | 1 Fuel for 5 Scrap | Nil | Auto SF K: MScrapFuel | [ [ Nil | HScrapFuel | MScrapMiss | MScrapDrones | -5 Hull | SF DR ] ] ]</text>
 		<event load="FUEL_EXPLORE_LIST"/>  
 	</choice>
 	<choice>
@@ -56,7 +56,7 @@
 <event name="FUEL_APPROACH">
 	<text>A ship approaches. They hail you saying, "You need some fuel? We'll prepare to dock to help."</text>
 	<choice hidden="true">
-		<text>Graciously accept their offer. [ 2-6 Fuel | Various Fuel Trades | 2-3 Boarders, SF DR | SF DR ]</text>
+		<text>Graciously accept their offer. [ 2-6 Fuel | Various Fuel Trades | 2-3 Boarders, Prt SF DR | Prt SF DR ]</text>
 		<event load="FUEL_APPROACH_ACCEPT_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -64,11 +64,11 @@
 		<event load="FUEL_APPROACH_DECLINE_LIST"/>
 	</choice>  
 	<choice hidden="true" req="sensors" lvl="3">
-		<text>(Advanced Sensors) Run a detailed scan with your sensors before responding. [ 3-7 Fuel | SF DR BO Cloak to avoid) ]</text>
+		<text>(Advanced Sensors) Run a detailed scan with your sensors before responding. [ 3-7 Fuel | Prt SF DR BO Cloak to avoid) ]</text>
 		<event load="FUEL_APPROACH_SCAN_LIST"/>
 	</choice>    
 	<choice hidden="true" req="ADV_SCANNERS">
-		<text>(Long-Ranged Scanners) Run a detailed scan before responding. [ 3-7 Fuel | SF DR BO Cloak to avoid ]</text>
+		<text>(Long-Ranged Scanners) Run a detailed scan before responding. [ 3-7 Fuel | Prt SF DR BO Cloak to avoid ]</text>
 		<event load="FUEL_APPROACH_SCAN_LIST"/>
 	</choice>    
 </event>
@@ -94,12 +94,12 @@
 		</choice>
 	</event>
 	<event>
-		<text>As their ship pulls up next to yours, their captain continues, "Yes, we'll certainly help... Help to relieve you of that nice ship!" Sensors detect a hidden teleporter has been activated. We've been boarded! [ SF DR, 2-3 Human Boarders ]</text>
+		<text>As their ship pulls up next to yours, their captain continues, "Yes, we'll certainly help... Help to relieve you of that nice ship!" Sensors detect a hidden teleporter has been activated. We've been boarded! [ Prt SF DR, 2-3 Human Boarders ]</text>
 		<ship load="PIRATE_FUEL" hostile="true"/>
 		<boarders min="2" max="3" class="human"/>
 	</event>
 	<event>
-		<text>As they approach, you detect their weapons powering up. It seems their intentions are hostile! [ SF DR ]</text>
+		<text>As they approach, you detect their weapons powering up. It seems their intentions are hostile! [ Prt SF DR ]</text>
 		<ship load="PIRATE" hostile="true"/>
 	</event>
 </eventList>
@@ -116,7 +116,7 @@
 		<text>"No one trusts anyone these days..." The ship jumps away.</text>
 	</event>
 	<event>
-		<text>They reply,"Keep our distance? Let's see if you can stop us!" They power up their weapons and advance. [ SF DR ]</text>
+		<text>They reply,"Keep our distance? Let's see if you can stop us!" They power up their weapons and advance. [ Prt SF DR ]</text>
 		<ship load="PIRATE_FUEL" hostile="true"/>
 	</event>
 </eventList>
@@ -131,7 +131,7 @@
 	<event>
 		<text>Sensors are picking up armed crew and considerably more weaponry than is legal for a craft of this size. This is surely a trap.</text>
 		<choice>
-			<text>Power up weapons and prepare for a fight. [ SF DR ]</text>
+			<text>Power up weapons and prepare for a fight. [ Prt SF DR ]</text>
 			<event>
 				<ship load="PIRATE_FUEL" hostile="true"/>
 			</event>
@@ -197,14 +197,14 @@
 </event>
 
 <textList name="FUEL_ON_REBEL_ATTACK">
-	<text>A Rebel ship hails you, "Hello citizen. We are responding to your distress call and can assist... Wait a second... You're that ship! Prepare to die!" [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
-	<text>A Rebel ship jumps nearby, "I wasn't looking forward to patrolling this boring sector but here you are, the most wanted ship in the area, just asking for me to find you. It looks like it's my lucky day!" They power up their weapons. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
-	<text>Your distress beacon must be working because a ship just jumped nearby. You run a scan on it and activate a red alert. It's a Rebel fighter! [ F K: MScrapFuel, CK: HScrapFuel ]</text>
-	<text>A Rebel ship jumps in and hails you, "I knew you would slip up some time. Surrender quietly!" [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>A Rebel ship hails you, "Hello citizen. We are responding to your distress call and can assist... Wait a second... You're that ship! Prepare to die!" [ Rbl SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>A Rebel ship jumps nearby, "I wasn't looking forward to patrolling this boring sector but here you are, the most wanted ship in the area, just asking for me to find you. It looks like it's my lucky day!" They power up their weapons. [ Rbl SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>Your distress beacon must be working because a ship just jumped nearby. You run a scan on it and activate a red alert. It's a Rebel fighter! [ Rbl SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>A Rebel ship jumps in and hails you, "I knew you would slip up some time. Surrender quietly!" [ Rbl SF K: MScrapFuel, CK: HScrapFuel ]</text>
 </event>
 
 <event name="FUEL_ON_REBEL_WARNING">
-	<text>A ship responding to your distress moves in. Unfortunately it turns out to be an automated Rebel scout. It immediately reverses thrust after scanning your ship. [ LStd ]</text>
+	<text>A ship responding to your distress moves in. Unfortunately it turns out to be an automated Rebel scout. It immediately reverses thrust after scanning your ship. [ Auto SF K: LStd, Esc: Fleet+ ]</text>
 	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
 </event>	
 
@@ -212,7 +212,7 @@
 	<text>As you drift through space an Engi ship passes through. From listening to their com channel it sounds like they're discussing making repairs on their ship.</text>
 	<ship load="FUEL_OFF_ENGI_DUBIOUS" hostile="false"/>
 	<choice hidden="true">
-		<text>Hail them. [ Nil | 2-6 Fuel | SF K: MScrapFuel, CK: HScrapFuel | Fuel Trade Offer ]</text>
+		<text>Hail them. [ Nil | 2-6 Fuel | Eng SF K: MScrapFuel, CK: HScrapFuel | Fuel Trade Offer ]</text>
 		<event load="FUEL_OFF_ENGI_DUBIOUS_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -234,15 +234,15 @@
 </event>
 
 <textList name="FUEL_ON_MANTIS_ATTACK">
-	<text>A Mantis ship hails you, "Looks like we found the poor fools that need some help. Come brothers, let's 'help' them!" They move in to attack. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
-	<text>Before long a ship jumps nearby, no doubt responding to your beacon. However any relief you felt disappears as soon as you recognize that the ship is of Mantis design. Prepare for a fight. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
-	<text>You detect a Mantis ship approaching and hack into their comm channel and hear, "...hope they put up more of a fight than the last Federation ship. This has been a disappointing day so far." Looks like they're not here to help. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
-	<text>A Mantis ship jump nearby. Sensors detect weapon locks and all hope of avoiding a fight fades away. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>A Mantis ship hails you, "Looks like we found the poor fools that need some help. Come brothers, let's 'help' them!" They move in to attack. [ Mts SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>Before long a ship jumps nearby, no doubt responding to your beacon. However any relief you felt disappears as soon as you recognize that the ship is of Mantis design. Prepare for a fight. [ Mts SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>You detect a Mantis ship approaching and hack into their comm channel and hear, "...hope they put up more of a fight than the last Federation ship. This has been a disappointing day so far." Looks like they're not here to help. [ Mts SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>A Mantis ship jump nearby. Sensors detect weapon locks and all hope of avoiding a fight fades away. [ Mts SF K: MScrapFuel, CK: HScrapFuel ]</text>
 	
-	<text>A Mantis ship hails you, "Looks like we found the poor fools that need some help. Come brothers, let's 'help' them!" They move in to attack. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
-	<text>Before long a ship jumps nearby, no doubt responding to your beacon. However any relief you felt disappears as soon as you recognize that the ship is of Mantis design. Prepare for a fight. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
-	<text>You detect a Mantis ship approaching and hack into their comm channel and hear, "...hope they put up more of a fight than the last Federation ship. This has been a disappointing day so far." Looks like they're not here to help. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
-	<text>A Mantis ship jump nearby. Sensors detect weapon locks and all hope of avoiding a fight fades away. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>A Mantis ship hails you, "Looks like we found the poor fools that need some help. Come brothers, let's 'help' them!" They move in to attack. [ Mts SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>Before long a ship jumps nearby, no doubt responding to your beacon. However any relief you felt disappears as soon as you recognize that the ship is of Mantis design. Prepare for a fight. [ Mts SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>You detect a Mantis ship approaching and hack into their comm channel and hear, "...hope they put up more of a fight than the last Federation ship. This has been a disappointing day so far." Looks like they're not here to help. [ Mts SF K: MScrapFuel, CK: HScrapFuel ]</text>
+	<text>A Mantis ship jump nearby. Sensors detect weapon locks and all hope of avoiding a fight fades away. [ Mts SF K: MScrapFuel, CK: HScrapFuel ]</text>
 </event>
 
 <event name="FUEL_OFF_ROCK_WRECK">
@@ -313,14 +313,14 @@
 <event name="FUEL_OFF_ROCK_CURIOUS">
 	<text>A curious Rock ship comes in for a closer look at you. They refuse all hails.</text>
 	<choice hidden="true">
-		<text>Attack. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
+		<text>Attack. [ Rck SF K: MScrapFuel, CK: HScrapFuel ]</text>
 		<event>
 			<text>The Rock people are not renowned for their generosity. If it's fuel you need, it's fuel you must take!</text>
 			<ship load="FUEL_OFF_ROCK_CURIOUS" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Wait and see. [ 3-8 Fuel | SF with Engines cut to 1, K: MScrapFuel, CK: HScrapFuel ] </text>
+		<text>Wait and see. [ 3-8 Fuel | Rck SF with Engines cut to 1, K: MScrapFuel, CK: HScrapFuel ] </text>
 		<event load="FUEL_OFF_ROCK_CURIOUS_LIST"/>	
 	</choice>
 </event>
@@ -374,7 +374,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Negotiate. [ SF K: MScrapFuel, CK: HScrapFuel ]</text>
+		<text>Negotiate. [ Slg SF K: MScrapFuel, CK: HScrapFuel ]</text>
 		<event>
 			<text>You offer a more reasonable price but the Slugman is outraged! He moves in to attack!</text>
 			<ship hostile="true"/>
@@ -429,11 +429,11 @@
 <event name="NO_FUEL_REFUGEE_PIRATE">
 	<text>A refugee ship fleeing the Rebel advance enters the system, having picked up your distress beacon. While it doesn't have much fuel to spare, it is bad need of armaments and is willing to trade for them.</text>
 	<choice>
-		<text>Offer some missiles for fuel. [ 5-7 Fuel for 1 Missile | 5-7 Fuel for 1 Missile, SF DR ]</text>
+		<text>Offer some missiles for fuel. [ 5-7 Fuel for 1 Missile | 5-7 Fuel for 1 Missile, Prt SF DR ]</text>
 		<event load="NO_FUEL_REFUGEE_PIRATE_ACCEPT"/>
 	</choice>
 	<choice>
-		<text>Refuse their offer. [ LFuel | x2 SF DR ]</text>
+		<text>Refuse their offer. [ LFuel | x2 Prt SF DR ]</text>
 		<event load="NO_FUEL_REFUGEE_PIRATE_REJECT"/>
 	</choice>
 </event>
