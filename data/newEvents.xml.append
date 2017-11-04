@@ -491,7 +491,7 @@
 <event name="ROCK_SLUG_ARGUMENT" unique="true">  <!-- in slug and rock neutrals-->
 	<text>You find a Slug Cruiser and Rock ship at a standoff, both with weapons armed and ready to fight. You could intervene before this gets out of hand.</text>
 	<choice>
-		<text>Hail them to see what's wrong.</text>
+		<text>Hail them to see what's wrong. [ More ... ]</text>
 		<event>
 			<text>The Slug captain explains that they upgraded the Rock ship's reactor and now the 'thick boulder heads' are refusing to pay for the work done. The Rock Captain says the 'slime balls' did a poor job that is not worth their agreed upon price.</text>
 			<choice>
@@ -522,6 +522,26 @@
 		<event/>
 	</choice>
 </event>
+
+<eventList name="ROCK_SLUG_COMMAND">
+	<event>
+		<text>Apparently the Rock Captain was more annoyed than you thought, they shut off all communication and turn on you, the 'slime balls' defender.' [ Rck SF K: LStd, CK: MStd, DB: [ Nil | Reactor+1 | 10-15 Scrap Reactor Upgrade ] ]</text>
+		<ship load="ROCK_SLUG_REACTOR_SHIP" hostile="true"/>
+	</event>
+	<event>
+		<text>With much grumbling, the Rock Captain agrees to pay the price.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="ROCK_SLUG_GRATEFUL"/>
+		</choice>
+	</event>
+	<event>
+		<text>A massive explosion emanates from the Rock Ship, shattering its hull and sending debris on an unavoidable collision course to your ship. Seems like that reactor upgrade was poorly done after all, and the Slugs took the opportunity to jump away.</text>
+		<damage amount="3"/>
+		<damage amount="1" system="random"/>
+		<damage amount="1" system="random"/>  <!--DLC-->
+	</event>
+</eventList>
 
 <eventList name="ROCK_SLUG_GRATEFUL">
 	<event>
