@@ -7,11 +7,10 @@ This mod tags dialogue to show the possible outcomes of various ingame choices a
 This mod is useful for players wanting to learn the possible results of ingame events. It is also useful for players wanting to play optimally without having to refer to the wiki or XML diving.
 
 ## Notes
- * Most ingame events have been tagged. Some may have been accidentally missed.
- * Mistakes may have been made. I take no responsibility for any runs lost as a result of incorrect information supplied by this mod!
+ * Mostly complete. Would like to complete a double check of all tags before release.
 
 ## To-do
- * Testing / double checking etc
+ * Re-do screenshots.
 
 ## Legend
 * SF: Ship Fight
