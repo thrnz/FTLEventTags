@@ -1300,7 +1300,7 @@
 
 <ship name="DONOR_MANTIS_CHASE2" auto_blueprint="MANTIS_BOMBER">
 	<escape timer="12" min="6" max="6">
-		<text>They appear to be trying to get away again. You doubt they'll forget to mask their jump signature this time.</text>
+		<text>They appear to be trying to get away again. You doubt they'll forget to mask their jump signature this time. [ Mts SF K: MStd Weapon, CK: HStd Weapon, S: HWeap ]</text>
 	</escape>
 	<gotaway>
 		<text>Looks like they got away. At least you're able to scrap their abandoned fighter.</text>
@@ -1317,7 +1317,7 @@
 			</event>
 		</choice>
 		<choice>
-			<text>Finish them off. [ K: MStd Weap, CK: HStd, Weap ]</text>
+			<text>Finish them off. [ K: MStd Weap, CK: HStd Weap ]</text>
 			<event>
 				<text>"No! Hurry up, get us out of here! They're crazy!" You cut transmissions.</text>
 			</event>
