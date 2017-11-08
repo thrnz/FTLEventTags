@@ -1293,7 +1293,7 @@
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>"Not YOU again! Do you know how much these repairs are going to cost me? Time to take out the big guns." [ Mts SF K: MStd, CK: HStd, S: HWeap ]</text>
+			<text>"Not YOU again! Do you know how much these repairs are going to cost me? Time to take out the big guns." [ Mts SF K: MStd Weapon, CK: HStd Weapon, S: HWeap ]</text>
 		</event>
 	</choice>
 </event>
