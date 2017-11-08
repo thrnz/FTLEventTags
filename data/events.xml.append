@@ -1298,6 +1298,44 @@
 	</choice>
 </event>
 
+<ship name="DONOR_MANTIS_CHASE2" auto_blueprint="MANTIS_BOMBER">
+	<escape timer="12" min="6" max="6">
+		<text>They appear to be trying to get away again. You doubt they'll forget to mask their jump signature this time.</text>
+	</escape>
+	<gotaway>
+		<text>Looks like they got away. At least you're able to scrap their abandoned fighter.</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</gotaway>
+	<surrender  min="2" max="2">
+		<text>"Look, you proved your point. We don't want to die... Take this and let us go. Please?"</text>
+		<choice>
+			<text>Let them live. [ HWeap ]</text>
+			<event>
+				<text>"Thank you. But do you have any idea how much repairing TWO ships will set us back?..." What an odd Mantis. You prepare to leave.</text>
+				<autoReward level="HIGH">weapon</autoReward>
+				<ship hostile="false"/>
+			</event>
+		</choice>
+		<choice>
+			<text>Finish them off. [ K: MStd Weap, CK: HStd, Weap ]</text>
+			<event>
+				<text>"No! Hurry up, get us out of here! They're crazy!" You cut transmissions.</text>
+			</event>
+		</choice>
+	</surrender>
+	<destroyed>
+		<text>Their ship breaks apart and you salvage the two ships.</text>
+		<weapon name="RANDOM"/>
+		<autoReward level="MED">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>You find an intact weapon on their now empty ship. You take as much scrap from the ships as possible.</text>
+		<weapon name="RANDOM"/>
+		<autoReward level="HIGH">standard</autoReward>
+	</deadCrew>
+</ship>
+
+
 
 <event name="ALISON_MANTIS_CREW" unique="true">
 	<text>You arrive just in time to see an unusually well-armed Engi ship destroying a small pirate craft. A teleporter signal is detected...intruder on deck!</text>
