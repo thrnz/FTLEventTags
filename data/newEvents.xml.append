@@ -908,3 +908,21 @@
 		<text>As you approach the wreckage, a Slug ship makes its arrival. It hesitates for a moment, as if surprised to see anyone remaining, and then jumps away without a word. You resume scanning the system, wary of any other visitors.</text>
 	</event>
 </eventList>
+
+<event name="CONFUSED_MANTIS_HOME">
+	<text>The colony is a mining operation that specializes in FTL fuel. Robert's family, the head engineers, are excited to see him, and are very grateful for his return. Apparently he ran away to 'join the Federation' like his older brother, but was never accepted onto a ship.</text>
+	<choice hidden="true">
+		<text>Offer him a position on your ship. [ MantisCrew+ ]</text>
+		<event>
+			<text>He graciously accepts, having always wanted to serve in the Federation.</text>
+			<crewMember amount="1" class="mantis">Robert Smith</crewMember>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Ask if they can take a look at your engines. [ +1 Engines ]</text>
+		<event>
+			<text>They are happy to take a look, and are able to offer some suggestions for improvements.</text>
+			<upgrade amount="1" system="engines"/>
+		</event>
+	</choice>
+</event>	
