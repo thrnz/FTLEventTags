@@ -926,3 +926,10 @@
 		</event>
 	</choice>
 </event>	
+
+<textList name="GENERIC_HIDE_TEXT">
+	<text>Fly behind a moon and stay hidden. [ Nil ]</text>
+	<text>Shut down all non-vital systems and stay hidden. [ Nil ]</text>
+	<text>Stay quiet and hope they don't notice you. [ Nil ]</text>
+	<text>Stay out of their way and charge your FTL drive. [ Nil ]</text>
+</textList>
