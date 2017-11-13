@@ -77,7 +77,7 @@
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Protect the aliens' way of life - Attack the Rebel ship. [ Rb; SF K: LScrapWeapon, CK: MScrapWeapon ]</text>
+				<text>Protect the aliens' way of life - Attack the Rebel ship. [ Rbl SF K: LScrapWeapon, CK: MScrapWeapon ]</text>
 				<event>
 					<text>These creatures should be left to develop at their own pace. You direct all weapons on the Rebel ship and begin the firing sequence.</text>
 					<ship load="ZOLTAN_PRIMITIVES_REBEL" hostile="true"/>

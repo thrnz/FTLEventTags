@@ -91,7 +91,7 @@
 <event name="ROCK_MANTIS_FREIGHTER" unique="true">
 	<text>A curious sight greets you at this beacon: a disabled Rock freighter drifts in space while two Mantis craft battle it out - presumably over who deserves the spoils.</text>
 	<choice hidden="true">
-		<text>Wait, then attack the surviving Mantis. [ Mts SF Enemy Weapons@2, K: MStd, CK: MStd | Mts SF K: MStd, CK: MStd]</text>
+		<text>Wait, then attack the surviving Mantis. [ Mts SF Enemy Weapons@2, K: MStd, CK: MStd | Mts SF K: MStd, CK: MStd ]</text>
 		<event load="ROCK_MANTIS_FREIGHTER_LIST"/>
 	</choice>
 	<choice hidden="true">
