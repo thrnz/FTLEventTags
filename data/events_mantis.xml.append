@@ -27,7 +27,7 @@
 	<text load="MANTIS_FIGHT_CHOICE"/>
 	<ship load="MANTIS_FIGHT" hostile="false"/>
 	<choice hidden="true">
-		<text>Attack the ship. [ Mts  SF DR ]</text>
+		<text>Attack the ship. [ Mts SF DR ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
