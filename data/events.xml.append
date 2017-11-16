@@ -1189,7 +1189,7 @@
 		<event>
 			<text>You land a small shuttle in an enormous field, whose only occupants are small, brightly colored, six-legged, horse-like animals. Could they be what your scans picked up?</text>
 			<choice hidden="true">
-				<text>Try to communicate peacefully. [ EngiCrew+,  Std | Nil ]</text>
+				<text>Try to communicate peacefully. [ EngiCrew+,  LStd | Nil ]</text>
 				<event load="DONOR_PONY_PEACE"/>
 			</choice>
 			<choice hidden="true">
