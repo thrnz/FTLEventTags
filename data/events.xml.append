@@ -745,7 +745,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>After a quick scan, you find a ship being chased by a pirate. This must be the missing delivery ship! You move in to rescue them. [ Prt SF K: MStd, CK: MStd</text>
+		<text>After a quick scan, you find a ship being chased by a pirate. This must be the missing delivery ship! You move in to rescue them. [ Prt SF K: MStd, CK: MStd ]</text>
 		<ship load="JELLY_PIRATE_MERCHANT" hostile="true"/>
 	</event>
 </eventList>
