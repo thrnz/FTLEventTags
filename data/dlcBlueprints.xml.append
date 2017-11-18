@@ -1,0 +1,212 @@
+<droneBlueprint name="COMBAT_BEAM_2">
+	<type>COMBAT</type>
+	<title>Anti-Ship Beam Drone II</title>
+	<tip>tip_combat</tip>
+	<short>Beam II</short>
+	<desc>Combat drone that repeatedly attacks with a larger beam weapon; 10% fire chance</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>0</dodge>
+	<speed>11</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>60</cost>
+	<bp>3</bp>
+	<droneImage>drone_beam_2</droneImage>
+	<weaponBlueprint>DRONE_BEAM2</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>beam2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="COMBAT_FIRE">
+	<type>COMBAT</type>
+	<tip>tip_combat</tip>
+	<title>Anti-Ship Fire Drone</title>
+	<short>Fire</short>
+	<desc>Combat drone that repeatedly attacks with a small beam weapon that lights rooms on fire; 90% fire chance</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown> <!--- Doesn't effect combat drone -->
+	<dodge>0</dodge>
+	<speed>12</speed> <!--- Change this to increase/decrease firing speed -->
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>drone_fire</droneImage>
+	<weaponBlueprint>DRONE_FIREBEAM</weaponBlueprint>
+	<rarity>4</rarity>
+	<iconImage>fire</iconImage>
+</droneBlueprint>
+
+<weaponBlueprint name="MISSILE_CHARGEGUN">
+	<type>BURST</type>
+	<flavorType>Charge Blast Missile</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Swarm Missiles</title>
+	<tip>tip_charge</tip>
+	<short>Swarm</short>
+	<desc>If given time to prepare, the 'Swarm' launcher can replicate multiple warheads. 10% fire chance; 10% breach chance</desc>
+	<tooltip>Charges up to 3 shield-piercing missiles. However it always uses only one missile resource</tooltip>
+	<radius>31</radius>  <!-- was 34-->
+	<missiles>1</missiles>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<drone_targetable>1</drone_targetable> 
+	<cooldown>7</cooldown>
+	<power>2</power>
+	<chargeLevels>3</chargeLevels>
+	<cost>65</cost>
+	<bp>10</bp>
+	<speed>45</speed>
+	<rarity>4</rarity>
+	<explosion>explosion_random</explosion>
+	<projectiles>
+		<projectile count="1" fake="false">missile_burst</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>chargemissile</weaponArt>  
+	<iconImage>missile_charge</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_CHAINGUN">  <!-- 1 shot 1power-->
+	<type>LASER</type>
+	<title>Chain Burst Laser</title>
+	<short>Chain L.</short>
+	<tip>tip_chain_laser</tip>
+	<desc>This dual shot laser decreases in cooldown the more it fires. After 3 volleys it only takes 7 seconds to charge. 10% fire chance</desc>
+	<tooltip>Fires two lasers that deal 1 damage each. Cooldown drops the more it fires</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<power>2</power>
+	<cost>65</cost>
+	<bp>2</bp>
+	<rarity>3</rarity>
+	<image>laser_light1</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>3</amount>
+		<count>3</count>
+	</boost>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>chainlaser</weaponArt> 
+	<iconImage>laser_chain</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LASER_CHAINGUN_2">  <!-- 1 shot 1power-->
+	<type>LASER</type>
+	<title>Chain Vulcan</title>
+	<short>Vulcan</short>
+	<tip>tip_chain_laser</tip>
+	<desc>This laser weapon takes a long time to warm up. Each time it fires it decreases the cooldown, eventually able to take down any amount of shields. 10% fire chance</desc>
+	<tooltip>Cooldown drops the more it fires</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>11.1</cooldown>
+	<power>4</power>
+	<cost>95</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<image>laser_light1</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>2</amount>
+		<count>5</count>
+	</boost>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>chainlaser_2</weaponArt> 
+	<iconImage>laser_chain</iconImage>
+</weaponBlueprint>
+
+
+
+<weaponBlueprint name="LASER_CHARGEGUN_2"> 
+	<type>LASER</type>
+	<title>Laser Charger</title>
+	<short>Charge II</short>
+	<tip>tip_charge</tip>
+	<desc>This laser weapon can charge multiple times, giving it additional projectiles. 10% fire chance</desc>
+	<tooltip>Fires more shots the more it charges, up to a max of 4</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>5</cooldown>
+	<power>3</power>
+	<cost>70</cost>
+	<bp>2</bp>
+	<rarity>3</rarity>
+	<image>laser_light1</image>
+	<chargeLevels>4</chargeLevels>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>chargelaser2</weaponArt> 
+	<iconImage>laser_charge4</iconImage>
+</weaponBlueprint>
