@@ -1471,11 +1471,11 @@
 
 <eventList name="FEDERATION_PLANET_SIGNAL_LIST">
 	<event>
-		<text>You find a secret Federation outpost. They are regrettably out of supplies but are eager to tell you of another secret base. They give you the coordinates.</text>
+		<text>You find a secret Federation outpost. They are regrettably out of supplies but are eager to tell you of another secret base. They give you the coordinates. [ Hidden Federation Base Quest ]</text>
 		<quest event="HIDDEN_FEDERATION_BASE_LIST"/>
 	</event>
 	<event>
-		<text>You find a hidden Federation outpost. They message you, "Quick, we just got word from a sister outpost that they've been discovered by the Rebels and are under attack! If you are still loyal to the Federation, go save them!"</text>
+		<text>You find a hidden Federation outpost. They message you, "Quick, we just got word from a sister outpost that they've been discovered by the Rebels and are under attack! If you are still loyal to the Federation, go save them!" [ Federation Base Assist Quest ]</text>
 		<autoReward level="MED">stuff</autoReward>
 		<quest event="FEDERATION_BASE_ASSIST"/>
 	</event>
@@ -1487,7 +1487,7 @@
 		<autoReward level="HIGH">standard</autoReward>
 	</event>
 	<event>
-		<text>As you approach the signal you receive a message on a Rebel channel, "I knew we'd catch some Federation fish with this signal. Prepare to be boarded, scum!" [ SF DR, 2-3 Human Boarders ]</text>
+		<text>As you approach the signal you receive a message on a Rebel channel, "I knew we'd catch some Federation fish with this signal. Prepare to be boarded, scum!" [ Rbl SF DR, 2-3 Human Boarders ]</text>
 		<ship load="REBEL" hostile="true"/>
 		<boarders min="2" max="3" class="human"/>
 	</event>
