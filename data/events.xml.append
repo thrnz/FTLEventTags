@@ -1404,11 +1404,11 @@
 
 <eventList name="FEDERATION_BASE_ASSIST">
 	<event>
-		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ LWeapon, Crew+ | HStd, +7 Hull ] ]</text>
+		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ LScrapWeapon, Crew+ | HStd, +7 Hull ] ]</text>
 		<ship load="AUTO_FEDERATION_BASE" hostile="true"/>
 	</event>
 	<event>
-		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ LWeapon, Crew+ | HStd, +7 Hull ] ]</text>
+		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ LScrapWeapon, Crew+ | HStd, +7 Hull ] ]</text>
 		<ship load="AUTO_FEDERATION_BASE2" hostile="true"/>
 	</event>
 </eventList>

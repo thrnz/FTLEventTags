@@ -276,7 +276,7 @@
 	<event>
 		<text>They respond, "It's a good thing you came when you did; we'd be dead now otherwise. I'm a shipwright and I'd like to help you like you helped me."</text>
 		<choice>
-			<text>The captain offers to install a piece of equipment on your ship. [ LWeapon ]</text>
+			<text>The captain offers to install a piece of equipment on your ship. [ LScrapWeapon ]</text>
 			<event>
 				<autoReward level="LOW">weapon</autoReward>
 			</event>

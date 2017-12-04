@@ -131,7 +131,7 @@
 				<event>
 					<text>Your haste has paid off and you are able to bring him back from the brink of death. When his senses return he says, "I never thought I would see this day, but... I am willing to devote myself and my ships to your cause."</text>
 					<choice hidden="true">  <!-- NOTE - Add other options?-->
-						<text>Accept. [ HScrap, MantisCrew+ w/Max Skills, HWeapon Quest ]</text>
+						<text>Accept. [ HScrap, MantisCrew+ w/Max Skills, HScrapWeapon Quest ]</text>
 						<event>
 							<text>KazaaakplethKilik joins your crew, offers the coordinates for a nearby stash of stolen military goods and transmits the coordinates for a custom cruiser he has been working on. You forward it to the Federation, sure they can make good use of it.</text>
 							<augment name="CREW_STIMS"/>
