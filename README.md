@@ -50,17 +50,19 @@ This mod is useful for players wanting to learn the possible results of ingame e
 * ScrapDrones: Scrap + Drones
 * ScrapDrone: Scrap + Drone schematic
 * ScrapWeapon: Scrap + Weapon
+* ScrapAugment: Scrap + Augment
 * Fuel: Fuel only
 * Miss: Missiles only
 * Drones: Drones only
 * Drone: Drone schematic only
 * Weapon: Weapon only
+* Augment: Augment only
 
 ## Example tags:
 
 * [ Prt SF DR | Nil | Weapon ] 
 
-One of 3 possible outcomes: either a ship fight aainst a pirate class ship with default rewards, nothing, or a free random weapon.
+One of 3 possible outcomes: either a ship fight against a pirate class ship with default rewards, nothing, or a free random weapon.
 
 * [ x2 Nil | Crew+ | Crew- (CB+) ]
 
