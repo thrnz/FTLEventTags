@@ -21,7 +21,7 @@
 	<text load="MERCENARY"/>
 	<ship load="PIRATE" hostile="false"/>
 	<choice>
-		<text>Hire the mercenary to delay the Rebels.</text>
+		<text>Hire the mercenary to delay the Rebels. [ Fleet-- ]</text>
 		<event>
 			<text>The mercenary ship masks its jump signature to mimic your own and then jumps off in the opposite direction. This should keep the Rebels guessing.</text>
 			<item_modify>
@@ -33,7 +33,7 @@
 	<choice>
 		<text>Hire the mercenary to scout the sector.</text>
 		<event>
-			<text>Your map has been updated.</text>
+			<text>Your map has been updated. [ Map ]</text>
 			<item_modify>
 				<item type="scrap" min="-20" max="-10"/>
 			</item_modify>
@@ -48,7 +48,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>You have no need of his services.</text>
+		<text>You have no need of his services. [ Nil ]</text>
 		<event/>
 	</choice>
 </event>
