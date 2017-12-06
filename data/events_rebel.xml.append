@@ -168,9 +168,9 @@
 	<img planet="NONE"/>
 	<text>You spot a small Rebel ship nearby. It seems to have been re-fitted for transport rather than combat. It does not seem to want to engage you and your ship.</text>
 	<choice>
-		<text>Demand the surrender of their goods. [ Rbl SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 L Standard | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+		<text>Demand the surrender of their goods. [ Rbl SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 		<event>
-			<text>You prepare to secure their cargo by force. [ Rbl SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 L Standard | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+			<text>You prepare to secure their cargo by force. [ Rbl SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 			<ship load="SQUAT_TRANSPORT" hostile="true"/>
 		</event>
 	</choice>
