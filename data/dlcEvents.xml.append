@@ -26,7 +26,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="mind" lvl="3" max_group="0">
-		<text>(Advanced Mind Control) Alter the announcer's opinions. [ HStdd, Store ]</text>
+		<text>(Advanced Mind Control) Alter the announcer's opinions. [ HStd, Store ]</text>
 		<event>
 			<text>You locate the source of the announcement and 'convince' the speaker to rescind his previous statement. In addition he apologizes by offering considerable complimentary supplies. Hopefully you will have enough time to shop before he can figure out what just happened.</text>
 			<autoReward level="HIGH">standard</autoReward>
