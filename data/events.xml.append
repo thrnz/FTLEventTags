@@ -31,9 +31,9 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Hire the mercenary to scout the sector.</text>
+		<text>Hire the mercenary to scout the sector. [ Map ]</text>
 		<event>
-			<text>Your map has been updated. [ Map ]</text>
+			<text>Your map has been updated.</text>
 			<item_modify>
 				<item type="scrap" min="-20" max="-10"/>
 			</item_modify>
@@ -486,7 +486,7 @@
 		</event>		
 	</choice>
 	<choice hidden="true" req="rock">
-		<text>(Rock Crew) Send your Rock crew-member in. [ HAugment ]</text>
+		<text>(Rock Crew) Send your Rock crew-member in. [ HScrapAugment ]</text>
 		<event>
 			<text>Your Rock soldier tears through the airlock directly into the fire. You've never seen someone that large move that fast. It disperses as much fire suppressant as possible into the heart of the blaze and eventually the fires start to die down.</text>
 			<choice hidden="true">
@@ -499,7 +499,7 @@
 		</event>					
 	</choice>
 	<choice hidden="true" req="REPAIR">
-		<text>(Repair Drone) Send your Repair drone into the fire. [ HDrone ] </text>
+		<text>(Repair Drone) Send your Repair drone into the fire. [ HScrapDrone ] </text>
 		<event>
 			<text>You send the Repair drone in and it methodically puts out the fires. Once it has made some progress, the rest of your crew helps to secure the station.</text>
 			<choice hidden="true">
