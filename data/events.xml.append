@@ -1386,7 +1386,7 @@
 	<event>
 		<text>He offers to lead you to a secret cache of scrap nearby if you let him join your crew.</text>
 		<choice>
-			<text>Reluctantly accept his proposal and fight the Rebel ship. [ -3 Hull, SF DR, Fleet+ | -3 Hull, 2 Human Boarders, Rbl SF DR | x3 HumanCrew+, Quest, Rbl SF DR | 1 HumanBoarder, Rbl SF DR, Crew- (CB+)</text>
+			<text>Reluctantly accept his proposal and fight the Rebel ship. [ -3 Hull, Rbl SF DR, Fleet+ | -3 Hull, 2 Human Boarders, Rbl SF DR | x3 HumanCrew+, Quest, Rbl SF DR | 1 HumanBoarder, Rbl SF DR, Crew- (CB+)</text>
 			<event load="ALISON_DEFECTOR_HELP_2"/>
 		</choice>
 		<choice>
