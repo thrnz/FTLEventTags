@@ -227,7 +227,7 @@
 	<choice>
 		<text>Look around. [ Fight MiniFlagShip ]</text>
 		<event>
-			<text>Warning lights flash as scans identify the gigantic ship under construction - it's a second Rebel Flagship! This must be the secret shipyards where the first one was built, and you've accidentally stumbled across it! Even in its weakened state, the Rebel ship powers up... get ready, you've got a hell of a fight on your hands. [ SF L: 5 Fuel, 5 Missiles, 5 Drones, HScrapWeapon ]</text>
+			<text>Warning lights flash as scans identify the gigantic ship under construction - it's a second Rebel Flagship! This must be the secret shipyards where the first one was built, and you've accidentally stumbled across it! Even in its weakened state, the Rebel ship powers up... get ready, you've got a hell of a fight on your hands. [ SF K: 5 Fuel, 5 Missiles, 5 Drones, HScrapWeapon ]</text>
 			<ship load="FLASHSHIP_CONSTRUCTION_SHIP" hostile="true"/>
 		</event>
 	</choice>

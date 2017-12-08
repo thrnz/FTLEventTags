@@ -1416,7 +1416,7 @@
 <event name="QUEST_MANTIS_INVASION_START" unique="true">
 	<text>You receive a request, "All of our military ships have been destroyed or damaged during the rebellion. However, there have been reports of a Mantis war camp only a few jumps from us. Can you help?"</text>
 	<choice hidden="true">
-		<text>Pledge to do what you can. [ M ScrapOnly, Mantis War Camp Quest ]</text>
+		<text>Pledge to do what you can. [ MScrapOnly, Mantis War Camp Quest ]</text>
 		<event>
 			<text>"Thank you! If you can just give us a count on their numbers perhaps we can get the Rebels to help."</text>
 			<quest event="QUEST_MANTIS_INVASION"/>

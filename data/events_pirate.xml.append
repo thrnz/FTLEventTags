@@ -196,7 +196,7 @@
 <event name="FLOATING_CARGO" unique="true">
 	<text>Not too far from the beacon, you detect a destroyed cargo ship with its cargo scattered nearby, intact.</text>
 	<choice hidden="true">
-		<text>Bring it aboard. [ MStd | LScrap | 2-4 Boarders | 2-4 Boarders, Prt SF DR ]</text>
+		<text>Bring it aboard. [ MStd | LScrap | 2-4 Human Boarders | 2-4 Human Boarders, Prt SF DR ]</text>
 		<event load="FLOATING_CARGO_LIST"/>
 	</choice>
 	<choice hidden="true">

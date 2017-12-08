@@ -52,7 +52,7 @@
 <event name="REFUGEE_DISTRESS">
 	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
 	<choice>
-		<text>Hail them. [ x4 Resource Trade | x4 Ship Fight ]</text>
+		<text>Hail them. [ x4 Resource Trade | x4 SF ]</text>
 		<event load="REFUGEE_HAIL_LIST"/>
 	</choice>
 	<choice>
