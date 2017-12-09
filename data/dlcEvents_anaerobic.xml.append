@@ -82,7 +82,7 @@
 	<text>A distress beacon pulses weakly from a Rockman ship in this system... their hull (and their crew) are being mined by the Lanius, lasers and weapons tearing through the ship!</text>
 	<distressBeacon/>
 	<choice>
-		<text>Attack the Lanius ship. [ Lns SF K: MStf, CK: MStd, DB: [ Nil | MStd ] ]</text>
+		<text>Attack the Lanius ship. [ Lns SF K: MStd, CK: MStd, DB: [ Nil | MStd ] ]</text>
 		<event>
 			<text>The Rockmen need your help - you target the Lanius ship and grimly prepare for battle.</text>
 			<ship load="LANIUS_ROCK_DISTRESS_SHIP" hostile="true"/>
@@ -524,7 +524,7 @@
 		<event load="LANIUS_BEACON_EATER_SCRAP"/>		
 	</choice>
 	<choice hidden="true">
-		<text>Leave. [ x3 Nil | SF DLR ]</text>
+		<text>Leave. [ x3 Nil | Lns SF DLR ]</text>
 		<event load="LANIUS_BEACON_EATER_LEAVE"/>
 	</choice>
 	<choice hidden="true" req="anaerobic">
@@ -655,7 +655,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Navigate carefully around the ship and strip what materials from the hull you can. [ Lns SF DLR | L Scrap ]</text>
+		<text>Navigate carefully around the ship and strip what materials from the hull you can. [ Lns SF DLR | LScrap ]</text>
 		<event load="LANIUS_DORMANT_PILOT"/>
 	</choice>
 	<choice hidden="true" req="pilot" lvl="2">
@@ -677,7 +677,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Dock with the platform. [ BlastDoors BO +5 Fuel | [ Breach, 1 Boarder, SF | -3 Hull, Lns SF K: MStd, CK: MStd, DB: +3-5 Fuel ] | 3-5 Fuel BO for more ]</text>
+		<text>Dock with the platform. [ BlastDoors BO +5 Fuel | [ Breach, 1 Boarder, Lns SF K: MStd, CK: MStd, DB: +3-5 Fuel | -3 Hull, Lns SF K: MStd, CK: MStd, DB: +3-5 Fuel ] | 3-5 Fuel BO for more ]</text>
 		<event>
 			<text>Your ship enters one of the refueling station berths, grateful for a rest.</text>
 			<choice hidden="true">

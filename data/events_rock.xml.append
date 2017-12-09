@@ -50,7 +50,7 @@
 		<event load="ROCK_LOOTING_LEAVE"/>
 	</choice>
 	<choice hidden="true" req="slug">
-		<text>(Slug Crew) Check for lifeforms and keep a lookout for ships while looting the wreck. [ LStd  ]</text>
+		<text>(Slug Crew) Check for lifeforms and keep a lookout for ships while looting the wreck. [ LStd ]</text>
 		<event load="ROCK_LOOTING_SLUG"/>
 	</choice>
 </event>
@@ -153,7 +153,7 @@
 		<event>
 			<text>The ship's turning circle proves too wide and the mine bites down onto the hull. You can hear it now, chewing through the armor.</text>
 			<choice hidden="true">
-				<text>Send someone out there to defuse it. [ MScrap | [ M Scrap | -6 Hull, Crew- (CB+) ] ]</text>
+				<text>Send someone out there to defuse it. [ MScrap | [ MScrap | -6 Hull, Crew- (CB+) ] ]</text>
 				<event load="ROCK_STARSHIP_MINE_DEFUSE"/>
 			</choice>
 			<choice hidden="true" req="WEAPONS_MISSILES"> <!--JUSTIN - TO DO - Missile weapons-->
@@ -169,7 +169,7 @@
 				</event>
 			</choice>
 			<choice hidden="true" req="COMBAT_BEAM_DRONE_LIST">
-				<text>(Beam Drone) Use a drone to cut away the mine with a precision beam. [ -1 Drone, LScrap</text>
+				<text>(Beam Drone) Use a drone to cut away the mine with a precision beam. [ -1 Drone, LScrap ]</text>
 				<event>
 					<text>Carefully guided from the bridge, your beam drone removes the mine's grappling arms and sends it drifting off into space, where you shoot at it until it detonates at a safe distance.</text>
 					<item_modify>

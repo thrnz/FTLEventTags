@@ -324,7 +324,7 @@
 	<text>You spy two pirate ships lurking in the nebula here. They remain unaware of your presence; you're able to get your scanners to at least identify their cargo: One is carrying the fuel supplies, the other the ammunition. They begin to drift away from each other in the storm.</text>
 	<environment type="storm"/>
 	<choice hidden="true">
-		<text>Secure the fuel supply. [ Prt SF L: LScrapFuel, CK: HScrapFuel ]</text>
+		<text>Secure the fuel supply. [ Prt SF K: LScrapFuel, CK: HScrapFuel ]</text>
 		<event>
 			<text>You jet toward the pirate with the fuel supplies and engage - hopefully you can leave the ship in one piece!</text>
 			<ship load="STORM_PIRATE_SUPPLY_FUEL" hostile="true"/>
