@@ -8,10 +8,11 @@ This mod is useful for players wanting to learn the possible results of ingame e
 
 ## Notes
  * Mostly complete. Would like to complete a double check of all tags before release.
+ * Works with FTL v1.5.13
 
 ## To-do
  * Re-do screenshots.
- * Tag surrender/escape chance for ship fights
+ * Tag surrender/escape chance/triggers/etc for ship fights
 
 ## Legend
 * SF: Ship Fight
