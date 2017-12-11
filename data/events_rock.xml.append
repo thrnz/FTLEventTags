@@ -1,12 +1,12 @@
 <textList name="ROCK_SHIP">  <!-- JUSTIN - make surrender possible-->
-	<text>You encounter a Rock vessel and attempt to open trading frequencies, but they take it as an act of cultural transgression and open fire. [ Rck SF DR S: RStuff ]</text>
-	<text>You jump into the middle of a Rock excavation project on a nearby moon. Unimpressed with your intrusion they move to defend themselves! [ Rck SF DR S: RStuff ]</text>
-	<text>You intercept chatter from an approaching Rock ship: "Weapons, moving in to engage, arm the tubes." There is no talking to these guys. [ Rck SF DR S: RStuff ]</text>
-	<text>As you jump in, a vast figure appears on the view-screen. The Rock captain rubs the green, moss-like appendage on his chin and then orders his crew to open fire. [ Rck SF DR S: RStuff ]</text>
-	<text>It looks quiet, but you realize your computer is being scanned. A hidden Rock vessel hails you: "Why do you fill your computer with lies?! These are not the holy words!" Before you can interject they open fire. [ Rck SF DR S: RStuff ]</text>
-	<text>You notice a Rock ship performing combat exercises. However, they quickly change their course to engage your ship. They apparently treat unregistered alien ships as handy target practice. [ Rck SF DR S: RStuff ]</text>
-	<text>A loud 'thud' resounds through the ship after jump completion - you've just shunted a Rock fighter and he's already preparing to fire! [ Rck SF DR S: RStuff ]</text>
-	<text>You're intercepted by a Rock salvage operation. They don't seem to mind that you're still on board while they junk your ship. [ Rck SF DR S: RStuff ]</text>
+	<text>You encounter a Rock vessel and attempt to open trading frequencies, but they take it as an act of cultural transgression and open fire. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+	<text>You jump into the middle of a Rock excavation project on a nearby moon. Unimpressed with your intrusion they move to defend themselves! [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+	<text>You intercept chatter from an approaching Rock ship: "Weapons, moving in to engage, arm the tubes." There is no talking to these guys. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+	<text>As you jump in, a vast figure appears on the view-screen. The Rock captain rubs the green, moss-like appendage on his chin and then orders his crew to open fire. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+	<text>It looks quiet, but you realize your computer is being scanned. A hidden Rock vessel hails you: "Why do you fill your computer with lies?! These are not the holy words!" Before you can interject they open fire. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+	<text>You notice a Rock ship performing combat exercises. However, they quickly change their course to engage your ship. They apparently treat unregistered alien ships as handy target practice. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+	<text>A loud 'thud' resounds through the ship after jump completion - you've just shunted a Rock fighter and he's already preparing to fire! [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+	<text>You're intercepted by a Rock salvage operation. They don't seem to mind that you're still on board while they junk your ship. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
 </textList>
 
 <event name="ROCK_SHIP_SURRENDER">
@@ -42,11 +42,11 @@
 <event name="ROCK_LOOTING" unique="true">
 	<text>You find a disabled rock transport floating near the beacon. You consider stripping it of useful parts but are uncertain why it's there in the first place.</text>
 	<choice hidden="true">
-		<text>Strip the ship. [ LStd | LStd, Rck SF DR S: RStuff ] </text>
+		<text>Strip the ship. [ LStd | LStd, Rck SF DR S: 0.7, 3-4, RStuff ] </text>
 		<event load="ROCK_LOOTING_STRIP"/>
 	</choice>
 	<choice hidden="true">
-		<text>Leave it alone. [ x2 Nil | LStd, Rck SF DR S: RStuff ]</text>
+		<text>Leave it alone. [ x2 Nil | LStd, Rck SF DR S: 0.7, 3-4, RStuff ]</text>
 		<event load="ROCK_LOOTING_LEAVE"/>
 	</choice>
 	<choice hidden="true" req="slug">
@@ -127,7 +127,7 @@
 	<text>You encounter a small craft with minimal propulsion; its Rock crew-member explains that the Rock home-world is run on lies and propaganda that keep the populace in check, and that they want no part of it.</text>
 	<ship load="ROCK_SHIP" hostile="false"/>
 	<choice hidden="true">
-		<text>Tell them their god sent them here to join your crew. [ Rck SF DR S: RStuff ]</text>
+		<text>Tell them their god sent them here to join your crew. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
 		<event>
 			<text load="ROCK_ATHIEST_BAD"/>
 			<ship hostile="true"/>
@@ -190,9 +190,9 @@
 
 
 <textList name="ROCK_FIGHT_ASTEROID">
-	<text>A Rock mining vessel is harvesting the mineral-rich asteroids in this locality, and their scouts take your presence to be a transgression. Battle stations! [ Rck SF DR S: RStuff ]</text>
-	<text>A rookie Rock cargo ship has taken its orders too literally and took the most direct route to their destination... right through an asteroid field. They're confused and fire wildly as you jump in. [ Rck SF DR S: RStuff ]</text>
-	<text>The captain of a Rock freighter lost in the asteroid field hails you: "Our co-ordinates led us here, but only death greets us. What must be must be. Death to all." You power up the battle systems and wonder how long they've been stuck here. [ Rck SF DR S: RStuff ]</text>
+	<text>A Rock mining vessel is harvesting the mineral-rich asteroids in this locality, and their scouts take your presence to be a transgression. Battle stations! [ Rck SF DR w/Asteroids S: 0.7, 3-4, RStuff ]</text>
+	<text>A rookie Rock cargo ship has taken its orders too literally and took the most direct route to their destination... right through an asteroid field. They're confused and fire wildly as you jump in. [ Rck SF DR w/Asteroids S: 0.7, 3-4, RStuff ]</text>
+	<text>The captain of a Rock freighter lost in the asteroid field hails you: "Our co-ordinates led us here, but only death greets us. What must be must be. Death to all." You power up the battle systems and wonder how long they've been stuck here. [ Rck SF DR w/Asteroids S: 0.7, 3-4, RStuff ]</text>
 </textList>
 
 <textList name="ROCK_PIRATE_ASTEROID">
@@ -280,8 +280,8 @@
 </event>
 
 <textList name="ROCK_BOARDERS_SHIP">
-	<text>You passively scan a small Rock station that is next to the beacon. However they must not have appreciated your curiosity. A Rock ship pulls away from the station and you register an incoming teleporter signal as well! [ Rck SF DR, 1-3 Rock Boarders ]</text>
-	<text>You find a Rock ship docked with a damaged Mantis fighter. Before you have a chance to hail them, the ship moves in to attack you and you register teleporter symbols from the disabled ship. They're using Mantis tech to board you! [ Rck SF DR, 1-3 Rock Boarders ]/text>
+	<text>You passively scan a small Rock station that is next to the beacon. However they must not have appreciated your curiosity. A Rock ship pulls away from the station and you register an incoming teleporter signal as well! [ Rck SF DR, 1-3 Rock Boarders; S: 0.7, 3-4, RStuff ]</text>
+	<text>You find a Rock ship docked with a damaged Mantis fighter. Before you have a chance to hail them, the ship moves in to attack you and you register teleporter symbols from the disabled ship. They're using Mantis tech to board you! [ Rck SF DR, 1-3 Rock Boarders; S: 0.7, 3-4, RStuff ]/text>
 </textList>
 
 <eventList name="ROCK_MANTIS_FREIGHTER_LIST">
@@ -299,4 +299,10 @@
 <textList name="START_BEACON_ROCK">
 	<text>The Rock people have a particularly aggressive stance toward alien races trespassing in their space. You should tread carefully here. [ 2 Stores, 2-3 Empty, 1-2 Distress, 6-8 Hostile, 1-2 Boarders, 1-2 Items, 0-1 Quests, 7-8 Neutral ]</text>
 	<text>The Rock people are a powerful and proud race. It is not unheard of to have a peaceful journey through their lands, but don't count on it. [ 2 Stores, 2-3 Empty, 1-2 Distress, 6-8 Hostile, 1-2 Boarders, 1-2 Items, 0-1 Quests, 7-8 Neutral ]</text>
+</textList>
+
+
+<textList name="ROCK_BOARDERS_ASTEROID">
+	<text>You arrive in an asteroid field and immediately begin evasive maneuvers when a loud clunk reverberates through the ship. At first you think the hull has been hit, but the noise came from some Rock intruders teleporting aboard the ship! [ Rck SF DR w/Asteroids, 1-2 Rock Boarders, S: 0.7, 3-4, RStuff ]</text>
+	<text>Your shields are being taxed as they deflect the debris from an asteroid field. As you weave your way between the rocks, you happen upon a Rock pirate stronghold. You register teleport signatures and hear shouts aboard the ship. [ Rck SF DR w/Asteroids, 1-2 Rock Boarders, S: 0.7, 3-4, RStuff ]</text>
 </textList>

@@ -162,11 +162,11 @@
 
 
 <textList name="ZOLTAN_PIRATE">
-	<text>"Emergency, all ships in range, we are under attack!" The frequency matches a nearby Zoltan ship; you move in on their pursuer. They take your intervention as a cue to jump away. Cowards. [ Prt SF DR ]</text>
-	<text>You jump just in time to witness a Zoltan ship's FTL drive overload. In his final moments their captain implores you not to get involved, but it's too late - their attacker is already upon you! [ Prt SF DR ]</text>
-	<text>Despite their precautions, pirates have begun to harass the local Zoltan settlements across this sector. One such pirate spots your ship and moves in to attack. [ Prt SF DR ]</text>
-	<text>A ship with pirate markings demands your surrender. These are sad times when even Zoltan space is beset by pirates. You doubt these fools will be missed. [ Prt SF DR ]</text>
-	<text>You spot a pirate ship looting a small Zoltan cruiser. They spot you and move in to attack before your FTL drive has a chance to recharge. [ Prt SF DR ]</text>
+	<text>"Emergency, all ships in range, we are under attack!" The frequency matches a nearby Zoltan ship; you move in on their pursuer. They take your intervention as a cue to jump away. Cowards. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>You jump just in time to witness a Zoltan ship's FTL drive overload. In his final moments their captain implores you not to get involved, but it's too late - their attacker is already upon you! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>Despite their precautions, pirates have begun to harass the local Zoltan settlements across this sector. One such pirate spots your ship and moves in to attack. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>A ship with pirate markings demands your surrender. These are sad times when even Zoltan space is beset by pirates. You doubt these fools will be missed. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>You spot a pirate ship looting a small Zoltan cruiser. They spot you and move in to attack before your FTL drive has a chance to recharge. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 	<!-- Add more instead of repeating ! -->
 	
 	<text>"Emergency, all ships in range, we are under attack!" The frequency matches a nearby Zoltan ship; you move in on their pursuer. They take your intervention as a cue to jump away. Cowards. [ Prt SF DR ]</text>
@@ -213,7 +213,7 @@
 <event name="ZOLTAN_SCIENCE_DOCK" unique="true">
 	<text>What appears to be a Zoltan science ship requests permission to dock.</text>
 	<choice hidden="true">
-		<text>Dock with them. [ MStuff | Ztn SF S: [ LStd, ZoltanCrew+ ], K: LStd, CK: MStd ]</text>
+		<text>Dock with them. [ MStuff | Ztn SF; S: 0.5, 3-4. [ LStd, ZoltanCrew+ ]; K: LStd; CK: MStd ]</text>
 		<event load="ZOLTAN_SCIENCE_DOCK_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -225,7 +225,7 @@
 </event>	
 <eventList name="ZOLTAN_SCIENCE_DOCK_LIST">
 	<event>
-		<text>You allow them to approach, but are caught unaware when they open fire! [ Ztn SF S: [ LStd, ZoltanCrew+ ], K: LStd, CK: MStd ]</text>
+		<text>You allow them to approach, but are caught unaware when they open fire! [ Ztn SF S: [ 0.5, 3-4, LStd, ZoltanCrew+ ], K: LStd, CK: MStd ]</text>
 		<ship load="ZOLTAN_SCIENCE_DOCK" hostile="true"/>
 	</event>
 	<event>
@@ -299,7 +299,7 @@
 </event>
 
 <event name="NEBULA_ZOLTAN_ROCK" unique="true">
-	<text>This nebula turns out to be the hiding place of a terrified rock crew taking refuge from the Zoltan border police. They don't seem prepared to risk your leaving with their co-ordinates, and open fire! [ Rck SF DR ]</text>
+	<text>This nebula turns out to be the hiding place of a terrified rock crew taking refuge from the Zoltan border police. They don't seem prepared to risk your leaving with their co-ordinates, and open fire! [ Rck SF DR; S: 0.7, 3-4, RStuff ]</text>
 	<environment type="nebula"/>
 	<ship load="ROCK_SHIP" hostile="true"/>
 </event>
@@ -324,14 +324,14 @@
 	<text>You spy two pirate ships lurking in the nebula here. They remain unaware of your presence; you're able to get your scanners to at least identify their cargo: One is carrying the fuel supplies, the other the ammunition. They begin to drift away from each other in the storm.</text>
 	<environment type="storm"/>
 	<choice hidden="true">
-		<text>Secure the fuel supply. [ Prt SF K: LScrapFuel, CK: HScrapFuel ]</text>
+		<text>Secure the fuel supply. [ Prt SF K: LScrapFuel; CK: HScrapFuel; Esc: 0.5, 2-4 ]</text>
 		<event>
 			<text>You jet toward the pirate with the fuel supplies and engage - hopefully you can leave the ship in one piece!</text>
 			<ship load="STORM_PIRATE_SUPPLY_FUEL" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Secure the ammunition. [ Prt SF K: LScrapMiss, CK: HScrapMissiles ]</text>
+		<text>Secure the ammunition. [ Prt SF K: LScrapMiss; CK: HScrapMissiles; Esc: 0.5, 2-4 ]</text>
 		<event>
 			<text>You jet toward the pirate with the ammunition and engage - hopefully you can leave the ship in one piece!</text>
 			<ship load="STORM_PIRATE_SUPPLY_AMMO" hostile="true"/>

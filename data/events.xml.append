@@ -1140,7 +1140,7 @@
 <event name="ROCK_CRYSTAL_BEACON">
 	<text>An ancient device is orbiting within the crystal rings of a nearby gas giant. You can't discern its nature or function, but it seems to have been deactivated for a very long time. Perhaps you can get some scrap from it.</text>
 	<choice hidden="true">
-		<text>Scrap it. [ HScrap | Rck SF DR ]</text>
+		<text>Scrap it. [ HScrap | Rck SF DR S: 0.7, 3-4, RStuff ]</text>
 		<event load="ROCK_CRYSTAL_BEACON_LIST"/>
 	</choice>
 	<choice hidden="true">

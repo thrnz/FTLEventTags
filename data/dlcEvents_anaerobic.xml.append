@@ -37,7 +37,7 @@
 </event>
 
 <event name="LANIUS_DISTRESS_TRAP" unique="true">
-	<text>You are too late - whatever once was emitting the distress signal from this system drew a Lanius ship as well as your own. Having consumed the original target, the Lanius turn their attention to your vessel. [ Lns SF DLR ]</text>
+	<text>You are too late - whatever once was emitting the distress signal from this system drew a Lanius ship as well as your own. Having consumed the original target, the Lanius turn their attention to your vessel. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 	<ship load="LANIUS_SHIP" hostile="true"/>
 	<distressBeacon/>
 </event>
@@ -281,54 +281,54 @@
 </event>
 
 <textList name="LANIUS_FIGHT_TEXT">
-	<text>Sensors indicate a small Lanius cruiser in the process of salvaging another small Lanius ship. Before you have a chance to wonder what caused them to turn on each other, the survivor notices you and moves in to attack. [ Lns SF DLR ]</text>
-	<text>Shortly after your arrival, a Lanius ship jumps near the beacon. It begins to move slowly toward you. You open wide band communication channels, attempting to make contact. However, it either ignores you or is unable to receive the messages. As they get closer you issue the order to charge weapons and find they do the same. [ Lns SF DLR ]</text>
-	<text>You receive a message on a wide band frequency, originating from an approaching Lanius ship. It appears not to be directed at you, but your translator does its best all the same: "... metallic opportunity... acquisition... by force..." Looks like you're in for a fight. [ Lns SF DLR ]</text>
-	<text>A military Lanius vessel stops repurposing an abandoned satellite as soon as you jump in. It blocks all hails and powers its weapons. [ Lns SF DLR ]</text>
-	<text>The beacon is surrounded by many tiny Lanius craft, surely only capable of holding one occupant. Perhaps they are some kind of forward scout searching for 'metallic opportunities'? As you consider this, a much larger Lanius vessel moves in to engage you, and the scout ships scatter in all directions. [ Lns SF DLR ]</text>
-	<text>You arrive to see a well-armed Lanius craft preparing to salvage a badly damaged Rebel patrol ship. Noticing your arrival, the Lanius greedily moves in to intercept its second target of the day. [ Lns SF DLR ]</text>
+	<text>Sensors indicate a small Lanius cruiser in the process of salvaging another small Lanius ship. Before you have a chance to wonder what caused them to turn on each other, the survivor notices you and moves in to attack. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
+	<text>Shortly after your arrival, a Lanius ship jumps near the beacon. It begins to move slowly toward you. You open wide band communication channels, attempting to make contact. However, it either ignores you or is unable to receive the messages. As they get closer you issue the order to charge weapons and find they do the same. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
+	<text>You receive a message on a wide band frequency, originating from an approaching Lanius ship. It appears not to be directed at you, but your translator does its best all the same: "... metallic opportunity... acquisition... by force..." Looks like you're in for a fight. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
+	<text>A military Lanius vessel stops repurposing an abandoned satellite as soon as you jump in. It blocks all hails and powers its weapons. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
+	<text>The beacon is surrounded by many tiny Lanius craft, surely only capable of holding one occupant. Perhaps they are some kind of forward scout searching for 'metallic opportunities'? As you consider this, a much larger Lanius vessel moves in to engage you, and the scout ships scatter in all directions. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
+	<text>You arrive to see a well-armed Lanius craft preparing to salvage a badly damaged Rebel patrol ship. Noticing your arrival, the Lanius greedily moves in to intercept its second target of the day. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 	
 
 	<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- CHRIS ADDITIONS-- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
 	
-	<text>As you arrive in the system, your proximity alarm begins screaming: there is a Lanius ship right on top of you! Before you have a chance to hail, they open fire! [ Lns SF DLR ]</text>
-	<text>As you are getting your bearings, another ship suddenly arrives at the beacon - it's the Lanius, and they've marked your ship for salvage! [ Lns SF DLR ]</text>
-	<text>At first everything seems quiet, then your scanners pick up a ship approaching at high speed - the Lanius have detected your arrival and are powering up their weapons! [ Lns SF DLR ]</text>
-	<text>You have stumbled across a mining expedition - unfortunately, the miners are the Lanius, and they've chosen your ship as their target! [ Lns SF DLR ]</text>
-	<text>As you are getting your bearings, another ship suddenly arrives at the beacon - it's the Lanius, and they've marked your ship for salvage! [ Lns SF DLR ]</text>
+	<text>As you arrive in the system, your proximity alarm begins screaming: there is a Lanius ship right on top of you! Before you have a chance to hail, they open fire! [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
+	<text>As you are getting your bearings, another ship suddenly arrives at the beacon - it's the Lanius, and they've marked your ship for salvage! [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
+	<text>At first everything seems quiet, then your scanners pick up a ship approaching at high speed - the Lanius have detected your arrival and are powering up their weapons! [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
+	<text>You have stumbled across a mining expedition - unfortunately, the miners are the Lanius, and they've chosen your ship as their target! [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
+	<text>As you are getting your bearings, another ship suddenly arrives at the beacon - it's the Lanius, and they've marked your ship for salvage! [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 	
 	<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- TODO More-- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
 </textList>
 
 <textList name="LANIUS_REBEL_FIGHT_TEXT">
-	<text>You arrive to see a number of Rebel ships attempting to dissuade Lanius scavenger ships from "acquiring" their forward station. A passing Rebel patrol ship spots you and moves in to intercept. [ SF DR ]</text>
-	<text>A Rebel scout patrols near the beacon. "Hah! I knew you would try to sneak through this sector as soon as I heard it had become treacherous. Surrender! [ SF DR ]"</text>
-	<text>You intercept discussions between a Rebel patrol and a human mining colony, "... we realize you're scared but all reports indicate the metal bastards target abandoned settlements only. If we relocated our fleets based on every request from backwater... wait, what's that..." Before you can react, the channel is cut and the Rebel ship moves in to attack. [ SF DR ]</text> 
-	<text>You arrive at the beacon and notice a small Rebel ship chasing Lanius scavengers away from a wrecked Rebel battleship. As soon as the Rebel notices you and moves in to attack, the Lanius ships return to their prey like flies on garbage. [ SF DR ]</text>
-	<text>A Rebel messages you. "Who would have thought the most wanted ship in the quadrant would just happen by my station? Prepare to meet your maker." [ SF DR ]</text>
-	<text>Your arrival coincides almost exactly with that of a Rebel ship. It's hard to know who is more surprised, but there is no option but to fight. [ SF DR ]</text>
+	<text>You arrive to see a number of Rebel ships attempting to dissuade Lanius scavenger ships from "acquiring" their forward station. A passing Rebel patrol ship spots you and moves in to intercept. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>A Rebel scout patrols near the beacon. "Hah! I knew you would try to sneak through this sector as soon as I heard it had become treacherous. Surrender!" [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>You intercept discussions between a Rebel patrol and a human mining colony, "... we realize you're scared but all reports indicate the metal bastards target abandoned settlements only. If we relocated our fleets based on every request from backwater... wait, what's that..." Before you can react, the channel is cut and the Rebel ship moves in to attack. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>You arrive at the beacon and notice a small Rebel ship chasing Lanius scavengers away from a wrecked Rebel battleship. As soon as the Rebel notices you and moves in to attack, the Lanius ships return to their prey like flies on garbage. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>A Rebel messages you. "Who would have thought the most wanted ship in the quadrant would just happen by my station? Prepare to meet your maker." [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>Your arrival coincides almost exactly with that of a Rebel ship. It's hard to know who is more surprised, but there is no option but to fight. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 	
 	<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- TODO More-- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
 </textList>
 
 <textList name="LANIUS_PIRATE_FIGHT_TEXT">
-	<text>A pirate ship appears to be threatening a small refugee ship near the beacon. Upon seeing you jump in, it turns to approach. The civilian wastes no time and jumps away, but that appears only to harden the pirate's resolve. [ Rbl SF DR ]</text>
-	<text>An upgraded pirate ship sits among the remains of a number of Lanius ships. It hails you, "These punks think they can jus' waltz in here into our sector? Obnoxious, right? Well, I'm sure you know the routine, let's do this." [ Rbl SF DR ]</text>
-	<text>Debris from a number of battleships are scattered around the beacon. As you approach the area a pirate ship thrusts itself through the hulks to attack. It must be using the metal to lure the Lanius into a trap. [ Rbl SF DR ]</text> 
-	<text>The pirate ship patroling this sector has been busy. The debris of several Rebel scouts and at least one civilian ship litter the area. "Welcome, welcome, there's room for one more!" The over-confident pirate hails you as he charges his weapons and moves in to attack. [ Rbl SF DR ]</text>
-	<text>The pirate sees you before you see him... prepare for a fight! [ Rbl SF DR ]</text>
+	<text>A pirate ship appears to be threatening a small refugee ship near the beacon. Upon seeing you jump in, it turns to approach. The civilian wastes no time and jumps away, but that appears only to harden the pirate's resolve. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>An upgraded pirate ship sits among the remains of a number of Lanius ships. It hails you, "These punks think they can jus' waltz in here into our sector? Obnoxious, right? Well, I'm sure you know the routine, let's do this." [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>Debris from a number of battleships are scattered around the beacon. As you approach the area a pirate ship thrusts itself through the hulks to attack. It must be using the metal to lure the Lanius into a trap. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>The pirate ship patroling this sector has been busy. The debris of several Rebel scouts and at least one civilian ship litter the area. "Welcome, welcome, there's room for one more!" The over-confident pirate hails you as he charges his weapons and moves in to attack. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>The pirate sees you before you see him... prepare for a fight! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 	
 	<!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- TODO More-- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
 </textList>
 
 <event name="LANIUS_FIGHT_ASTEROID" unique="true">
-	<text>This beacon appears to have been set up within an asteroid field to access a mining settlement. However, half of the settlement has been disassembled by a number of Lanius scavengers. Their military escort moves in to scare you off. [ Lns SF DLR ]</text>
+	<text>This beacon appears to have been set up within an asteroid field to access a mining settlement. However, half of the settlement has been disassembled by a number of Lanius scavengers. Their military escort moves in to scare you off. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 	<ship load="LANIUS_SHIP" hostile="true"/>
 	<environment type="asteroid"/>
 </event>
 
 <event name="LANIUS_FIGHT_PULSAR" unique="true">
-	<text>There appears to be some sort of research station near a pulsar, although it's hard to tell since a portion of it has been melted. The Lanius ship that has been working at it moves in to intercept you, totally oblivious to the threat of EM pulses. [ Lna SF DLR ]</text>
+	<text>There appears to be some sort of research station near a pulsar, although it's hard to tell since a portion of it has been melted. The Lanius ship that has been working at it moves in to intercept you, totally oblivious to the threat of EM pulses. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 	<ship load="LANIUS_SHIP" hostile="true"/>
 	<environment type="pulsar"/>
 </event>
@@ -419,7 +419,7 @@
 	<text load="LANIUS_SOLO_SALVAGE_TEXT"/>
 	<ship load="LANIUS_SHIP" hostile="false"/>
 	<choice hidden="true">
-		<text>Attack the ship. [ Lns SF DLR ]</text>
+		<text>Attack the ship. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 		<event>
 			<text>You move in and power up your weapons. Detecting the threat, they stop what they were doing and prepare for a fight.</text>
 			<ship hostile="true"/>
@@ -432,7 +432,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="anaerobic">
-		<text>(Lanius Crew) Request some scrap. [ MScrap | Nil | [ Nil or Lns SF DLR ] ]</text>
+		<text>(Lanius Crew) Request some scrap. [ MScrap | Nil | [ Nil or Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ] ]</text>
 		<event load="LANIUS_SOLO_SALVAGE_LIST"/>
 	</choice>
 </event>
@@ -441,7 +441,7 @@
 	<text>You arrive at the beacon to discover a civilian ship fleeing from a lone Lanius craft. The civilian messages you, "Help! The metal monsters are coming to melt down our ship!" Strangely, no active weapon signatures are detected.</text>
 	<ship load="LANIUS_SHIP" hostile="false"/>
 	<choice hidden="true">
-		<text>Attack the Lanius ship. [ Lns SF DLR ]</text>
+		<text>Attack the Lanius ship. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 		<event>
 			<text>The civilian ship hastily retreats while you intercept the path of the ship and lock on weapons. It turns and prepares for a fight.</text>
 			<ship hostile="true"/>
@@ -454,7 +454,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Try to contact the Lanius ship. [ Store | Nil | Lns SF DLR ]</text>
+		<text>Try to contact the Lanius ship. [ Store | Nil | Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 		<event>
 			<text>You approach the ship without activating weapons and the civilian ship says, "Don't go any closer! Just kill them!" before hastily making their retreat.</text>
 			<choice hidden="true">
@@ -476,7 +476,7 @@
 	<text>You come across a Lanius ship in the process of absorbing a Rebel automated scout. If you scare off the Lanius you could probably make use of it.</text>
 	<ship load="LANIUS_AUTO_REBEL" hostile="false"/>
 	<choice hidden="true">
-		<text>Fight the ship. [ Lns SF K: MStd, CK: HStd, DB: [ LScrap, Map | LScrap, Fleet- ] ]</text>
+		<text>Fight the ship. [ Lns SF; Esc: 0.2, 2-4; K: MStd; CK: HStd; DB: [ LScrap, Map | LScrap, Fleet- ] ]</text>
 		<event>
 			<text>You power up your weapons, which quickly gets the attention of the ship.</text>
 			<ship hostile="true"/>
@@ -493,7 +493,7 @@
 <event name="LANIUS_GROUP_AUTO" unique="true">
 	<text>You notice a number of Lanius ships absorbing a forward Rebel base and its automated scouts. They don't seem to be aggressive. Perhaps their desire for metal could prove to be useful?</text>
 	<choice hidden="true">
-		<text>Try to use them to delay the Rebels. [ Nil | Lns SF DLR | MStd, Fleet- ]</text>
+		<text>Try to use them to delay the Rebels. [ Nil | Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 | MStd, Fleet- ]</text>
 		<event load="LANIUS_GROUP_AUTO_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -516,15 +516,15 @@
 	<text>You detect a damaged vessel docked with the jump beacon. It appears the Lanius are absorbing metal from the beacon, risking destroying it and becoming stranded.</text>
 	<ship load="LANIUS_SHIP" hostile="false"/>
 	<choice hidden="true">
-		<text>Ask if they require assistance. [ 30 Scrap for Random Augment | Lns SF DLR ]</text>
+		<text>Ask if they require assistance. [ 30 Scrap for Random Augment | Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 		<event load="LANIUS_BEACON_EATER_ASK"/>
 	</choice>
 	<choice hidden="true">
-		<text>Send them 30 scrap. [ -30 Scrap, Random Augment | -30 Scrap, Lns SF DLR ]</text>
+		<text>Send them 30 scrap. [ -30 Scrap, Random Augment | -30 Scrap, Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 		<event load="LANIUS_BEACON_EATER_SCRAP"/>		
 	</choice>
 	<choice hidden="true">
-		<text>Leave. [ x3 Nil | Lns SF DLR ]</text>
+		<text>Leave. [ x3 Nil | Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 		<event load="LANIUS_BEACON_EATER_LEAVE"/>
 	</choice>
 	<choice hidden="true" req="anaerobic">
@@ -590,7 +590,7 @@
 			</event>
 		</choice>
 		<choice hidden="true">
-			<text>Leave. [ x3 Nil | Lns SF DLR ]</text>
+			<text>Leave. [ x3 Nil | Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 			<event load="LANIUS_BEACON_EATER_LEAVE"/>
 		</choice>
 	</event>
@@ -604,14 +604,14 @@
 	<text>You have picked up a Lanius vessel drifting in this sector. There is no damage to the hull, and it appears to be powered down.</text>
 	<ship load="LANIUS_SHIP" hostile="false"/>
 	<choice hidden="true">
-		<text>Scan the ship for lifeforms. [ Lns SF DLR ]</text>
+		<text>Scan the ship for lifeforms. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 		<event>
 			<text>As you scan the vessel, the scan frequencies awaken the Lanius crew from hibernation - and they're hungry for raw materials!</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Power weapons to attack. [ Lns SF DLR | More... | ]</text>
+		<text>Power weapons to attack. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 | More... | ]</text>
 		<event load="LANIUS_DORMANT_WEAPONS"/>
 	</choice>
 	<choice hidden="true">
@@ -622,7 +622,7 @@
 
 <eventList name="LANIUS_DORMANT_WEAPONS">
 	<event>
-		<text>You power up your weapons, and in response, the Lanius ship does the same! Prepare for a fight. [ Lns SF DLR ]</text>
+		<text>You power up your weapons, and in response, the Lanius ship does the same! Prepare for a fight. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 		<ship hostile="true"/>
 	</event>
 	<event>
@@ -632,7 +632,7 @@
 			<event load="LANIUS_DORMANT_INVESTIGATE"/>
 		</choice>
 		<choice hidden="true">
-			<text>Destroy and scrap it. [ Lns SF DLR ]</text>
+			<text>Destroy and scrap it. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 ]</text>
 			<event>
 				<text>As soon as you lock your weapons onto their vessel, it awakens... they must have been in hibernation and were awoken by the danger!</text>
 				<ship hostile="true"/>
@@ -655,7 +655,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Navigate carefully around the ship and strip what materials from the hull you can. [ Lns SF DLR | LScrap ]</text>
+		<text>Navigate carefully around the ship and strip what materials from the hull you can. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 | LScrap ]</text>
 		<event load="LANIUS_DORMANT_PILOT"/>
 	</choice>
 	<choice hidden="true" req="pilot" lvl="2">

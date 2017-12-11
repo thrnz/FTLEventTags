@@ -21,8 +21,8 @@ This mod is useful for players wanting to learn the possible results of ingame e
 * K: Kill reward
 * CK: Crew Kill reward
 * DB: Double reward
-* S: Surrender offer
-* Esc: Escape
+* S: Surrender offer (Chance, Min-Max)
+* Esc: Escape (Chance, Min-Max, Timer)
 * BO: Blue Option
 * Crew-/+: Gain/lose crew
 * CB+/-: Whether clone bay revives(+) or not (-) lost crew
@@ -70,9 +70,9 @@ One of 3 possible outcomes: either a ship fight against a pirate class ship with
 
 One of 4 possible outcomes: Two chances at having nothing happen, one chance of gaining a random crew member, and one chance of losing a crew member that can be negated by a clonebay.
 
-* [ Rbl SF K: MStd, CK: HStd ]
+* [ Rbl SF K: MStd; S: 0.2, 3-4, RStuff; Esc: 0.4, 3-4; CK: HStd ]
 
-A ship fight against a Rebel class ship. Killing the ship gives medium scrap + 2 resources. Getting a crew kill gives high scrap + 2 resources.
+A ship fight against a Rebel class ship. Killing the ship gives medium scrap + 2 resources. Getting a crew kill gives high scrap + 2 resources. The ship has a chance of trying to escape/surrendering.
 
 * [ Fleet-- ]
 
