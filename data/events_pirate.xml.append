@@ -1,9 +1,9 @@
 <textList name="PIRATE">
-	<text>As you jump into the system a pirate advances on your position. They are refusing all hails. Prepare for a fight. [ Prt SF DR ]</text>
-	<text>Soon after arriving in the system you are hailed by a small cruiser. "What good fortune that we happen to run into each other. Nothing personal, but you have some information we need!" [ Prt SF DR ]</text>
-	<text>At first it appears you've arrived in an empty system, but a ship appears from behind a planet and hails you: "Haha! I am the dread pirate Tuco, prepare to die!" [ Prt SF DR ]</text>
-	<text>The only other ship at this beacon messages you: "Finally, after months of waiting, someone has fallen into our trap!" [ Prt SF DR ]</text>
-	<text>You barely have time to register jump completion before your ship warns you of an incoming ship with weapons hot. [ Prt SF DR ]</text>
+	<text>As you jump into the system a pirate advances on your position. They are refusing all hails. Prepare for a fight. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>Soon after arriving in the system you are hailed by a small cruiser. "What good fortune that we happen to run into each other. Nothing personal, but you have some information we need!" [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>At first it appears you've arrived in an empty system, but a ship appears from behind a planet and hails you: "Haha! I am the dread pirate Tuco, prepare to die!" [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>The only other ship at this beacon messages you: "Finally, after months of waiting, someone has fallen into our trap!" [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>You barely have time to register jump completion before your ship warns you of an incoming ship with weapons hot. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 </textList>
 
 <event name="PIRATE_NO_ESCAPE" unique="true">
@@ -53,7 +53,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Try to be a hero. Attack the pirate. [ Prt SF S: HStuff, K: RScrap, CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ] ]</text>
+		<text>Try to be a hero. Attack the pirate. [ Prt SF; S: 0.2, 3-4, HStuff; Esc: 0.4, 3-4, Double; K: RScrap; CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ] ]</text>
 		<event>
 			<text>The pirate ship stops its pursuit and locks weapons onto your ship.</text> 
 			<ship hostile="true"/>
@@ -110,9 +110,9 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Reject their 'offer'. [ Prt SF DR ]</text>
+		<text>Reject their 'offer'. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event>
-			<text>"Too bad... You will regret this decision!" [ SF DR ]</text>
+			<text>"Too bad... You will regret this decision!" [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
@@ -132,7 +132,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>We will never surrender one of our crew to slavers! [ Prt SF S: Crew+, K: HStd, CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | HStd ] ]</text>
+		<text>We will never surrender one of our crew to slavers! [ Prt SF; S: 0.2, 2-4, Crew+; Esc: 0.5, 2-4; K: HStd; CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | HStd ] ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -156,7 +156,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Attack the slaver scum. [ Prt SF S: Crew+, K: HStd, CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | Hstd ]</text>
+		<text>Attack the slaver scum. [ Prt SF; S: 0.2, 2-4, Crew+; Esc: 0.5, 2-4; K: HStd; CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | Hstd ] ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -173,7 +173,7 @@
 
 <event name="PIRATE_SUN" unique="true">
 	<img back="BG_DARK"/>
-	<text>This beacon has been placed too close to a super-giant class M star! The ship will gradually overheat until you get out of here... or die. A pirate, apparently oblivious to the danger of the sun, moves in to engage. [ Prt SF DR ]</text>
+	<text>This beacon has been placed too close to a super-giant class M star! The ship will gradually overheat until you get out of here... or die. A pirate, apparently oblivious to the danger of the sun, moves in to engage. [ Prt SF DR; S; 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 	<ship load="PIRATE" hostile="true"/>
 	<environment type="sun"/>
 </event>
@@ -184,7 +184,7 @@
 	<text>A pirate ship was lying in wait inside this asteroid field. It immediately moves in to attack.</text>
 	<ship load="PIRATE" hostile="true"/>
 	<choice>
-		<text>Turn and fight. [ Prt SF DR w/asteroids ]</text>
+		<text>Turn and fight. [ Prt SF DR w/asteroids; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event/>
 	</choice> <!--
 	<choice req="pilot" lvl="2" hidden="true">

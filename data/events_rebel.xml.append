@@ -31,16 +31,16 @@
 </event>	
 
 <textList name="REBEL">
-	<text>Your ship is hailed. "We've found you at last. Prepare to die!" [ Rbl SF DR, S: RStuff ]</text>
-	<text>A small Rebel ship is docked at a small station. You try to lay low but it spots you. Power up the weapons! [ Rbl SF DR, S: RStuff ]</text>
-	<text>A Rebel ship has been patrolling this region. As soon as you arrive it begins its assault. [ Rbl SF DR, S: RStuff ]</text>
-	<text>A Rebel ship hails you: "Federation scum! We've waited a long time for this!" [ Rbl SF DR, S: RStuff ]</text>
-	<text>You receive a transmission: "Sorry sir, this is nothing personal but we're under orders." The Rebel ship's weapons go hot. [ Rbl SF DR, S: RStuff ]</text>
-	<text>By the time you notice the Rebel ship behind the beacon, it's too late to avoid a fight. [ Rbl SF DR, S: RStuff ]</text>
-	<text>A Rebel ship hails. "We did not fight a war to let a single Federation ship shatter our dreams of a better galaxy!" He locks weapons. [ Rbl SF DR, S: RStuff ]</text>
-	<text>A Rebel ship approaches cautiously. "Personally," says the captain, "I'd have stuck with the Federation. But I'm a soldier, sir, and I'm no use without a war to fight. Raise your shields!" [ Rbl SF DR, S: RStuff ]</text>
-	<text>You're hailed by a Rebel ship: "When the rebellion is complete you'll see the safer world we provide. Well, you won't, but you get the point." They arm weapons. [ Rbl SF DR, S: RStuff ]</text>
-	<text>A Rebel ship is guarding this beacon. You order a pursuit course and prepare to scratch up one more. [ Rbl SF DR, S: RStuff ]</text>
+	<text>Your ship is hailed. "We've found you at last. Prepare to die!" [ Rbl SF DR, S: [ 0.5, 2-3, RStuff ], Esc: [ 0.5, 3-4 ] ]</text>
+	<text>A small Rebel ship is docked at a small station. You try to lay low but it spots you. Power up the weapons! [ Rbl SF DR, S: [ 0.5, 2-3, RStuff ], Esc: [ 0.5, 3-4 ] ]</text>
+	<text>A Rebel ship has been patrolling this region. As soon as you arrive it begins its assault. [ Rbl SF DR, S: [ 0.5, 2-3, RStuff ], Esc: [ 0.5, 3-4 ] ]</text>
+	<text>A Rebel ship hails you: "Federation scum! We've waited a long time for this!" [ Rbl SF DR, S: [ 0.5, 2-3, RStuff ], Esc: [ 0.5, 3-4 ] ]</text>
+	<text>You receive a transmission: "Sorry sir, this is nothing personal but we're under orders." The Rebel ship's weapons go hot. [ Rbl SF DR, S: [ 0.5, 2-3, RStuff ], Esc: [ 0.5, 3-4 ] ]</text>
+	<text>By the time you notice the Rebel ship behind the beacon, it's too late to avoid a fight. [ Rbl SF DR, S: [ 0.5, 2-3, RStuff ], Esc: [ 0.5, 3-4 ] ]</text>
+	<text>A Rebel ship hails. "We did not fight a war to let a single Federation ship shatter our dreams of a better galaxy!" He locks weapons.[ Rbl SF DR, S: [ 0.5, 2-3, RStuff ], Esc: [ 0.5, 3-4 ] ]</text>
+	<text>A Rebel ship approaches cautiously. "Personally," says the captain, "I'd have stuck with the Federation. But I'm a soldier, sir, and I'm no use without a war to fight. Raise your shields!"[ Rbl SF DR, S: [ 0.5, 2-3, RStuff ], Esc: [ 0.5, 3-4 ] ]</text>
+	<text>You're hailed by a Rebel ship: "When the rebellion is complete you'll see the safer world we provide. Well, you won't, but you get the point." They arm weapons.[ Rbl SF DR, S: [ 0.5, 2-3, RStuff ], Esc: [ 0.5, 3-4 ] ]</text>
+	<text>A Rebel ship is guarding this beacon. You order a pursuit course and prepare to scratch up one more.[ Rbl SF DR, S: [ 0.5, 2-3, RStuff ], Esc: [ 0.5, 3-4 ] ]</text>
 </textList>
 
 <event name="AUTO_CIVILIAN" unique="false">
@@ -168,9 +168,9 @@
 	<img planet="NONE"/>
 	<text>You spot a small Rebel ship nearby. It seems to have been re-fitted for transport rather than combat. It does not seem to want to engage you and your ship.</text>
 	<choice>
-		<text>Demand the surrender of their goods. [ Rbl SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+		<text>Demand the surrender of their goods. [ Rbl SF Esc: 14-14, 40s; K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 		<event>
-			<text>You prepare to secure their cargo by force. [ Rbl SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+			<text>You prepare to secure their cargo by force. [ Rbl SF Esc: 14-14, 40s; K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 			<ship load="SQUAT_TRANSPORT" hostile="true"/>
 		</event>
 	</choice>

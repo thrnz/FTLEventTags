@@ -1,7 +1,7 @@
 <event name="ASTEROID_EXPLORE" unique="true">
 	<text>Scans reveal a large asteroid field nearby. Short-range scanners may discover useful materials while we wait for the FTL to recharge.</text>
 	<choice hidden="true">
-		<text>Explore the asteroid field. [ Nil | HScrapFuel | MScrapMiss | MScrapDrones | -5 Hull | Prt SF DR w/Asteroids ] </text>
+		<text>Explore the asteroid field. [ Nil | HScrapFuel | MScrapMiss | MScrapDrones | -5 Hull | Prt SF DR w/Asteroids; Esc: 0.5, 2-4; S: 0.5, 3-4 ]</text>
 		<event load="ASTEROID_EXPLORE_RESULTS"/>
 	</choice>
 	<choice>	
@@ -41,7 +41,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Fight the ship. [ Prt SF DR ]</text>
+		<text>Fight the ship. [ Prt SF DR; Esc: 0.5, 2-4; S: 0.5, 3-4 ]</text>
 		<event>
 			<text>Mercenaries are worse than Rebels. The only honorable course is to engage the mercenary in battle.</text>
 			<ship hostile="true"/>
@@ -57,7 +57,7 @@
 	<text>Scans show a remote settlement being blockaded by a pirate ship. The ship hastily messages you, "Stay out of this, or you'll be next!...Concentrate fire on..."</text>
 	<ship load="PIRATE_STATION_CROPS" hostile="false"/>
 	<choice hidden="true">
-		<text>Attack the pirate. [ Prt SF K: MStd; CK: MStd; DB: LStuff, S: MStuff ]</text>
+		<text>Attack the pirate. [ Prt SF K: MStd; S: 0.5, 2-4, MStuff; Esc: 0.5, 3-4; CK: MStd; DB: LStuff, S: MStuff ]</text>
 		<event>
 			<text>"You asked for it!" They pull away from the planet and move in to engage.</text>
 			<ship hostile="true"/>

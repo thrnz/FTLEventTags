@@ -82,7 +82,7 @@
 
 <ship name="SQUAT_WARNING" auto_blueprint="SHIPS_REBEL">
 	<escape timer="40" min="22" max="22" >
-		<text>They are powering up their FTL! If they get away, they will no doubt warn the fleet of your position! [ Rbl SF K: MStd, CK: MStd ]</text>
+		<text>They are powering up their FTL! If they get away, they will no doubt warn the fleet of your position! [ Rbl SF K: MStd; CK: MStd; Esc: 22-22, 40s, Fleet+ ]</text>
 		<ship hostile="true"/>
 	</escape>
 	<gotaway>
