@@ -192,10 +192,10 @@
 </eventList>
 
 <textList name="TRAP_BEACON_TEXT">  <!-- JUSTIN - ADDED -->
-	<text>You arrive at the beacon and immediately detect a pirate ship. It seems this distress beacon was a trap! [ Prt SF DR ]</text>
-	<text>"Haha! I knew someone would fall into our dastardly trap!" It appears this distress beacon was nothing but a decoy for a pirate ambush. [ Prt SF DR ]</text>
-	<text>Your cockpit lights up with warning signals. You are being targeted by a nearby ship. The distress call was a lure to attract unwitting ships into weapons range. You prepare for a fight. [ Prt SF DR ]</text>
-	<text>As soon as you arrive at the distress signal, shots are fired toward your ship. A trap! [ Prt SF DR ]</text>
+	<text>You arrive at the beacon and immediately detect a pirate ship. It seems this distress beacon was a trap! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>"Haha! I knew someone would fall into our dastardly trap!" It appears this distress beacon was nothing but a decoy for a pirate ambush. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>Your cockpit lights up with warning signals. You are being targeted by a nearby ship. The distress call was a lure to attract unwitting ships into weapons range. You prepare for a fight. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>As soon as you arrive at the distress signal, shots are fired toward your ship. A trap! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 </textList>
 
 <event name="CIVILIAN_ASTEROIDS_BEACON_2">
@@ -340,7 +340,7 @@
 		<event load="DISTRESS_TRAPPED_MINER_SHOOT"/>
 	</choice>
 	<choice hidden="true">
-		<text>Destroy and loot the ship. They're just pirates. [ MStd | Prt SF DR ]</text>
+		<text>Destroy and loot the ship. They're just pirates. [ MStd | Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event load="DISTRESS_TRAPPED_MINER_LOOT"/>		
 	</choice>
 	<choice hidden="true" req="WEAPONS_BEAM_DAMAGE"> <!-- JUSTIN - TO DO - List of beam weapons-->
@@ -753,7 +753,7 @@
 <event name="FEDERATION_PLANET_SIGNAL" unique ="true">    
 	<text>A Federation encrypted signal is being broadcast from a nearby planet.</text>
 	<choice hidden="true">
-		<text>Send an away party to investigate. [ Hidden Federation Base Quest | MStuff, Federation Base Assist Quest | Nil | HStd | Rbl SF DR, 2-3 Human Boarders ]</text>
+		<text>Send an away party to investigate. [ Hidden Federation Base Quest | MStuff, Federation Base Assist Quest | Nil | HStd | Rbl SF DR; 2-3 Human Boarders; S: 0.5, 2-3, RStuff; Esc: 0.5, 3- ]</text>
 		<event name="FEDERATION_PLANET_SIGNAL_LIST"/>
 	</choice>
 	<choice>
@@ -1233,20 +1233,20 @@
 		<event>
 			<text>"Well I have heard of you and I must see if you are as dangerousss as they say. I challenge you!"</text>
 			<choice hidden="true">	
-				<text>Accept his challenge. [ Slg SF K: MStd, CK: HStd, S: HScrapWeapon ]</text>
+				<text>Accept his challenge. [ Slg SF K: MStd; CK: HStd; S: 0, 3-4, HScrapWeapon ]</text>
 				<event>
 					<ship hostile="true"/>
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Decline. [ Slg SF K: MStd, CK: HStd, S: HScrapWeapon ]</text>
+				<text>Decline. [ Slg SF K: MStd; CK: HStd; S: 0, 3-4, HScrapWeapon ]</text>
 				<event>
 					<text>"I sssee... However you have no choice in the matter!" They move in to attack.</text>
 					<ship hostile="true"/>
 				</event>
 			</choice>
 			<choice hidden="true" req="slug">
-				<text>(Slugman Crew) Engage in a duel of the mind. [ HScrapWeapon | Slg SF 1-2 Boarders, K: MStd, CK: HStd, S: HScrapWeapon </text>
+				<text>(Slugman Crew) Engage in a duel of the mind. [ HScrapWeapon | Slg SF 1-2 Boarders; K: MStd; CK: HStd; S: 0, 3-4, HScrapWeapon </text>
 				<event load="DONOR_BLACK_RAVEN_SLUG"/>
 			</choice>
 		</event>
@@ -1254,7 +1254,7 @@
 </event>
 
 <event name="DONOR_MANTIS_CHASE" unique="true">
-	<text>You are immediately hailed by an impressive looking Mantis ship, "Your ship would make a mighty fine prize. Prepare for battle!" [ Mts SF K: MStd, CK: HStd, Esc: Mantis Chase Quest ] </text>
+	<text>You are immediately hailed by an impressive looking Mantis ship, "Your ship would make a mighty fine prize. Prepare for battle!" [ Mts SF K: MStd, CK: HStd, Esc: 5-5, 5s, Mantis Chase Quest ] </text>
 	<ship load="DONOR_MANTIS_CHASE1" hostile="true"/>
 </event>
 <ship name="DONOR_MANTIS_CHASE1" auto_blueprint="MANTIS_FIGHTER">
@@ -1293,14 +1293,14 @@
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>"Not YOU again! Do you know how much these repairs are going to cost me? Time to take out the big guns." [ Mts SF K: MStd Weapon, CK: HStd Weapon, S: HWeap, Esc: HStd ]</text>
+			<text>"Not YOU again! Do you know how much these repairs are going to cost me? Time to take out the big guns." [ Mts SF K: MStd Weapon; CK: HStd Weapon; S: 2-2, HWeap; Esc: 6-6, 12s, HStd ]</text>
 		</event>
 	</choice>
 </event>
 
 <ship name="DONOR_MANTIS_CHASE2" auto_blueprint="MANTIS_BOMBER">
 	<escape timer="12" min="6" max="6">
-		<text>They appear to be trying to get away again. You doubt they'll forget to mask their jump signature this time. [  K: MStd Weapon, CK: HStd Weapon, S: HWeap, Esc: HStd ]</text>
+		<text>They appear to be trying to get away again. You doubt they'll forget to mask their jump signature this time. [ K: MStd Weapon; CK: HStd Weapon; S: 2-2, HWeap; Esc: 6-6, 12s, HStd ]</text>
 	</escape>
 	<gotaway>
 		<text>Looks like they got away. At least you're able to scrap their abandoned fighter.</text>
@@ -1317,7 +1317,7 @@
 			</event>
 		</choice>
 		<choice>
-			<text>Finish them off. [ K: MStd Weap, CK: HStd Weap ]</text>
+			<text>Finish them off. [ K: MStd Weapon; CK: HStd Weapon; Esc: 6-6, 12s, HStd ]</text>
 			<event>
 				<text>"No! Hurry up, get us out of here! They're crazy!" You cut transmissions.</text>
 			</event>
@@ -1377,10 +1377,10 @@
 
 <eventList name="ALISON_DEFECTOR_REJECT">
 	<event>
-		<text>Your fearless crew easily overcome the intruder, but the Rebel ship still needs to be dealt with. [ Rbl SF DR ]</text>
+		<text>Your fearless crew easily overcome the intruder, but the Rebel ship still needs to be dealt with. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 	</event>
 	<event>
-		<text>Attempting to deal with attacks from inside and out is never easy! [ 1 Boarder, Rbl SF DR ]</text>
+		<text>Attempting to deal with attacks from inside and out is never easy! [ 1 Human Boarder, Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		<boarders min="1" max="1" class="human"/>
 	</event>
 	<event>
@@ -1390,11 +1390,11 @@
 			<event load="ALISON_DEFECTOR_HELP_2"/>
 		</choice>
 		<choice>
-			<text>Reject him outright and execute him on the spot. [ Rbl SF DR ]</text>
+			<text>Reject him outright and execute him on the spot. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text></text>
 			<event/>
 		</choice>
 		<choice>
-			<text>Reject his offer again. [ Rbl SF DR, 1 Human Boarder ]</text>
+			<text>Reject his offer again. [ Rbl SF DR, 1 Human Boarder; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 			<event>
 				<boarders min="1" max="1" class="human"/>
 			</event>
@@ -1511,3 +1511,76 @@
 		<ship load="PIRATE" hostile="true"/>
 	</event>
 </eventList>	
+
+
+<eventList name="ALISON_DEFECTOR_HELP">
+	<event>
+		<text>The dishonorable Rebel has deceived you. He damages your engines and steals your flight data before teleporting away. The fleet will be able to track you with ease. If they can't kill you now that is! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text> <!--DLC2-->
+		<damage amount="2"/>
+		<damage amount="1" system="engines"/>  <!--DLC-->
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Your new crew-member smiles, then reveals a small remote trigger in the palm of his hand. Explosions rocket around the ship as more intruders teleport aboard! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]\\</text>
+		<boarders min="2" max="2" class="human"/>
+		<damage amount="3"/>
+	</event>
+	<event>
+		<text>Relieved and light-headed, your new crewmember gets to work as the Rebel ship attacks. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<crewMember amount="1" class="human"/>	
+	</event>
+	<event>
+		<text>Relieved and light-headed, your new crewmember gets to work as the Rebel ship attacks. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<crewMember amount="1" class="human"/>	
+	</event>
+	<event>
+		<text>Relieved and light-headed, your new crewmember gets to work as the Rebel ship attacks. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<crewMember amount="1" class="human"/>	
+	</event>
+	<event>
+		<text>The Rebel makes to take his assigned station, then suddenly turns and eviscerates the nearest crew-member. Red Alert! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<boarders min="1" max="1" class="human"/>
+		<removeCrew>
+			<clone>true</clone>
+			<text>The eviscerated crewmember's clone launches out of the clone bay, eager to seek revenge.</text>
+		</removeCrew>
+	</event>
+</eventList>
+
+<eventList name="ALISON_DEFECTOR_HELP_2">
+	<event>
+		<text>The dishonorable Rebel has deceived you. He damages your ship and steals ship information before teleporting away. The fleet will be able to track you with ease. If they can't kill you now, that is! [ Rbl SF DR; Fleet+; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text> <!--DLC2-->
+		<damage amount="2"/>
+		<damage amount="1" system="engines"/>  <!--DLC-->
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Your new crew-member smiles, then reveals a small remote trigger in the palm of his hand. Explosions rocket around the ship as more intruders teleport aboard! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<boarders min="2" max="2" class="human"/>
+		<damage amount="2"/>
+		<damage amount="1" system="pilot"/>  <!--DLC-->
+	</event>
+	<event>
+		<text>Relieved and light-headed, your new crewmember gets to work as the Rebel ship attacks. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<crewMember amount="1" class="human"/>
+		<quest event="ALISON_DEFECTOR_QUEST"/>
+	</event>
+	<event>
+		<text>Relieved and light-headed, your new crewmember gets to work as the Rebel ship attacks. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<crewMember amount="1" class="human"/>
+		<quest event="ALISON_DEFECTOR_QUEST"/>
+	</event>
+	<event>
+		<text>Relieved and light-headed, your new crewmember gets to work as the Rebel ship attacks. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<crewMember amount="1" class="human"/>
+		<quest event="ALISON_DEFECTOR_QUEST"/>
+	</event>
+	<event>
+		<text>The Rebel makes to take his assigned station, then suddenly turns and eviscerates the nearest crew-member. Red Alert! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<boarders min="1" max="1" class="human"/>
+		<removeCrew>
+			<clone>true</clone>
+			<text>The eviscerated crewmember's clone launches out of the clone bay, eager to seek revenge.</text>
+		</removeCrew>
+	</event>
+</eventList>

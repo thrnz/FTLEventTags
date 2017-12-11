@@ -43,12 +43,12 @@
 </textList>
 
 <event name="ENGI_REBEL_FIGHT">
-	<text>The rebel fighter here would seem to suggest elements of the rebel fleet are already making incursions on Engi space. You move to engage. [ Rbl SF DR ]</text>
+	<text>The rebel fighter here would seem to suggest elements of the rebel fleet are already making incursions on Engi space. You move to engage. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 	<ship load="REBEL" hostile="true"/>
 </event>
 
 <event name="ENGI_PIRATE_FIGHT">
-	<text>There must have been rich pickings for pirates around here up until war broke out. The pirate you encounter here looks worn down, but hungry. You'll have to fight! [ Prt SF DR ]</text>
+	<text>There must have been rich pickings for pirates around here up until war broke out. The pirate you encounter here looks worn down, but hungry. You'll have to fight! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 	<ship load="PIRATE" hostile="true"/>
 </event>
 

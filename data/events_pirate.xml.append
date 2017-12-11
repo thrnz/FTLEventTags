@@ -196,7 +196,7 @@
 <event name="FLOATING_CARGO" unique="true">
 	<text>Not too far from the beacon, you detect a destroyed cargo ship with its cargo scattered nearby, intact.</text>
 	<choice hidden="true">
-		<text>Bring it aboard. [ MStd | LScrap | 2-4 Human Boarders | 2-4 Human Boarders, Prt SF DR ]</text>
+		<text>Bring it aboard. [ MStd | LScrap | 2-4 Human Boarders | 2-4 Human Boarders, Prt SF DR; S: 0-5, RStuff; Esc: 0.3, 2-4, 15s ]</text>
 		<event load="FLOATING_CARGO_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -206,11 +206,11 @@
 		</event>
 	</choice>
 	<choice req="sensors" lvl="2" hidden="true">
-		<text>(Advanced Sensors) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | Prt SF DR or Nil ]</text>
+		<text>(Advanced Sensors) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | [ Prt SF DR; S: 0-5, RStuff; Esc: 0.3, 2-4, 15s or Nil ]</text>
 		<event load="FLOATING_CARGO_SCAN_LIST"/>
 	</choice>
 	<choice req="ADV_SCANNERS" hidden="true">
-		<text>(Long-Ranged Scanners) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | Prt SF DR or Nil ]</text>
+		<text>(Long-Ranged Scanners) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | Prt SF DR; S: 0-5, RStuff; Esc: 0.3, 2-4, 15s Prt SF DR or Nil ]</text>
 		<event load="FLOATING_CARGO_SCAN_LIST"/>
 	</choice>
 </event>
@@ -229,7 +229,7 @@
 	<event>
 		<text>Your advanced sensors pick up faint life signatures inside the cargo. The life forms appear to be armed. This looks like a planned pirate ambush.</text>
 		<choice hidden="true">
-			<text>Destroy the crates to prevent another ship from falling victim. [ Prt SF DR ]</text>
+			<text>Destroy the crates to prevent another ship from falling victim. [ Prt SF DR; S: 0-5, RStuff; Esc: 0.3, 2-4, 15s ]</text>
 			<event>
 				<text>You fire on the crates, breaking them open and scattering the pirates into empty space. A pirate ship appears out of nowhere with a message, "You will pay for that!"</text>
 				<ship load="PIRATE" hostile="true"/>

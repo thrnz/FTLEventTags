@@ -204,7 +204,7 @@
 </event>
 
 <event name="FUEL_ON_REBEL_WARNING">
-	<text>A ship responding to your distress moves in. Unfortunately it turns out to be an automated Rebel scout. It immediately reverses thrust after scanning your ship. [ Auto SF K: LStd, Esc: Fleet+ ]</text>
+	<text>A ship responding to your distress moves in. Unfortunately it turns out to be an automated Rebel scout. It immediately reverses thrust after scanning your ship. [ Auto SF; K: LStd; Esc: 40s, 22-22, Fleet+ ]</text>
 	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
 </event>	
 

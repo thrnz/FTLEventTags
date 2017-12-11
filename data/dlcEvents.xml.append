@@ -36,25 +36,25 @@
 </event>
 
 <textList name="REBEL_PULSAR_TEXT"> <!--DLC2-->
-	<text>A Rebel captain appears on the screen. "I thought we had been doomed to backwater assignments. This is my chance to get back in Command's good graces! Charge the weapons!" [ Rbl SF DR ]</text>
-	<text>A small rebel research station overlooks a pulsating star. Before you can react a Rebel ship spots you and moves in to attack. [ Rbl SF DR ]</text>
-	<text>You arrive at an infrequently used beacon close to a pulsar. Before long a Rebel ship happens to jump nearby. Looks like you'll have to fight. [ Rbl SF DR ]</text>
+	<text>A Rebel captain appears on the screen. "I thought we had been doomed to backwater assignments. This is my chance to get back in Command's good graces! Charge the weapons!" [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>A small rebel research station overlooks a pulsating star. Before you can react a Rebel ship spots you and moves in to attack. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>You arrive at an infrequently used beacon close to a pulsar. Before long a Rebel ship happens to jump nearby. Looks like you'll have to fight. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 	
 	
 	<!-- NEEDS MORE-->
-	<text>A Rebel captain appears on the screen. "I thought we had been doomed to backwater assignments. This is my chance to get back in Command's good graces! Charge the weapons!" [ Rbl SF DR ]</text>
-	<text>A small rebel research station overlooks a pulsating star. Before you can react a Rebel ship spots you and moves in to attack. [ Rbl SF DR ]</text>
-	<text>You arrive at an infrequently used beacon close to a pulsar. Before long a Rebel ship happens to jump nearby. Looks like you'll have to fight. [ Rbl SF DR ]</text>
+	<text>A Rebel captain appears on the screen. "I thought we had been doomed to backwater assignments. This is my chance to get back in Command's good graces! Charge the weapons!" [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>A small rebel research station overlooks a pulsating star. Before you can react a Rebel ship spots you and moves in to attack. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>You arrive at an infrequently used beacon close to a pulsar. Before long a Rebel ship happens to jump nearby. Looks like you'll have to fight. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 </textList>
 
 <textList name="PIRATE_PULSAR_TEXT">
-	<text>Sensors go wild as a nearby pulsar is detected. While you are attempting to recalibrate the FTL drive, a pirate sneaks up on your ship, weapons charging. Prepare for a fight! [ Prt SF DR ]</text>
-	<text>You arrive to find a pulsar dominating the view screen. You see a small silhouette pass in front of the star. Before you can ponder what it is, warning signals go off. It appears to be a ship in a firing trajectory! [ Prt SF DR ]</text>
-	<text>A small research station orbits a nearby pulsar. It appears largely abandoned, but you detect power signatures flaring up as soon as you're in scanning distance. A small combat ship launches from the station. Pirates! [ Prt SF DR ]</text>
+	<text>Sensors go wild as a nearby pulsar is detected. While you are attempting to recalibrate the FTL drive, a pirate sneaks up on your ship, weapons charging. Prepare for a fight! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>You arrive to find a pulsar dominating the view screen. You see a small silhouette pass in front of the star. Before you can ponder what it is, warning signals go off. It appears to be a ship in a firing trajectory! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>A small research station orbits a nearby pulsar. It appears largely abandoned, but you detect power signatures flaring up as soon as you're in scanning distance. A small combat ship launches from the station. Pirates! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 	
 	
 	<!-- NEEDS MORE-->
-	<text>Sensors go wild as a nearby pulsar is detected. While you are attempting to recalibrate the FTL drive, a pirate sneaks up on your ship, weapons charging. Prepare for a fight! [ Prt SF DR ]</text>
-	<text>You arrive to find a pulsar dominating the view screen. You see a small silhouette pass in front of the star. Before you can ponder what it is, warning signals go off. It appears to be a ship in a firing trajectory! [ Prt SF DR ]</text>
-	<text>A small research station orbits a nearby pulsar. It appears largely abandoned, but you detect power signatures flaring up as soon as you're in scanning distance. A small combat ship launches from the station. Pirates! [ Prt SF DR ]</text>
+	<text>Sensors go wild as a nearby pulsar is detected. While you are attempting to recalibrate the FTL drive, a pirate sneaks up on your ship, weapons charging. Prepare for a fight! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>You arrive to find a pulsar dominating the view screen. You see a small silhouette pass in front of the star. Before you can ponder what it is, warning signals go off. It appears to be a ship in a firing trajectory! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>A small research station orbits a nearby pulsar. It appears largely abandoned, but you detect power signatures flaring up as soon as you're in scanning distance. A small combat ship launches from the station. Pirates! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 </textList>

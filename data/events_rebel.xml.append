@@ -21,7 +21,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="hacking"> <!-- CHANGED - added -->
-		<text>(Hacking System) Counter the remote hacking. [ Slg SF DR ]</text>
+		<text>(Hacking System) Counter the remote hacking. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 		<event>
 			<text>Your hacking system automatically counters the digital assault and you move in to fight the ship.</text>
 			<ship load="JELLY" hostile="true"/>
@@ -225,9 +225,9 @@
 <event name="FLAGSHIP_CONSTRUCTION" unique="true">
 	<text>You arrive at the beacon to find yourself in a huge Rebel shipyard, scaffolding and construction drones filling the sector! The entire system looks devoted to ship construction, the nearby planets and moons ruthlessly mined to harvest resources for a ship of immense size...</text>
 	<choice>
-		<text>Look around. [ Fight MiniFlagShip ]</text>
+		<text>Look around. [ MiniFlagship SF K: 5 Fuel, 5 Missiles, 5 Drones, HScrapWeapon, Fleet-- ]</text>
 		<event>
-			<text>Warning lights flash as scans identify the gigantic ship under construction - it's a second Rebel Flagship! This must be the secret shipyards where the first one was built, and you've accidentally stumbled across it! Even in its weakened state, the Rebel ship powers up... get ready, you've got a hell of a fight on your hands. [ SF K: 5 Fuel, 5 Missiles, 5 Drones, HScrapWeapon ]</text>
+			<text>Warning lights flash as scans identify the gigantic ship under construction - it's a second Rebel Flagship! This must be the secret shipyards where the first one was built, and you've accidentally stumbled across it! Even in its weakened state, the Rebel ship powers up... get ready, you've got a hell of a fight on your hands. [ SF K: 5 Fuel, 5 Missiles, 5 Drones, HScrapWeapon, Fleet-- ]</text>
 			<ship load="FLASHSHIP_CONSTRUCTION_SHIP" hostile="true"/>
 		</event>
 	</choice>
@@ -240,10 +240,10 @@
 </event>
 
 <textList name="BOARDERS_REBEL_SHIP" unique="false">
-	<text>You receive a message from a nearby Rebel station, "You have a lot of guts passing through our space, I'll give you that." He turns giving an order, "Kill their crew, I want that ship intact." [ Rbl SF DR, 2-3 Human Boarders ]</text>
-	<text>Your sensors warn of an incoming Rebel ship at the same time as you hear the telltale signs of a teleporter. You hear someone taunt from within the ship, "Ready to die? I sure am ready to get a promotion!" [ Rbl SF DR, 2-3 Human Boarders ]</text>
-	<text>Incoming message, "Hello Captain," says a Rebel in an officer's garb. "How very generous of you to turn yourself in. Prepare to be boarded. Come quietly and we may be lenient." [ Rbl SF DR, 2-3 Human Boarders ]</text>
-	<text>You receive a message on a low-band channel. "You're surrounded, just like the last of your Federation friends. Just die already." The enemy has teleported onto your ship! [ Rbl SF DR, 2-3 Human Boarders ]</text>
+	<text>You receive a message from a nearby Rebel station, "You have a lot of guts passing through our space, I'll give you that." He turns giving an order, "Kill their crew, I want that ship intact." [ Rbl SF DR; 2-3 Human Boarders; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>Your sensors warn of an incoming Rebel ship at the same time as you hear the telltale signs of a teleporter. You hear someone taunt from within the ship, "Ready to die? I sure am ready to get a promotion!" [ Rbl SF DR; 2-3 Human Boarders; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>Incoming message, "Hello Captain," says a Rebel in an officer's garb. "How very generous of you to turn yourself in. Prepare to be boarded. Come quietly and we may be lenient." [ Rbl SF DR; 2-3 Human Boarders; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>You receive a message on a low-band channel. "You're surrounded, just like the last of your Federation friends. Just die already." The enemy has teleported onto your ship! [ Rbl SF DR; 2-3 Human Boarders; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 </textList>
 
 <textList name="START_BEACON_REBEL">

@@ -1,5 +1,5 @@
 <event name="SLUG_FIGHT" unique="true">
-	<text>It's rare for the Slugs to stay exposed in open space for long periods - the ship here may be lost, or just passing through, but either way he moves in to attack! [ Slg SF DR ]</text>
+	<text>It's rare for the Slugs to stay exposed in open space for long periods - the ship here may be lost, or just passing through, but either way he moves in to attack! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 	<ship load="JELLY" hostile="true"/>
 </event>
 
@@ -10,15 +10,15 @@
 </event> 
 
 <textList name="SLUG_PIRATE" unique="false">
-	<text>There appears to be a pirate ship nearby. Be on your guard; anyone trying to hunt in Slug territory is either formidable or deeply stupid, and in space, either can be dangerous. [ Prt SF DR ]</text>
-	<text>"We knew anyone foolish enough to try and sneak through a Slug nebula would stick to open space. Yield your goods and we may let you live." You cut the transmission in lieu of a response. [ Prt SF DR ]</text>
-	<text>Before you can take a moment's rest from the ever present nebulas in this sector, a pirate ship appears behind you and opens fire. [ Prt SF DR ]</text>
+	<text>There appears to be a pirate ship nearby. Be on your guard; anyone trying to hunt in Slug territory is either formidable or deeply stupid, and in space, either can be dangerous. [ Prt SF DR; Sur: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>"We knew anyone foolish enough to try and sneak through a Slug nebula would stick to open space. Yield your goods and we may let you live." You cut the transmission in lieu of a response. [ Prt SF DR; Sur: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>Before you can take a moment's rest from the ever present nebulas in this sector, a pirate ship appears behind you and opens fire. [ Prt SF DR; Sur: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 </textList>
 
 <textList name="SLUG_REBEL" unique="false">
-	<text>As you arrive at the beacon, a hostile ship immediately registers on your scanners. You didn't expect to see Rebels extending their reach into Slug territory. Charge the weapons! [ Rbl SF DR ]</text>
-	<text>You jump into empty space and are relieved to see your sensors blink back to life. However, you are less pleased to see them immediately register a rebel ship on an approach vector! [ Rbl SF DR ]</text>
-	<text>You receive a message from a nearby ship, "Looks like our intelligence was correct! Sneaking through the clouds with the Slugs... No one can hide from the rebellion!" [ Rbl SF DR ]</text>
+	<text>As you arrive at the beacon, a hostile ship immediately registers on your scanners. You didn't expect to see Rebels extending their reach into Slug territory. Charge the weapons! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>You jump into empty space and are relieved to see your sensors blink back to life. However, you are less pleased to see them immediately register a rebel ship on an approach vector! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>You receive a message from a nearby ship, "Looks like our intelligence was correct! Sneaking through the clouds with the Slugs... No one can hide from the rebellion!" [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 </textList>
 
 <event name="NEBULA_SLUG_CHOOSE_DEATH" unique="true">
@@ -81,7 +81,7 @@
 		<event load="NEBULA_SLUG_HULLFIX_RESULT1"/>
 	</choice>
 	<choice hidden="true">
-		<text>Ask if they would like payment. [ Slg SF DR | Nil or +10 Hull for 50 Scrap ]</text>
+		<text>Ask if they would like payment. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 | Nil or +10 Hull for 50 Scrap ]</text>
 		<event load="NEBULA_SLUG_HULLFIX_REQUEST"/>
 	</choice>
 </event>
@@ -105,15 +105,15 @@
 				<event>
 					<text>"Firssst... We accept no tradesss, couponss or refundss. Purchasess are final. Underssstand?"</text>
 					<choice>
-						<text>Understood. [ [ +5 Fuel, Store | Slg SF 1 Boarder, Weapons@0, K: HStd, CK: HStd | 2 Boarders, Slg SF DR ] or [ Nothing | 1 Boarder, Slg SF DR ] ] </text>
+						<text>Understood. [ [ +5 Fuel, Store | Slg SF 1 Boarder, Weapons@0, K: HStd, CK: HStd | 2 Boarders, Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ] or [ Nothing | 1 Boarder, Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ] ] </text>
 						<event>
 							<text>"We hold no liability for productsss damaged post ssale. We offer no insurance or customer sservice. Not a problem?"</text>
 							<choice hidden="true">
-								<text>Not a problem. [ +5 Fuel, Store | 1 Boarder, Slg SF Weapons@0, K: HStd, CK: HStd | 2 Boarders, Slg SF DR ] </text>
+								<text>Not a problem. [ +5 Fuel, Store | 1 Boarder, Slg SF Weapons@0, K: HStd, CK: HStd | 2 Boarders, Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ] </text>
 								<event load="NEBULA_SLUG_FAKE_STORE_LIST"/>
 							</choice>
 							<choice hidden="true">
-								<text>Forget this. [ Nil | 1 Boarder, Slg SF DR ]</text>
+								<text>Forget this. [ Nil | 1 Boarder, Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 								<event load="NEBULA_SLUG_FAKE_STORE_LEAVING"/>
 							</choice>
 						</event>
@@ -125,7 +125,7 @@
 						</event>
 					</choice>
 					<choice hidden="true" req="slug">
-						<text>(Slug crewmember) Our Slug senses someone aboard the ship. Investigate it. [ Slg SF DR ]</text>
+						<text>(Slug crewmember) Our Slug senses someone aboard the ship. Investigate it. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 						<event>
 							<text>It looks like the merchant was trying to stall you while someone teleported on board. You catch him before he could finish and he teleports away. You immediately prepare for battle.</text>
 							<ship load="JELLY" hostile="true"/>
@@ -138,17 +138,17 @@
 </event>
 
 <textList name="NEBULA_SLUG_FIGHT">
-	<text>Your sensors are no match for the Slug's telepathic abilities - a ship you never even saw opens fire from astern! [ Slg SF DR ]</text>
-	<text>The Slug vessel you encounter here has obviously made a big score and is looking to test its new armaments. They picked the wrong ship to attack. [ Slg SF DR ]</text>
-	<text>A Slug passenger ship hails: "Please, your worthy alien highnessesss, we are unarmed and sseeking asssylum." You approach cautiously, and weapons immediately spring from their hull! [ Slg SF DR ]</text>
-	<text>A Slug ship - a rogue, you suspect - approaches, but when he sees you're Federation he thinks better of the sneak attack and fires everything he has. [ Slg SF DR ]</text>
-	<text>Direct attacks are not preferred by the Slugs, but of the three you see at this beacon, one has the brass to make a move on your position! [ Slg SF DR ]</text>
+	<text>Your sensors are no match for the Slug's telepathic abilities - a ship you never even saw opens fire from astern! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>The Slug vessel you encounter here has obviously made a big score and is looking to test its new armaments. They picked the wrong ship to attack. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>A Slug passenger ship hails: "Please, your worthy alien highnessesss, we are unarmed and sseeking asssylum." You approach cautiously, and weapons immediately spring from their hull! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>A Slug ship - a rogue, you suspect - approaches, but when he sees you're Federation he thinks better of the sneak attack and fires everything he has. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>Direct attacks are not preferred by the Slugs, but of the three you see at this beacon, one has the brass to make a move on your position! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 	
-	<text>Your sensors are no match for the Slug's telepathic abilities - a ship you never even saw opens fire from astern! [ Slg SF DR ]</text>
-	<text>The Slug vessel you encounter here has obviously made a big score and is looking to test its new armaments. They picked the wrong ship to attack. [ Slg SF DR ]</text>
-	<text>A Slug passenger ship hails: "Please, your worthy alien highnessesss, we are unarmed and sseeking asssylum." You approach cautiously, and weapons immediately spring from their hull! [ Slg SF DR ]</text>
-	<text>A Slug ship - a rogue, you suspect - approaches, but when he sees you're Federation he thinks better of the sneak attack and fires everything he has. [ Slg SF DR ]</text>
-	<text>Direct attacks are not preferred by the Slugs, but of the three you see at this beacon, one has the brass to make a move on your position! [ Slg SF DR ]</text>
+	<text>Your sensors are no match for the Slug's telepathic abilities - a ship you never even saw opens fire from astern! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>The Slug vessel you encounter here has obviously made a big score and is looking to test its new armaments. They picked the wrong ship to attack. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>A Slug passenger ship hails: "Please, your worthy alien highnessesss, we are unarmed and sseeking asssylum." You approach cautiously, and weapons immediately spring from their hull! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>A Slug ship - a rogue, you suspect - approaches, but when he sees you're Federation he thinks better of the sneak attack and fires everything he has. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>Direct attacks are not preferred by the Slugs, but of the three you see at this beacon, one has the brass to make a move on your position! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 </textList>
 
 <event name="NEBULA_SLUG_MANTIS" unique="true">
@@ -162,7 +162,7 @@
 	<ship load="PIRATE" hostile="false"/>
 	<environment type="nebula"/>
 	<choice>
-		<text>Attack! [ Prt SF DR ]</text>
+		<text>Attack! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -249,10 +249,10 @@
 
 
 <textList name="STORM_SLUG_FIGHT">
-	<text>The ion storm here threatens to deactivate your core systems, a fact made all the worse for the largely unaffected Slug ships circling like space-vultures. [ Slg SF DR ]</text>
-	<text>The Slug ship that descends into view as you enter the ion storm must have sensed your distress - defensive action! [ Slg SF DR ]</text>
-	<text>You arrive in the middle of an ion storm. Slugs generally avoid these storms but you find one waiting in ambush. Prepare for a fight! [ Slg SF DR ]</text>
-	<text>You find yourself stuck in the middle of an ion storm with a Slug ship just a short distance away, refusing all hails. You cautiously try to slip further into the clouds, but they turn suddenly to attack! [ Slg SF DR ]</text>	
+	<text>The ion storm here threatens to deactivate your core systems, a fact made all the worse for the largely unaffected Slug ships circling like space-vultures. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>The Slug ship that descends into view as you enter the ion storm must have sensed your distress - defensive action! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>You arrive in the middle of an ion storm. Slugs generally avoid these storms but you find one waiting in ambush. Prepare for a fight! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>You find yourself stuck in the middle of an ion storm with a Slug ship just a short distance away, refusing all hails. You cautiously try to slip further into the clouds, but they turn suddenly to attack! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 </textList>
 
 <event name="SLUG_DISTRESS_ROCK" unique="true">
@@ -264,7 +264,7 @@
 		<event load="SLUG_DISTRESS_ROCK_FIGHT"/>
 	</choice>
 	<choice>
-		<text>Ignore them. [ x2 Nil | Rck SF DR ]</text>
+		<text>Ignore them. [ x2 Nil | Rck SF DR; S: 0.7, 3-4, RStuff ]</text>
 		<event load="SLUG_DISTRESS_ROCK_AVOID"/>
 	</choice>
 </event>
@@ -343,14 +343,14 @@
 		<event load="SLUG_DRINK_DRINK"/>
 	</choice>
 	<choice hidden="true">
-		<text>Refuse. [ Slg SF DR ]</text>
+		<text>Refuse. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4</text>
 		<event>
 			<text>The Slug feigns offense at your refusal, but you sense that he respects your caution. This does not, however, prevent him from returning to his ship and opening fire.</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true" req="rock">
-		<text>(Rock Crew) Have your Rockman pose as captain. [ Store, +10 Hull | Slg SF DR ]</text>
+		<text>(Rock Crew) Have your Rockman pose as captain. [ Store, +10 Hull | Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 		<event load="SLUG_DRINK_ROCK"/>
 	</choice>
 </event>
@@ -423,7 +423,7 @@
 	<environment type="nebula"/>
 	<ship load="JELLY" hostile="false"/>
 	<choice hidden="true">
-		<text>Send some crew to help. [ 1-3 Borders, Slg SF DR | Crew- (CB+), Slg SF DR | HScrap ]</text>
+		<text>Send some crew to help. [ 1-3 Borders, Slg SF DR; S: 0.5, 3-4; E: 0.5, 3-4 | Crew- (CB+), Slg SF DR; S: 0.5, 3-4; E: 0.5, 3-4 | HScrap ]</text>
 		<event load="SLUG_DISTRESS_TRICK_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -554,7 +554,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>Just before the transmission is cut you hear, "They're not falling for it. Just kill the crew and we can ssstrip..." Looks like you're not getting out of here without a fight. [ Slg SF DR ]</text>
+		<text>Just before the transmission is cut you hear, "They're not falling for it. Just kill the crew and we can ssstrip..." Looks like you're not getting out of here without a fight. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 		<ship load="JELLY" hostile="true"/>
 	</event>
 </eventList>

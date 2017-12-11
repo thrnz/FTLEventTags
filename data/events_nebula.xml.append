@@ -1,11 +1,11 @@
 <textList name="NEBULA_REBEL_LIST">
-	<text>You cross paths with an advance scout of the Rebel fleet searching this section of the nebula for your ship. [ Rbl SF DR ]</text>
-	<text>A ship bearing Rebel colors can be seen waiting near the beacon. They must have been waiting for you, since they engage immediately. [ Rbl SF DR ]</text>
-	<text>The Rebels must have anticipated you would try to lose them within the nebula. A scout is waiting for you at the beacon. [ Rbl SF DR ]</text>
-	<text>It looks like you will be unable to avoid the Rebels by traveling through the nebula. A Rebel ship is waiting for you near the beacon. [ Rbl SF DR ]</text>
-	<text>Shortly after you arrive, a Rebel ship jumps nearby. There looks to be no escape. Prepare for a fight! [ Rbl SF DR ]</text>
-	<text>Newton-knows what brings this Rebel ship so far out; its captain hails, but does a double take when he identifies your ship. They open fire. [ Rbl SF DR ]</text>
-	<text>A Rebel ship hails, but you don't take chances in conditions like this. You block the frequency and prepare to engage. [ Rbl SF DR ]</text>
+	<text>You cross paths with an advance scout of the Rebel fleet searching this section of the nebula for your ship. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>A ship bearing Rebel colors can be seen waiting near the beacon. They must have been waiting for you, since they engage immediately. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>The Rebels must have anticipated you would try to lose them within the nebula. A scout is waiting for you at the beacon. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>It looks like you will be unable to avoid the Rebels by traveling through the nebula. A Rebel ship is waiting for you near the beacon. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>Shortly after you arrive, a Rebel ship jumps nearby. There looks to be no escape. Prepare for a fight! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>Newton-knows what brings this Rebel ship so far out; its captain hails, but does a double take when he identifies your ship. They open fire. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>A Rebel ship hails, but you don't take chances in conditions like this. You block the frequency and prepare to engage. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 </textList>
 
 <textList name="NEBULA_AUTO_LIST">
@@ -17,17 +17,17 @@
 </textList>
 
 <event name="NEBULA_AUTO_WARNING" unique = "true">
-	<text>It appears that an automated Rebel scout was positioned within the nebula to warn of your passing. [ Auto SF K: LStd, Esc: Fleet+ ]</text>
+	<text>It appears that an automated Rebel scout was positioned within the nebula to warn of your passing. [ Auto SF K: LStd; Esc: 22-22, 40s, Fleet+ ]</text>
 	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
 	<environment type="nebula"/>
 </event>
 
 <textList name="NEBULA_PIRATE">	<!-- JUSTIN - ADD MORE -->
-	<text>As you drift through the nebula an unmarked vessel descends from the clouds and into your wake. Their weapons come online. [ Prt SF DR ]</text>
-	<text>A pirate ship pulls out of the ether and hails: "You know what I love about this part of the galaxy? The explorers! You always carry such fine loot." They lock weapons. [ Prt SF DR ]</text>
-	<text>As you coast through the nebula a pirate ship matches your course and closes the distance. Better to pick your battleground, but beggars can't be choosers. [ Prt SF DR ]</text>
-	<text>A hostile vessel descends from out of the nebula. Combat stations! [ Prt SF DR ]</text>
-	<text>You try to read the ID of a ship ahead in the fog, but it's too thick to penetrate. You have your answer when the ship turns, weapons hot! [ Prt SF DR ]</text>	
+	<text>As you drift through the nebula an unmarked vessel descends from the clouds and into your wake. Their weapons come online. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>A pirate ship pulls out of the ether and hails: "You know what I love about this part of the galaxy? The explorers! You always carry such fine loot." They lock weapons. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>As you coast through the nebula a pirate ship matches your course and closes the distance. Better to pick your battleground, but beggars can't be choosers. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>A hostile vessel descends from out of the nebula. Combat stations! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+	<text>You try to read the ID of a ship ahead in the fog, but it's too thick to penetrate. You have your answer when the ship turns, weapons hot! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>	
 </textList>
 
 <textList name="NEBULA_MANTIS_FIGHT">
@@ -44,13 +44,13 @@
 	<ship load="REBEL" hostile="false"/>
 	<environment type="nebula"/>
 	<choice>
-		<text>Attack the ship. [ Rbl SF DR ]</text>
+		<text>Attack the ship. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice>
-		<text>Attempt to remain concealed. [ SF DR (LVL4 Engines to Avoid) | Nil | Rbl SF DR, Fleet+ ]</text>
+		<text>Attempt to remain concealed. [ Rbl SF DR S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 (LVL4 Engines to Avoid) | Nil | Fleet+ ]</text>
 		<event load="NEBULA_REBEL_UNDETECTED_LIST"/>
 	</choice>
 	<choice req="cloaking" hidden="true" hidden="true"> 
@@ -65,9 +65,9 @@
 	<text>A pirate ship arrives shortly after you. Judging from the fact that it is attempting to avoid your ship, you assume that it's a smuggler trying to stay away from beacons.</text>
 	<environment type="nebula"/>
 	<choice>
-		<text>Attack the pirate. [ Prt SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+		<text>Attack the pirate. [ Prt SF; S: 0.5, 2-4, RStuff; Esc: 3-4, 35s; K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 		<event>
-			<text>You power up your weapons and move in to engage. [ SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+			<text>You power up your weapons and move in to engage. [ Prt SF; S: 0.5, 2-4, RStuff; Esc: 3-4, 35s; K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 			<ship load="PIRATE_SMUGGLE" hostile ="true"/>
 		</event>
 	</choice>
@@ -149,7 +149,7 @@
 	<text>A heavily damaged Federation ship is hiding in the nebula at this beacon. Before you have time to make contact with them, they fade into the nebula.</text>
 	<environment type="nebula"/>
 	<choice hidden="true">
-		<text>Attempt to follow and help them. [ Nil | Crew+ | Rbl SF DR ]</text>
+		<text>Attempt to follow and help them. [ Nil | Crew+ | Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		<event load="NEBULA_LOST_SHIP_LIST"/>
 	</choice>
 	<choice>
@@ -179,7 +179,7 @@
 		<event/>
 	</choice>
 	<choice>
-		<text>Attack the ship. [ Prt SF DR ]</text>
+		<text>Attack the ship. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -203,7 +203,7 @@
 		<event/>
 	</choice>
 	<choice>
-		<text>Repugnant?! Arm the weapons! [ Rck SF DR ]</text>
+		<text>Repugnant?! Arm the weapons! [ Rck SF DR; S: 0.7, 3-4, RStuff ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -244,25 +244,25 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Prepare to chase them! [ Rbl SF DR | Nil | Fleet+ ]</text>
+		<text>Prepare to chase them! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 | Nil | Fleet+ ]</text>
 		<event load="NEBULA_REBEL_CHASE_LIST"/>
 	</choice>
 	<choice req="sensors" lvl="3">
-		<text>(Advanced Sensors) Try to track them as you move to engage. [ Rbl SF DR ]</text>
+		<text>(Advanced Sensors) Try to track them as you move to engage. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		<event>
 			<text>As soon as they see you they make a run for it. You squeeze what you can out of the malfunctioning sensors and are able to keep track of them long enough to get in firing range.</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice req="ADV_SCANNERS" hidden="true">
-		<text>(Long-ranged Scanner) Try to track them as you move to engage. [ Rbl SF DR ]</text>
+		<text>(Long-ranged Scanner) Try to track them as you move to engage. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		<event>
 			<text>As soon as they see you they make a run for it. You squeeze what you can out of the malfunctioning sensors and are able to keep track of them long enough to get in firing range.</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice req="LIFE_SCANNER" hidden="true"><!--DLC-->
-		<text>(Lifeform Scanner) Use their life signatures to follow. [ Rbl SF DR ]</text>
+		<text>(Lifeform Scanner) Use their life signatures to follow. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		<event>
 			<text>Your augment's ability to keep track of their life signatures within the nebula proves useful. You catch up to the ship and prepare for a fight.</text>
 			<ship hostile="true"/>
@@ -298,7 +298,7 @@
 </event>
 
 <event name="STORM_REBEL" unique = "true">
-	<text>You arrive in the middle of a plasma storm. Despite the harsh conditions, a Rebel scout seems to be waiting for you. [ Rbl SF DR ]</text>
+	<text>You arrive in the middle of a plasma storm. Despite the harsh conditions, a Rebel scout seems to be waiting for you. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 	<ship load = "REBEL" hostile = "true"/>
 	<environment type="storm"/>
 </event>

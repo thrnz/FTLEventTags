@@ -80,7 +80,7 @@
 	<event load="REFUGEE_TRADER"/>
 	<event load="REFUGEE_TRADER"/>
 	<event>
-		<text>As you hail the freighter, it advances, weapons bristling from its hull! It's a pirate ambush! [ Prt SF DR ]</text>
+		<text>As you hail the freighter, it advances, weapons bristling from its hull! It's a pirate ambush! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<ship load="PIRATE" hostile="true"/>
 	</event>
 	<event>
@@ -239,7 +239,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>You dock with the station to take a look inside. However no sooner do you open the airlock than pirates burst in. Meanwhile scanners pick up a previously undetected pirate ship moving in to attack! [ Prt SF DR ]</text>
+		<text>You dock with the station to take a look inside. However no sooner do you open the airlock than pirates burst in. Meanwhile scanners pick up a previously undetected pirate ship moving in to attack! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<boarders min="2" max="2"/>
 		<ship load="PIRATE" hostile="true"/>
 	</event>
@@ -264,7 +264,7 @@
 		<event load="WRECKAGE_SCANNED"/>
 	</choice>
 	<choice hidden="true">
-		<text>Investigate the battlefield. [ x5 Nil | MStuff | Mts SF DR | Rbl SF DR | Ztn SF DR ]</text>
+		<text>Investigate the battlefield. [ x5 Nil | MStuff | Mts SF DR | Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 | Ztn SF DR ]</text>
 		<event load="WRECKAGE_INVESTIGATE"/>
 	</choice>
 	<choice>
@@ -276,11 +276,11 @@
 <event name="FUELING_STATION" unique="true">
 	<text>A small platform orbits near this beacon - it looks like a fueling station of some sort, and it is cheerily broadcasting reasonable prices in a spectrum of frequencies and languages.</text>
 	<choice hidden="true">
-		<text>Dock with the refueling platform. [ [ Fuel Trade | 3-5 Fuel | More... ] | [ [ -3 Hull, 2-4 Boarders | 5 Fuel BlastDoors BO] | -3 Hull, Prt SF DR] ]</text>
+		<text>Dock with the refueling platform. [ [ Fuel Trade | 3-5 Fuel | More... ] | [ [ -3 Hull, 2-4 Boarders | 5 Fuel BlastDoors BO ] | -3 Hull, Prt SF DR, -3 Hull; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ] ]</text>
 		<event load="FUELING_STATION_LIST"/>
 	</choice>
 	<choice>
-		<text>Ignore the refueling platform. [ Nil | SF DR ]</text>
+		<text>Ignore the refueling platform. [ Nil | Prt SF DR, -3 Hull; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event load="FUELING_STATION_IGNORE"/>
 	</choice>
 </event>
@@ -308,7 +308,7 @@
 		</choice>
 	</event>
 	<event>
-		<text>The refueling station welcomes you into one of its berths, and as you hail them, there is an explosion from your engine room! While assessing the damage, you detect a Pirate Ship closing fast! [ Prt SF DR, -3 Hull ]</text>
+		<text>The refueling station welcomes you into one of its berths, and as you hail them, there is an explosion from your engine room! While assessing the damage, you detect a Pirate Ship closing fast! [ Prt SF DR, -3 Hull; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<ship load="PIRATE" hostile="true"/>
 		<damage amount="3" system="engines"/>
 	</event>
@@ -610,7 +610,7 @@
 		<upgrade amount="1" system="oxygen"/>
 	</event>
 	<event>
-		<text>A complete scan of the planet reveals no life signs other than a single ship on the surface. The terraformers thank you for your help, and attempt to contact the ship. Just as you're about to jump away, the ship takes off and attacks, it's a pirate! [ Prt SF DR ]</text>
+		<text>A complete scan of the planet reveals no life signs other than a single ship on the surface. The terraformers thank you for your help, and attempt to contact the ship. Just as you're about to jump away, the ship takes off and attacks, it's a pirate! [ Prt SF DR; S: 0.5, 3-4, RStuf; Esc: 0.5, 2-4 ]</text>
 		<ship load="PIRATE" hostile="true"/>
 	</event>
 	<event>
@@ -705,7 +705,7 @@
 		<event load="CONTACT_PIRATE_SALESMAN"/>
 	</choice>
 	<choice>
-		<text>Attack him before he can attack! [ Prt SF DR ]</text>
+		<text>Attack him before he can attack! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event>
 			<ship load="PIRATE" hostile="true"/>
 		</event>
@@ -723,7 +723,7 @@
 		<event load="DOCK_PIRATE_SALESMAN"/>
 	</choice>
 	<choice>
-		<text>This seems dangerous, leave. [ Prt SF DR ]</text>
+		<text>This seems dangerous, leave. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event>
 			<text>As soon as you start to reverse your ship, the pirate reveals hidden weaponry and sets off in pursuit. You'll have to fight him to escape!</text>
 			<ship load="PIRATE" hostile="true"/>
@@ -791,7 +791,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Buy nothing. [ -3 Hull, SF DR ]</text>
+		<text>Buy nothing. [ -3 Hull, Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event>
 			<text>"Ah, I'm sorry to hear that! Pleasant journeys." Once back to the helm, a series of explosions rocks your ship. The pirate ship has powered its weapons! You receive a message, "You shouldn't waste people's time Captain!"</text>
 			<ship load="PIRATE" hostile="true"/>
@@ -806,7 +806,7 @@
 <event name="REBEL_CHECKPOINT">
 	<text load="REBEL_CHECKPOINT_TEXT"/>
 	<choice>
-		<text>Fend for yourself, attack and escape. [ Rbl SF DR ]</text>
+		<text>Fend for yourself, attack and escape. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		<event>
 			<ship load="REBEL" hostile="true"/>
 		</event>
@@ -859,14 +859,14 @@
 		<event/>
 	</choice>
 	<choice req="sensors" lvl="2" max_group="0">
-		<text>(Improved Sensors) Perform a scan of the area. [ Rbl SF DR ]</text>
+		<text>(Improved Sensors) Perform a scan of the area. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		<event>
 			<text>You quickly find the Rebel ship's location and move to intercept.</text>
 			<ship load="REBEL" hostile="true"/>
 		</event>
 	</choice>
 	<choice req="sensors" lvl="3" max_group="0" hidden="true">
-		<text>(Advanced Sensors) Pinpoint the Rebel's location. [ Rbl SF DR, Enemy Engines@0 ]</text>
+		<text>(Advanced Sensors) Pinpoint the Rebel's location. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4; Enemy Engines@0 ]</text>
 		<event>
 			<text>You find the Rebel ship hiding on a nearby asteroid. You are able to get a shot off and permanently disable their engines before they notice you.</text>
 			<ship load="REBEL" hostile="true"/>
