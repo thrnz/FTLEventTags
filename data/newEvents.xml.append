@@ -280,7 +280,7 @@
 		<event load="FUELING_STATION_LIST"/>
 	</choice>
 	<choice>
-		<text>Ignore the refueling platform. [ Nil | Prt SF DR, -3 Hull; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+		<text>Ignore the refueling platform. [ Nil | Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event load="FUELING_STATION_IGNORE"/>
 	</choice>
 </event>
