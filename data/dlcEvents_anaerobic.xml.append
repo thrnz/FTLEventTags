@@ -503,7 +503,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="anaerobic">
-		<text>(Lanius Crew) Try to use them to delay the Rebels. [ Fleet- ]</text>
+		<text>(Lanius Crew) Try to use them to delay the Rebels. [ MStd, Fleet- ]</text>
 		<event>
 			<text>Your crewmember tells them of the approaching fleet and the number of automated ships they use to scout ahead. They thank you for the tip and prepare to jump in the direction you came. That will hopefully delay the fleet. You scrap what remains of the Rebel station.</text>
 			<autoReward level="MED">standard</autoReward>
