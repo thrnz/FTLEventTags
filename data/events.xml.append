@@ -1390,7 +1390,7 @@
 			<event load="ALISON_DEFECTOR_HELP_2"/>
 		</choice>
 		<choice>
-			<text>Reject him outright and execute him on the spot. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text></text>
+			<text>Reject him outright and execute him on the spot. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 			<event/>
 		</choice>
 		<choice>
