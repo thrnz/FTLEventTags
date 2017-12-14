@@ -244,7 +244,7 @@
 		<ship load="PIRATE" hostile="true"/>
 	</event>
 	<event>
-		<text>You dock with the station to take a look inside. However no sooner do you open the airlock than pirates burst in. Meanwhile multiple warning signals go off on the bridge. The pirates have activated a remote planetary defense system and it's locking onto your ship!</text>
+		<text>You dock with the station to take a look inside. However no sooner do you open the airlock than pirates burst in. Meanwhile multiple warning signals go off on the bridge. The pirates have activated a remote planetary defense system and it's locking onto your ship! [ 2-4 Boarders, EnemyASB ]</text>
 		<boarders min="2" max="4"/>
 		<environment type="PDS" target="player"/>
 	</event>

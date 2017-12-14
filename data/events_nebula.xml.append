@@ -157,7 +157,7 @@
 		<event/>
 	</choice>	
 	<choice req="teleporter" hidden="true"> 
-		<text>(Teleporter) Lock onto their life-signs with your teleporter. [ Crew+, MScrap ] ]</text>
+		<text>(Teleporter) Lock onto their life-signs with your teleporter. [ Crew+, MScrap ]</text>
 		<event>
 			<text>You beam the Federation crew aboard. One gladly joins your crew, the rest wait to be dropped off at the next station.</text>
 			<crewMember amount="1"/>
@@ -298,7 +298,7 @@
 </event>
 
 <event name="STORM_REBEL" unique = "true">
-	<text>You arrive in the middle of a plasma storm. Despite the harsh conditions, a Rebel scout seems to be waiting for you. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>You arrive in the middle of a plasma storm. Despite the harsh conditions, a Rebel scout seems to be waiting for you. [ Rbl SF DR w/Ion-Storm; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 	<ship load = "REBEL" hostile = "true"/>
 	<environment type="storm"/>
 </event>

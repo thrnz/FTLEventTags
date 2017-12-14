@@ -18,7 +18,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="crystal">
-		<text>(Crystal crewmember) Have your Crystalline Being recalibrate your weapons. [ L Stuff, Crystal Weapon | L Stuff, Crystal Weapon, 2-3 Crystal Boarders | [ -1 Crew (CB revive) or [ -100 Fuel, Weapon, L Stuff or BOs ] ] ] </text>
+		<text>(Crystal crewmember) Have your Crystalline Being recalibrate your weapons. [ L Stuff, Crystal Weapon | L Stuff, Crystal Weapon, 2-3 Crystal Boarders | [ -1 Crew (CB+) or [ -100 Fuel, Weapon, L Stuff or BOs ] ] ] </text>
 		<event>
 			<text>Your Crystalline crew-member is able to adjust the detonation frequency of your weapons to resonate with this type of crystal, and the barrier gives little resistance.</text>
 			<choice hidden="true">
@@ -84,7 +84,7 @@
 <event name="CRYSTAL_SCRAP_EXCITED" unique="true">
 	<text>You receive a signal from a private relay on a nearby inhabited planet. "Are you the alien ship they've been talking about?! You are! Please, I am a collector of alien artifacts, I'm sure what is scrap to you is priceless to me."</text>
 	<choice hidden="true">
-		<text>Offer 35 scrap. [ +1 Crystal Crew or [ Crystal Bomb | Crystal Burst 2 ] ]</text>
+		<text>Offer 35 scrap. [ CrystalCrew+ or [ Crystal Bomb | Crystal Burst 2 ] ]</text>
 		<event>
 			<text>"My word! Is this... a 25th century Rockman thrust stabilizer?! What do you want for it? Wait, I have a better proposal. I long to see the galaxy. I propose I come with you. What do you say?"</text>
 			<item_modify>    
@@ -279,7 +279,7 @@
 		<event load="CRYSTAL_HUMAN_TESTS_ACCEPT"/>
 	</choice>
 	<choice hidden="true">
-		<text>Refuse. [ x2 Nil | SF DR ]</text>
+		<text>Refuse. [ x2 Nil | Cry SF DR ]</text>
 		<event load="CRYSTAL_HUMAN_TESTS_REFUSE"/>
 	</choice>
 	<choice hidden="true" req="rock">
@@ -418,7 +418,7 @@
 						</event>
 					</choice>
 					<choice hidden="true">
-						<text>Wait. [ Fleet+, Crystal Heavy 2 ]</text>
+						<text>Wait. [ Fleet+, Crystal Heavy 2, HAugment ]</text>
 						<event>
 							<text>Another cycle passes while the Rebel fleet draws ever nearer. You contact the captain again. "Alien Captain, your knowledge of our customs has most impressed us. Your crewmember is on their way back to you now, along with a token of our respect."</text>
 							<modifyPursuit amount="1"/>

@@ -286,7 +286,7 @@
 
 <eventList name="ROCK_MANTIS_FREIGHTER_LIST">
 	<event>
-		<text>The Mantis craft are both too busy slaughtering one another to notice you. Eventually the smaller ship gets the upper hand, but they must have blown a fuse in the assault and their weapons system is inoperable. Now is the time to attack! [ Mts SF K: MStd, CK: MStd ]</text>
+		<text>The Mantis craft are both too busy slaughtering one another to notice you. Eventually the smaller ship gets the upper hand, but they must have blown a fuse in the assault and their weapons system is inoperable. Now is the time to attack! [ Mts SF w/Enemy weapons@2 K: MStd, CK: MStd ]</text>
 		<ship load="MANTIS_ROCK_MANTIS_FREIGHTER" hostile="true"/>
 		<status type="loss" target="enemy" system="weapons" amount="2"/>
 	</event>

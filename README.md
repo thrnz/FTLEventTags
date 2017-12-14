@@ -12,7 +12,6 @@ This mod is useful for players wanting to learn the possible results of ingame e
 
 ## To-do
  * Re-do screenshots.
- * Tag surrender/escape chance/triggers/etc for ship fights
 
 ## Legend
 * SF: Ship Fight

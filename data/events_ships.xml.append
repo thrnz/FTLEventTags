@@ -181,7 +181,7 @@
 			</event>
 		</choice>
 		<choice hidden="true">
-			<text>Finish them off.</text>
+			<text>Finish them off. [ K: MStd; CK: MStd ]</text>
 			<event>
 				<text>They wanted to pick a fight with you so that's what they'll get.</text>
 			</event>

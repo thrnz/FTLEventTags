@@ -208,9 +208,9 @@
 		<autoReward level="LOW">standard</autoReward>
 	</event>
 	<event>
-		<text>Your improved Sensors indicate the ship is on standby, ready to activate at a moment's notice. Will you still attempt to access the ship's data? [ Map, LStd | Auto SF DR ]</text>
+		<text>Your improved Sensors indicate the ship is on standby, ready to activate at a moment's notice. Will you still attempt to access the ship's data?</text>
 		<choice hidden="true">
-			<text>Yes.</text>
+			<text>Yes. [ Map, LStd | Auto SF DR ]</text>
 			<event load="DOWNLOAD_DRONE_DATA"/>
 		</choice>
 		<choice>

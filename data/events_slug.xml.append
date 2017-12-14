@@ -97,7 +97,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Ask to see the goods.</text>
+		<text>Ask to see the goods. [ More ... ]</text>
 		<event>
 			<text>"Before we get ahead of ourssselves, I need to explain sssome ground ruless of our transsaction. Thesse are dangerous times, yess?"</text>
 			<choice>
@@ -294,7 +294,7 @@
 <event name="SLUG_UNLOCK_SURRENDER">  <!-- this is the hidden special surrender event-->
 	<text>"You have besssted us! Will you accept what is in our storeesss in exchange for our livess?"</text>
 	<choice hidden="true">
-		<text>Let them live. [ [ HFuel | LStuff | MStuff ] | [ BioBeam or Slug Unlock Quest ]</text>
+		<text>Let them live. [ [ HFuel | LStuff | MStuff ] | [ BioBeam or Slug Unlock Quest ] ]</text>
 		<event>
 			<text>"Take thisss newly developed weapon we're transporting... They're not going to be happy we gave it up, that isss for ssure..."</text>
 			<choice>
@@ -324,7 +324,7 @@
 <event name="SLUG_SURRENDER">
 	<text>"You have besssted us! Will you accept what is in our storeesss in exchange for our livess?"</text>
 	<choice hidden="true">
-		<text>Let them live. [ [ HFuel | LStuff | MStuff ] | [ BioBeam or Slug Unlock Quest ]</text>
+		<text>Let them live. [ [ HFuel | LStuff | MStuff ] | [ BioBeam or Slug Unlock Quest ] ]</text>
 		<event load="SLUG_SURRENDER_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -343,7 +343,7 @@
 		<event load="SLUG_DRINK_DRINK"/>
 	</choice>
 	<choice hidden="true">
-		<text>Refuse. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4</text>
+		<text>Refuse. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 		<event>
 			<text>The Slug feigns offense at your refusal, but you sense that he respects your caution. This does not, however, prevent him from returning to his ship and opening fire.</text>
 			<ship hostile="true"/>
@@ -488,7 +488,7 @@
 			<event load="BATTLEFIELD_SURVIVOR"/>
 			</choice>
 			<choice>
-				<text>Leave the battlefield before other ships arrive.</text>
+				<text>Leave the battlefield before other ships arrive. [ Nil ]</text>
 				<event/>
 			</choice>
 		</event>
@@ -525,7 +525,7 @@
 </event>
 
 <textList name="START_BEACON_SLUG">
-	<text>The only thing that can render a nebula more dangerous is if it's also home to the Slugs. This particular nebula is just that. [ 0-1 Non-Nebula Store, 2 Nebula Stores, 0-2 Items, 0-2 Non-Nebula Empty, 1-2 Non-Nebula Hostile, 3-4 Distress, 2-4 Empty Nebula, 5-7 Nebula Hostile, 1-3 IonStorm Slug Fights, 3-5 Neutral Nebula, 1-2 Neutral ] </text>
+	<text>The only thing that can render a nebula more dangerous is if it's also home to the Slugs. This particular nebula is just that. [ 0-1 Non-Nebula Store, 2 Nebula Stores, 0-2 Items, 0-2 Non-Nebula Empty, 1-2 Non-Nebula Hostile, 3-4 Distress, 2-4 Empty Nebula, 5-7 Nebula Hostile, 1-3 IonStorm Slug Fights, 3-5 Neutral Nebula, 1-2 Neutral ]</text>
 	<text>This nebula is home to the telepathic Slugs. They'd sell their own slime for a crate of scrap, but they much prefer to just take it. [ 0-1 Non-Nebula Store, 2 Nebula Stores, 0-2 Items, 0-2 Non-Nebula Empty, 1-2 Non-Nebula Hostile, 3-4 Distress, 2-4 Empty Nebula, 5-7 Nebula Hostile, 1-3 IonStorm Slug Fights, 3-5 Neutral Nebula, 1-2 Neutral ]</text>
 	<text>You're told the Slug home world is somewhere in this nebula. You can't see them, but you know they're watching. [ 0-1 Non-Nebula Store, 2 Nebula Stores, 0-2 Items, 0-2 Non-Nebula Empty, 1-2 Non-Nebula Hostile, 3-4 Distress, 2-4 Empty Nebula, 5-7 Nebula Hostile, 1-3 IonStorm Slug Fights, 3-5 Neutral Nebula, 1-2 Neutral ]</text>
 	<text>The Slugs that live in this nebula field are a leisure-centered civilization. Everything in Slug life is done in the pursuit of more currency and more time in which to spend it on extravagant ventures. This, inevitably, leads to much treachery in open space. [ 0-1 Non-Nebula Store, 2 Nebula Stores, 0-2 Items, 0-2 Non-Nebula Empty, 1-2 Non-Nebula Hostile, 3-4 Distress, 2-4 Empty Nebula, 5-7 Nebula Hostile, 1-3 IonStorm Slug Fights, 3-5 Neutral Nebula, 1-2 Neutral ]</text>

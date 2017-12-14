@@ -30,7 +30,7 @@
 			<event load="FUEL_TRADER_HIGH_LIST"/>
 		</choice>
 		<choice>
-			<text>Decline again. [ Nil }</text>
+			<text>Decline again. [ Nil ]</text>
 			<event>
 				<text>Their captain disconnects from the channel and without another word their ship prepares to jumps away.</text>
 			</event>
@@ -374,7 +374,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Negotiate. [ Slg SF K: MScrapFuel, CK: HScrapFuel ]</text>
+		<text>Negotiate. [ Slg SF Esc: 30-30, 80s; K: MScrapFuel; CK: HScrapFuel ]</text>
 		<event>
 			<text>You offer a more reasonable price but the Slugman is outraged! He moves in to attack!</text>
 			<ship hostile="true"/>

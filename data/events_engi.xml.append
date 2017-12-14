@@ -59,7 +59,7 @@
 		<event load="ENGI_STATION_DISTRESS_LIST"/>
 	</choice>
 	<choice>
-		<text>Keep your distance.</text>
+		<text>Keep your distance. [ Nil ]</text>
 		<event/>
 	</choice>
 </event>
@@ -145,7 +145,7 @@
 		<event load="DISTRESS_ENGI_REACTOR_LIST1"/>
 	</choice>
 	<choice hidden="true">
-		<text>Ignore it.</text>
+		<text>Ignore it. [ Nil ]</text>
 		<event>
 			<text>The place looks in bad state, probably nothing of use there. Time to move on.</text>
 		</event>
@@ -204,7 +204,7 @@
 </event>
 
 <event name="ENGI_UNLOCK_3">
-	<text>You have finally caught up with the ships you've been hunting. A hangar-sized cargo ship is being escorted by a number of Mantis ships. As you reconsider the assault, a squadron of Engi ships with pirate emblems jump in and assist you. You prepare to fight the Mantis but scans indicate they are manned by Rebels! [ Mts w/Human crew SF CK: MStd, DB: +20 Hull, HStd, Titanium System Casing  ]</text>
+	<text>You have finally caught up with the ships you've been hunting. A hangar-sized cargo ship is being escorted by a number of Mantis ships. As you reconsider the assault, a squadron of Engi ships with pirate emblems jump in and assist you. You prepare to fight the Mantis but scans indicate they are manned by Rebels! [ Mts w/Human crew SF CK: MStd, DB: +20 Hull, HStd, Titanium System Casing ]</text>
 	<ship load="MANTIS_ENGI_UNLOCK_3" hostile="true"/>
 </event>
 

@@ -75,7 +75,7 @@
 </event>
 
 <event name="MANTIS_SUN_FIGHT" unique="false">   
-	<text>Who knows why the Mantis would venture so close to a sun. Perhaps it makes for more of a challenge? [ Mts SF DR ]</text>
+	<text>Who knows why the Mantis would venture so close to a sun. Perhaps it makes for more of a challenge? [ Mts SF DR w/Solar-flare ]</text>
 	<ship load="MANTIS_FIGHT" hostile="true"/>
 	<environment type="sun"/>
 </event>
@@ -108,7 +108,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="teleporter">
-		<text>(Teleporter) Quickly teleport additional crew and check for survivors.[ More .. ]</text>
+		<text>(Teleporter) Quickly teleport additional crew and check for survivors. [ More ... ]</text>
 		<event>
 			<text>You find KazaaakplethKilik slumped in a corner dying.</text>
 			<choice hidden="true">
@@ -119,7 +119,7 @@
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Listen to what he has to say. [ HStd, HScrapWeapon Quest ]</text>
+				<text>Listen to what he has to say. [ HStd, MantisThiefStash Quest ]</text>
 				<event>
 					<text>In his dying moments he gives up the location of his secret stash. You strip the ship wondering what other secrets went with him to the grave.</text>
 					<quest event="MANTIS_NAMED_THIEF_STASH"/>
@@ -163,7 +163,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="sensors" lvl="3">
-		<text>(Sensors) Quickly scan their ship for survivors.</text>
+		<text>(Sensors) Quickly scan their ship for survivors. [ More ... ]</text>
 		<event>
 			<text>You detect KazaaakplethKilik slumped in a corner dying.</text>
 			<choice hidden="true">
