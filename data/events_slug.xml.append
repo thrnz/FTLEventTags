@@ -467,7 +467,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="hacking"> <!-- CHANGED - added -->
-		<text>(Hacking System) Counter the remote hacking. [ Slg SF Hacking@0, K: Mstd, CK: HStd ]</text>
+		<text>(Hacking System) Counter the remote hacking. [ Slg SF Hacking@0, K: MStd, CK: HStd ]</text>
 		<event>
 			<text>Your hacking system automatically counters the digital assault and you move in to fight the ship.</text>
 			<ship hostile="true"/>

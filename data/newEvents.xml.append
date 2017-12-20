@@ -176,7 +176,7 @@
 	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
 	<environment type="nebula"/>
 	<choice>
-		<text>Hail them. [ Resource Trade | Slg SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | Prt SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_SLUG"/>
 	</choice>
 	<choice>
@@ -187,7 +187,7 @@
 <eventList name="REFUGEE_HAIL_LIST_SLUG">
 	<event load="REFUGEE_TRADER"/>
 	<event>
-		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait! [ Slg SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>As you hail the refugee ship, a pirate ship jumps into the system... it was using the refugee ship as bait! [ Prt SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<ship load="PIRATE_REFUGEE" hostile="true"/>
 	</event>
 </eventList>
