@@ -8,7 +8,7 @@ This mod is useful for players wanting to learn the possible results of ingame e
 
 ## Notes
  * Mostly complete. Would like to complete a double check of all tags before release.
- * Works with FTL v1.5.13
+ * Works with FTL v1.5.13. For FTL v1.6 and later, use [this](https://github.com/thrnz/FTLEventTags1.6).
 
 ## To-do
  * Re-do screenshots.
