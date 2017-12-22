@@ -18,7 +18,7 @@
 	<distressBeacon/>
 	<ship load="LANIUS_CIVILIAN" hostile="false"/>
 	<choice hidden="true">
-		<text>Fight the Lanius ship. [ Lns SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
+		<text>Fight the Lanius ship. [ Lns SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 		<event>
 			<text>You move in to intercept the ship. Detecting a greater threat, the Lanius prepare to fight.</text>
 			<ship hostile="true"/>
@@ -31,7 +31,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="anaerobic">
-		<text>(Lanius Crew) Have your crew admonish their captain. [ Straight to Double | Lns SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
+		<text>(Lanius Crew) Have your crew admonish their captain. [ Straight to Double | Lns SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 		<event load="LANIUS_DISTRESS_FIGHT_LANIUS"/>
 	</choice>
 </event>
@@ -383,7 +383,7 @@
 	<text load="LANIUS_CIVILIAN_TEXT"/>
 	<ship load="LANIUS_CIVILIAN" hostile="false"/>
 	<choice hidden="true">
-		<text>Attack the Lanius ship. [ Lns SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
+		<text>Attack the Lanius ship. [ Lns SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 		<event>
 			<text>You charge your weapons, which quickly gets the Lanius ship's attention.</text>
 			<ship hostile="true"/>
@@ -611,7 +611,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Power weapons to attack. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 | More... | ]</text>
+		<text>Power weapons to attack. [ Lns SF DLR; S: 0.2, 3-4, RStuff; Esc: 0.2, 2-4 | More... ]</text>
 		<event load="LANIUS_DORMANT_WEAPONS"/>
 	</choice>
 	<choice hidden="true">

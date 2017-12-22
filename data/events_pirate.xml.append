@@ -28,7 +28,7 @@
 	<text load="PIRATE_CIVILIAN"/>
 	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
 	<choice>
-		<text>Aid the civilian ship. [ Prt SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
+		<text>Aid the civilian ship. [ Prt SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 		<event>
 			<text>You power up your weapons and engage the pirate ship.</text>
 			<ship load="PIRATE_CIVILIAN" hostile="true"/>

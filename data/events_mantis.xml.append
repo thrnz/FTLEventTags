@@ -46,7 +46,7 @@
 	<text load="MANTIS_CIVILIAN"/>
 	<ship load="MANTIS_CIVILIAN" hostile="false"/>
 	<choice hidden="true">
-		<text>Aid the civilian ship. [ Mts SF K: MStd, CK: MStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
+		<text>Aid the civilian ship. [ Mts SF K: MStd, CK: MStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 		<event>
 			<text>You frown, power up the weapons and prepare to engage the Mantis ship. Not today.</text>
 			<ship hostile="true"/>

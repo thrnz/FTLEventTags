@@ -184,7 +184,7 @@
 	<title>Heavy Laser Mark I</title>
 	<short>Heavy Laser I</short>
 	<tip>tip_laser</tip>
-	<desc>Heavy lasers can wreak more havoc than their smaller, burst laser counterparts. 30% fire/breach chance</desc>
+	<desc>Heavy lasers can wreak more havoc than their smaller, burst laser counterparts. 30% fire/breach chance. 20% stun chance.</desc>
 	<tooltip>Fires 1 shot, causes 2 damage with low chance of fire and breaching.</tooltip>
 	<damage>2</damage>
 	<shots>1</shots>
@@ -223,7 +223,7 @@
 	<title>Heavy Laser Mark II</title>
 	<short>Heavy Laser II</short>
 	<tip>tip_laser</tip>
-	<desc>This heavy laser fires two shots in quick succession, each dealing 2 damage. %30 fire/breach chance</desc>
+	<desc>This heavy laser fires two shots in quick succession, each dealing 2 damage. %30 fire/breach chance. 20% stun chance.</desc>
 	<tooltip>Fires 2 heavy lasers, 2 damage each with low chance of fire and breaching.</tooltip>
 	<damage>2</damage>
 	<shots>2</shots>
@@ -635,7 +635,7 @@
 	<title>Hull Missile</title>
 	<short>Hull Mi.</short>
 	<tip>tip_hull</tip>
-	<desc>High hull damage plus a decent breach chance. 10% fire chance; 30% breach chance</desc>
+	<desc>High hull damage plus a decent breach chance. 10% fire chance; 30% breach chance; 10% stun chance.</desc>
 	<tooltip>Fires 1 missile; 2 damage; 2x damage in systemless rooms</tooltip>
 	<!--<desc>Power Req: 2  Fires a missile that deals 2 damage to rooms with a system or subsystem and double damage to rooms without either.</desc>-->
 	<damage>2</damage>

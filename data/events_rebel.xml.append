@@ -46,7 +46,7 @@
 <event name="AUTO_CIVILIAN" unique="false">
 	<text>You come across a Rebel automated scout ship pursuing a civilian ship, weapons engaged.</text>
 	<choice>
-		<text>Aid the civilian ship. [ Auto SF K: LStd, CK: MStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
+		<text>Aid the civilian ship. [ Auto SF K: LStd, CK: MStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 		<event>
 			<text>You power up your weapons and engage the automated ship.</text>
 			<ship load="REBEL_AUTO_CIVILIAN" hostile="true"/>
@@ -196,7 +196,7 @@
 		</event>
 	</choice>
 	<choice req="sensors" lvl="3" hidden="true">
-		<text>(Sensors) Remotely scan the ship. [ LStd | More... ]</text>
+		<text>(Sensors) Remotely scan the ship. [ Map, LStd | More... ]</text>
 		<event load="BROKEN_REBEL_DRONE_SENSORS"/>
 	</choice>
 </event>

@@ -159,7 +159,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Attack the Crystalline ship. [ Cry SF DR ]</text>
+		<text>Attack the Crystalline ship. [ Fleet+, Cry SF DR ]</text>
 		<event>
 			<text>You move in to intercept the Crystalline ship. As soon as the Rebel scans your ship it takes the opportunity to jump. You have the sneaking suspicion they will inform the fleet of your position, but that's the least of your current concerns.</text>
 			<modifyPursuit amount="1"/>
@@ -275,7 +275,7 @@
 <event name="CRYSTAL_HUMAN_TESTS" unique="true">
 	<text>You arrive near what appears to be a Crystalline research facility. A scientist quickly messages you, "Ah! You're those aliens! Please, I've heard so much about you and I'm really curious about your physiology! Would you let us run a few simple tests?"</text>
 	<choice hidden="true">
-		<text>Allow them to run tests on a crewmember. [ Crew- (CB+) | LScrapWeapon | MStuff | LScrapDrone ]</text>
+		<text>Allow them to run tests on a crewmember. [ Crew- (CB+), LScrapWeapon | MStuff | LScrapDrone ]</text>
 		<event load="CRYSTAL_HUMAN_TESTS_ACCEPT"/>
 	</choice>
 	<choice hidden="true">

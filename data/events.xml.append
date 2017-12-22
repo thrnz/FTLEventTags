@@ -1,7 +1,7 @@
 <event name="ASTEROID_EXPLORE" unique="true">
 	<text>Scans reveal a large asteroid field nearby. Short-range scanners may discover useful materials while we wait for the FTL to recharge.</text>
 	<choice hidden="true">
-		<text>Explore the asteroid field. [ Nil | HScrapFuel | MScrapMiss | MScrapDrones | -5 Hull | Prt SF DR w/Asteroids; Esc: 0.5, 2-4; S: 0.5, 3-4 ]</text>
+		<text>Explore the asteroid field. [ Nil | HFuel | MScrapMiss | MScrapDrones | -5 Hull | Prt SF DR w/Asteroids; Esc: 0.5, 2-4; S: 0.5, 3-4 ]</text>
 		<event load="ASTEROID_EXPLORE_RESULTS"/>
 	</choice>
 	<choice>	
@@ -260,7 +260,7 @@
 	<text load="REBEL_VS_FEDERATION"/>
 	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
 	<choice>
-		<text>Aid the Federation ship. [ Rbl SF K: MStd; CK: MStd; DB: [ Hidden Federation Base Quest | MStd | Crew+ w/BOs ]</text>
+		<text>Aid the Federation ship. [ Rbl SF K: MStd; CK: MStd; DB: [ Hidden Federation Base Quest | MStd | LStd, Crew+, BOs for more ]</text>
 		<event>
 			<text>You power up your weapons and engage the Rebel ship.</text>
 			<ship load="REBEL_VS_FEDERATION" hostile="true"/>
@@ -542,7 +542,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="medbay" lvl="2">
-		<text>(Adv. Medbay) Use your Medbay to help synthesize a cure. [ MStuff | HScrapWeapon w/MedBots BO ]</text>
+		<text>(Adv. Medbay) Use your Medbay to help synthesize a cure. [ MStuff or HScrapWeapon w/MedBots BO ]</text>
 		<event>
 			<text>Your military-grade medical computers are easily able to isolate the cause of the virus, a previously unknown spore that was unearthed during excavations. You are quickly able to inform the colony's leaders of your success in reverse engineering a cure.</text>
 			<choice hidden="true">
@@ -696,7 +696,7 @@
 			</event>
 		</choice>
 		<choice hidden="true" req="weapons" lvl="6"> 
-			<text>(Weapons) Remain silent but power up your weapons. [ +55-70 Scrap, +2 Fuel, -5 Drones ]</text>
+			<text>(Weapons) Remain silent but power up your weapons. [ +55-70 Scrap, +2-5 Fuel, -5 Drones ]</text>
 			<event>
 				<text>"You make a good point. You traveled all the way out here to fulfill our request, despite what must have been... a difficult scenario to cause such a delay. Here, we'll even tip you for the inconvenience you must have gone through..."</text>
 				<item_modify>
@@ -1099,7 +1099,7 @@
 <event name="ZOLTAN_CREW_STUDY">
 	<text>You arrive at a Zoltan research facility. They say they are researching genetic distortion due to stasis sleep and prolonged FTL travel. They ask if your crew has the time to undergo a few scans.</text>
 	<choice hidden="true">
-		<text>Participate in their study. [ x2 LScrap | 2 Boarders, Prt SF K: MStd, CK: HStd, DB: LStuff ]</text>
+		<text>Participate in their study. [ x2 LScrap | 2 Boarders, Prt SF K: MStd, CK: HStd, DB: LStuff, Drone ]</text>
 		<event load="ZOLTAN_CREW_STUDY_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -1170,7 +1170,7 @@
 <event name="DONOR_PLAGUE" unique="true">
 	<text>You arrive near a damaged and dilapidated space station. It appears to be abandoned but you detect faint life signatures on board.</text>
 	<choice hidden="true">
-		<text>Board the station and look for survivors. [ LScrap | LScrap, HumanCrew+ | LScrap, Crew- (CB-), LVL 2 Medbay will revive) ]</text>
+		<text>Board the station and look for survivors. [ LScrap | LScrap, HumanCrew+ | LScrap, Crew- (CB-), Lvl 2 Medbay will revive ]</text>
 		<event load="DONOR_PLAGUE_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -1404,11 +1404,11 @@
 
 <eventList name="FEDERATION_BASE_ASSIST">
 	<event>
-		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ LScrapWeapon, Crew+ | HStd, +7 Hull ] ]</text>
+		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ LScrapWeapon, Crew+ | HStd, +7 Hull, Crew+ ] ]</text>
 		<ship load="AUTO_FEDERATION_BASE" hostile="true"/>
 	</event>
 	<event>
-		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ LScrapWeapon, Crew+ | HStd, +7 Hull ] ]</text>
+		<text>You arrive in the sector to see a small outpost being bombarded by an automated drone. This must be the Federation base you were told about! [ Auto SF K: LStd, DB: [ LScrapWeapon, Crew+ | HStd, +7 Hull, Crew+ ] ]</text>
 		<ship load="AUTO_FEDERATION_BASE2" hostile="true"/>
 	</event>
 </eventList>

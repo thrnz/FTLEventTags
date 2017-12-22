@@ -70,7 +70,7 @@
 		<event>
 			<text>You tap into their frequency and hear the Rebel captain yelling, "We are liberating this planet in the name of the new Galactic government! These aliens will not be left in ignorance where they cannot be of use!"</text>
 			<choice hidden="true">
-				<text>Interfere - make first contact with the primitive aliens. [ Ztn SF K: LStd, CK: RStd ]</text>
+				<text>Interfere - make first contact with the primitive aliens. [ Fleet+, Ztn SF K: LStd, CK: RStd ]</text>
 				<event>
 					<text>The local people - furry, one-eyed tree lizard things - begin chanting when they see you. Suddenly the sky is lit by laser fire - the Zoltan opened fire on your ship! You dash back to the shuttle and join the fight.</text>
 					<ship load="ZOLTAN_PRIMITIVES_ZOLTAN" hostile="true"/>
