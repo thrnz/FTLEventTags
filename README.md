@@ -7,7 +7,6 @@ This mod tags dialogue to show the possible outcomes of various ingame choices a
 This mod is useful for players wanting to learn the possible results of ingame events. It is also useful for players wanting to play optimally without having to refer to the wiki or XML diving.
 
 ## Notes
- * Mostly complete. Would like to complete a double check of all tags before release.
  * Works with FTL v1.5.13. For FTL v1.6 and later, use [this](https://github.com/thrnz/FTLEventTags1.6).
 
 ## To-do
