@@ -401,7 +401,7 @@
 	<text load="LANIUS_PIRATE_CIVILIAN_TEXT"/>
 	<ship load="PIRATE_CIVILIAN_LANIUS" hostile="false"/>
 	<choice hidden="true">
-		<text>Attack the pirate. [ Prt SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull ] ]</text>
+		<text>Attack the pirate. [ Prt SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 		<event>
 			<text>You charge your weapons, which quickly gets the pirate ship's attention.</text>
 			<ship hostile="true"/>
@@ -476,7 +476,7 @@
 	<text>You come across a Lanius ship in the process of absorbing a Rebel automated scout. If you scare off the Lanius you could probably make use of it.</text>
 	<ship load="LANIUS_AUTO_REBEL" hostile="false"/>
 	<choice hidden="true">
-		<text>Fight the ship. [ Lns SF; Esc: 0.2, 2-4; K: MStd; CK: HStd; DB: [ LScrap, Map | LScrap, Fleet- ] ]</text>
+		<text>Fight the ship. [ Lns SF; K: MStd; CK: HStd; DB: [ LScrap, Map | LScrap, Fleet- ]; Esc: [ 0.2, 2-4, Same as DB ] ]</text>
 		<event>
 			<text>You power up your weapons, which quickly gets the attention of the ship.</text>
 			<ship hostile="true"/>
@@ -677,15 +677,15 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Dock with the platform. [ BlastDoors BO +5 Fuel | [ Breach, 1 Boarder, Lns SF K: MStd, CK: MStd, DB: +3-5 Fuel | -3 Hull, Lns SF K: MStd, CK: MStd, DB: +3-5 Fuel ] | 3-5 Fuel BO for more ]</text>
+		<text>Dock with the platform. [ Lvl2 Doors BO +5 Fuel or [ Breach, 1 Boarder, Lns SF K: MStd, CK: MStd, DB: +3-5 Fuel | -3 Hull, Lns SF K: MStd, CK: MStd, DB: +3-5 Fuel ] | 3-5 Fuel BO for more ]</text>
 		<event>
 			<text>Your ship enters one of the refueling station berths, grateful for a rest.</text>
 			<choice hidden="true">
-				<text>Signal for a refuel.</text>
+				<text>Signal for a refuel. [ Breach, 1 Lns Boarder, Lns SF K: MStd, CK: MStd, DB: +3-5 Fuel | -3 Hull, Lns SF K: MStd, CK: MStd, DB: +3-5 Fuel | 3-5 Fuel BO for more ]</text>
 				<event load="LANIUS_FUELING_STATION_LIST"/>
 			</choice>
 			<choice req="doors" lvl="2" hidden="true">
-				<text>[Blast Doors] Secure your blast doors - best to be safe when docked.</text>
+				<text>[Blast Doors] Secure your blast doors - best to be safe when docked. [ +5 Fuel ]</text>
 				<event>
 					<text>Your reinforced doors save you from an attempted ambush by the Lanius, who cluster around the doors and hull, attempting to consume your ship. Coldly, you wipe them out one by one with your weapon array, then take control of the station and take its fuel reserves.</text>
 					<item_modify>

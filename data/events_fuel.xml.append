@@ -44,7 +44,7 @@
 <event name="FUEL_EXPLORE">
 	<text>Although your lack of fuel cells prevents your ship from jumping, you can still use your impulse engines. Will you spend some time exploring the nearby system?</text>
 	<choice hidden="true">
-		<text>Explore the nearby area. [ 5 Fuel for 20 Scrap | 2 Fuel for 10 Scrap | 1 Fuel for 5 Scrap | Nil | Auto SF K: MScrapFuel | [ [ Nil | HScrapFuel | MScrapMiss | MScrapDrones | -5 Hull | SF DR ] ] ]</text>
+		<text>Explore the nearby area. [ Fuel for Scrap Trades | Nil | Auto SF K: MScrapFuel | [ Nil | HFuel | MScrapMiss | MScrapDrones | -5 Hull | Prt SF DR ] ]</text>
 		<event load="FUEL_EXPLORE_LIST"/>  
 	</choice>
 	<choice>
@@ -56,11 +56,11 @@
 <event name="FUEL_APPROACH">
 	<text>A ship approaches. They hail you saying, "You need some fuel? We'll prepare to dock to help."</text>
 	<choice hidden="true">
-		<text>Graciously accept their offer. [ 2-6 Fuel | Various Fuel Trades | 2-3 Boarders, Prt SF DR | Prt SF DR ]</text>
+		<text>Graciously accept their offer. [ 2-6 Fuel | Various Fuel Trades | 2-3 Human Boarders, Prt SF DR | Prt SF DR ]</text>
 		<event load="FUEL_APPROACH_ACCEPT_LIST"/>
 	</choice>
 	<choice hidden="true">
-		<text>Request that they keep their distance. [ 1-4 Fuel | Nil | SF DR ]</text>
+		<text>Request that they keep their distance. [ 1-4 Fuel | Nil | Prt SF DR ]</text>
 		<event load="FUEL_APPROACH_DECLINE_LIST"/>
 	</choice>  
 	<choice hidden="true" req="sensors" lvl="3">
@@ -99,7 +99,7 @@
 		<boarders min="2" max="3" class="human"/>
 	</event>
 	<event>
-		<text>As they approach, you detect their weapons powering up. It seems their intentions are hostile! [ Prt SF DR ]</text>
+		<text>As they approach, you detect their weapons powering up. It seems their intentions are hostile! [ Prt SF DR S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<ship load="PIRATE" hostile="true"/>
 	</event>
 </eventList>
@@ -116,7 +116,7 @@
 		<text>"No one trusts anyone these days..." The ship jumps away.</text>
 	</event>
 	<event>
-		<text>They reply,"Keep our distance? Let's see if you can stop us!" They power up their weapons and advance. [ Prt SF DR ]</text>
+		<text>They reply,"Keep our distance? Let's see if you can stop us!" They power up their weapons and advance. [ Prt SF DR Esc: 30-30, 80s ]</text>
 		<ship load="PIRATE_FUEL" hostile="true"/>
 	</event>
 </eventList>
@@ -131,7 +131,7 @@
 	<event>
 		<text>Sensors are picking up armed crew and considerably more weaponry than is legal for a craft of this size. This is surely a trap.</text>
 		<choice>
-			<text>Power up weapons and prepare for a fight. [ Prt SF DR ]</text>
+			<text>Power up weapons and prepare for a fight. [ Prt SF DR Esc: 30-30, 80s ]</text>
 			<event>
 				<ship load="PIRATE_FUEL" hostile="true"/>
 			</event>

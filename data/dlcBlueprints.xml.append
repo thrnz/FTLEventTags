@@ -41,7 +41,7 @@
 	<title>Swarm Missiles</title>
 	<tip>tip_charge</tip>
 	<short>Swarm</short>
-	<desc>If given time to prepare, the 'Swarm' launcher can replicate multiple warheads. 10% fire chance; 10% breach chance</desc>
+	<desc>If given time to prepare, the 'Swarm' launcher can replicate multiple warheads. 10% fire chance. 10% breach chance.</desc>
 	<tooltip>Charges up to 3 shield-piercing missiles. However it always uses only one missile resource</tooltip>
 	<radius>31</radius>  <!-- was 34-->
 	<missiles>1</missiles>

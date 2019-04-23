@@ -92,7 +92,7 @@
 		<ship load="PIRATE_REFUGEE" hostile="true"/>
 	</event>
 	<event>
-		<text>As you hail the refugee ship, a Slug ship jumps into the system... it was hunting the refugee ship for sport and now they've found you instead! [ Slg SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>As you hail the refugee ship, a Slug ship jumps into the system... it was hunting the refugee ship for sport and now they've found you instead! [ Prt SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<ship load="SLUG_REFUGEE" hostile="true"/>
 	</event>
 </eventList>
@@ -163,7 +163,7 @@
 <event name="REFUGEE_DISTRESS_SLUG">
 	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
 	<choice>
-		<text>Hail them. [ Resource Trade | Slg SF K: MStd, CK: HStd, DB: LStd ]</text>
+		<text>Hail them. [ Resource Trade | Prt SF K: MStd, CK: HStd, DB: LStd ]</text>
 		<event load="REFUGEE_HAIL_LIST_SLUG"/>
 	</choice>
 	<choice>

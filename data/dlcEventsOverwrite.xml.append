@@ -9,7 +9,7 @@
 	</event>
 	<!-- the new ones-->
 	<event> 
-		<text>You arrive in the sector to see the Federation outpost under fire from multiple Rebel ships. However, as you approach they get their Anti-Ship Battery online and disable two of the smaller ships. You swoop in to assist, taking down the wing leader. [ Friendly ASB, Rbl SF K: LStd, CK: MStd, DB: [ Crew+, MScrap ] ]</text>
+		<text>You arrive in the sector to see the Federation outpost under fire from multiple Rebel ships. However, as you approach they get their Anti-Ship Battery online and disable two of the smaller ships. You swoop in to assist, taking down the wing leader. [ Friendly ASB, Rbl SF K: LStd, CK: MStd, DB: [ Crew+, MScrap ], Esc: [ 0.8, 4-6, Same as DB ] ]</text>
 		<ship load="REBEL_FEDERATION_PDS" hostile="true"/>
 		<environment type="PDS" target="enemy"/>
 	</event>

@@ -223,7 +223,7 @@
 	<title>Heavy Laser Mark II</title>
 	<short>Heavy Laser II</short>
 	<tip>tip_laser</tip>
-	<desc>This heavy laser fires two shots in quick succession, each dealing 2 damage. %30 fire/breach chance. 20% stun chance.</desc>
+	<desc>This heavy laser fires two shots in quick succession, each dealing 2 damage. 30% fire/breach chance. 20% stun chance.</desc>
 	<tooltip>Fires 2 heavy lasers, 2 damage each with low chance of fire and breaching.</tooltip>
 	<damage>2</damage>
 	<shots>2</shots>
@@ -379,7 +379,7 @@
 	<tip>tip_missiles</tip>
 	<title>Hermes Missile</title>
 	<short>Hermes</short>
-	<desc>Standard but powerful missile. 30% fire chance; 20% breach chance; 10% stun chance</desc>
+	<desc>Standard but powerful missile. 30% fire chance. 20% breach chance. 10% stun chance.</desc>
 	<tooltip>Fires 1 missile; does 3 damage; pierces all shields</tooltip>
 	<!--<desc>Power Req: 2    Pierces through all shields and deals 3 damage with a chance of fire and breaches. Uses 1 missile per shot.</desc>-->
 	<damage>3</damage>
@@ -419,7 +419,7 @@
 	<tip>tip_missiles</tip>
 	<title>Pegasus Missile</title>
 	<short>Pegasus</short>
-	<desc>Creative missile design allows for two projectiles for the cost of one! 30% fire chance; 20% breach chance; 10% stun chance</desc>
+	<desc>Creative missile design allows for two projectiles for the cost of one! 30% fire chance. 20% breach chance. 10% stun chance.</desc>
 	<tooltip>Fires 2 missiles; 2 damage each; pierces all shields</tooltip>
 	<!--<desc>Power Req: 3    Fires 2 missiles that pierces through all shields and deals 2 damage. Consumes 2 missile per shot.</desc>-->
 	<damage>2</damage>
@@ -460,7 +460,7 @@
 	<tip>tip_missiles</tip>
 	<title>Breach Missiles</title>
 	<short>Breach</short>
-	<desc>These missiles are designed to cause maximum destruction to ship hull armor. 30% fire chance; 10% stun chance</desc>
+	<desc>These missiles are designed to cause maximum destruction to ship hull armor. 80% breach chance. 30% fire chance. 10% stun chance.</desc>
 	<tooltip>Fires 1 missile; 4 damage; pierces all shields; 80% breach chance</tooltip>
 	<!--<desc>Power Req: 3    Fires a single shot, heavy missile that does 4 damage and causes breaches in the target's hull.</desc>-->
 	<damage>4</damage>
@@ -592,7 +592,7 @@
 	<title>Hull Smasher Laser Mark II</title>
 	<short>Hull Laser II</short>
 	<tip>tip_hull</tip>
-	<desc>This powerful counterpart to the Hull Smasher Mark I fires more projectiles per shot. 10% fire chance; 30% breach chance</desc>
+	<desc>This powerful counterpart to the Hull Smasher Mark I fires more projectiles per shot. 10% fire chance. 30% breach chance.</desc>
 	<tooltip>Fires 3 lasers, 1 damage each and 2x damage in systemless rooms</tooltip>
 	<!--<desc>Power Req: 3  Fires 3 shots that deal 1 damage to rooms with a system or subsystem and double damage to rooms without either.</desc>-->
 	<damage>1</damage>
@@ -635,7 +635,7 @@
 	<title>Hull Missile</title>
 	<short>Hull Mi.</short>
 	<tip>tip_hull</tip>
-	<desc>High hull damage plus a decent breach chance. 10% fire chance; 30% breach chance; 10% stun chance.</desc>
+	<desc>High hull damage plus a decent breach chance. 10% fire chance. 30% breach chance. 10% stun chance.</desc>
 	<tooltip>Fires 1 missile; 2 damage; 2x damage in systemless rooms</tooltip>
 	<!--<desc>Power Req: 2  Fires a missile that deals 2 damage to rooms with a system or subsystem and double damage to rooms without either.</desc>-->
 	<damage>2</damage>
@@ -811,7 +811,7 @@
 	<title>Crystal Burst Mark I</title>
 	<short>Crystal B. I</short>
 	<tip>tip_crystal</tip>
-	<desc>Modified projectile weapon that fires 2 shield piercing crystals. 10% breach chance; 10% stun chance</desc>
+	<desc>Modified projectile weapon that fires 2 shield piercing crystals. 10% breach chance. 10% stun chance.</desc>
 	<tooltip>Pierces 1 shield; fires 2 crystals that deal 1 damage each</tooltip>
 	<damage>1</damage>
 	<shots>2</shots>
@@ -851,7 +851,7 @@
 	<type>MISSILES</type>
 	<title>Crystal Burst Mark II</title>
 	<short>Crystal B. II</short>
-	<desc>Modified projectile weapon that fires 3 shield piercing crystals. 10% breach chance; 10% stun chance</desc>
+	<desc>Modified projectile weapon that fires 3 shield piercing crystals. 10% breach chance. 10% stun chance.</desc>
 	<tooltip>Pierces 1 shield; fires 3 crystals that deal 1 damage each</tooltip>
 	<damage>1</damage>
 	<tip>tip_crystal</tip>
@@ -893,7 +893,7 @@
 	<tip>tip_crystal</tip>
 	<title>Heavy Crystal Mark I</title>
 	<short>Crystal H. I</short>
-	<desc>Modified projectile weapon that fires a shield piercing large crystal. 10% breach chance; 20% stun chance</desc>
+	<desc>Modified projectile weapon that fires a shield piercing large crystal. 10% breach chance. 20% stun chance.</desc>
 	<tooltip>Pierces 1 shield; fires 1 crystal that deals 2 damage</tooltip>
 	<damage>2</damage>
 	<shots>1</shots>
@@ -934,7 +934,7 @@
 	<tip>tip_crystal</tip>
 	<title>Heavy Crystal Mark II</title>
 	<short>Crystal H. II</short>
-	<desc>Modified projectile weapon that fires a shield piercing large crystal. 100% breach chance; 20% stun chance</desc>
+	<desc>Modified projectile weapon that fires a shield piercing large crystal. 100% breach chance. 20% stun chance.</desc>
 	<tooltip>Pierces 1 shield; fires 1 crystal that deals 4 damage and causes a hull breach</tooltip>
 	<damage>4</damage>
 	<shots>1</shots>

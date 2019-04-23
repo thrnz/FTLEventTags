@@ -114,7 +114,7 @@
 
 
 <event name="DISTRESS_ENGI_REBEL" unique="true">
-	<text>The distress signal originates from a small Engi ship under attack by a rebel fighter - but when the Rebels see Federation markings they turn to attack! [ Rbl SF K: LStd, CK: MStd, DB: Random Buyables ]</text> 
+	<text>The distress signal originates from a small Engi ship under attack by a rebel fighter - but when the Rebels see Federation markings they turn to attack! [ Rbl SF K: LStd, CK: MStd, DB: Trade offers ]</text> 
 	<distressBeacon/>
 	<ship load="DISTRESS_ENGI_REBEL" hostile="true"/>
 </event>
@@ -323,7 +323,7 @@
 				</event>
 			</choice>
 			<choice req="engi" hidden="true">
-				<text>[Engi Crew] Have your Engi crewmember negotiate with the Engi ship. [ EngiCrew-, Eng SF K: MStd, CK: MStd, DB: EngiCrew+ w/Max Skills ]</text>
+				<text>[Engi Crew] Have your Engi crewmember negotiate with the Engi ship. [ EngiCrew-, Eng SF K: MStd; CK: MStd; DB: EngiCrew+ w/Max Skills ]</text>
 				<event>
 					<text>As the Engi attempts to contact the vessel and negotiate, your Engi crewmember suddenly dissolves into nanites - the virus has murdered again! Detecting activity on board your ship, the Engi vessel opens fire!</text>
 					<ship load="ENGI_VIRUS_SHIP_ALT" hostile="true"/>
@@ -345,7 +345,7 @@
 		<boarders min="1" max="2" class="mantis"/>
 	</event>
 	<event>
-		<text>You approach to find a Mantis ship assaulting a small Engi space station. You prepare for a fight! [ Mts SF K: MStd, CK: HStd, DB: [ Nil | MFuel | EngiCrew+, LStd | [ Option of Fuel/Weapon/Drone/Engi BO ] ] ]</text>
+		<text>You approach to find a Mantis ship assaulting a small Engi space station. You prepare for a fight! [ Mts SF K: MStd; CK: HStd; DB: [ Nil | MFuel | EngiCrew+, LStd | [ Option of Fuel/Weapon/Drone/Engi BO ] ] ]</text>
 		<ship load="MANTIS_ENGI_STATION" hostile="true"/>
 	</event>
 </eventList>

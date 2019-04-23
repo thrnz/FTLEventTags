@@ -57,7 +57,7 @@
 	<text>Scans show a remote settlement being blockaded by a pirate ship. The ship hastily messages you, "Stay out of this, or you'll be next!...Concentrate fire on..."</text>
 	<ship load="PIRATE_STATION_CROPS" hostile="false"/>
 	<choice hidden="true">
-		<text>Attack the pirate. [ Prt SF K: MStd; S: 0.5, 2-4, MStuff; Esc: 0.5, 3-4; CK: MStd; DB: LStuff, S: MStuff ]</text>
+		<text>Attack the pirate. [ Prt SF K: MStd; CK: MStd; DB: LStuff; S: 0.5, 2-4, MStuff; Esc: 0.5, 3-4; ]</text>
 		<event>
 			<text>"You asked for it!" They pull away from the planet and move in to engage.</text>
 			<ship hostile="true"/>
@@ -117,7 +117,7 @@
 <event name="PIRATE_CIVILIAN_BEACON">
 	<text>The distress beacon is coming from a civilian ship. It appears it is being chased by a pirate.</text>
 	<choice>
-		<text>Aid the civilian ship. [ Prt SF K: MStd; CK: HStd; DB: [ Crew+ | MStd | LStd | LWeap | +5 Hull ] ]</text>
+		<text>Aid the civilian ship. [ Prt SF K: MStd; CK: HStd; DB: [ Crew+ | MStd | LStd | LWeap | +5 Hull | Nil ] ]</text>
 		<event>
 			<text>You power up your weapons and engage the pirate ship.</text>
 			<ship load="PIRATE_CIVILIAN" hostile="true"/>
@@ -587,7 +587,7 @@
 	<img back="BG_DARK" planet="NONE"/>
 	<text>You jump into the middle of an asteroid field. Looking around, you find you are surrounded by dozens of wrecks of other ships. Faint wisps of light can be seen moving between wrecks. As you watch, they seem to be changing path and floating toward your ship!</text>
 	<choice>
-		<text>Prepare for a fight! [ 3-6 Boarders w/asteroids ]</text>
+		<text>Prepare for a fight! [ 3-6 Boarders w/Asteroids ]</text>
 			<event>
 			<boarders min="3" max="6" class="ghost"/>
 			<environment type="asteroid"/>
@@ -830,7 +830,7 @@
 
 <eventList name="QUEST_ESCORT_ARRIVE">
 	<event>
-		<text>You escort the ship to the requested beacon. Much to your dismay you are ambushed by a Rebel ship. You walked right into their trap! [ Rbl SF DR, S: 0.5, 2-3, RStuff;Esc: 0.5, 3-4 ]</text>
+		<text>You escort the ship to the requested beacon. Much to your dismay you are ambushed by a Rebel ship. You walked right into their trap! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		<ship load="REBEL" hostile="true"/>
 	</event>
 	<event>
@@ -869,7 +869,7 @@
 <event name="QUEST_STORE_RESCUE">
 	<text>Once you arrive at the beacon you detect a Rebel scout assaulting a compound on a nearby desolate moon.</text>
 	<choice>
-		<text>Engage the Rebel and rescue the space dock. [ Rbl SF K: MScrap, CK: MScrap, DB: [ +5 Hull, Store ] ]</text>
+		<text>Engage the Rebel and rescue the space dock. [ Rbl SF K: MScrap; CK: MScrap; DB: [ +5 Hull, Store ] ]</text>
 		<event>
 			<ship load="SQUAT_STORE_RESCUE" hostile="true"/>
 		</event>
@@ -902,7 +902,7 @@
 	<event>
 		<text>"Some of our friends have taken to piracy in the recent chaos of the war. We'd like you to "convince" them of their poor decision by severely damaging their ship. We'll pay you well as long as you don't kill them all."</text>
 		<choice>
-			<text>Accept. [ Prt SF S: MScrapWeapon, K: LStd, CK: LStd ]</text>
+			<text>Accept. [[ Prt SF S: MScrapWeapon; K: LStd; CK: LStd ]</text>
 			<event>
 				<text>"Just be sure not to blow them up!" they say nervously as they direct you to a nearby moon. You find the pirate ship docked there. They immediately respond to your appearance with, "Your money or your life!" They must be new to this. [ Prt SF S: MScrapWeapon, K: LStd, CK: LStd ]</text>
 				<ship load="SQUAT_PIRATE_MERCENARY" hostile="true"/>
@@ -1099,7 +1099,7 @@
 <event name="ZOLTAN_CREW_STUDY">
 	<text>You arrive at a Zoltan research facility. They say they are researching genetic distortion due to stasis sleep and prolonged FTL travel. They ask if your crew has the time to undergo a few scans.</text>
 	<choice hidden="true">
-		<text>Participate in their study. [ x2 LScrap | 2 Boarders, Prt SF K: MStd, CK: HStd, DB: LStuff, Drone ]</text>
+		<text>Participate in their study. [ x2 LScrap | 2 Boarders, Prt SF K: MStd; CK: HStd; DB: LStuff, Drone ]</text>
 		<event load="ZOLTAN_CREW_STUDY_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -1150,7 +1150,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="crystal">
-		<text>(Crystal Crew) Reactivate it.</text>
+		<text>(Crystal Crew) Reactivate it. [ +1 Fuel, Jump to Crystal Sector ]</text>
 		<event>
 			<text>Your Crystalline companion says, "It looks like we have found the abandoned link to the Crystal home worlds. I can reactivate it." He transmits some codes to the device and it immediately powers on.</text>
 			<item_modify>
@@ -1241,7 +1241,7 @@
 			<choice hidden="true">
 				<text>Decline. [ Slg SF K: MStd; CK: HStd; S: 0, 3-4, HScrapWeapon ]</text>
 				<event>
-					<text>"I sssee... However you have no choice in the matter!" They move in to attack.</text>
+					<text>"I sssee... However you have no choice in the matter!" They move in to attack. [ Slg SF K: MStd; CK: HStd; S: 0, 3-4, HScrapWeapon ]</text>
 					<ship hostile="true"/>
 				</event>
 			</choice>
@@ -1252,6 +1252,23 @@
 		</event>
 	</choice>
 </event>
+<eventList name="DONOR_BLACK_RAVEN_SLUG">
+	<event>
+		<text>Your Slug crewman's eyes glaze over as the two telepaths concentrate. You can only wonder what is happening. After a short time your comrade grunts in pain and collapses onto the floor, stunned. Nights responds, "Hah! It'll take more than that to defeat me! Let the real battle begin!" [ Slg SF 1-2 Boarders; K: MStd; CK: HStd; S: 0, 3-4, HScrapWeapon ]</text>
+		<ship hostile="true"/>
+		<boarders min="1" max="2" class="slug"/>
+	</event>
+	<event>
+		<text>Your Slug crewman's eyes glaze over as the two telepaths concentrate. You are powerless to help, but after a short time your comrade shakes off the daze and appears victorious.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event>
+				<text>His face contorted with pain, Nights concedes his defeat: "If this is the caliber of subordinatesss you keep, there iss no way we can defeat you. Take thisss and let us leave in shame."</text>
+				<autoReward level="HIGH">weapon</autoReward>
+			</event>
+		</choice>
+	</event>
+</eventList>
 
 <event name="DONOR_MANTIS_CHASE" unique="true">
 	<text>You are immediately hailed by an impressive looking Mantis ship, "Your ship would make a mighty fine prize. Prepare for battle!" [ Mts SF K: MStd, CK: HStd, Esc: 5-5, 5s, Mantis Chase Quest ]</text>
@@ -1521,7 +1538,7 @@
 		<modifyPursuit amount="1"/>
 	</event>
 	<event>
-		<text>Your new crew-member smiles, then reveals a small remote trigger in the palm of his hand. Explosions rocket around the ship as more intruders teleport aboard! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<text>Your new crew-member smiles, then reveals a small remote trigger in the palm of his hand. Explosions rocket around the ship as more intruders teleport aboard! [ 2 Human Boarders, -3 Hull, Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		<boarders min="2" max="2" class="human"/>
 		<damage amount="3"/>
 	</event>
@@ -1542,7 +1559,7 @@
 		<boarders min="1" max="1" class="human"/>
 		<removeCrew>
 			<clone>true</clone>
-			<text>The eviscerated crewmember's clone launches out of the clone bay, eager to seek revenge.</text>
+			<text>The eviscerated crewmember's clone launches out of the clone bay, eager to seek revenge. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 		</removeCrew>
 	</event>
 </eventList>

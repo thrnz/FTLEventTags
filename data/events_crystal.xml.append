@@ -112,35 +112,35 @@
 </event>
 
 <textList name="CRYSTAL_FIGHT">
-	<text>You arrive near a fleet of crystal ships, civilian or mercantile from the looks of them. You pause to scan one but they react immediately and send an escort to fight you off. Prepare to engage! [ Cry SF DR ]</text>
-	<text>You arrive at the Beacon and are immediately greeted by an automatic message or warning of some kind. The translator can't seem to discern its purpose but after a few short moments an alarm goes off and a hostile ship jumps in! [ Cry SF DR ]</text>
-	<text>You receive a message, "Hah. It looks like another worthless alien-filled craft. Prepare to meet your maker!" Weapon locks detected. [ Cry SF DR ]</text>
-	<text>A Crystalline ship messages you, "I've heard tales that our isolation has finally ended. As a warrior I must demand to test my skills against you!" Before you can respond they move in to attack. [ Cry SF DR ]</text>
-	<text>You arrive in a busy sector. At first no one pays any mind to your alien ship but soon you're registering a number of scan signatures. You get the feeling you're not wanted here just seconds before registering enemy weapon locks! [ Cry SF DR ]</text>
-	<text>You jump next to a node busy with traffic, but before long all nearby ships notice you and keep their distance, uncertain of your allegiance. After an awkward standoff, a military ship breaks away from the rest and charges you. [ Cry SF DR ]</text> 
-	<text>A barrage of rasps and clicks is broadcast over the comm; the universal translator understands little, but the words 'aliens', 'allowed' and 'no' come through quite clearly. You'll have to prove your right to be here in combat! [ Cry SF DR ]</text>
+	<text>You arrive near a fleet of crystal ships, civilian or mercantile from the looks of them. You pause to scan one but they react immediately and send an escort to fight you off. Prepare to engage! [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text>
+	<text>You arrive at the Beacon and are immediately greeted by an automatic message or warning of some kind. The translator can't seem to discern its purpose but after a few short moments an alarm goes off and a hostile ship jumps in! [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text>
+	<text>You receive a message, "Hah. It looks like another worthless alien-filled craft. Prepare to meet your maker!" Weapon locks detected. [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text>
+	<text>A Crystalline ship messages you, "I've heard tales that our isolation has finally ended. As a warrior I must demand to test my skills against you!" Before you can respond they move in to attack. [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text>
+	<text>You arrive in a busy sector. At first no one pays any mind to your alien ship but soon you're registering a number of scan signatures. You get the feeling you're not wanted here just seconds before registering enemy weapon locks! [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text>
+	<text>You jump next to a node busy with traffic, but before long all nearby ships notice you and keep their distance, uncertain of your allegiance. After an awkward standoff, a military ship breaks away from the rest and charges you. [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text> 
+	<text>A barrage of rasps and clicks is broadcast over the comm; the universal translator understands little, but the words 'aliens', 'allowed' and 'no' come through quite clearly. You'll have to prove your right to be here in combat! [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]/text>
 	
-	<text>You arrive near a fleet of crystal ships, civilian or mercantile from the looks of them. You pause to scan one but they react immediately and send an escort to fight you off. Prepare to engage! [ Cry SF DR ]</text>
-	<text>You arrive at the Beacon and are immediately greeted by an automatic message or warning of some kind. The translator can't seem to discern its purpose but after a few short moments an alarm goes off and a hostile ship jumps in! [ Cry SF DR ]</text>
-	<text>You receive a message, "Hah. It looks like another worthless alien-filled craft. Prepare to meet your maker!" Weapon locks detected. [ Cry SF DR ]</text>
-	<text>A Crystalline ship messages you, "I've heard tales that our isolation has finally ended. As a warrior I must demand to test my skills against you!" Before you can respond they move in to attack. [ Cry SF DR ]</text>
-	<text>You arrive in a busy sector. At first no one pays any mind to your alien ship but soon you're registering a number of scan signatures. You get the feeling you're not wanted here just seconds before registering enemy weapon locks! [ Cry SF DR ]</text>
-	<text>You jump next to a node busy with traffic, but before long all nearby ships notice you and keep their distance, uncertain of your allegiance. After an awkward standoff, a military ship breaks away from the rest and charges you. [ Cry SF DR ]</text> 
-	<text>A barrage of rasps and clicks is broadcast over the comm; the universal translator understands little, but the words 'aliens', 'allowed' and 'no' come through quite clearly. You'll have to prove your right to be here in combat! [ Cry SF DR ]</text>
+	<text>You arrive near a fleet of crystal ships, civilian or mercantile from the looks of them. You pause to scan one but they react immediately and send an escort to fight you off. Prepare to engage! [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text>
+	<text>You arrive at the Beacon and are immediately greeted by an automatic message or warning of some kind. The translator can't seem to discern its purpose but after a few short moments an alarm goes off and a hostile ship jumps in! [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text>
+	<text>You receive a message, "Hah. It looks like another worthless alien-filled craft. Prepare to meet your maker!" Weapon locks detected. [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text>
+	<text>A Crystalline ship messages you, "I've heard tales that our isolation has finally ended. As a warrior I must demand to test my skills against you!" Before you can respond they move in to attack. [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text>
+	<text>You arrive in a busy sector. At first no one pays any mind to your alien ship but soon you're registering a number of scan signatures. You get the feeling you're not wanted here just seconds before registering enemy weapon locks! [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text>
+	<text>You jump next to a node busy with traffic, but before long all nearby ships notice you and keep their distance, uncertain of your allegiance. After an awkward standoff, a military ship breaks away from the rest and charges you. [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]</text> 
+	<text>A barrage of rasps and clicks is broadcast over the comm; the universal translator understands little, but the words 'aliens', 'allowed' and 'no' come through quite clearly. You'll have to prove your right to be here in combat! [ Cry SF DR; S: 0.6, 3-4 [ x2 Nil | x4 RStuff | RStuff or CrystalCrew+ ] ]/text>
 </textList>
 
 <event name="CRYSTAL_CONVOY" unique="true">
-	<text>A large convoy of lumbering civilian ships appears to be passing through this region. You show no hostile intentions, but they are taking no chances, immediately sending their escort to attack! [ Cry SF K: MStd, CK: MStd, S: [ LScrapFuel, +8 Hull ] ]</text>
+	<text>A large convoy of lumbering civilian ships appears to be passing through this region. You show no hostile intentions, but they are taking no chances, immediately sending their escort to attack! [ Cry SF K: MStd, CK: MStd, S: 0, 3-4, [ LScrapFuel, +8 Hull ] ]</text>
 	<ship load="CRYSTAL_CONVOY" hostile="true"/>
 </event>
 
 <event name="CRYSTAL_HUNTER" unique="true">
-	<text>Crystal shards fly past your ship as soon as you jump. You scan to find the assailant and discover a Crystalline ship carrying a number of humans in its cargo bay. It must be hunting the intruding ships! [ Cry SF K: MStd, CK: MStd, S: HumanCrew+ ]</text>
+	<text>Crystal shards fly past your ship as soon as you jump. You scan to find the assailant and discover a Crystalline ship carrying a number of humans in its cargo bay. It must be hunting the intruding ships! [ Cry SF K: MStd; CK: MStd; S: 0.5, 3-4, HumanCrew+ ]</text>
 	<ship load="CRYSTAL_HUNTER" hostile="true"/>
 </event>
 
 <event name="CRYSTAL_REBEL" unique="false">
-	<text>As soon as you arrive, a Rebel ship jumps in after you; they must be really hot on your tail. [ Rbl SF DR ]</text>
+	<text>As soon as you arrive, a Rebel ship jumps in after you; they must be really hot on your tail. [ Rbl SF DR S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 	<ship load="REBEL" hostile="true"/>
 </event>
 
@@ -177,7 +177,7 @@
 <event name="CRYSTAL_MANTIS_CRYSTAL" unique="false">
 	<text>You discover a number of civilian ships fleeing the area. Shots are fired and you find the assailant; a Mantis ship is attacking one of the smaller ships!</text>
 	<choice hidden="true">
-		<text>Attack the Mantis. [ Mts SF K: MStd, CK: HStd, DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
+		<text>Attack the Mantis. [ Mts SF K: MStd; CK: HStd, DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
 		<event>
 			<text>You activate your impulse engines and fly between the Mantis and their prey, weapons charging. You appear to have their full attention.</text>
 			<ship load="MANTIS_CRYSTAL" hostile="true"/>
@@ -331,6 +331,22 @@
 		</event>
 	</choice>
 </event>
+<eventList name="CRYSTAL_CHATTY_LIST">
+	<event>
+		<text>You speak at length about nothing particularly interesting. "Wow, thanks. Oh look, another alien ship! I wonder if they're as nice as you." Seeing the Rebel decals you doubt they're friendly. They spot you and move in to attack, while the Crystalline civilian jumps away. [ Rbl SF DR S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>You speak at length about nothing particularly interesting. "Wow, thanks! I don't know if this is of any use to you, but we have some supplies we can offer you. Perhaps you can use them on your trip!"</text>
+		<autoReward level="RANDOM">stuff</autoReward>
+	</event>
+	<event>
+		<text>You speak at length about nothing particularly interesting. "Wow, thanks! Perhaps we can fix up a bit of your hull for sating my curiosity. We're pretty handy with repairs."</text>
+		<damage amount="-6"/>
+	</event>
+</eventList>
+
+
 
 <event name="CRYSTAL_REQUEST" unique="true">
 	<text>The moment you arrive you notice a Crystalline ship in the vicinity keeping its distance. They message you, "The 'Rebels' that are trying to hunt YOU down are creating havoc everywhere they go."</text>
@@ -443,7 +459,7 @@
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>"You have done as you promised and so shall I. The coordinates of my old ship have been forwarded to your navigation system." [ 2-3 Stores, 2 Items, 2 Empty, 6-10 Hostile, 1-2 Boarders, 12 Neutral ]</text>
+			<text>"You have done as you promised and so shall I. The coordinates of my old ship have been forwarded to your navigation system." [ 2-3 Stores, 2 Items, 2 Empty, 6-10 Hostile, 1-2 Boarders, 12 Neutral ] [ Crystal Unlock Quest ]</text>
 			<quest event="CRYSTAL_UNLOCK"/>
 		</event>
 	</choice>

@@ -329,3 +329,30 @@
 	<destroyed load="DESTROYED_DEFAULT"/>
 	<deadCrew load="DEAD_CREW_DEFAULT"/>
 </ship> 
+
+ER" auto_blueprint="SHIPS_CRYSTAL">
+	<surrender  chance="0.5" min="3" max="4">
+		<text>The hunters message you, "We surrender. Take one of these squishy meat sacks that we've captured." He must be referring to the human captives.</text>
+		<choice hidden="true">
+			<text>Accept their surrender. [ HumanCrew+ ]</text>
+			<event>
+				<text>They send one of their prisoners over to your ship. They're a bit shaken up and you suspect that they were once a Rebel, but they seem very glad to be free.</text>
+				<crewMember amount="1" class="human"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Finish them off. [ K: MStd; CK: MStd ]</text>
+			<event>
+				<text>Who knows how many humans will be saved if you kill them now.</text>
+			</event>
+		</choice>
+	</surrender>
+	<destroyed>
+		<text>The Crystalline ship shatters and you pick what you can from the debris. Who knows how many people you've saved by stopping this ship.</text>
+		<autoReward level="MED">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>The crew of the enemy ship has been eliminated. You scrap what you can. Who knows how many people you've saved by stopping this ship.</text>
+		<autoReward level="MED">standard</autoReward>
+	</deadCrew>
+</ship>
