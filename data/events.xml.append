@@ -57,7 +57,7 @@
 	<text>Scans show a remote settlement being blockaded by a pirate ship. The ship hastily messages you, "Stay out of this, or you'll be next!...Concentrate fire on..."</text>
 	<ship load="PIRATE_STATION_CROPS" hostile="false"/>
 	<choice hidden="true">
-		<text>Attack the pirate. [ Prt SF K: MStd; CK: MStd; DB: LStuff; S: 0.5, 2-4, MStuff; Esc: 0.5, 3-4; ]</text>
+		<text>Attack the pirate. [ Prt SF K: MStd; CK: MStd; DB: LStuff; S: 0.5, 2-4, MStuff; Esc: 0.5, 3-4 ]</text>
 		<event>
 			<text>"You asked for it!" They pull away from the planet and move in to engage.</text>
 			<ship hostile="true"/>
@@ -260,7 +260,7 @@
 	<text load="REBEL_VS_FEDERATION"/>
 	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
 	<choice>
-		<text>Aid the Federation ship. [ Rbl SF K: MStd; CK: MStd; DB: [ Hidden Federation Base Quest | MStd | LStd, Crew+, BOs for more ]</text>
+		<text>Aid the Federation ship. [ Rbl SF K: MStd; CK: MStd; DB: [ Hidden Federation Base Quest | MStd | LStd, Crew+, BOs for more ] ]</text>
 		<event>
 			<text>You power up your weapons and engage the Rebel ship.</text>
 			<ship load="REBEL_VS_FEDERATION" hostile="true"/>
@@ -1276,7 +1276,7 @@
 </event>
 <ship name="DONOR_MANTIS_CHASE1" auto_blueprint="MANTIS_FIGHTER">
 	<escape timer="5" min="5" max="5">
-		<text>You pick up more chatter from the enemy ship, "You know what... Forget this. Prepare for retreat!" Looks like they're preparing to make a hasty get away! [ K: MStd, CK: HStd, Esc: Mantis Chase Quest ]</text>
+		<text>You pick up more chatter from the enemy ship, "You know what... Forget this. Prepare for retreat!" Looks like they're preparing to make a hasty get away! [ K: MStd, CK: HStd, Esc: 5s, Mantis Chase Quest ]</text>
 	</escape>
 	<gotaway>
 		<text>The ship made an emergency FTL jump, but it looks like they didn't mask their signatures. You could easily follow them if you want.</text>
@@ -1380,7 +1380,7 @@
 		<event>
 			<text>A flushed and panicky rebel soldier has teleported aboard. The rebel, who appears unarmed, repeatedly declares his peaceful intentions. It seems the rebel life has lost its charm.</text>
 			<choice hidden="true">
-				<text>Accept his proposal, and prepare to fight the Rebel ship. [ -3 Hull, Fleet+, Rbl SF DR | 2 Human Boarders, -3 Hull, Rbl SF DR | x3 HumanCrew+ Rbl SF DR | 1 Human Boarder, Rbl SF DR, Crew- (CB+)</text>
+				<text>Accept his proposal, and prepare to fight the Rebel ship. [ -3 Hull, Fleet+, Rbl SF DR | 2 Human Boarders, -3 Hull, Rbl SF DR | x3 HumanCrew+ Rbl SF DR | 1 Human Boarder, Rbl SF DR, Crew- (CB+) ]</text>
 				<event load="ALISON_DEFECTOR_HELP"/>
 			</choice>
 			<choice>

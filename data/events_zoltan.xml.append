@@ -43,7 +43,7 @@
 		</event>
 	</choice>
 	<choice req="energy">
-		<text>(Zoltan Crew) Present his official documentation and pay the entry fee. [-10 Scrap, [ Store | Primitives Quest ] ]</text>
+		<text>(Zoltan Crew) Present his official documentation and pay the entry fee. [ -10 Scrap, [ Store | Primitives Quest ] ]</text>
 		<event>
 			<text>They scan ID that declares your crewmember an official citizen, collect their fee, and let you pass.</text>
 			<item_modify>
@@ -279,7 +279,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Submit to profiling. [ Nil | [ Crew- (CB-) or [ Ztn SF 2-4 Zoltan Boarders, Weapons@half, K: LStd, CK: MStd ] ]</text>
+		<text>Submit to profiling. [ Nil | [ Crew- (CB-) or [ Ztn SF 2-4 Zoltan Boarders, Weapons@half, K: LStd, CK: MStd ] ] ]</text>
 		<event load="ZOLTAN_CREW_SCAN_LIST"/>
 	</choice>
 	<choice hidden="true" req="slug">

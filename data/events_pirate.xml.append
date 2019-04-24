@@ -206,7 +206,7 @@
 		</event>
 	</choice>
 	<choice req="sensors" lvl="2" hidden="true">
-		<text>(Advanced Sensors) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | [ Prt SF DR or Nil ]</text>
+		<text>(Advanced Sensors) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | [ Prt SF DR or Nil ] ]</text>
 		<event load="FLOATING_CARGO_SCAN_LIST"/>
 	</choice>
 	<choice req="ADV_SCANNERS" hidden="true">

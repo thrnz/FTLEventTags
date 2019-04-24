@@ -5,7 +5,7 @@
 		<event load="CRYSTAL_CACHE_BREAK"/>
 	</choice>
 	<choice hidden="true" req="MISSILES_BREACH">
-		<text>(Breach Missiles) Use a Breach Missile. [ -1 Miss, [ LStuff, Crystal Weapon | LStuff, Crystal Weapon, 2-3 Crystal Boarders | [ Crew- (CB+) or [ -100 Fuel, Weapon, LStuff or BOs ] ] ]</text>
+		<text>(Breach Missiles) Use a Breach Missile. [ -1 Miss, [ LStuff, Crystal Weapon | LStuff, Crystal Weapon, 2-3 Crystal Boarders | [ Crew- (CB+) or [ -100 Fuel, Weapon, LStuff or BOs ] ] ] ]</text>
 		<event>
 			<text>Your Breach warheads dislodge and shatter a massive shard of crystal, leaving your away team enough space to climb down and take a look.</text>
 			<item_modify>
