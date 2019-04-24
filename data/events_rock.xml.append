@@ -208,7 +208,7 @@
 <event name="ROCK_QUEST_MARRIAGE_START" unique="true">
 	<text>A Rock captain hails you: "It is improper of me to contact off-worlders, but this is an emergency. We were on our way to deliver our passenger to her new husband - the Grand Basilisk of Numa V - when our engines broke down. Will you take possession of her and make haste to Numa V?"</text>
 	<choice hidden="true">
-		<text>Accept the passenger. [ Rock Marraige Quest ]</text>
+		<text>Accept the passenger. [ Rock Marriage Quest ]</text>
 		<event>
 			<text>"You surprise me, off-worlder. Thank you. The passenger will be with you momentarily." She refuses to enter the main hold and prefers to wait in the cargo bay. [ Rock Marraige Quest ]</text>
 			<quest event="ROCK_QUEST_MARRIAGE"/>

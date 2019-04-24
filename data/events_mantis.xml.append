@@ -119,7 +119,7 @@
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Listen to what he has to say. [ HStd, MantisThiefStash Quest ]</text>
+				<text>Listen to what he has to say. [ HStd, HScrapWeapon Quest ]</text>
 				<event>
 					<text>In his dying moments he gives up the location of his secret stash. You strip the ship wondering what other secrets went with him to the grave.</text>
 					<quest event="MANTIS_NAMED_THIEF_STASH"/>

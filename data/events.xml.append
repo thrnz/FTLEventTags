@@ -234,7 +234,7 @@
 	<distressBeacon/>
 	<ship load="CIVILIAN_SHIP" hostile="false"/>
 	<choice hidden="true">
-		<text>Lead them to their destination. [ LScrap, Ship Escort Quest ]</text>
+		<text>Lead them to their destination. [ LScrap, Quest: [ Rbl SF DR | HStd | +5 Hull, Store | Reactor+1 ] ]</text>
 		<event>
 			<text>"Take this bit of scrap as a down-payment. We'll use your jump signatures to follow you. You're really helping us out here."</text>
 			<quest event="QUEST_ESCORT_ARRIVE"/>
@@ -715,20 +715,20 @@
 		<text>You find the remains of the ship. It seems to have severe external damage, but you cannot pinpoint a cause. The majority of its cargo seems intact. You manage to discern the ship's intended destination.</text>
 		<autoReward level="MED">standard</autoReward>
 		<choice>
-			<text>Take the cargo and head to its original destination in search of a reward. [ MDrone Reward Quest ]</text>
+			<text>Take the cargo and head to its original destination in search of a reward. [ MScrapDrone Reward Quest ]</text>
 			<event>
 				<quest event="MERCHANT_INVESTIGATE_DELIVER"/>
 			</event>
 		</choice>
 		<choice hidden="true">
-			<text>Take the cargo for yourself. [ Weapon | HStd | MDrone Reward Quest ]</text>
+			<text>Take the cargo for yourself. [ Weapon | HStd | MScrapDrone Reward Quest ]</text>
 			<event load="MERCHANT_INVESTIGATE_CARGO_LIST"/>
 		</choice>
 	</event>
 	<event>
 		<text>You find a severely damaged ship floating among some debris. The crew hails you, "I can't believe that cheap bastard sent someone after us! I thought we would freeze to death. If you help us complete the delivery, we'll share the reward and join your crew."</text>
 		<choice hidden="true">
-			<text>Promise to deliver the cargo and ask if any would be interested in joining your crew. [ Crew+, MDrone Reward Quest ]</text>
+			<text>Promise to deliver the cargo and ask if any would be interested in joining your crew. [ Crew+, MScrapDrone Reward Quest ]</text>
 			<event>
 				<text>They upload the delivery destination once on board. One takes you up on your offer, the rest you drop off at a nearby station.</text>
 				<crewMember amount="1"/>
@@ -736,11 +736,11 @@
 			</event>
 		</choice>
 		<choice hidden="true">
-			<text>Take the cargo but drop them off at a nearby station. [ Weapon | HStd | MDrone Reward Quest ]</text>
+			<text>Take the cargo but drop them off at a nearby station. [ Weapon | HStd | MScrapDrone Reward Quest ]</text>
 			<event load="MERCHANT_INVESTIGATE_CARGO_LIST"/>
 		</choice>
 		<choice req="teleporter" hidden="true"> 
-			<text>(Teleporter) Beam the cargo aboard and leave them to their fate. [ Weapon | HStd | MDrone Reward Quest ]</text>
+			<text>(Teleporter) Beam the cargo aboard and leave them to their fate. [ Weapon | HStd | MScrapDrone Reward Quest ]</text>
 			<event load="MERCHANT_INVESTIGATE_CARGO_LIST"/>
 		</choice>
 	</event>
@@ -1189,7 +1189,7 @@
 		<event>
 			<text>You land a small shuttle in an enormous field, whose only occupants are small, brightly colored, six-legged, horse-like animals. Could they be what your scans picked up?</text>
 			<choice hidden="true">
-				<text>Try to communicate peacefully. [ EngiCrew+,  LStd | Nil ]</text>
+				<text>Try to communicate peacefully. [ EngiCrew+, LStd | Nil ]</text>
 				<event load="DONOR_PONY_PEACE"/>
 			</choice>
 			<choice hidden="true">
@@ -1310,7 +1310,7 @@
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-			<text>"Not YOU again! Do you know how much these repairs are going to cost me? Time to take out the big guns." [ Mts SF K: MStd Weapon; CK: HStd Weapon; S: 2-2, HWeap; Esc: 6-6, 12s, HStd ]</text>
+			<text>"Not YOU again! Do you know how much these repairs are going to cost me? Time to take out the big guns." [ Mts SF K: MStd Weapon; CK: HStd Weapon; S: 2-2, HScrapWeap; Esc: 6-6, 12s, HStd ]</text>
 		</event>
 	</choice>
 </event>
@@ -1326,7 +1326,7 @@
 	<surrender  min="2" max="2">
 		<text>"Look, you proved your point. We don't want to die... Take this and let us go. Please?"</text>
 		<choice>
-			<text>Let them live. [ HWeap ]</text>
+			<text>Let them live. [ HScrapWeap ]</text>
 			<event>
 				<text>"Thank you. But do you have any idea how much repairing TWO ships will set us back?..." What an odd Mantis. You prepare to leave.</text>
 				<autoReward level="HIGH">weapon</autoReward>
@@ -1403,7 +1403,7 @@
 	<event>
 		<text>He offers to lead you to a secret cache of scrap nearby if you let him join your crew.</text>
 		<choice>
-			<text>Reluctantly accept his proposal and fight the Rebel ship. [ -3 Hull, Rbl SF DR, Fleet+ | -3 Hull, 2 Human Boarders, Rbl SF DR | x3 HumanCrew+, Quest, Rbl SF DR | 1 HumanBoarder, Rbl SF DR, Crew- (CB+) ]</text>
+			<text>Reluctantly accept his proposal and fight the Rebel ship. [ -3 Hull, Rbl SF DR, Fleet+ | -3 Hull, 2 Human Boarders, Rbl SF DR | (Visible) x3 HumanCrew+, Defector Quest, Rbl SF DR | 1 HumanBoarder, Rbl SF DR, Crew- (CB+) ]</text>
 			<event load="ALISON_DEFECTOR_HELP_2"/>
 		</choice>
 		<choice>

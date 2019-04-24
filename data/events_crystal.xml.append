@@ -177,7 +177,7 @@
 <event name="CRYSTAL_MANTIS_CRYSTAL" unique="false">
 	<text>You discover a number of civilian ships fleeing the area. Shots are fired and you find the assailant; a Mantis ship is attacking one of the smaller ships!</text>
 	<choice hidden="true">
-		<text>Attack the Mantis. [ Mts SF K: MStd; CK: HStd, DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
+		<text>Attack the Mantis. [ Mts SF K: MStd; CK: HStd; DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
 		<event>
 			<text>You activate your impulse engines and fly between the Mantis and their prey, weapons charging. You appear to have their full attention.</text>
 			<ship load="MANTIS_CRYSTAL" hostile="true"/>
@@ -194,7 +194,7 @@
 <event name="CRYSTAL_PIRATE_CRYSTAL" unique="false">
 	<text>A pirate ship jumps in right after you arrive at the beacon. It must have followed once the Long-Range Beacon was reactivated. It almost charges a small Crystalline transport ship, weapons armed.</text>
 	<choice hidden="true">
-		<text>Attack the pirate. [ Prt SF K: MStd, CK, HStd, DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
+		<text>Attack the pirate. [ Prt SF K: MStd; CK: HStd; DB: [ x2 Nil | x2 RStuff | Crystal Weapon ] ]</text>
 		<event>
 			<text>You chase down the pirate before it has a chance to engage the civilian ship. When it detects the real threat, it turns to face you.</text>
 			<ship load="PIRATE_CRYSTAL" hostile="true"/>

@@ -791,3 +791,75 @@
 		<autoReward level="HIGH">scrap_only</autoReward>
 	</event>
 </eventList>
+
+
+<event name="SLUG_UNLOCK_1"> <!-- This is the quest after you decline the weapon -->
+	<text>You arrive to discover an impressive cruiser being worked on by a few smaller ships and guarded by an assault ship. The mobile construction platform is slowly slipping into the clouds. You have not yet been noticed.</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>Charge them before they escape. [ Slg SF K: HStd; CK: HStd ]</text>
+		<event>
+			<text>As you approach, the assault ship swoops in on an intercept trajectory. Prepare for a fight!</text>
+			<ship load="JELLY_UNLOCK2" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Try to tail them without being noticed. [ Slg SF K: HStd; CK: HStd or Nil or SlugCrew/Lvl2 Sensors BOs ]</text>
+		<event load="SLUG_UNLOCK_2"/>
+	</choice>
+		<!-- Changed this part to be easier
+			<text>It's not long before they detect your presence. The assault ship moves in to attack!</text>
+			<ship load="JELLY_UNLOCK2" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="cloaking" lvl="1">
+		<text>(Cloaking) Cloak and slip into the clouds.</text>
+		<event load="SLUG_UNLOCK_2"/>
+	</choice>
+	<choice hidden="true" req="pilot" lvl="2">
+		<text>(Advanced Piloting) Quickly maneuver into the clouds and stay out of their detection range.</text>
+		<event load="SLUG_UNLOCK_2"/>
+	</choice> -->
+</event>
+<event name="SLUG_UNLOCK_2">   <!-- if you use cloaking or piloting from SLUG_UNLOCK_1-->
+	<text>You slip into the nebula undetected but at this rate you are likely to get lost and lose track of them.</text>
+	<choice hidden="true">
+		<text>Fly slowly toward their last known position. [ Slg SF K: HStd; CK: HStd ]</text>
+		<event>
+			<text>You are advancing slowly when suddenly the assault ship bursts through the clouds. They must have been able to detect you with their telepathy!</text>
+			<ship load="JELLY_UNLOCK2" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Wait and hope the escort leaves. [ Nil ]</text>
+		<event>
+			<text>You wait for a time before attempting to advance toward the platform. However, after some frantic searching you can't tell if they left or you simply miscalculated your trajectory... You give up the search and prepare to leave.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="slug">
+		<text>(Slug Crew) Have your crewmember monitor their life signatures. [ Slg SF K: HStd, Slug Gel; CK: HStd, Slug Gel; Esc: 22-22, 35s ]</text>
+		<event>
+			<text>You try to stay just far enough away that they won't detect your life signatures without actively searching for you. After a time, your Slug tells you the ship with a larger crew has jumped away. He guides the helm toward the platform...</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>The only ship left near the cruiser is an interceptor. This should be easy! [ Slg SF K: HStd, Slug Gel; CK: HStd, Slug Gel; Esc: 22-22, 35s ]</text>
+					<ship load="JELLY_UNLOCK3" hostile="true"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="sensors" lvl="2">
+		<text>(Improved Sensors) Try to maintain a lock on their ships from a distance. [ Slg SF K: HStd, Slug Gel; CK: HStd, Slug Gel; Esc: 22-22, 35s ]</text>
+		<event>
+			<text>You overclock your sensors, trying to get them to function in the clouds. They work just enough to let you keep tabs on their general position. After a time, the assault ship and most of the escort jumps away from the platform. You take the opportunity and move in to attack.</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>The only ship left near the cruiser is an interceptor. This should be easy! [ Slg SF K: HStd, Slug Gel; CK: HStd, Slug Gel; Esc: 22-22, 35s ]</text>
+					<ship load="JELLY_UNLOCK3" hostile="true"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>

@@ -127,7 +127,7 @@
 		<event>
 			<text>They respond, "We haven't the foggiest idea how it works. They appear to meld part of their bodies into the metal and reshape it. They have been willing to demonstrate their ability if you have some extra metal that you would like converted into something.</text>
 			<choice hidden="true">
-				<text>Give 45 scrap to craft an augmentation.</text>  
+				<text>Give 45 scrap to craft an augmentation. [ -45 Scrap, Random DLC Augment ]</text>  
 				<event>
 					<text>You transfer over the scrap and watch the master craftsmen work. They easily reshape the metal into pieces they can use and then add various additional materials on their ship to construct the augmentation. You thank them and load it onto your ship.</text>
 					<item_modify>
@@ -137,7 +137,7 @@
 				</event>
 			</choice>	
 			<choice hidden="true">
-				<text>Give 50 scrap to craft a weapon.</text>
+				<text>Give 50 scrap to craft a weapon. [ -50 Scrap, Random DLC Weapon ]</text>
 				<event>
 					<text>You transfer over the scrap and watch the master craftsmen work. They easily reshape the metal into pieces they can use and then add various additional materials on their ship to construct the weapon. You thank them and load it onto your ship.</text>
 					<item_modify>
@@ -147,7 +147,7 @@
 				</event>
 			</choice>				
 			<choice hidden="true">
-				<text>Give 40 scrap to craft a drone schematic.</text>
+				<text>Give 40 scrap to craft a drone schematic. [ -40 Scrap, Random DLC Drone ]</text>
 				<event>
 					<text>You transfer over the scrap and watch the master craftsmen work. They easily reshape the metal into pieces they can use and then add various additional materials on their ship to construct the schematic. You thank them and load it onto your ship.</text>
 					<item_modify>
@@ -167,7 +167,7 @@
 				<event>
 					<text>Your crewmember offers to aid in the process to speed it along. They think it can be performed a bit more efficiently with the extra help and request less scrap.</text>
 					<choice hidden="true">
-						<text>Give 35 scrap to craft an augmentation.</text>  
+						<text>Give 35 scrap to craft an augmentation. [ -35 Scrap, Random DLC Augment ]</text>  
 						<event>
 							<text>You transfer over the scrap and watch the master craftsmen work. They easily reshape the metal into pieces they can use and then add various additional materials on their ship to construct the augmentation. You thank them and load it onto your ship.</text>
 							<item_modify>
@@ -177,7 +177,7 @@
 						</event>
 					</choice>	
 					<choice hidden="true">
-						<text>Give 40 scrap to craft a weapon.</text>
+						<text>Give 40 scrap to craft a weapon. [ -40 Scrap, Random DLC Weapon ]</text>
 						<event>
 							<text>You transfer over the scrap and watch the master craftsmen work. They easily reshape the metal into pieces they can use and then add various additional materials on their ship to construct the weapon. You thank them and load it onto your ship.</text>
 							<item_modify>
@@ -187,7 +187,7 @@
 						</event>
 					</choice>				
 					<choice hidden="true">
-						<text>Give 30 scrap to craft a drone schematic.</text>
+						<text>Give 30 scrap to craft a drone schematic. [ -30 Scrap, Random DLC Drone ]</text>
 						<event>
 							<text>You transfer over the scrap and watch the master craftsmen work. They easily reshape the metal into pieces they can use and then add various additional materials on their ship to construct the schematic. You thank them and load it onto your ship.</text>
 							<item_modify>
@@ -263,7 +263,7 @@
 		</event>
 	</choice>
 	<choice hidden="true" req="anaerobic">
-		<text>(Lanius Crew) Ask for an alternative trade. [ Better Deals ]</text>
+		<text>(Lanius Crew) Ask for an alternative trade. [ -3-7 fuel for 20-35 Scrap | -3-7 Missiles for 25-50 Scrap | -3-7 Drones for 25-50 Scrap ]</text>
 		<event>
 			<text>After a short discussion you do not understand, the trader comes back with a second proposal.</text>
 			<choice>
