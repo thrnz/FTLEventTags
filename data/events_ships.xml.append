@@ -26,7 +26,7 @@
 
 <ship name="REBEL_ENGI_UNLOCK_2FAKE" auto_blueprint="SHIPS_REBEL">
 	<escape timer="40" min="18" max="18" >
-		<text>As soon as they see you, they power up their engines to jump away. Stop them! [ Rbl SF K: MStd, CK: MStd (Decoy), HStd (Real) ]</text>
+		<text>As soon as they see you, they power up their engines to jump away. Stop them! [ Rbl SF K: MStd; CK: MStd (Decoy), HStd (Real); Esc: 18-18, 40s; S: 4-4, Engi Unlock Quest (Real) or Nothing (Decoy) ]</text>
 		<ship hostile="true"/>
 	</escape>
 	<gotaway>
@@ -46,7 +46,7 @@
 
 <ship name="REBEL_ENGI_UNLOCK_2REAL" auto_blueprint="SHIPS_REBEL">
 	<escape timer="40" min="18" max="18" >
-		<text>As soon as they see you, they power up their engines to jump away. Stop them! [ Rbl SF K: MStd, CK: MStd (Decoy), HStd (Real) ]</text>
+		<text>As soon as they see you, they power up their engines to jump away. Stop them! [ Rbl SF K: MStd; CK: MStd (Decoy), HStd (Real); Esc: 18-18, 40s; S: 4-4, Engi Unlock Quest (Real) or Nothing (Decoy) ]</text>
 		<ship hostile="true"/>
 	</escape>
 	<gotaway>
@@ -67,7 +67,7 @@
 
 <ship name="REBEL_AUTO_WARNING" auto_blueprint="SHIPS_AUTO">
 	<escape timer="40" min="22" max="22" >
-		<text>The ship starts to power up its FTL Drive. If it gets away, it will no doubt warn the fleet of your position! [ Auto SF K: LStd, Esc: Fleet+ ]</text>
+		<text>The ship starts to power up its FTL Drive. If it gets away, it will no doubt warn the fleet of your position! [ Auto SF; K: LStd; Esc: 22-22, 40s, Fleet+ ]</text>
 		<ship hostile="true"/>
 	</escape>
 	<gotaway>
@@ -280,7 +280,7 @@
 			</event>
 		</choice>
 		<choice>
-			<text>Reject the offer and continue your assault. [ K: RScrap, CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ]</text>
+			<text>Reject the offer and continue your assault. [ K: RScrap, CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ] ]</text>
 			<event/>
 		</choice>
 	</surrender>

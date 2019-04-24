@@ -105,7 +105,7 @@
 				<event>
 					<text>"Firssst... We accept no tradesss, couponss or refundss. Purchasess are final. Underssstand?"</text>
 					<choice>
-						<text>Understood. [ [ +5 Fuel, Store | Slg SF 1 Boarder, Weapons@0, K: HStd, CK: HStd | 2 Boarders, Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ] or [ Nothing | 1 Boarder, Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ] ] </text>
+						<text>Understood. [ [ +5 Fuel, Store | Slg SF 1 Boarder, Weapons@0, K: HStd, CK: HStd | 2 Boarders, Slg SF DR ] or [ Nothing | 1 Boarder, Slg SF DR ] ]</text>
 						<event>
 							<text>"We hold no liability for productsss damaged post ssale. We offer no insurance or customer sservice. Not a problem?"</text>
 							<choice hidden="true">
@@ -125,9 +125,9 @@
 						</event>
 					</choice>
 					<choice hidden="true" req="slug">
-						<text>(Slug crewmember) Our Slug senses someone aboard the ship. Investigate it. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+						<text>(Slug crewmember) Our Slug senses someone aboard the ship. Investigate it. [ Slg SF DR ]</text>
 						<event>
-							<text>It looks like the merchant was trying to stall you while someone teleported on board. You catch him before he could finish and he teleports away. You immediately prepare for battle.</text>
+							<text>It looks like the merchant was trying to stall you while someone teleported on board. You catch him before he could finish and he teleports away. You immediately prepare for battle. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 							<ship load="JELLY" hostile="true"/>
 						</event>
 					</choice>
@@ -249,10 +249,10 @@
 
 
 <textList name="STORM_SLUG_FIGHT">
-	<text>The ion storm here threatens to deactivate your core systems, a fact made all the worse for the largely unaffected Slug ships circling like space-vultures. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
-	<text>The Slug ship that descends into view as you enter the ion storm must have sensed your distress - defensive action! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
-	<text>You arrive in the middle of an ion storm. Slugs generally avoid these storms but you find one waiting in ambush. Prepare for a fight! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
-	<text>You find yourself stuck in the middle of an ion storm with a Slug ship just a short distance away, refusing all hails. You cautiously try to slip further into the clouds, but they turn suddenly to attack! [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>The ion storm here threatens to deactivate your core systems, a fact made all the worse for the largely unaffected Slug ships circling like space-vultures. [ Slg SF DR w/Ion-storm; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>The Slug ship that descends into view as you enter the ion storm must have sensed your distress - defensive action! [ Slg SF DR w/Ion-storm; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>You arrive in the middle of an ion storm. Slugs generally avoid these storms but you find one waiting in ambush. Prepare for a fight! [ Slg SF DR w/Ion-storm; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+	<text>You find yourself stuck in the middle of an ion storm with a Slug ship just a short distance away, refusing all hails. You cautiously try to slip further into the clouds, but they turn suddenly to attack! [ Slg SF DR w/Ion-storm; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 </textList>
 
 <event name="SLUG_DISTRESS_ROCK" unique="true">
@@ -260,11 +260,11 @@
 	<distressBeacon/>
 	<environment type="nebula"/>
 	<choice hidden="true">
-		<text>Engage the Slug ship. [ Slg SF K: MStd, CK: MStd, DB: [ x2 Nil | MStd ] ]</text>
+		<text>Engage the Slug ship. [ Nil | Slg SF K: MStd, CK: MStd, DB: [ x2 Nil | MStd ] ]</text>
 		<event load="SLUG_DISTRESS_ROCK_FIGHT"/>
 	</choice>
 	<choice>
-		<text>Ignore them. [ x2 Nil | Rck SF DR; S: 0.7, 3-4, RStuff ]</text>
+		<text>Ignore them. [ x2 Nil | Rck SF DR ]</text>
 		<event load="SLUG_DISTRESS_ROCK_AVOID"/>
 	</choice>
 </event>
@@ -272,7 +272,7 @@
 <event name="SLUG_DISTRESS_MANTIS" unique="true">
 	<text>The distress call appears to be emanating from a Slug ship caught in open space by a Mantis raider. They contact you on emergency frequencies: "Please, we'll give you all we have if you sssave ussss!"</text>
 	<choice hidden="true">
-		<text>Attack the Mantis ship. [ Mts SF K: MStd, CK: MStd, DB: [ LScrapAugment | RStd ]</text>
+		<text>Attack the Mantis ship. [ Mts SF K: MStd; CK: MStd; DB: [ LScrapAugment | RStd ] ]</text>
 		<event>
 			<text>You lock onto the Mantis ship and engage.</text>
 			<ship load="SLUG_DISTRESS_MANTIS" hostile="true"/>
@@ -343,14 +343,14 @@
 		<event load="SLUG_DRINK_DRINK"/>
 	</choice>
 	<choice hidden="true">
-		<text>Refuse. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+		<text>Refuse. [ Slg SF DR ]</text>
 		<event>
-			<text>The Slug feigns offense at your refusal, but you sense that he respects your caution. This does not, however, prevent him from returning to his ship and opening fire.</text>
+			<text>The Slug feigns offense at your refusal, but you sense that he respects your caution. This does not, however, prevent him from returning to his ship and opening fire. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true" req="rock">
-		<text>(Rock Crew) Have your Rockman pose as captain. [ Store, +10 Hull | Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+		<text>(Rock Crew) Have your Rockman pose as captain. [ Store, +10 Hull | Slg SF DR ]</text>
 		<event load="SLUG_DRINK_ROCK"/>
 	</choice>
 </event>
@@ -382,14 +382,14 @@
 		<event>
 			<text>Suddenly the first ship bursts into flames, and an urgent call arrives from the remaining Slugs. "We sssugest you distract the pirate vesssel while we retrieve the valuables. Fifty fifty sssplit."</text>
 			<choice hidden="true">
-				<text>Engage the pirate. [ Prt SF K: MStd, CK: HStd, S:HScrap ]</text>
+				<text>Engage the pirate. [ Prt SF K: MStd; CK: HStd; S:HScrap ]</text>
 				<event>
 					<text>There's money to be made here. The Slugs know that. You turn on the pirate and intercept just before he can reach the cache! </text>
 					<ship load="QUEST_SLUG_PIRATE_TRAP1" hostile="true"/>
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Head for the cache. [ Prt SF K: LStd, CK: MStd ]</text>
+				<text>Head for the cache. [ Prt SF K: LStd; CK: MStd ]</text>
 				<event>
 					<text>When he sees you making for the cache the Slug captain hails: "Foolish alienss, no eye for profit. Bessst of luck to you." They jump off, leaving you toe to toe with the pirate! </text>
 					<ship load="QUEST_SLUG_PIRATE_TRAP2" hostile="true"/>
@@ -423,7 +423,7 @@
 	<environment type="nebula"/>
 	<ship load="JELLY" hostile="false"/>
 	<choice hidden="true">
-		<text>Send some crew to help. [ 1-3 Borders, Slg SF DR; S: 0.5, 3-4; E: 0.5, 3-4 | Crew- (CB+), Slg SF DR; S: 0.5, 3-4; E: 0.5, 3-4 | HScrap ]</text>
+		<text>Send some crew to help. [ 1-3 Borders, Slg SF DR | Crew- (CB+), Slg SF DR | HScrap ]</text>
 		<event load="SLUG_DISTRESS_TRICK_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -452,7 +452,7 @@
 		<event load="SLUG_DISTRESS_PILOTING_SWEAR"/>
 	</choice>
 	<choice hidden="true">
-		<text>Never! [ Slg SF Engines@1, K: MStd, CK: HStd ]</text>
+		<text>Never! [ Slg SF w/Engines@1, K: MStd, CK: HStd ]</text>
 		<event>
 			<text>The Slug is unimpressed by your bravado and moves in to attack. Get the shields up, you're a sitting duck with malfunctioning thrusters!</text>
 			<ship hostile="true"/>
@@ -494,7 +494,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Investigate the battlefield. [ -5 Hull | x3 Nil | [ Abadoth Quest or BOs for +1 Crew ] ]</text>
+		<text>Investigate the battlefield. [ -5 Hull | x3 Nil | [ Abadoth Quest or BOs for Crew+ ] ]</text>
 		<event load="BATTLEFIELD_INVESTIGAGE"/>
 	</choice>
 	<choice>
@@ -605,5 +605,189 @@
 	<event>
 		<text>Just before the transmission is cut you hear, "They're not falling for it. Just kill the crew and we can ssstrip..." Looks like you're not getting out of here without a fight. [ Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
 		<ship load="JELLY" hostile="true"/>
+	</event>
+</eventList>
+
+<eventList name="NEBULA_SLUG_FAKE_STORE_LIST">  <!-- if you stay for the whole thing -->
+	<event>
+		<text>"Great. Let me show you our waress. It's not often I meet patient alienss, have this complimentary fuel as well."</text>
+		<item_modify>
+			<item type="fuel" min="5" max="5"/>
+		</item_modify>
+		<store/>
+	</event>
+	<event>
+		<text>"During our discussion, my man hass taken the liberty of disabling your weaponss to prevent any complications while completing our... transssaction..." You suddenly register multiple weapon locks, but your own weapons are not responding. Get out of there! [ Slg SF, 1 Slug Boarder, Weapons@0, K: HStd, CK: HStd ]</text>
+		<ship load="JELLY_STATUS_WEAPONS" hostile="true"/>
+		<boarders min="1" max="1" class="slug"/>
+		<status type="limit" target="player" system="weapons" amount="0"/>
+	</event>
+	<event>
+		<text>"Thank you. If you could do me one more courtesssy... please die quietly." You suddenly hear gunshots aboard the ship. He must have been stalling for time while they boarded your ship! [ 1 Slug Boarder, Slg SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+		<ship load="JELLY" hostile="true"/>
+		<boarders min="2" max="2" class="slug"/>
+	</event>
+</eventList>
+
+
+<eventList name="NEBULA_SLUG_HULLFIX_RESULT1">
+	<event>
+		<text>You pull up to the automatic station and after a short time they repair 10 hull damage. You begin to offer your thanks but discover that you can't detach from the station.</text>
+		<damage amount="-10"/>
+		<choice>
+			<text>Demand an explanation.</text>
+			<event load="NEBULA_SLUG_HULLFIX_RESULT2"/>
+		</choice>
+	</event>
+	<event>
+		<text>You dock with the station hoping for a quick turnaround, but the automatic machines take their sweet time. When the process finally finishes, you notice only one damage has been repaired.</text>
+		<damage amount="-1"/>
+		<choice>
+			<text>Demand an explanation.</text>
+			<event load="NEBULA_SLUG_HULLFIX_RESULT2"/>
+		</choice>
+	</event>
+	<event>
+		<text>As you dock with the station your readings go haywire. An EMP blast resonates throughout the ship and your engines shut down. You're a sitting duck as a ship reveals itself and silently moves in to attack! [ Slug SF w/Engines@0, K: MStd; CK: HStd ]</text>
+		<ship load="JELLY_STATUS_ENGINES" hostile="true"/>
+		<status type="limit" target="player" system="engines" amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="NEBULA_SLUG_HULLFIX_RESULT2">
+	<event>
+		<text>"We're glad you have enjoyed our servicessss. Perhaps some fuel would be an appropriate compensssation?"</text>
+		<choice hidden="true">
+			<text>Give them the 15 fuel they demand. [ -15 Fuel ]</text>
+			<event>
+				<text>You transfer the fuel and they release your ship. "Tell your friendsss about us!" Their portable station slips into the clouds.</text>
+				<item_modify>
+					<item type="fuel" min="-15" max="-15"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>That's ridiculous! [ -5 Hull, Slug SF DR ]</text>
+			<event>
+				<text>"I'm ssssorry to hear that." He presses a button and an explosion rocks the ship. They must have planted a bomb while 'repairing'! Prepare for a fight! [ -5 Hull, Slug SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+				<ship load="JELLY" hostile="true"/>
+				<damage amount="4"/>
+				<damage amount="1" system="random"/>  <!--DLC-->
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>"We're glad you have enjoyed our servicessss. Now for payment. To enssssure your cooperation we've taken the liberty of installing a limiter on your weapons system."</text>
+		<choice hidden="true">
+			<text>Give them the 50 scrap they demand. [ -50 Scrap ]</text>
+			<event>
+				<text>You transfer the scrap and they release your ship. "Tell your friendsss about us!" Their portable station slips into the clouds.</text>
+				<item_modify>
+					<item type="scrap" min="-50" max="-50"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Let's get out of here! [ Slug SF w/Weapons@half; K: HStd; CK: HStd ]</text>
+			<event>
+				<text>You activate your thrusters and force your way away from the station. A ship quickly moves in to engage. You'll need to get out of here fast; there may not be time to get the weapons fully operational! [ Slug SF w/Weapons@half; K: HStd; CK: HStd ]</text>
+				<ship load="JELLY_STATUS_WEAPONS" hostile="true"/>
+				<status type="divide" target="player" system="weapons" amount="2"/> <!-- TO DO - TEST-->
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+
+<event name="SECRET_WORD_ABADOTH_CONCLUSION">
+	<text>A Zoltan ship decloaks and demands your reason for being here!</text>
+	<choice>
+		<text>Explain about finding the dead crewman. [ Ztn SF DR ]</text>
+		<event>
+			<text>There is a moment of silence, and suddenly the Zoltan ship cloaks - must have been the wrong word to use... now you've got a fight on your hands!</text>
+			<ship load="ZOLTAN_SHIP" hostile="true"/>
+		</event>
+	</choice>
+	<choice req="engi" hidden="true">
+		<text>(Engi Crew) Say ABADOTH. [ MStd ]</text>
+		<event>
+			<text>Your Engi crewman easily recalls the phrase the deadman used from its memory banks. There is a moment of silence, and the ship's captain solemnly thanks you for the information. He wishes you well on your journey, and he offers several upgrades to assist you in exchange for your service to the Zoltan race.</text>
+			<autoReward level="MED">standard</autoReward> 
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Say ANODYNE. [ Ztn SF DR ]</text>
+		<event>
+			<text>There is a moment of silence, and suddenly the Zoltan ship cloaks - must have been the wrong word to use... now you've got a fight on your hands!</text>
+			<ship load="ZOLTAN_SHIP" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Say ABADOTH. [ MStd ]</text>
+		<event>
+			<text>There is a moment of silence, and the ship's captain solemnly thanks you for the information. He wishes you well on your journey, and he offers several upgrades to assist you in exchange for your service to the Zoltan race.</text>
+			<autoReward level="MED">standard</autoReward> 
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Say ABATODH. [ Ztn SF DR ]</text>
+		<event>
+			<text>There is a moment of silence, and suddenly the Zoltan ship cloaks - must have been the wrong word to use... now you've got a fight on your hands!</text>
+			<ship load="ZOLTAN_SHIP" hostile="true"/>
+		</event>
+	</choice>
+</event>
+
+
+<eventList name="SLUG_DISTRESS_RESCUE_LIST">
+	<event>
+		<text>You power up the FTL, at which point the Slug sends an urgent plea. "Please, I ssee you are a sssly captain. You have an advantage. Very well. I will join your crew - but please remove me from this rock!"</text>
+		<choice>
+			<text>Rescue him. [ SlugCrew+ ]</text>
+			<event>
+				<text>When he sees the shuttle headed for his position the Slug thanks you with what looks like sincerity. He readily joins your crew.</text>
+				<crewMember amount="1" class="slug">Slocknog</crewMember> 
+			</event>
+		</choice>
+		<choice>
+			<text>Leave him. [ Nil ]</text>
+			<event>
+				<text>You close the frequency and continue jump prep. If this Slug is such a hero he'll find a way off that moon on his own.</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+
+<eventList name="SLUG_DISTRESS_ROCK_AVOID">
+	<event>
+		<text>You have no desire to provoke Slugs in their own territory. You leave them alone.</text>
+	</event>
+	<event>
+		<text>You have no desire to provoke the Slugs in their own territory. You leave them alone.</text>
+	</event>
+	<event>
+		<text>After the Slugs board the ship, you are surprised to see the Rock ship spring to life and decimate the other ship. They message you, "Pathetic. You are either a coward or an ally of the Slugs. Either way, you don't deserve to live." [ Rck SF DR; S: 0.7, 3-4, RStuff ]</text>
+		<ship load="ROCK_SHIP" hostile="true"/>
+	</event>
+</eventList>
+
+<eventList name="SLUG_DISTRESS_TRICK_LIST">
+	<event>
+		<text>As soon as you board their ship their hostile intentions become clear. Despite being outnumbered, your crew is able to break free of the Slug trap and fight back to the airlock. You pull away from the enemy ship but not before a few Slugs make it on board. [ 1-3 Slug Boarders, SLug SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+		<ship hostile="true"/>
+		<boarders min="1" max="3" class="slug"/>
+	</event>
+	<event>
+		<text>As soon as you board their ship their hostile intentions become clear. On your way back to the airlock, one of your crewmembers is taken out by a well aimed Slug blaster shot. [ Crew- (CB+), Slug SF DR; S: 0.5, 3-4; Esc: 0.5, 3-4 ]</text>
+		<ship hostile="true"/>
+		<removeCrew>
+			<clone>true</clone>
+			<text>Fortunately, your crewmember was immediately revived by the Clone Bay.</text>
+		</removeCrew>
+	</event>
+	<event>
+		<text>You cautiously board their ship and immediately smell the stale air of a malfunctioning life support. In no time at all you're able to fix up the problem and head off again with some extra scrap in your hold.</text>
+		<autoReward level="HIGH">scrap_only</autoReward>
 	</event>
 </eventList>

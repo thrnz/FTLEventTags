@@ -50,7 +50,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Attempt to remain concealed. [ Rbl SF DR S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 (LVL4 Engines to Avoid) | Nil | Fleet+ ]</text>
+		<text>Attempt to remain concealed. [ Rbl SF DR (Avoid with Lvl4 Engines) | Nil | Fleet+ ]</text>
 		<event load="NEBULA_REBEL_UNDETECTED_LIST"/>
 	</choice>
 	<choice req="cloaking" hidden="true" hidden="true"> 
@@ -65,9 +65,9 @@
 	<text>A pirate ship arrives shortly after you. Judging from the fact that it is attempting to avoid your ship, you assume that it's a smuggler trying to stay away from beacons.</text>
 	<environment type="nebula"/>
 	<choice>
-		<text>Attack the pirate. [ Prt SF; S: 0.5, 2-4, RStuff; Esc: 3-4, 35s; K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+		<text>Attack the pirate. [ Prt SF; K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 		<event>
-			<text>You power up your weapons and move in to engage. [ Prt SF; S: 0.5, 2-4, RStuff; Esc: 3-4, 35s; K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+			<text>You power up your weapons and move in to engage. [ Prt SF; K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ]; S: 0.5, 2-4, RStuff; Esc: 3-4, 35s ]</text>
 			<ship load="PIRATE_SMUGGLE" hostile ="true"/>
 		</event>
 	</choice>
@@ -88,7 +88,7 @@
 				</event>
 			</choice>
 			<choice>
-				<text>Ignore their bribe and attack. [ Prt SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | M Scrap | MScrapDrone ] ]</text>
+				<text>Ignore their bribe and attack. [ Prt SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 MScrap | x2 LStd | HStd ], CK: [ MScrapWeapon | Crew+, HScrap | M Scrap | MScrapDrone ]; S: 0.5, 2-4, RStuff; Esc: 3-4, 35s ]</text>
 				<event>
 					<ship load="PIRATE_SMUGGLE" hostile ="true"/>
 				</event>
@@ -149,7 +149,7 @@
 	<text>A heavily damaged Federation ship is hiding in the nebula at this beacon. Before you have time to make contact with them, they fade into the nebula.</text>
 	<environment type="nebula"/>
 	<choice hidden="true">
-		<text>Attempt to follow and help them. [ Nil | Crew+ | Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<text>Attempt to follow and help them. [ Nil | Crew+ | Rbl SF DR ]</text>
 		<event load="NEBULA_LOST_SHIP_LIST"/>
 	</choice>
 	<choice>
@@ -244,27 +244,27 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Prepare to chase them! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 | Nil | Fleet+ ]</text>
+		<text>Prepare to chase them! [ Rbl SF DR | Nil | Fleet+ ]</text>
 		<event load="NEBULA_REBEL_CHASE_LIST"/>
 	</choice>
 	<choice req="sensors" lvl="3">
-		<text>(Advanced Sensors) Try to track them as you move to engage. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<text>(Advanced Sensors) Try to track them as you move to engage. [ Rbl SF DR ]</text>
 		<event>
-			<text>As soon as they see you they make a run for it. You squeeze what you can out of the malfunctioning sensors and are able to keep track of them long enough to get in firing range.</text>
+			<text>As soon as they see you they make a run for it. You squeeze what you can out of the malfunctioning sensors and are able to keep track of them long enough to get in firing range. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice req="ADV_SCANNERS" hidden="true">
-		<text>(Long-ranged Scanner) Try to track them as you move to engage. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<text>(Long-ranged Scanner) Try to track them as you move to engage. [ Rbl SF DR ]</text>
 		<event>
-			<text>As soon as they see you they make a run for it. You squeeze what you can out of the malfunctioning sensors and are able to keep track of them long enough to get in firing range.</text>
+			<text>As soon as they see you they make a run for it. You squeeze what you can out of the malfunctioning sensors and are able to keep track of them long enough to get in firing range. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
 	<choice req="LIFE_SCANNER" hidden="true"><!--DLC-->
-		<text>(Lifeform Scanner) Use their life signatures to follow. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<text>(Lifeform Scanner) Use their life signatures to follow. [ Rbl SF DR ]</text>
 		<event>
-			<text>Your augment's ability to keep track of their life signatures within the nebula proves useful. You catch up to the ship and prepare for a fight.</text>
+			<text>Your augment's ability to keep track of their life signatures within the nebula proves useful. You catch up to the ship and prepare for a fight. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
@@ -298,7 +298,7 @@
 </event>
 
 <event name="STORM_REBEL" unique = "true">
-	<text>You arrive in the middle of a plasma storm. Despite the harsh conditions, a Rebel scout seems to be waiting for you. [ Rbl SF DR w/Ion-Storm; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+	<text>You arrive in the middle of a plasma storm. Despite the harsh conditions, a Rebel scout seems to be waiting for you. [ Rbl SF DR w/Ion-storm; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
 	<ship load = "REBEL" hostile = "true"/>
 	<environment type="storm"/>
 </event>
@@ -328,3 +328,92 @@
 	<text>Thanks to the high nebula density of this sector very little of it has been charted, and rumours of what lurks in the depths abound. [ 0-1 Non-Nebula Store, 1-3 Items, 1 Nebula Store, 4 Empty Nebula, 5-6 Hostile, 7-8 Neutral, 1-3 Distress ]</text>
 	<text>The gases that make up the nebulas in this sector threaten to impair your systems; but you have to press on. [ 0-1 Non-Nebula Store, 1-3 Items, 1 Nebula-Store, 4 Empty Nebula, 5-6 Hostile, 7-8 Neutral, 1-3 Distress ]</text>
 </textList>
+
+<eventList name="NEBULA_AUTO_DEFENSE_ITEM_CLOAK"> <!--DLC EVENTLIST-->
+	<event>
+		<text>You successfully sneak by the ship and access the station undetected.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="DEFENSE_ITEM_LIST"/>
+		</choice>
+	</event>
+	<event>	
+		<text>You try to sneak past the automated ship but it quickly turns and attacks! [ Auto SF K: MScrap, DB: [ LScrapDrone | Nil | LScrapWeapon | MStuff ] ]</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+<eventList name="NEBULA_AUTO_DEFENSE_ITEM_HACK"> <!--DLC EVENTLIST-->
+	<event>
+		<text>You successfully hack into the station and sever the connection to the automated ship. You access the station undetected.</text>
+		<item_modify>
+			<item type="drones" min="-1" max="-1"/>
+		</item_modify>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="DEFENSE_ITEM_LIST"/>
+		</choice>
+	</event>
+	<event>	
+		<text>You send a drone to hack the station but the automated ship notices and turns to attack! [ Auto SF K: MScrap, DB: [ LScrapDrone | Nil | LScrapWeapon | MStuff ] ]</text>
+		<item_modify>
+			<item type="drones" min="-1" max="-1"/>
+		</item_modify>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+
+<eventList name="NEBULA_LOST_SHIP_LIST">
+	<event>
+		<text>Your search is hopeless. Your sensors can't pick up anything in the nebula.</text>
+	</event>
+	<event>
+		<text>While searching fruitlessly through the nebula, you stumble upon the Rebel ship which the Federation loyalists were likely hiding from. You prepare for a fight. [ Rbl SF DR S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>You get lucky and find them floating not too deep into the nebula. Thrilled to be found by friendlies, they come on board and abandon their wrecked ship.</text>
+		<crewMember amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="NEBULA_REBEL_CHASE_LIST">
+	<event>
+		<text>You follow their vapour trails and surf onto their six o'clock, weapons hot. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>Without sensors you can't maintain a lock for long. The Rebels slip away.</text>
+	</event>
+	<event>
+		<text>You get disoriented in the nebula and lose your bearings completely. It takes some time to get back to the beacon. It's likely the fleet has had time to advance closer to your position.</text>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+
+<eventList name="NEBULA_REBEL_UNDETECTED_LIST">
+	<event>
+		<text>You immediately slip further into the clouds, but not quickly enough. The Rebel catches sight of you and moves in to engage!</text>
+		<choice>
+			<text>Prepare to fight. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+			<event>
+				<ship hostile="true"/>
+			</event>
+		</choice>
+		<choice req="engines" lvl="4" hidden="true">
+			<text>(Engines) Fully power the engines to out-run them. [ Nil ]</text>
+			<event>
+				<text>Your powerful engines allow you to out-distance the ship and eventually lose it within the nebula.</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>You power down non-essential systems and slip into the cloud. The ship never noticed you.</text>
+	</event>
+	<event>
+		<text>The ship spots you and gives chase. After some quick maneuvering you were able to lose your pursuers in the clouds. You expect they warned the fleet of your position, however.</text>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>

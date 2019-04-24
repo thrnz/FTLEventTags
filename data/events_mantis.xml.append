@@ -69,7 +69,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Pry it open. [ Crew- (CB+), 1 Boarder | MantisCrew+ | HumanCrew+ ]</text>
+		<text>Pry it open. [ Crew- (CB+), 1 Mantis Boarder | MantisCrew+ | HumanCrew+ ]</text>
 		<event load="MANTIS_CREW_LIST"/>
 	</choice>
 </event>

@@ -15,7 +15,7 @@
 	<text>Your arrival is greeted by numerous computer alerts. The nearby automated Rebel scout has used a local satellite to deploy a virus to disrupt your Shields System. Hopefully it won't cause further problems before you can destroy it.</text>
 	<ship load="REBEL_AUTO_HACKSHIELDS" hostile="true"/>
 	<choice>
-		<text>Continue... [ Auto SF Shields@Half, K: MStd ]</text>
+		<text>Continue... [ Auto SF w/Shields@Half, K: MStd ]</text>
 		<event>	
 			<status type="divide" target="player" system="shields" amount="2"/>
 		</event>
@@ -67,7 +67,7 @@
 	<choice>
 		<text>Intervene to defend the outpost. [ Rbl SF K: MStd, CK: HStd, DB: MScrapFuel ]</text>
 		<event>
-			<text>The rebel responds to your threat, "I don't know who you are, but no one defies the Rebel Fleet!" They move in to engage.</text> 
+			<text>The rebel responds to your threat, "I don't know who you are, but no one defies the Rebel Fleet!" They move in to engage. [ Rbl SF K: MStd, CK: HStd, DB: MScrapFuel ]</text> 
 			<ship hostile="true"/>
 		</event>
 	</choice>
@@ -139,7 +139,7 @@
 		<event/>
 	</choice>
 	<choice req="cloaking" hidden="true">
-		<text>(Cloaking) Attempt to cloak and access the cache. [ Auto SF K: MScrap, DB: [ LScrapDrone | Nil | LScrapWeapon | MStuff ] | [ LScrapDrone | Nil | LScrapWeapon | MStuff ] ]</text>
+		<text>(Cloaking) Attempt to cloak and access the cache. [ Straight to Double | Same as above ]</text>
 		<event load="AUTO_DEFENSE_ITEM_CLOAK"/>
 	</choice>
 </event>
@@ -168,7 +168,7 @@
 	<img planet="NONE"/>
 	<text>You spot a small Rebel ship nearby. It seems to have been re-fitted for transport rather than combat. It does not seem to want to engage you and your ship.</text>
 	<choice>
-		<text>Demand the surrender of their goods. [ Rbl SF Esc: 14-14, 40s; K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
+		<text>Demand the surrender of their goods. [ Rbl SF K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 		<event>
 			<text>You prepare to secure their cargo by force. [ Rbl SF Esc: 14-14, 40s; K: [ MScrapWeapon | LStd | LScrapWeapon | MScrap | MScrapDrone | MScrapDrones | x2 M ScrapOnly | x2 LStd | HStd ]; CK: [ MScrapWeapon | Crew+, HScrap | MScrap | MScrapDrone ] ]</text>
 			<ship load="SQUAT_TRANSPORT" hostile="true"/>

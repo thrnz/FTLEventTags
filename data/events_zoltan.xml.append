@@ -70,7 +70,7 @@
 		<event>
 			<text>You tap into their frequency and hear the Rebel captain yelling, "We are liberating this planet in the name of the new Galactic government! These aliens will not be left in ignorance where they cannot be of use!"</text>
 			<choice hidden="true">
-				<text>Interfere - make first contact with the primitive aliens. [ Fleet+, Ztn SF K: LStd, CK: RStd ]</text>
+				<text>Interfere - make first contact with the primitive aliens. [ Ztn SF; K: LStd, Fleet+; CK: RStd, Fleet+ ]</text>
 				<event>
 					<text>The local people - furry, one-eyed tree lizard things - begin chanting when they see you. Suddenly the sky is lit by laser fire - the Zoltan opened fire on your ship! You dash back to the shuttle and join the fight.</text>
 					<ship load="ZOLTAN_PRIMITIVES_ZOLTAN" hostile="true"/>
@@ -96,7 +96,7 @@
 <event name="ZOLTAN_ODD_MOON" unique="true">
 	<text>Something strikes you as odd about a moon in the distance.</text>
 	<choice hidden="true">
-    <text>Check it out. [ Nil | LScrapWeapon | MScrap | -1 Mis [ RScrap | Nil | RScrapWeapon ] ]</text>
+    <text>Check it out. [ Nil | LScrapWeapon | MScrap | -1 Mis [ RScrap | Nil | RScrapWeapon ] or Nil ]</text>
 		<event load="ZOLTAN_ODD_MOON_CHECK"/>
 	</choice>
 	<choice>
@@ -213,7 +213,7 @@
 <event name="ZOLTAN_SCIENCE_DOCK" unique="true">
 	<text>What appears to be a Zoltan science ship requests permission to dock.</text>
 	<choice hidden="true">
-		<text>Dock with them. [ MStuff | Ztn SF; S: 0.5, 3-4. [ LStd, ZoltanCrew+ ]; K: LStd; CK: MStd ]</text>
+		<text>Dock with them. [ MStuff | Ztn SF; K: LStd; CK: MStd; S:[ LStd, ZoltanCrew+ ] ]</text>
 		<event load="ZOLTAN_SCIENCE_DOCK_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -225,7 +225,7 @@
 </event>	
 <eventList name="ZOLTAN_SCIENCE_DOCK_LIST">
 	<event>
-		<text>You allow them to approach, but are caught unaware when they open fire! [ Ztn SF S: [ 0.5, 3-4, LStd, ZoltanCrew+ ], K: LStd, CK: MStd ]</text>
+		<text>You allow them to approach, but are caught unaware when they open fire! [ Ztn SF K: LStd; CK: MStd; S: 0.5, 3-4, [ LStd, ZoltanCrew+ ] ]</text>
 		<ship load="ZOLTAN_SCIENCE_DOCK" hostile="true"/>
 	</event>
 	<event>
@@ -274,7 +274,7 @@
 	<choice hidden="true">
 		<text>You don't have time for this nonsense. Attack! [ Ztn SF DR ]</text>
 		<event>
-			<text>Expecting resistance, their Energy Shield is raised and ready for combat.</text>
+			<text>Expecting resistance, their Energy Shield is raised and ready for combat. [ Ztn SF DR ]</text>
 			<ship load="ZOLTAN_SHIP" hostile="true"/>
 		</event>
 	</choice>
@@ -331,7 +331,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Secure the ammunition. [ Prt SF K: LScrapMiss; CK: HScrapMissiles; Esc: 0.5, 2-4 ]</text>
+		<text>Secure the ammunition. [ Prt SF K: LScrapMiss; CK: HScrapMiss; Esc: 0.5, 2-4 ]</text>
 		<event>
 			<text>You jet toward the pirate with the ammunition and engage - hopefully you can leave the ship in one piece!</text>
 			<ship load="STORM_PIRATE_SUPPLY_AMMO" hostile="true"/>
@@ -378,3 +378,31 @@
 	<text>You arrive in Zoltan space. From what you have heard they anticipated the coming war and made preparations to hold their borders. [ 1 Zoltan Study, 2 Stores, 1-2 Empty, 1-2 Distress, 2-6 Nebula, 6-8 Hostile, 1-2 Boarders, 1-2 Items, 0-1 Quests, 5-6 Neutral ]</text>
 	<text>You're far from Federation home space here in Zoltan territory, and it's not clear whether the authorities will have any goodwill remaining. Still, you have to push forward. [ 1 Zoltan Study, 2 Stores, 1-2 Empty, 1-2 Distress, 2-6 Nebula, 6-8 Hostile, 1-2 Boarders, 1-2 Items, 0-1 Quests, 5-6 Neutral ]</text>
 </textList>
+
+<eventList name="ZOLTAN_CREW_SCAN_LIST">
+	<event>
+		<text>The Zoltan security staff board your ship and scan the crew's faces into a computer. After a few tense moments of uncertainty they allow your ship to pass.</text>
+	</event>
+	<event>
+		<text>The Zoltan security staff board your ship and begin scanning the crew's faces into a computer. Suddenly alarms go off and the Zoltan leap on one of your crew! "This person is wanted on five charges of Utter Villainy! Surrender them to us!"</text>
+		<choice hidden="true">
+			<text>Give up your crewmember. [ Crew- (CB-) ]</text>
+			<event>
+				<text>It's a tough call, but Zoltan law holds sway here. Besides, that one always seemed a bit shifty.</text>
+				<removeCrew>
+					<clone>false</clone>
+					<text>Unfortunately your crewmember was taken away unharmed so your Clone Bay was unable to retrieve them.</text>
+				</removeCrew>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>Refuse and fight. [ Ztn SF 2-4 Zoltan Boarders, Weapons@half, K: LStd, CK: MStd ]</text>
+			<event>
+				<text>You're not going to leave anyone behind. You pull away from the station with the enemy guards on board. Unfortunately, they are able to sabotage your weapon system in the chaos. It's time to leave! [ Ztn SF 2-4 Zoltan Boarders, Weapons@half, K: LStd, CK: MStd ]</text>
+				<ship load="ZOLTAN_CREW_SCAN" hostile="true"/>
+				<boarders min="2" max="4" class="energy"/>
+				<status type="divide" target="player" system="weapons" amount="2"/>
+			</event>
+		</choice>
+	</event>
+</eventList>

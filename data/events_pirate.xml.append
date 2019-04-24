@@ -10,13 +10,13 @@
 	<text>Once you arrive, your screen lights up with warnings. A nearby pirate seems to have advanced hacking tools and they have tried to shut down your engines. Your crew manages to keep them barely operational and you move into attack.</text>
 	<ship load="PIRATE_NO_ESCAPE" hostile="true"/>
 	<choice hidden="true">
-		<text>Continue... [ Prt SF Engines@1, K: RScrapFuel, CK: MSCrapFuel ]</text>
+		<text>Continue... [ Prt SF Engines@1, K: RScrapFuel, CK: MScrapFuel ]</text>
 		<event>
 			<status type="limit" target="player" system="engines" amount="1"/>			
 		</event>
 	</choice>
 	<choice hidden="true" req="hacking"> <!-- CHANGED - added -->
-		<text>(Hacking System) Counter the remote hacking. [ Prt SF Hacking@0, K: RScrapFuel, CK: MScrapFuel ]</text>
+		<text>(Hacking System) Counter the remote hacking. [ Prt SF w/Hacking@0, K: RScrapFuel, CK: MScrapFuel ]</text>
 		<event>
 			<text>Your Hacking System automatically counters the digital assault and you move in to fight the ship.</text>
 			<status type="limit" target="player" system="hacking" amount="0"/>
@@ -30,7 +30,7 @@
 	<choice>
 		<text>Aid the civilian ship. [ Prt SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 		<event>
-			<text>You power up your weapons and engage the pirate ship.</text>
+			<text>You power up your weapons and engage the pirate ship. [ Prt SF K: MStd, CK: HStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 			<ship load="PIRATE_CIVILIAN" hostile="true"/>
 		</event>
 	</choice>
@@ -53,9 +53,9 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Try to be a hero. Attack the pirate. [ Prt SF; S: 0.2, 3-4, HStuff; Esc: 0.4, 3-4, Double; K: RScrap; CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ] ]</text>
+		<text>Try to be a hero. Attack the pirate. [ Prt SF; K: RScrap; CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ] ]</text>
 		<event>
-			<text>The pirate ship stops its pursuit and locks weapons onto your ship.</text> 
+			<text>The pirate ship stops its pursuit and locks weapons onto your ship. [ Prt SF; K: RScrap; CK: MStd, DB: [ [ LStd or Fleet- ] | MScrap | Nil | Store | +15 Hull ]; S: 0.2, 3-4, HStuff; Esc: 0.4, 3-4, Double ]</text> 
 			<ship hostile="true"/>
 		</event>
 	</choice>
@@ -110,7 +110,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Reject their 'offer'. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+		<text>Reject their 'offer'. [ Prt SF DR ]</text>
 		<event>
 			<text>"Too bad... You will regret this decision!" [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 			<ship hostile="true"/>
@@ -132,7 +132,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>We will never surrender one of our crew to slavers! [ Prt SF; S: 0.2, 2-4, Crew+; Esc: 0.5, 2-4; K: HStd; CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | HStd ] ]</text>
+		<text>We will never surrender one of our crew to slavers! [ Prt SF; K: HStd; CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | HStd ]; S: 0.2, 2-4, Crew+; Esc: 0.5, 2-4 ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -156,7 +156,7 @@
 		</event>
 	</choice>
 	<choice>
-		<text>Attack the slaver scum. [ Prt SF; S: 0.2, 2-4, Crew+; Esc: 0.5, 2-4; K: HStd; CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | Hstd ] ]</text>
+		<text>Attack the slaver scum. [ Prt SF; K: HStd; CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | Hstd ]; S: 0.2, 2-4, Crew+; Esc: 0.5, 2-4 ]</text>
 		<event>
 			<ship hostile="true"/>
 		</event>
@@ -184,7 +184,7 @@
 	<text>A pirate ship was lying in wait inside this asteroid field. It immediately moves in to attack.</text>
 	<ship load="PIRATE" hostile="true"/>
 	<choice>
-		<text>Turn and fight. [ Prt SF DR w/asteroids; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+		<text>Turn and fight. [ Prt SF DR w/Asteroids; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event/>
 	</choice> <!--
 	<choice req="pilot" lvl="2" hidden="true">
@@ -196,7 +196,7 @@
 <event name="FLOATING_CARGO" unique="true">
 	<text>Not too far from the beacon, you detect a destroyed cargo ship with its cargo scattered nearby, intact.</text>
 	<choice hidden="true">
-		<text>Bring it aboard. [ MStd | LScrap | 2-4 Human Boarders | 2-4 Human Boarders, Prt SF DR; S: 0-5, RStuff; Esc: 0.3, 2-4, 15s ]</text>
+		<text>Bring it aboard. [ MStd | LScrap | 2-4 Human Boarders | 2-4 Human Boarders, Prt SF DR ]</text>
 		<event load="FLOATING_CARGO_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -206,11 +206,11 @@
 		</event>
 	</choice>
 	<choice req="sensors" lvl="2" hidden="true">
-		<text>(Advanced Sensors) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | [ Prt SF DR; S: 0-5, RStuff; Esc: 0.3, 2-4, 15s or Nil ]</text>
+		<text>(Advanced Sensors) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | [ Prt SF DR or Nil ]</text>
 		<event load="FLOATING_CARGO_SCAN_LIST"/>
 	</choice>
 	<choice req="ADV_SCANNERS" hidden="true">
-		<text>(Long-Ranged Scanners) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | Prt SF DR; S: 0-5, RStuff; Esc: 0.3, 2-4, 15s Prt SF DR or Nil ]</text>
+		<text>(Long-Ranged Scanners) Run an advanced scan on the boxes. [ 20-35 Scrap | MStd | Prt SF DR or Nil ]</text>
 		<event load="FLOATING_CARGO_SCAN_LIST"/>
 	</choice>
 </event>
@@ -229,9 +229,9 @@
 	<event>
 		<text>Your advanced sensors pick up faint life signatures inside the cargo. The life forms appear to be armed. This looks like a planned pirate ambush.</text>
 		<choice hidden="true">
-			<text>Destroy the crates to prevent another ship from falling victim. [ Prt SF DR; S: 0-5, RStuff; Esc: 0.3, 2-4, 15s ]</text>
+			<text>Destroy the crates to prevent another ship from falling victim. [ Prt SF DR ]</text>
 			<event>
-				<text>You fire on the crates, breaking them open and scattering the pirates into empty space. A pirate ship appears out of nowhere with a message, "You will pay for that!"</text>
+				<text>You fire on the crates, breaking them open and scattering the pirates into empty space. A pirate ship appears out of nowhere with a message, "You will pay for that!" [ Prt SF DR; S: 0-5, RStuff; Esc: 0.3, 2-4, 15s ]</text>
 				<ship load="PIRATE" hostile="true"/>
 			</event>
 		</choice>
@@ -276,7 +276,7 @@
 	<event>
 		<text>They respond, "It's a good thing you came when you did; we'd be dead now otherwise. I'm a shipwright and I'd like to help you like you helped me."</text>
 		<choice>
-			<text>The captain offers to install a piece of equipment on your ship. [ LScrapWeapon ]</text>
+			<text>The captain offers to install a piece of equipment on your ship.</text>
 			<event>
 				<autoReward level="LOW">weapon</autoReward>
 			</event>
@@ -288,5 +288,56 @@
 	</event>
 	<event>
 		<text>The civilian ship wisely made a fast retreat while you distracted the hostile ship. [ Nil ]</text>
+	</event>
+</eventList>
+
+
+<eventList name="FLOATING_CARGO_LIST">
+	<event>
+		<text>They appear to be filled with military supplies! You take everything you can use and jettison the rest.</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>The cargo was primarily consumer goods and clothing, nothing particularly useful. You manage to collect some scrap.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Once you bring the cargo onto your ship, a pirate bursts out of one of the crates saying, "Ugh... I was getting cramped in there. Oh, yeah! Prepare to die!" Immediately after this battle-cry your ship is filled with the sound of crates breaking open...</text>
+		<boarders min="2" max="4" class="human"/>
+	</event>
+	<event>
+		<text>You bring the cargo aboard. Before you have a chance to open them a pirate ship appears out of hiding and charges. At the same time, the crates fly open. Intruders aboard the ship! [ 2-4 Human Boarders, Prt SF DR; S: 0-5, RStuff; Esc: 0.3, 2-4, 15s ]</text>
+		<boarders min="2" max="4" class="human"/>
+		<ship load="JELLY_PIRATE_WITHBOARDERS" hostile="true"/>
+	</event>
+</eventList>
+
+<eventList name="FRIENDLY_SLAVER_TELEPORTER">
+	<event>
+		<text>You beam a small team into their holds. They work quickly to free the slaves and teleport back to your ship. One of the captives seems fit for battle and you throw them a weapon in preparation for a fight. [ Crew+, Prt SF; K: HStd; CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | Hstd ]; S: 0.2, 2-4, Crew+; Esc: 0.5, 2-4 ]</text>
+		<crewMember amount="1"/>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>You teleport an away team into their hold to attempt to free their prisoners. They are able to get to one person before being caught and forced into a corner by the crew. You quickly beam the team and prisoner back to your ship. [ Crew+, Prt SF; K: HStd; CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | Hstd ]; S: 0.2, 2-4, Crew+; Esc: 0.5, 2-4 ]</text>
+		<crewMember amount="1"/>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>You beam a team onto their ship. However, your estimations of the location of their prisoners was off. By the time they get their bearings the slavers spot them. You beam them back to the ship and prepare for a fight. [ Prt SF; K: HStd; CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | Hstd ]; S: 0.2, 2-4, Crew+; Esc: 0.5, 2-4 ]</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+<eventList name="PIRATE_SLAVER_RUN">
+	<event>
+		<text>You quickly fire up your engines and make a break for it. However, it seems to be in vain. They catch up to you effortlessly and power up their weapons. [ Prt SF; K: HStd; CK: [ Rock/Mantis/Engi, MStd | Crew+, HStd | HStd ]; S: 0.2, 2-4, Crew+; Esc: 0.5, 2-4 ]</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>You divert all available power to your engines and flee. You caught them off-guard, but they seem to be gaining on you. Luckily you are able to stay out of range long enough to charge the FTL drive.</text>
+	</event>
+	<event>
+		<text>You fire up the engines and try to escape. Their slower ship is unable to keep pace; eventually it gives up and returns to the beacon to await an easier target.</text>
 	</event>
 </eventList>

@@ -42,11 +42,11 @@
 <event name="ROCK_LOOTING" unique="true">
 	<text>You find a disabled rock transport floating near the beacon. You consider stripping it of useful parts but are uncertain why it's there in the first place.</text>
 	<choice hidden="true">
-		<text>Strip the ship. [ LStd | LStd, Rck SF DR S: 0.7, 3-4, RStuff ] </text>
+		<text>Strip the ship. [ LStd | LStd, Rck SF DR ] </text>
 		<event load="ROCK_LOOTING_STRIP"/>
 	</choice>
 	<choice hidden="true">
-		<text>Leave it alone. [ x2 Nil | LStd, Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+		<text>Leave it alone. [ x2 Nil | LStd, Rck SF DR ]</text>
 		<event load="ROCK_LOOTING_LEAVE"/>
 	</choice>
 	<choice hidden="true" req="slug">
@@ -61,7 +61,7 @@
 	<choice hidden="true">
 		<text>Attack! [ Mts SF DR ]</text>
 		<event>
-			<text>No species deserves a Mantis hunter on their back - time to make the galaxy a little safer. Engage!</text>
+			<text>No species deserves a Mantis hunter on their back - time to make the galaxy a little safer. Engage! [ Mts SF DR ]</text>
 			<ship hostile="true"/>	
 		</event>
 	</choice>
@@ -74,7 +74,7 @@
 	<choice hidden="true" req="ROCK_ARMOR">
 		<text>(Rock Ship) Ram the bastards. [ Mts SF DR, Enemy engines@0 ]</text>
 		<event>
-			<text>Before they have a chance, you ram your ship into theirs, causing irreparable damage to their engines. Luckily, your ship's armored hull is hardly dented from the impact. The Mantis ship careens away and you move in to attack.</text>
+			<text>Before they have a chance, you ram your ship into theirs, causing irreparable damage to their engines. Luckily, your ship's armored hull is hardly dented from the impact. The Mantis ship careens away and you move in to attack. [ Mts SF DR, w/Enemy engines@0 ]</text>
 			<ship hostile="true"/>
 			<status type="limit" target="enemy" system="engines" amount="0"/>
 		</event>
@@ -82,7 +82,7 @@
 	<choice hidden="true" req="rock">
 		<text>(Rock Crew) Put your Rock crewmember on the comm. [ Mts SF DR ]</text>
 		<event>
-			<text>The two aliens face one another over the vidscreen. "Cave-dwelling pebble-man!" yells the furious Mantis captain. "See, I paint my ship with your companions! I paint my ship with you!"</text>
+			<text>The two aliens face one another over the vidscreen. "Cave-dwelling pebble-man!" yells the furious Mantis captain. "See, I paint my ship with your companions! I paint my ship with you!" [ Mts SF DR ]</text>
 			<ship hostile="true"/>
 		</event>
 	</choice>
@@ -91,7 +91,7 @@
 <event name="ROCK_MANTIS_FREIGHTER" unique="true">
 	<text>A curious sight greets you at this beacon: a disabled Rock freighter drifts in space while two Mantis craft battle it out - presumably over who deserves the spoils.</text>
 	<choice hidden="true">
-		<text>Wait, then attack the surviving Mantis. [ Mts SF Enemy Weapons@2, K: MStd, CK: MStd | Mts SF K: MStd, CK: MStd ]</text>
+		<text>Wait, then attack the surviving Mantis. [ Mts SF w/Enemy Weapons@2, K: MStd; CK: MStd | Mts SF K: MStd; CK: MStd ]</text>
 		<event load="ROCK_MANTIS_FREIGHTER_LIST"/>
 	</choice>
 	<choice hidden="true">
@@ -127,7 +127,7 @@
 	<text>You encounter a small craft with minimal propulsion; its Rock crew-member explains that the Rock home-world is run on lies and propaganda that keep the populace in check, and that they want no part of it.</text>
 	<ship load="ROCK_SHIP" hostile="false"/>
 	<choice hidden="true">
-		<text>Tell them their god sent them here to join your crew. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+		<text>Tell them their god sent them here to join your crew. [ Rck SF DR ]</text>
 		<event>
 			<text load="ROCK_ATHIEST_BAD"/>
 			<ship hostile="true"/>
@@ -196,13 +196,13 @@
 </textList>
 
 <textList name="ROCK_PIRATE_ASTEROID">
-	<text>Minute fissures in the shields spark and crackle as the ship jumps into the wake of a huge asteroid. More asteroids follow, as does a lost and aggressive Rock pirate ship. [ PRck SF DR ]</text>
-	<text>You exit the jump surrounded by dirt and rocks. Before long a blast is deflected by your shield, but that was no asteroid... Incoming pirate! [ PRck SF DR ]</text>
+	<text>Minute fissures in the shields spark and crackle as the ship jumps into the wake of a huge asteroid. More asteroids follow, as does a lost and aggressive Rock pirate ship. [ PRck SF DR w/Asteroids ]</text>
+	<text>You exit the jump surrounded by dirt and rocks. Before long a blast is deflected by your shield, but that was no asteroid... Incoming pirate! [ PRck SF DR w/Asteroids ]</text>
 </textList>
 
 <textList name="ROCK_PIRATE_SUN">
-	<text>Unusual solar activity in this region means you need to get out, quick. The Rock pirate nearby apparently thinks otherwise as they move to attack your ship. [ PRck SF DR ]</text>
-	<text>A Rock ship is silhouetted against a sun in supernova. They hail: "Even out here you follow us! We only wish to be left alone!" Out of panic or anger, they charge their weapons. [ PRck SF DR ]</text>
+	<text>Unusual solar activity in this region means you need to get out, quick. The Rock pirate nearby apparently thinks otherwise as they move to attack your ship. [ PRck SF DR w/Solar-flare ]</text>
+	<text>A Rock ship is silhouetted against a sun in supernova. They hail: "Even out here you follow us! We only wish to be left alone!" Out of panic or anger, they charge their weapons. [ PRck SF DR w/Solar-flare ]</text>
 </textList>
 
 <event name="ROCK_QUEST_MARRIAGE_START" unique="true">
@@ -210,7 +210,7 @@
 	<choice hidden="true">
 		<text>Accept the passenger. [ Rock Marraige Quest ]</text>
 		<event>
-			<text>"You surprise me, off-worlder. Thank you. The passenger will be with you momentarily." She refuses to enter the main hold and prefers to wait in the cargo bay.</text>
+			<text>"You surprise me, off-worlder. Thank you. The passenger will be with you momentarily." She refuses to enter the main hold and prefers to wait in the cargo bay. [ Rock Marraige Quest ]</text>
 			<quest event="ROCK_QUEST_MARRIAGE"/>
 		</event>
 	</choice>
@@ -274,7 +274,7 @@
 </event>
 
 <event name="ROCK_UNLOCK2">
-	<text>You arrive at the coordinates given and find yourself dangerously close to an M-class star! The other ship messages you, "Let's see how long your puny ship can handle this heat! Prepare for a challenge!" [ SF K: MStd, CK: HStd, Esc: Quest [ Rock Plating , +29 Hull ] ]</text>
+	<text>You arrive at the coordinates given and find yourself dangerously close to an M-class star! The other ship messages you, "Let's see how long your puny ship can handle this heat! Prepare for a challenge!" [ SF K: MStd, CK: HStd, Esc: 28-28, 32s, Quest [ Rock Plating , +29 Hull ] ]</text>
 	<ship load="ROCK_UNLOCK2" hostile="true"/>
 	<environment type="sun"/>	
 </event>
@@ -305,4 +305,53 @@
 <textList name="ROCK_BOARDERS_ASTEROID">
 	<text>You arrive in an asteroid field and immediately begin evasive maneuvers when a loud clunk reverberates through the ship. At first you think the hull has been hit, but the noise came from some Rock intruders teleporting aboard the ship! [ Rck SF DR w/Asteroids, 1-2 Rock Boarders, S: 0.7, 3-4, RStuff ]</text>
 	<text>Your shields are being taxed as they deflect the debris from an asteroid field. As you weave your way between the rocks, you happen upon a Rock pirate stronghold. You register teleport signatures and hear shouts aboard the ship. [ Rck SF DR w/Asteroids, 1-2 Rock Boarders, S: 0.7, 3-4, RStuff ]</text>
+</textList>
+
+<eventList name="ROCK_LOOTING_LEAVE">
+	<event>
+		<text>The Rock people are not known for setting traps but you hasten to leave anyway.</text>
+	</event>
+	<event>
+		<text>The Rock people are not known for setting traps but you hasten to leave anyway.</text>
+	</event>
+	<event>
+		<text>Before you have a chance to leave, a Rock patrol ship arrives and you intercept their comm chatter, "...appears we've finally found them. Their killing spree ends now!" Before you can plead your innocence they move in to attack. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+		<ship load="ROCK_SHIP" hostile="true"/>
+	</event>
+</eventList>
+
+
+<eventList name="ROCK_LOOTING_STRIP">
+	<event>
+		<text>You salvage what you can from the ship. No one bothers you during the operation.</text>
+		<autoReward level="low">standard</autoReward>
+	</event>
+	<event>
+		<text>A Rock patrol ship jumps in while you are salvaging the ship. They message you, "Filthy pirates! Prepare to die!" You doubt explaining your mission will convince them of your need. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+		<ship load="ROCK_SHIP" hostile="true"/>
+		<autoReward level="low">standard</autoReward>
+	</event>
+</eventList>
+
+<eventList name="ROCK_STARSHIP_MINE_DEFUSE">
+	<event>
+		<text>Your crewmember dons a space suit and exits the airlock. They make quick work of the basic device and return inside to relief all round. The mine makes good scrap pickings too.</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Your crewmember dons a space suit and exits the airlock. When they open up the mine housing, though, they panic. The red wire or the blue?! 3... 2... 1...</text>
+		<choice hidden="true">
+			<text>Red! [ MScrap | -6 Hull, Crew- (CB+) ]</text>
+			<event load="ROCK_STARSHIP_MINE_DEFUSE2"/>
+		</choice>
+		<choice hidden="true">
+			<text>Blue! [ MScrap | -6 Hull, Crew- (CB+) ]</text>
+			<event load="ROCK_STARSHIP_MINE_DEFUSE2"/>
+		</choice>
+	</event>
+</eventList>
+
+<textList name="ROCK_ATHIEST_BAD">
+	<text>They barely hear out your appeals before yelling, "These are the lies I sought to escape!" Looks like they're charging weapons! [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
+	<text>They listen to your appeals and whisper, "Traitors to truth. You're no better than them!" Chaos ensues. [ Rck SF DR S: 0.7, 3-4, RStuff ]</text>
 </textList>

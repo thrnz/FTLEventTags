@@ -204,7 +204,7 @@
 </event>
 
 <event name="ENGI_UNLOCK_3">
-	<text>You have finally caught up with the ships you've been hunting. A hangar-sized cargo ship is being escorted by a number of Mantis ships. As you reconsider the assault, a squadron of Engi ships with pirate emblems jump in and assist you. You prepare to fight the Mantis but scans indicate they are manned by Rebels! [ Mts w/Human crew SF CK: MStd, DB: +20 Hull, HStd, Titanium System Casing ]</text>
+	<text>You have finally caught up with the ships you've been hunting. A hangar-sized cargo ship is being escorted by a number of Mantis ships. As you reconsider the assault, a squadron of Engi ships with pirate emblems jump in and assist you. You prepare to fight the Mantis but scans indicate they are manned by Rebels! [ Mts w/Human crew SF CK: MStd; DB: +20 Hull, HStd, Titanium System Casing ]</text>
 	<ship load="MANTIS_ENGI_UNLOCK_3" hostile="true"/>
 </event>
 
@@ -243,7 +243,7 @@
 		<event>
 			<text>They insist they must destroy your ship to prevent the virus from escaping!</text>
 			<choice hidden="true">
-				<text>Hold on! Let us try to purge the system code! [ Eng SF with half Shields and Engines, K: MStd, CK: MStd ]</text>
+				<text>Hold on! Let us try to purge the system code! [ Eng SF with half Shields and Engines, K: MStd; CK: MStd ]</text>
 				<event>
 					<text>Wiping your engine core and shields proves useless... eventually you trap the virus in the weapons systems to purge it, but before you do, the Engi grow restless and attack!</text>
 					<status type="divide" target="player" system="shields" amount="2"/>
@@ -252,7 +252,7 @@
 				</event>
 			</choice>
 			<choice hidden="true">
-				<text>Attack the Engi vessel! [ Eng SF K:MStd, CK: MStd ]</text>
+				<text>Attack the Engi vessel! [ Eng SF K:MStd; CK: MStd ]</text>
 				<event>
 					<text>The Engi be damned, no one threatens your ship. You prepare for a fight!</text>
 					<ship load="ENGI_VIRUS_SHIP" hostile="true"/>

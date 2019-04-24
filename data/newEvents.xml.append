@@ -1,7 +1,7 @@
 <event name="HELP_MINERS" unique="true">
 	<text>You come across an asteroid mining colony. They message you immediately, saying, "Greetings. Our supplies of mining explosives have run out ever since the Rebels blockaded this system. Do you have any extra explosives?"</text>
 	<choice hidden="true" req="WEAPONS_MISSILES_EVENTS">
-		<text>(Missile Weapon) Offer to solve their problem by launching a missile.</text>
+		<text>(Missile Weapon) Offer to solve their problem by launching a missile. [ Same as above ]</text>
 		<event>
 			<text>"While I appreciate your enthusiasm, we have certain protocols for the use of explosives around the workplace. Launching a military grade weapon into our mines isn't exactly what I would call, 'union-friendly'."</text>
 			<choice hidden="true">
@@ -195,7 +195,7 @@
 <event name="EMPTY_STATION2" unique="true"> <!--Neutrals-->
 	<text load="EMPTY_STATION2_TEXT"/>
 	<choice hidden="true">
-		<text>Move in to examine the station. [ Nil | x2 LScrap | [ LSCrap | CloneBay BO [ x2 Crew+ | +1 Boarder ] ] | 2 Boarders, Prt SF DR | 2-4 Boarders, Enemy ASB ]</text>
+		<text>Move in to examine the station. [ Nil | x2 LScrap | [ LSCrap | CloneBay BO [ x2 Crew+ | 1 Boarder ] ] | 2 Boarders, Prt SF DR | 2-4 Boarders, Enemy ASB ]</text>
 		<event load="EMPTY_STATION2_LIST"/>
 	</choice>
 	<choice>
@@ -264,7 +264,7 @@
 		<event load="WRECKAGE_SCANNED"/>
 	</choice>
 	<choice hidden="true">
-		<text>Investigate the battlefield. [ x5 Nil | MStuff | Mts SF DR | Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 | Ztn SF DR ]</text>
+		<text>Investigate the battlefield. [ x5 Nil | MStuff | Mts SF DR | Rbl SF DR | Ztn SF DR ]</text>
 		<event load="WRECKAGE_INVESTIGATE"/>
 	</choice>
 	<choice>
@@ -276,11 +276,11 @@
 <event name="FUELING_STATION" unique="true">
 	<text>A small platform orbits near this beacon - it looks like a fueling station of some sort, and it is cheerily broadcasting reasonable prices in a spectrum of frequencies and languages.</text>
 	<choice hidden="true">
-		<text>Dock with the refueling platform. [ [ Fuel Trade | 3-5 Fuel | More... ] | [ [ -3 Hull, 2-4 Boarders | 5 Fuel BlastDoors BO ] | -3 Hull, Prt SF DR, -3 Hull; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ] ]</text>
+		<text>Dock with the refueling platform. [ [ Fuel Trade | 3-5 Fuel | More... ] | [ [ -3 Hull, 2-4 Boarders | 5 Fuel BlastDoors BO ] | -3 Hull, Prt SF DR ] ]</text>
 		<event load="FUELING_STATION_LIST"/>
 	</choice>
 	<choice>
-		<text>Ignore the refueling platform. [ Nil | Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+		<text>Ignore the refueling platform. [ x2 Nil | Prt SF DR ]</text>
 		<event load="FUELING_STATION_IGNORE"/>
 	</choice>
 </event>
@@ -418,7 +418,7 @@
 	<event>
 		<text>You find the missing cargo ship docked to a Rebel station. You send a short-band message to them and discover they are being held against their will and forced to 'donate to their supplies for the war effort.'</text>
 		<choice hidden="true">
-			<text>Attack the Rebels to help them escape. [ Rbl SF Enemy ASB, K: MStd, CK: HStd, DB: MScrap ]</text>
+			<text>Attack the Rebels to help them escape. [ Rbl SF Enemy ASB; K: MStd; CK: HStd; DB: MScrap ]</text>
 			<event>
 				<text>You move in to attack the Rebel ship that is threatening them and scanners detect weapon locks from a nearby Anti-Ship Battery. It's about to get hectic!</text>
 				<ship load="QUEST_CONSTRUCTIONYARD_SHIP" hostile="true"/>
@@ -435,7 +435,7 @@
 	<event>
 		<text>You find the missing cargo ship docked to an empty space station. However their hold appears to be empty and there are no obvious signs that anyone is inside the ship or station. Everything looks abandoned.</text>
 		<choice hidden="true">
-			<text>Move in to examine the station. [ Nil | x2 LScrap | [ LScrap | CloneBay BO [ x2 Crew+ | +1 Boarder ] ] | 2 Boarders, Prt SF DR | 2-4 Boarders, Enemy ASB ]</text>
+			<text>Move in to examine the station. [ Nil | x2 LScrap | [ LScrap | CloneBay BO [ x2 Crew+ | 1 Boarder ] ] | 2 Boarders, Prt SF DR | 2-4 Boarders, Enemy ASB ]</text>
 			<event load="EMPTY_STATION2_LIST"/>
 		</choice>
 		<choice>
@@ -495,7 +495,7 @@
 		<event>
 			<text>The Slug captain explains that they upgraded the Rock ship's reactor and now the 'thick boulder heads' are refusing to pay for the work done. The Rock Captain says the 'slime balls' did a poor job that is not worth their agreed upon price.</text>
 			<choice>
-				<text>Offer to pay off the Rock debt. [ -10-15 Scrap, [ Nil | Reactor+1 | 10-15 Scrap Reactor Upgrade ] ]</text>
+				<text>Offer to pay off the Rock debt. [ -10-15 Scrap, [ Nil | Reactor +1 | 10-15 Scrap Reactor Upgrade ] ]</text>
 				<event>
 					<text>You pay off the debt. The Rock Captain still seems annoyed at the Slug's getting their 'undeserved' scrap, but at least the situation will remain peaceful.</text>
 					<item_modify>
@@ -554,7 +554,7 @@
 	<event>
 		<text>The Slug Captain, thankful for your help, offers a reactor upgrade for your ship... for a 'fair' price.</text>
 		<choice req="reactor" max_lvl="24" blue="false">
-			<text>Agree to the price. [ Reactor+1, -10-15 Scrap ]</text>
+			<text>Agree to the price. [ Reactor +1, -10-15 Scrap ]</text>
 			<event>
 				<text>You let their team on board and after a short time they finish their work.</text>
 				<item_modify>
@@ -659,7 +659,7 @@
 		<event>
 			<text>"Found malfunctioning Mantis. Believes it is human. Will receive input only from human. Danger Evaluation: Extremely High. Provide assistance."</text>
 			<choice>
-				<text>Send a shuttle with an away team to help. [ Nil | Crew- (CB+) | [ MantisCrew+1 or +1 Engines ] ]</text>
+				<text>Send a shuttle with an away team to help. [ Nil | Crew- (CB+) | [ MantisCrew+ or Engines +1 ] ]</text>
 				<event load="CONFUSED_MANTIS_DEFAULT"/>
 			</choice>
 			<choice>
@@ -667,7 +667,7 @@
 				<event/>
 			</choice>
 			<choice req="human" hidden="true">
-				<text>(Human Crew) Send your human crewmember to communicate with the Mantis. [ MantisCrew+1 or +1 Engines ]</text>
+				<text>(Human Crew) Send your human crewmember to communicate with the Mantis. [ MantisCrew+ or Engines +1 ]</text>
 				<event>
 					<text>The Mantis is grateful to see 'another human', and introduces himself as Robert Smith. He explains he's from a nearby human colony and would appreciate being returned there.</text>
 					<choice>
@@ -723,9 +723,9 @@
 		<event load="DOCK_PIRATE_SALESMAN"/>
 	</choice>
 	<choice>
-		<text>This seems dangerous, leave. [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+		<text>This seems dangerous, leave. [ Prt SF DR ]</text>
 		<event>
-			<text>As soon as you start to reverse your ship, the pirate reveals hidden weaponry and sets off in pursuit. You'll have to fight him to escape!</text>
+			<text>As soon as you start to reverse your ship, the pirate reveals hidden weaponry and sets off in pursuit. You'll have to fight him to escape! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 			<ship load="PIRATE" hostile="true"/>
 		</event>
 	</choice>
@@ -793,7 +793,7 @@
 	<choice>
 		<text>Buy nothing. [ -3 Hull, Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 		<event>
-			<text>"Ah, I'm sorry to hear that! Pleasant journeys." Once back to the helm, a series of explosions rocks your ship. The pirate ship has powered its weapons! You receive a message, "You shouldn't waste people's time Captain!"</text>
+			<text>"Ah, I'm sorry to hear that! Pleasant journeys." Once back to the helm, a series of explosions rocks your ship. The pirate ship has powered its weapons! You receive a message, "You shouldn't waste people's time Captain!" [ -3 Hull, Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
 			<ship load="PIRATE" hostile="true"/>
 			<damage amount="1" system="engines" effect="random"/>
 			<damage amount="1" system="room" effect="random"/>
@@ -859,14 +859,14 @@
 		<event/>
 	</choice>
 	<choice req="sensors" lvl="2" max_group="0">
-		<text>(Improved Sensors) Perform a scan of the area. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<text>(Improved Sensors) Perform a scan of the area. [ Rbl SF DR ]</text>
 		<event>
 			<text>You quickly find the Rebel ship's location and move to intercept.</text>
 			<ship load="REBEL" hostile="true"/>
 		</event>
 	</choice>
 	<choice req="sensors" lvl="3" max_group="0" hidden="true">
-		<text>(Advanced Sensors) Pinpoint the Rebel's location. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4; Enemy Engines@0 ]</text>
+		<text>(Advanced Sensors) Pinpoint the Rebel's location. [ Rbl SF DR w/Enemy Engines@0 ]</text>
 		<event>
 			<text>You find the Rebel ship hiding on a nearby asteroid. You are able to get a shot off and permanently disable their engines before they notice you.</text>
 			<ship load="REBEL" hostile="true"/>
@@ -919,7 +919,7 @@
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Ask if they can take a look at your engines. [ +1 Engines ]</text>
+		<text>Ask if they can take a look at your engines. [ Engines +1 ]</text>
 		<event>
 			<text>They are happy to take a look, and are able to offer some suggestions for improvements.</text>
 			<upgrade amount="1" system="engines"/>
@@ -933,3 +933,52 @@
 	<text>Stay quiet and hope they don't notice you. [ Nil ]</text>
 	<text>Stay out of their way and charge your FTL drive. [ Nil ]</text>
 </textList>
+
+
+<eventList name="FUELING_STATION_IGNORE">
+	<event>
+		<text>As you prepare to leave the system, a Pirate ship suddenly appears on scanners - it looks like it was attempting to use the platform as bait! [ Prt SF DR; S: 0.5, 3-4, RStuff; Esc: 0.5, 2-4 ]</text>
+		<ship load="PIRATE" hostile="true"/>
+	</event>
+	<event/>
+	<event/>
+</eventList>
+
+
+<eventList name="REBEL_BRIBE_RESULT">
+	<event>
+		<text>The civilians are grateful. However, none of them seem eager to be mistaken as Federation loyalists so they quickly jump away.</text>
+	</event>
+	<event>
+		<text>Some of the civilians pool together their excess scrap to try to repay you for your help.</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>One of the civilian ships quietly teleports over a crate of Federation military supplies.</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>One of the civilian ships contacts you and reveals they are Federation loyalists. An eavesdropping Rebel swoops in, destroys the ship, and turns to attack you! [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+</eventList>
+
+
+<eventList name="ROGUE_REBEL_SEARCH">
+	<event>
+		<text>You spend some time looking around but your scanners cannot pick up any trace of the Rebel ship. You prepare to move on.</text>
+	</event>
+	<event>
+		<text>After a short search you find the Rebel ship. Let's hope he's as easy to defeat in combat as he was to find. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>You are able to quickly track down the Rebel. Let's hope he's as easy to defeat in combat as he was to find. [ Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>After far too much time spent searching, you are finally able to track him down. You go into the fight pondering just how much of a head start you've lost on the Rebel Fleet... [ Fleet+, Rbl SF DR; S: 0.5, 2-3, RStuff; Esc: 0.5, 3-4 ]</text>
+		<modifyPursuit amount="1"/>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+</eventList>
