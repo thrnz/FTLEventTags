@@ -281,7 +281,7 @@
 
 <textList name="ROCK_BOARDERS_SHIP">
 	<text>You passively scan a small Rock station that is next to the beacon. However they must not have appreciated your curiosity. A Rock ship pulls away from the station and you register an incoming teleporter signal as well! [ Rck SF DR, 1-3 Rock Boarders; S: 0.7, 3-4, RStuff ]</text>
-	<text>You find a Rock ship docked with a damaged Mantis fighter. Before you have a chance to hail them, the ship moves in to attack you and you register teleporter symbols from the disabled ship. They're using Mantis tech to board you! [ Rck SF DR, 1-3 Rock Boarders; S: 0.7, 3-4, RStuff ]/text>
+	<text>You find a Rock ship docked with a damaged Mantis fighter. Before you have a chance to hail them, the ship moves in to attack you and you register teleporter symbols from the disabled ship. They're using Mantis tech to board you! [ Rck SF DR, 1-3 Rock Boarders; S: 0.7, 3-4, RStuff ]</text>
 </textList>
 
 <eventList name="ROCK_MANTIS_FREIGHTER_LIST">
