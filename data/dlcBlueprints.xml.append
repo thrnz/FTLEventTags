@@ -210,3 +210,50 @@
 	<weaponArt>chargelaser2</weaponArt> 
 	<iconImage>laser_charge4</iconImage>
 </weaponBlueprint>
+
+
+  <shipBlueprint name="ANAEROBIC_BOMBER" layout="anaerobic_bomber" img="anaerobic_bomber">
+	<class>Lanius Bomber [ 10M 3-5C ]</class>
+	<minSector>3</minSector>
+	<systemList>
+		<pilot power="1"max="3" room="3"/>
+		<doors power="1" max="3" room="10" start="false"/>
+		<clonebay power="1" max="3" room="7" start="false"/>
+		<!--<oxygen power="1" max="3" room="9"/> -->
+		<shields power="2" max="8" room="0"/>
+		<engines power="1" max="5" room="9"/>
+		<weapons power="2" max="8" room="1"/>
+		<mind power="1" max="2" room="4" start="false"/>
+		<teleporter power="1" max="3" room="8"/>
+		<cloaking power="1" max="3" room="2" start="false"/>
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_ANAEROBIC"/>
+	<health amount="9"/>	
+	<maxPower amount ="7"/>
+	<crewCount amount = "3" max="5" class="anaerobic"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>anaerobic_bomber</cloakImage>
+	<aug name="O2_MASKS"/>
+</shipBlueprint>
+
+  <shipBlueprint name="ANAEROBIC_SCOUT" layout="anaerobic_scout" img="anaerobic_scout">
+	<class>Lanius Scout [ 10M 2-3C ]</class>
+	<maxSector>7</maxSector>
+	<systemList>
+		<pilot power="1"max="3" room="1"/>
+		<clonebay power="1" max="3" room="3" start="false"/>
+		<!--<oxygen power="1" max="3" room="9"/> -->
+		<shields power="2" max="8" room="5"/>
+		<engines power="1" max="5" room="6"/>
+		<weapons power="2" max="8" room="4"/>
+		<doors power="1" max="3" room="0" start="false"/>
+		<hacking power="1" max="3" room="2" start="false"/>
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_ANAEROBIC"/>
+	<health amount="7"/>	
+	<maxPower amount ="7"/>
+	<crewCount amount = "2" max="3" class="anaerobic"/>
+	<boardingAI>sabotage</boardingAI>
+	<cloakImage>anaerobic_scout</cloakImage>
+	<aug name="O2_MASKS"/>
+</shipBlueprint>

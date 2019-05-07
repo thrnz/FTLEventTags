@@ -1026,3 +1026,42 @@
 	<rarity>5</rarity>
 	<iconImage>combat2</iconImage>
 </droneBlueprint>
+
+
+<shipBlueprint name="LONG_ELITE_MED" layout="rebel_long" img="rebel_long_hard">
+	<class>Rebel Elite [ 5M 4C ]</class>
+	<systemList>
+		<oxygen power="2" room="2"/>
+		<pilot power="3" room="0"/>
+		<shields power="6" room="6"/>
+		<engines power="4" room="5"/>
+		<weapons power="9" room="4"/>
+	</systemList>
+	<weaponList count="3" missiles="5">
+		<weapon name="MISSILES_BREACH"/>
+		<weapon name="LASER_HEAVY_1"/>
+		<weapon name="BEAM_2"/>
+	</weaponList>
+	<health amount="20"/>	
+	<maxPower amount ="21"/>
+	<crewCount amount = "4" class="human"/>
+</shipBlueprint>
+
+<shipBlueprint name="LONG_ELITE_HARD" layout="rebel_long" img="rebel_long_hard">
+	<class>Rebel Elite [ 7M 5C ] </class>
+	<systemList>
+		<oxygen power="2" room="2"/>
+		<pilot power="3" room="0"/>
+		<shields power="8" room="6"/>
+		<engines power="5" room="5"/>
+		<weapons power="9" room="4"/>
+	</systemList>
+	<weaponList count="3" missiles="7">
+		<weapon name="MISSILES_2"/>
+		<weapon name="LASER_HEAVY_2"/>
+		<weapon name="BEAM_3"/>
+	</weaponList>
+	<health amount="30"/>	
+	<maxPower amount ="24"/>
+	<crewCount amount = "5" class="human"/>
+</shipBlueprint>

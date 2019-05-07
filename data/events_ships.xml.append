@@ -330,7 +330,7 @@
 	<deadCrew load="DEAD_CREW_DEFAULT"/>
 </ship> 
 
-ER" auto_blueprint="SHIPS_CRYSTAL">
+<ship name="CRYSTAL_HUNTER" auto_blueprint="SHIPS_CRYSTAL">
 	<surrender  chance="0.5" min="3" max="4">
 		<text>The hunters message you, "We surrender. Take one of these squishy meat sacks that we've captured." He must be referring to the human captives.</text>
 		<choice hidden="true">

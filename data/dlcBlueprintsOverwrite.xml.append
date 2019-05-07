@@ -1,0 +1,443 @@
+<shipBlueprint name="AUTO_BASIC_DLC" layout="auto_basic" img="auto_basic">  <!-- NOTE:   This ship starts with no shields.  that ok?-->
+	<class>Auto-Surveyor [ 10 M ]</class>
+	<systemList>
+		<pilot power="1" max="2" room="2"/>
+		<shields power="2" max="8" room="1" start="false"/> <!--3-->
+		<engines power="2" max="8" room="0"/> <!--1-->
+		<weapons power="2" max="8" room="3"/> <!--4-->
+		<mind power="1" max="2" room="4" start="false"/> <!--0-->
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_AUTO"/>
+	<health amount="6"/>	
+	<maxPower amount ="6"/>
+	<crewCount amount = "0" max="0" class="human"/>
+</ship>	
+
+<shipBlueprint name="AUTO_ASSAULT_DLC" layout="auto_assault" img="auto_assault">
+	<class>Auto-Hacker [ 10M 4D ]</class>
+	<systemList>
+		<pilot power="1" max="3" room="2"/><!--2-->
+		<shields power="2" max="8" room="1"/> <!--3-->
+		<engines power="1" max="5" room="0"/><!--4-->
+		<weapons power="2" max="7" room="3"/>   <!--1-->
+		<hacking power="1" max="2" room="4"/> <!--0-->
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_AUTO"/>
+	<droneList drones="4"/>
+	<health amount="8"/>	
+	<maxPower amount ="7"/>
+	<crewCount amount = "0" max="0" class="human"/>
+</ship>	
+
+  <shipBlueprint name="CRYSTAL_SCOUT_DLC" layout="crystal_scout" img="crystal_scout">
+	<class>Crystal Outrider [ 10M 2-3C ]</class>
+	<systemList>
+		<pilot power="1"max="3" room="3"/>
+		<clonebay power="1" max="3" room="5" start="false"/>
+		<oxygen power="1" max="3" room="0"/>
+		<shields power="2" max="8" room="1"/>
+		<engines power="1" max="5" room="4"/>
+		<weapons power="4" max="8" room="2"/> 
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_CRYSTAL"/>
+	<health amount="7"/>	
+	<maxPower amount ="9"/>
+	<crewCount amount = "2" max="3" class="crystal"/>
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="CRYSTAL_BOMBER_DLC" layout="crystal_bomber" img="crystal_bomber">
+	<class>Crystal Instigator [ 10M 2-5C ]</class>
+	<systemList>
+		<pilot power="1"max="3" room="2"/> 
+		<doors power="1" max="3" room="8" start="false"/>
+		<clonebay power="1" max="3" room="0" start="false"/> 
+		<oxygen power="1" max="3" room="6"/> 
+		<shields power="2" max="10" room="4"/>  
+		<engines power="1" max="5" room="5"/>
+		<weapons power="2" max="10" room="7"/>
+		<cloaking power="1" max="2" room="1"/>
+		<teleporter power="1" max="2" room="3"/>
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_CRYSTAL"/>
+	<health amount="9"/>	
+	<maxPower amount ="9"/>
+	<crewCount amount = "2" max="5" class="crystal"/>
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+  <shipBlueprint name="CIRCLE_SCOUT_DLC" layout="circle_scout" img="circle_scout">
+	<class>Engi Outrider [ 6M 4D 2-5C ]</class>
+	<maxSector>7</maxSector>
+	<systemList>
+		<pilot power="1"max="3" room="5"/> <!--5-->
+		<hacking power="1" max="2" room="2" start="false"/> <!--2-->
+		<clonebay power="1" max="3" room="6" start="false"/> <!--6-->
+		<oxygen power="1" max="3" room="7"/>  <!--3-->
+		<shields power="2" max="8" room="3"/> <!--1-->
+		<engines power="1" max="5" room="4"/> <!--7-->
+		<weapons power="2" max="6" room="1"/> <!--4-->
+		<drones power="2" max="8" room="0"/> <!--0-->
+	</systemList>
+	<weaponList missiles="6" load="WEAPONS_CIRCLE"/>
+	<droneList drones="4" load="DRONES_DEFENSE"/>
+	<health amount="7"/>	
+	<maxPower amount ="8"/>
+	<crewCount amount = "2" max="5" class="engi"/><!--CHANGED was 2 3-->
+	<aug name="NANO_MEDBAY"/>
+</shipBlueprint>
+
+  <shipBlueprint name="CIRCLE_BOMBER_DLC" layout="circle_bomber" img="circle_bomber">
+	<class>Engi Hacker [ 10M 4D 3-6C ]</class>
+	<minSector>1</minSector>
+	<systemList>
+		<pilot power="1"max="3" room="1"/>  <!--1-->
+		<doors power="1" max="3" room="2" start="false"/> <!--2-->
+		<clonebay power="1" max="3" room="4" start="false"/>  <!--4-->
+		<oxygen power="1" max="3" room="3"/> <!--3-->
+		<shields power="2" max="10" room="11"/>  <!--7-->
+		<engines power="1" max="5" room="7"/> <!--9-->
+		<weapons power="2" max="8" room="9"/> <!--11-->
+		<drones power="2" max="8" room="6"/> <!--5-->
+		<hacking power="1" max="3" room="8" start="false"/>
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_CIRCLE"/>
+	<droneList drones="4" load="DRONES_DEFENSE"/>
+	<health amount="9"/>	
+	<maxPower amount ="8"/>
+	<crewCount amount = "3" max="6" class="engi"/><!--CHANGED was 2 3-->
+	<boardingAI>sabotage</boardingAI>
+	<aug name="NANO_MEDBAY"/>
+</shipBlueprint>
+
+  <shipBlueprint name="FED_SCOUT_DLC" layout="fed_scout" img="fed_scout">
+	<class>Federation Outrider [ 10M 4D 2-3C ]</class>
+	<maxSector>6</maxSector>
+	<systemList>
+		<pilot power="1" max="3" room="0"/> <!--0-->
+		<hacking power="1" max="1" room="2" start="false"/> <!--2-->
+		<oxygen power="1" max="3" room="5"/> <!--5-->
+		<shields power="2" max="8" room="3"/> <!--1-->
+		<engines power="1" max="5" room="4"/> <!--4-->
+		<weapons power="2" max="8" room="1"/> <!--3-->
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_FED"/>
+	<droneList drones="4"/>
+	<health amount="7"/>	
+	<maxPower amount ="10"/>
+	<crewCount amount = "2" max="3" class="human"/>
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+  
+  <shipBlueprint name="FED_BOMBER_DLC" layout="fed_bomber" img="fed_bomber">
+	<class>Federation Hacker [ 10M 4D 2-6C ]</class>
+	<minSector>1</minSector>
+	<systemList>
+		<pilot power="1"max="3" room="0"/> <!--0-->
+		<hacking power="1" max="1" room="2" start="false"/> <!--doors 2-->
+		<clonebay power="1" max="3" room="8" start="false"/> <!--8-->
+		<oxygen power="1" max="3" room="5"/> <!--5--> 
+		<shields power="2" max="8" room="9"/> <!--1-->
+		<engines power="1" max="5" room="6"/>  <!--9-->
+		<weapons power="2" max="8" room="1"/> <!--6--> 
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_FED"/>
+	<droneList drones="4"/>
+	<health amount="9"/>	
+	<maxPower amount ="7"/>
+	<crewCount amount = "2" max="6" class="human"/>  <!--CHANGED was 2 4-->
+</shipBlueprint>
+
+
+<shipBlueprint name="JELLY_BUTTON_DLC" layout="jelly_button" img="jelly_button">
+	<class>Slug Scout [ 6M 2-3C ]</class>
+	<maxSector>5</maxSector>
+	<systemList>
+		<oxygen power="1" max="3" room="3"/>
+		<pilot power="1" max="3" room="0"/>
+		<shields power="2" max="8" room="1"/>
+		<engines power="1" max="8"  room="4"/>
+		<weapons power="2" max="8"  room="2"/>
+	</systemList>
+	<weaponList missiles="6" load="WEAPONS_JELLY"/>
+	<health amount="9"/>	
+	<maxPower amount ="7"/>
+	<crewCount amount = "2" max="3" class="slug"/>
+	<boardingAI>sabotage</boardingAI>
+	<aug name="SLUG_GEL"/>
+</shipBlueprint>
+
+<shipBlueprint name="JELLY_CROISSANT_DLC" layout="jelly_croissant" img="jelly_croissant">
+	<class>Slug Light-Surveyor [ 10M 3-7C ]</class>
+	<minSector>1</minSector>
+	<systemList>
+		<pilot power="1" max="3" room="0"/> <!--0-->
+		<!-- <doors power="1" max="3"room="7" start="false"/>  --5-->
+		<oxygen power="1" max="3" room="4"/>  <!--4-->
+		<clonebay power="1" max="3" room="7" start="false"/>  <!--6-->
+		<shields power="2" max="10" room="3"/>  <!--3-->
+		<engines power="1" max="6" room="2"/>  <!--7-->
+		<weapons power="2" max="7" room="1"/>  <!--1-->
+		<mind power="1" max="2" room="6" start="false"/>  <!--new-->
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_JELLY"/>
+	<health amount="10"/>	
+	<maxPower amount ="7"/>
+	<crewCount amount = "3" max="7" class="slug"/><!--CHANGED was 3/5-->
+	<boardingAI>sabotage</boardingAI>
+	<aug name="SLUG_GEL"/>
+</shipBlueprint>
+
+  
+  <shipBlueprint name="JELLY_TRUFFLE_DLC" layout="jelly_truffle" img="jelly_truffle">
+	<class>Slug Instigator [ 14M 4-8C ]</class>
+	<minSector>4</minSector>
+	<systemList>
+		<pilot power="1"max="3" room="0"/>  <!--0-->
+		<mind power="1" max="2" room="4" start="false"/>  <!--doors 1-->
+		<oxygen power="1" max="3" room="6"/>  <!--4-->
+		<clonebay power="1" max="3" room="7" start="false"/>  <!--3-->
+		<shields power="2" max="10" room="5"/>  <!--6-->
+		<engines power="1" max="5" room="3"/>  <!--2-->
+		<weapons power="2" max="9" room="1"/>  <!--5-->
+		<cloaking power="1" max="1" room="2" start="false"/>  <!--7-->
+	</systemList>
+	<weaponList missiles="14" load="WEAPONS_JELLY"/>
+	<health amount="11"/>	
+	<maxPower amount ="10"/>
+	<crewCount amount = "4" max="8" class="slug"/> <!--CHANGED was 4/6-->
+	<boardingAI>sabotage</boardingAI>
+	<aug name="SLUG_GEL"/>
+</shipBlueprint>
+
+
+  <shipBlueprint name="MANTIS_SCOUT_DLC" layout="mantis_scout" img="mantis_scout">
+	<class>Mantis Interceptor [ 6M 2-4C ]</class>
+	<maxSector>5</maxSector>
+	<systemList>
+		<pilot power="1"max="3" room="5"/>  <!--1-->
+		<doors power="1" max="2" room="2" start="false"/> <!--2-->
+		<oxygen power="1" max="3" room="1"/> <!--5-->
+		<clonebay power="1" max="2" room="0" start="false"/> <!--6-->
+		<teleporter power="1" max="2" room="7" start="false"/> <!--4-->
+		<shields power="2" max="8" room="3"/> <!--0-->
+		<engines power="1" max="5" room="4"/> <!--7-->
+		<weapons power="2" max="7" room="6"/> <!--3-->
+	</systemList>
+	<weaponList missiles="6" load="WEAPONS_MANTIS"/>
+	<health amount="7"/>	
+	<maxPower amount ="10"/>
+	<crewCount amount = "2" max="4" class="mantis"/> 
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+  
+<shipBlueprint name="MANTIS_FIGHTER_DLC" layout="mantis_fighter" img="mantis_fighter">
+	<class>Mantis Assault [ 10M 2-5C ]</class>
+	<minSector>1</minSector>
+	<systemList>
+		<pilot power="1"max="3" room="9"/> <!--9-->
+		<doors power="1" max="3" room="5" start="false"/> <!--2-->
+		<oxygen power="1" max="3" room="8"/> <!--5-->
+		<clonebay power="1" max="3" room="0"/> <!--8-->
+		<teleporter power="1" max="2" room="7"/> <!--4-->
+		<shields power="2" max="7" room="3"/> <!--0-->
+		<engines power="1" max="5" room="4"/> <!--7-->
+		<weapons power="1" max="7" room="2"/> <!--3-->
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_MANTIS"/>
+	<health amount="9"/>	
+	<maxPower amount ="11"/>
+	<crewCount amount = "2" max="5" class="mantis"/>
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+    
+<shipBlueprint name="MANTIS_BOMBER_DLC" layout="mantis_bomber" img="mantis_bomber">
+	<class>Mantis Aggressor [ 14M 3-6C ]</class>
+	<minSector>4</minSector>
+	<systemList>
+		<pilot power="1"max="3" room="3"/>				 <!--3-->
+		<doors power="1" max="3" room="11" start="false"/> <!--9-->
+		<oxygen power="1" max="3" room="9"/> 			 <!--11-->
+		<clonebay power="1" max="1" room="0" start="false"/> <!--8-->
+		<teleporter power="1" max="2" room="4"/>			<!--4-->
+		<shields power="2" max="8" room="10"/>			<!--0-->
+		<engines power="1" max="5" room="7"/>		<!--7-->
+		<weapons power="2" max="8" room="8"/>	<!--10-->
+	</systemList>
+	<weaponList missiles="14" load="WEAPONS_MANTIS"/>
+	<health amount="11"/>	
+	<maxPower amount ="11"/>
+	<crewCount amount = "3" max="6" class="mantis"/>
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+
+
+<shipBlueprint name="REBEL_FAT_DLC" layout="rebel_squat" img="rebel_squat">
+	<class>Rebel Disruptor [ 10M 4D 3-5C ]</class>
+	<systemList>
+		<pilot power="1" max="2" room="0"/>
+		<oxygen power="1" max="2" room="1"/> <!--2-->
+		<shields power="2" max="8" room="7"/> <!--4-->
+		<engines power="2" max="4" room="6"/> <!--7--> 
+		<weapons power="1" max="6" room="2"/> <!--6-->
+		<drones power="2" max="8" room="4"/> <!--1-->
+		<clonebay power="1" max="3" room="3" start="false"/> <!--3-->
+		<hacking power="1" max="1" room="5" start="false"/> <!--5-->
+	</systemList>
+	<droneList drones="4" load="DRONES_STANDARD"/>
+	<weaponList missiles="10" load="WEAPONS_REBEL"/> 
+	<health amount="9"/>	
+	<maxPower amount ="8"/>
+	<crewCount amount = "3" max="5" class="human"/>
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+<shipBlueprint name="REBEL_SKINNY_DLC" layout="rebel_long" img="rebel_long">
+	<class>Rebel Invader [ 10M 3-6C ]</class>
+	<systemList>
+		<oxygen power="1" max="2" room="3"/> <!--2-->
+		<pilot power="1" max="3" room="0"/> <!--0-->
+		<shields power="2" max="8" room="4"/> <!--6-->
+		<engines power="2" max="5" room="5"/> <!--5-->
+		<weapons power="2" max="8" room="6"/>   <!--4-->
+		<clonebay power="1" max="2" room="2" start="false"/> <!--3--> 
+		<teleporter power="1" max="1" room="1" start="false"/> <!--1-->
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_REBEL"/>
+	<health amount="10"/>	
+	<maxPower amount ="7"/>
+	<crewCount amount = "3" max="6" class="human"/> <!--CHANGED was 3/6-->
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+		
+<shipBlueprint name="REBEL_SKINNY_ELITE_DLC" layout="rebel_long" img="rebel_long_elite">
+	<class>Elite Assault [ 10M 3-8C ]</class>
+	<systemList>
+		<oxygen power="1" max="2" room="3"/>
+		<pilot power="1" max="3" room="0"/>
+		<shields power="4" max="8" room="4"/>
+		<engines power="3" max="5" room="5"/>
+		<weapons power="4" max="10" room="6"/>  
+		<clonebay power="1" max="3" room="2"/> 
+		<teleporter power="1" max="3" room="1" start="false"/>
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_REBEL"/>
+	<health amount="14"/>	
+	<maxPower amount ="13"/>
+	<crewCount amount="3" max="8" class="human"/> <!--CHANGED was 3/6-->
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+
+
+
+  <shipBlueprint name="ROCK_SCOUT_DLC" layout="rock_scout" img="rock_scout">
+	<class>Rock Investigator [ 6M 2-4C ]</class>
+	<maxSector>5</maxSector>
+	<systemList>
+		<pilot power="1"max="3" room="3"/>  <!--3-->
+		<teleporter power="1" max="2" room="0" start="false"/> <!-- doors 5-->
+		<oxygen power="1" max="3" room="5"/> <!--0-->
+		<clonebay power="1" max="3" room="6" start="false"/> <!--2-->
+		<shields power="2" max="8" room="2"/> <!--4-->
+		<engines power="1" max="5" room="1"/> <!--6-->
+		<weapons power="2" max="8" room="4"/> <!--1-->
+	</systemList>
+	<weaponList missiles="6" load="WEAPONS_ROCK"/>
+	<health amount="8"/>	
+	<maxPower amount ="10"/>
+	<crewCount amount = "2" max="4" class="rock"/>
+	<boardingAI>sabotage</boardingAI>
+	<aug name="ROCK_ARMOR"/>
+</shipBlueprint>
+
+  <shipBlueprint name="ROCK_FIGHT_DLC" layout="rock_fight" img="rock_fight">
+	<class>Rock Interceptor [ 10M 2-5C ]</class>
+	<minSector>2</minSector>
+	<systemList>
+		<pilot power="1"max="3" room="3"/> <!--3-->
+		<teleporter power="1" max="2" room="6" start="false"/> <!--6-->
+		<oxygen power="1" max="3" room="4"/> <!--7-->
+		<clonebay power="1" max="3" room="0" start="false"/> <!--4-->
+		<shields power="2" max="8" room="8"/> <!--5-->
+		<engines power="2" max="5" room="7"/> <!--8-->
+		<weapons power="2" max="8" room="5"/> <!--0-->
+		<cloaking power="1" max="1" room="2" start="false"/> <!--0-->
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_ROCK"/>
+	<health amount="10"/>	
+	<maxPower amount ="7"/>
+	<crewCount amount = "2" max="5" class="rock"/>
+	<boardingAI>sabotage</boardingAI>
+	<aug name="ROCK_ARMOR"/>
+</shipBlueprint>
+
+
+
+  <shipBlueprint name="ROCK_ASSAULT_DLC" layout="rock_assault" img="rock_assault">
+	<class>Rock Aggressor [ 10M 2-6C ]</class>
+	<minSector>5</minSector>
+	<systemList>
+		<pilot power="1"max="3" room="0"/> <!--0-->
+		<doors power="1" max="3" room="3" start="false"/> <!--3-->
+		<oxygen power="1" max="3" room="9"/> <!--9-->
+		<clonebay power="1" max="2" room="1" start="false"/> <!--1-->
+		<shields power="2" max="8" room="6"/> <!--6-->
+		<engines power="2" max="5" room="7"/> <!--7-->
+		<weapons power="2" max="8" room="5"/> <!--5-->
+		<cloaking power="1" max="2" room="4" start="false"/> <!--4-->
+		<teleporter power="1" max="2" room="8" start="false"/> <!--8-->
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_ROCK"/>
+	<health amount="12"/>	
+	<maxPower amount ="7"/>
+	<crewCount amount = "2" max="6" class="rock"/>
+	<boardingAI>sabotage</boardingAI>
+	<aug name="ROCK_ARMOR"/>
+</shipBlueprint>
+
+
+
+
+  <shipBlueprint name="ZOLTAN_FIGHTER_DLC" layout="energy_fighter" img="energy_fighter">
+	<class>Energy Instigator [ 10M 2-3C ]</class>
+	<systemList>
+		<pilot power="1"max="3" room="0"/> <!--5-->
+		<mind power="1" max="1" room="1" start="false"/> <!--2-->
+		<clonebay power="1" max="3" room="6" start="false"/> <!--6-->
+		<oxygen power="1" max="3" room="4"/>  <!--3-->
+		<shields power="2" max="8" room="2"/> <!--1-->
+		<engines power="1" max="5" room="5"/> <!--0-->
+		<weapons power="2" max="8" room="3"/> <!--4-->
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_ZOLTAN"/>
+	<health amount="7"/>
+	<aug name="ENERGY_SHIELD"/>
+	<maxPower amount ="12"/>
+	<crewCount amount = "2" max="3" class="energy"/>
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+
+  <shipBlueprint name="ZOLTAN_BOMBER_DLC" layout="energy_bomber" img="energy_bomber">
+	<class>Energy Hacker [ 10M 3-6C ]</class>
+	<minSector>3</minSector>
+	<systemList>
+		<pilot power="1"max="3" room="1"/>  <!--1-->
+		<doors power="1" max="3" room="2" start="false"/> <!--2-->
+		<clonebay power="1" max="3" room="7" start="false"/> <!--6-->
+		<oxygen power="1" max="3" room="5"/>  <!--5-->
+		<shields power="2" max="8" room="4"/>  <!--3-->
+		<engines power="1" max="5" room="6"/> <!--7-->
+		<weapons power="2" max="8" room="3"/> <!--4-->
+		<hacking power="1" max="2" room="0" start="false"/> <!--0-->
+	</systemList>
+	<weaponList missiles="10" load="WEAPONS_ZOLTAN"/>
+	<droneList drones="5" load="DRONES_COMBAT"/>
+	<health amount="7"/>	
+	<aug name="ENERGY_SHIELD"/>
+	<maxPower amount ="15"/>
+	<crewCount amount = "3" max="6" class="energy"/> <!--CHANGED was 3 4-->
+	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
