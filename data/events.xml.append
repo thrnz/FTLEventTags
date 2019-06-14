@@ -1601,3 +1601,19 @@
 		</removeCrew>
 	</event>
 </eventList>
+
+<eventList name="ZOLTAN_CREW_STUDY_LIST">
+	<event>
+		<text>Your crew calmly lines up for the Zoltans to take their readings. After a short time, the process is done. They contact you, "Thank you for your participation in our study. Please accept these small cakes made from stiff dough as well as some scrap."</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>Your crew calmly lines up for the Zoltans to take their readings. After a short time, the process is done. They contact you, "Thank you for your participation in our study. Please accept these small cakes made from stiff dough as well as some scrap."</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>As soon as you dock, pirates burst on board and a hostile ship appears on the radar. You hear the Zoltans yell in the distance, "We're being held hostage!" [ 2 Boarders, Prt SF K: MStd; CK: HStd; DB: LStuff, Drone ]</text>
+		<ship load="PIRATE_ZOLTAN_CREW_STUDY" hostile="true"/>
+		<boarders min="2" max="2" class="random"/>
+	</event>
+</eventList>
