@@ -119,7 +119,7 @@
 	<choice>
 		<text>Aid the civilian ship. [ Prt SF K: MStd; CK: HStd; DB: [ Crew+ | MStd | LStd | LWeap | +5 Hull | Nil ] ]</text>
 		<event>
-			<text>You power up your weapons and engage the pirate ship.</text>
+			<text>You power up your weapons and engage the pirate ship. [ Prt SF K: MStd; CK: HStd; DB: [ Crew+ | MStd | LStd | LWeap | +5 Hull | Nil ] ]</text>
 			<ship load="PIRATE_CIVILIAN" hostile="true"/>
 		</event>
 	</choice>
@@ -262,7 +262,7 @@
 	<choice>
 		<text>Aid the Federation ship. [ Rbl SF K: MStd; CK: MStd; DB: [ Hidden Federation Base Quest | MStd | LStd, Crew+, BOs for more ] ]</text>
 		<event>
-			<text>You power up your weapons and engage the Rebel ship.</text>
+			<text>You power up your weapons and engage the Rebel ship. [ Rbl SF K: MStd; CK: MStd; DB: [ Hidden Federation Base Quest | MStd | LStd, Crew+, BOs for more ] ]</text>
 			<ship load="REBEL_VS_FEDERATION" hostile="true"/>
 		</event>
 	</choice>

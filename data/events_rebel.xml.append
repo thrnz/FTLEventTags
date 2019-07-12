@@ -48,7 +48,7 @@
 	<choice>
 		<text>Aid the civilian ship. [ Auto SF K: LStd, CK: MStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 		<event>
-			<text>You power up your weapons and engage the automated ship.</text>
+			<text>You power up your weapons and engage the automated ship. [ Auto SF K: LStd, CK: MStd, DB: [ Crew+ | MStd | LStd | LScrapWeapon | +5 Hull | Nil ] ]</text>
 			<ship load="REBEL_AUTO_CIVILIAN" hostile="true"/>
 		</event>
 	</choice>

@@ -3,17 +3,17 @@
 	<environment type="asteroid"/>
 	<distressBeacon/>
 	<choice hidden="true">
-		<text>Interfere and save the Mantis ship. [ Ztn SF K: LStd, CK: MStd ]</text>
+		<text>Interfere and save the Mantis ship. [ Ztn SF w/Asteroids K: LStd, CK: MStd ]</text>
 		<event>
-			<text>Sometimes you have to bet on the underdog - even on the rare occasions that the underdog is a Mantis warship. You set off for the heart of the asteroid field and engage the Zoltan there.</text>
+			<text>Sometimes you have to bet on the underdog - even on the rare occasions that the underdog is a Mantis warship. You set off for the heart of the asteroid field and engage the Zoltan there. [ Ztn SF w/Asteroids K: LStd, CK: MStd ]</text>
 			<environment type="asteroid"/>
 			<ship load="ZOLTAN_SHIP_SAVE_MANTIS1" hostile="true"/>
 		</event>
 	</choice>
 	<choice hidden="true">
-		<text>Interfere and help the Zoltan ship. [ Mts SF K: LStd, CK: MStd ]</text>
+		<text>Interfere and help the Zoltan ship. [ Mts SF w/Asteroids K: LStd, CK: MStd ]</text>
 		<event>
-			<text>You overtake the Zoltan and catch up with the Mantis ship in the asteroid belt. Time to make some friends.</text>
+			<text>You overtake the Zoltan and catch up with the Mantis ship in the asteroid belt. Time to make some friends. [ Mts SF w/Asteroids K: LStd, CK: MStd ]</text>
 			<environment type="asteroid"/>
 			<ship load="ZOLTAN_SHIP_SAVE_MANTIS2" hostile="true"/>
 		</event>
